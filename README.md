@@ -10,6 +10,11 @@
 
 -Ezequiel Coronel, 22 años, vivo en Piedra del Aguila Nqn. Actualmente estoy cursando en la universidad, me inscribí en el curso porque es algo que me gusta y no solamente por la salida laboral sino que es la carrera que quise estudiar cuando termine el secundario y que no pude hacer, vi la oportunidad y no dudé en anotarme en este curso.
 
+-Sabrina Vorpagel, 24 años, vivo en Bella vista, Provincia de Bs. As. Actualmente estoy haciendo el curso de programación web full stack de la fundación formar, me gusta mucho toda la parte del front end. Y a futuro me gustaría estudiar diseño gráfico y poder sumarle mis conocimientos del curso.  
+
+-Abigail Mealla, 27 años, vivo en San Miguel, Provincia de Buenos Aires. Actualmente estoy realizando el curso de programación web, y la universidad. Quiero aprender para expandir mis conocimientos y a futuro tener un trabajo estable. 
+
+
 Links:
 -https://porotos.com.ar/?gclid=Cj0KCQjwhqaVBhCxARIsAHK1tiPoh6LPe1Voq4il8f1vqvZPQ02EDCvm4GJFdzIa2cQiesMKzCvlLy8aAvIqEALw_wcB
 -https://www.puppis.com.ar/?gclid=Cj0KCQjwhqaVBhCxARIsAHK1tiMQ-JmRg5TZImuhFMrvwdZKwDoQBGvkn7KbEC4jt2Hx1kGZB2qv4KEaAhudEALw_wcB
