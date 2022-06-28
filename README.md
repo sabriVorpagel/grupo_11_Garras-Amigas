@@ -14,6 +14,53 @@
 
 -Abigail Mealla, 27 años, vivo en San Miguel, Provincia de Buenos Aires. Actualmente estoy realizando el curso de programación web, y la universidad. Quiero aprender para expandir mis conocimientos y a futuro tener un trabajo estable. 
 
+-GAMA DE COLORES SELECCIONADOS 
+#FF6B6B
+#FFD93D
+#6BCB77
+#4D96FF
+#6998AB
+#406882
+-TIPOGRAFIA SELECCIONADA 
+*Roboto mono
+
+Wireframe: 
+HOME: 
+  *Header: Usamos como inspiracion la pagina de Porotos. https://porotos.com.ar/?gclid=CjwKCAjwquWVBhBrEiwAt1KmwhOlDS_n9kl5VOXCakIHQHKApwkVm68MgIw0SZO3yHi_H_QGexbFsBoCeV8QAvD_BwE
+
+  *Body:  Usamos como inspiracion la pagina de WOW! Botique de mascotas. https://www.boutiquedemascotas.com/
+ Tambien usamos de la pagina tienda de mascotas. https://www.tiendamascota.com.ar/?mshops-cookie-isguest=true&mshops-redirection-timestamp=1656377819897 
+  *Footer:  Usamos como inspiracion la pagina de Porotos. https://porotos.com.ar/?gclid=CjwKCAjwquWVBhBrEiwAt1KmwhOlDS_n9kl5VOXCakIHQHKApwkVm68MgIw0SZO3yHi_H_QGexbFsBoCeV8QAvD_BwE
+
+ PRODUCTOS: 
+  *Header: Usamos como inspiracion la pagina de Porotos. https://porotos.com.ar/?gclid=CjwKCAjwquWVBhBrEiwAt1KmwhOlDS_n9kl5VOXCakIHQHKApwkVm68MgIw0SZO3yHi_H_QGexbFsBoCeV8QAvD_BwE
+  
+  *Body: Usamos como inspitacion la pagina de Puppis. https://www.puppis.com.ar/perros/accesorios/transportadoras
+  Tambien usamos de la pagina de Mis Pichos. https://mispichos.com/?utm_source=Google&utm_medium=Google_Search&utm_campaign=Categoriagclid=Cj0KCQjwhqaVBhCxARIsAHK1tiN1z8cpEM8S5F6H1JO5Iy4vIgRyGwWI0JA-VsmcmGiifv7jH1RmpP0aAhTcEALw_wcB
+
+  *Footer:  Usamos como inspiracion la pagina de Porotos. https://porotos.com.ar/?gclid=CjwKCAjwquWVBhBrEiwAt1KmwhOlDS_n9kl5VOXCakIHQHKApwkVm68MgIw0SZO3yHi_H_QGexbFsBoCeV8QAvD_BwE
+
+FORMILADIO DE REGISTRO:  
+*Header: Usamos como inspiracion la pagina de Porotos. https://porotos.com.ar/?gclid=CjwKCAjwquWVBhBrEiwAt1KmwhOlDS_n9kl5VOXCakIHQHKApwkVm68MgIw0SZO3yHi_H_QGexbFsBoCeV8QAvD_BwE
+
+*Body: Usamos como inspiracion la pagina de Mis Pichos. https://mispichos.com/?utm_source=Google&utm_medium=Google_Searchutm_campaign=Categoriagclid=Cj0KCQjwhqaVBhCxARIsAHK1tiN1z8cpEM8S5F6H1JO5Iy4vIgRyGwWI0JA-VsmcmGiifv7jH1RmpP0aAhTcEALw_wcB
+Tambien usamos de la pagina de WOW! Botique de mascotas. https://www.boutiquedemascotas.com/
+
+*Footer:  Usamos como inspiracion la pagina de Porotos. https://porotos.com.ar/?gclid=CjwKCAjwquWVBhBrEiwAt1KmwhOlDS_n9kl5VOXCakIHQHKApwkVm68MgIw0SZO3yHi_H_QGexbFsBoCeV8QAvD_BwE
+
+CARRITO DE COMPRA: 
+*Header: Usamos como inspiracion la pagina de Porotos. https://porotos.com.ar/?gclid=CjwKCAjwquWVBhBrEiwAt1KmwhOlDS_n9kl5VOXCakIHQHKApwkVm68MgIw0SZO3yHi_H_QGexbFsBoCeV8QAvD_BwE
+
+*Body:  Usamos como inspiracion la pagina de Porotos. https://porotos.com.ar/?gclid=CjwKCAjwquWVBhBrEiwAt1KmwhOlDS_n9kl5VOXCakIHQHKApwkVm68MgIw0SZO3yHi_H_QGexbFsBoCeV8QAvD_BwE
+
+*Footer:  Usamos como inspiracion la pagina de Porotos. https://porotos.com.ar/?gclid=CjwKCAjwquWVBhBrEiwAt1KmwhOlDS_n9kl5VOXCakIHQHKApwkVm68MgIw0SZO3yHi_H_QGexbFsBoCeV8QAvD_BwE
+
+LOGIN: 
+*Header: Usamos como inspiracion la pagina de Porotos. https://porotos.com.ar/?gclid=CjwKCAjwquWVBhBrEiwAt1KmwhOlDS_n9kl5VOXCakIHQHKApwkVm68MgIw0SZO3yHi_H_QGexbFsBoCeV8QAvD_BwE
+
+*Body: Usamos como inspitacion el siguiente video https://youtu.be/va_4klLW7R4
+
+*Footer:  Usamos como inspiracion la pagina de Porotos. https://porotos.com.ar/?gclid=CjwKCAjwquWVBhBrEiwAt1KmwhOlDS_n9kl5VOXCakIHQHKApwkVm68MgIw0SZO3yHi_H_QGexbFsBoCeV8QAvD_BwE
 
 Links:
 -https://porotos.com.ar/?gclid=Cj0KCQjwhqaVBhCxARIsAHK1tiPoh6LPe1Voq4il8f1vqvZPQ02EDCvm4GJFdzIa2cQiesMKzCvlLy8aAvIqEALw_wcB
