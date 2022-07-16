@@ -48,8 +48,9 @@ HOME:
   
   *Body: Usamos como inspiración la página de Puppis.
   https://www.puppis.com.ar/perros/accesorios/transportadoras
-        Tambien usamos de la página de Mis Pichos. 
+        Tambien utilizamos de las páginas Mercado Libre y Mis Pichos. 
   https://mispichos.com/?utm_source=Google&utm_medium=Google_Search&utm_campaign=Categoriagclid=Cj0KCQjwhqaVBhCxARIsAHK1tiN1z8cpEM8S5F6H1JO5Iy4vIgRyGwWI0JA-VsmcmGiifv7jH1RmpP0aAhTcEALw_wcB
+  https://www.mercadolibre.com.ar/microondas-hitplus-cm-206d-blanco-20l-220v/p/MLA17955479?pdp_filters=deal:MLA779357-1#searchVariation=MLA17955479&position=4&search_layout=grid&type=product&tracking_id=c982bb9b-3853-49f1-82a3-e3bd69d9f693&c_id=/home/promotions-recommendations/element&c_element_order=5&c_uid=53a39bf4-008a-415e-8d86-95c9b3feca39
 
   *Footer:  Usamos como inspiración la página de Porotos. 
   https://porotos.com.ar/?gclid=CjwKCAjwquWVBhBrEiwAt1KmwhOlDS_n9kl5VOXCakIHQHKApwkVm68MgIw0SZO3yHi_H_QGexbFsBoCeV8QAvD_BwE

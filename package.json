@@ -1,0 +1,23 @@
+{
+  "name": "grupo_11_garras-amigas",
+  "version": "1.0.0",
+  "description": "-Los productos que brindará nuestro sitio está orientado a las mascotas, específicamente gatos y perros. También contará con un sistema de anuncios de adopción.\r -Nuestra audiencia objetivo son todos aquellos que cuentan con mascotas, sean gatos o perros.\r -Nos ajustaremos a la oferta de ese público mediante encuestas, analizando las redes sociales, estudiando a la competencia, valorar nuestro servicio y producto que ofrecemos, probando anuncios publicitarios para nuestro público objetivo y revisando constantemente la investigación del público.\r ### **Integrantes**",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sabriVorpagel/grupo_11_Garras-Amigas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sabriVorpagel/grupo_11_Garras-Amigas/issues"
+  },
+  "homepage": "https://github.com/sabriVorpagel/grupo_11_Garras-Amigas#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
