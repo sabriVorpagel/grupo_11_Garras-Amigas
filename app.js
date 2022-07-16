@@ -15,5 +15,5 @@ app.get('/login', (req,res) => res.sendFile(path.join(__dirname, 'views', 'login
 app.get('/register', (req,res) => res.sendFile(path.join(__dirname, 'views', 'register.html')));
 
 /*puerto*/
-app.listen(port, () => console.log("Server running in htpp://localhost:" + port))
+app.listen(port, () => console.log("Server running in http://localhost:" + port))
 
