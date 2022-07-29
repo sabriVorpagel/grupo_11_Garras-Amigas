@@ -94,7 +94,7 @@
 }
 
 .home__header--menu{
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     flex-direction: row;
     width: 100%;
@@ -539,6 +539,7 @@
     }
 }
 
+/*DESKTOP*/
 @media (min-width: 1024px){
     /*HOME | FOOTER*/
     .home__footer{
