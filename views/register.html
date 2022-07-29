@@ -14,7 +14,35 @@
 <!-- HEADER -->
 
 <body>
-      
+    <header class="home__header">
+        <section class="home__header__section">
+            <div class="home__header--logo">
+                <a href="/"><img src="/img/garras amigas.png"></a>
+            </div>
+            <div class="home__header--burger">
+                <button><i class="fas fa-bars"></i></button>
+            </div>
+            <div class="home__header--buscador">
+                <form action="">
+                    <input type="text">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+            <div class="home__header--login--carrito">
+                <a href="/login"><i class="fa-solid fa-user"></i></a>
+                <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="home__header--menu">
+                <ul>
+                    <li><a>PRODUCTOS</a></li>
+                    <li><a>DUDAS</a></li>
+                    <li><a>GUIA DE COMPRAS</a></li>
+                    <li><a>CONTACTO</a></li>
+                    <li><a>GUIA DE TALLES</a></li>
+                </ul>
+            </div>
+        </section>
+    </header>
 
     <!-- MAIN -->
 
@@ -38,18 +66,18 @@
 
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" autocomplete="off" name="firstName">
-                <small  class="texto--error">El nombre obligatorio</small>
+                <small  class="texto--error">El nombre es obligatorio</small>
 
 
                 <label for="apellido">Apellido:</label>
                 <input min="0" step="0.1" max="10" type="text" id="apellido" name="lastName">
-                <small  class="texto--error">El apellido obligatorio</small>
+                <small  class="texto--error">El apellido es obligatorio</small>
 
 
 
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email">
-                <small  class="texto--error">El email obligatorio</small>
+                <small  class="texto--error">El email es obligatorio</small>
 
 
 
@@ -87,63 +115,7 @@
 
 
 
-    <!-- footer -->
-
-    <footer>
-
-        <section class="footer__section__container">
-
-            <article class="footer__container columnas__enlaces">
-
-                <h4> Enlaces Rápidos</h4>
-                <a href="">
-                    <p>#SomosGarrasAmigas</p>
-                </a>
-                <a href="">
-                    <p>Guía de compra</p>
-                </a>
-                <a href="">
-                    <p>Preguntas frecuentes</p>
-                </a>
-                <a href="">
-                    <p>Política cambio o devolución</p>
-                </a>
-                <a href="">
-                    <p>Contactanos</p>
-                </a>
-            </article>
-
-            <article class="footer__container  columnas__ayuda">
-                <h4> ¿Necesitas Ayuda?</h4>
-                <p>Estamos acá para audarte en lo que necesites, no dudes en contactarnos si tenés alguna pregunta o
-                    necesitas asistencia</p>
-                <p>Lun-Vie 9:00 am - 6:00 pm</p>
-                <p> <a href=""><i class="fa-brands fa-whatsapp"></i> +5491150487437</p></a>
-                <a href="">
-                    <p> <i class="fa-light fa-at"></i> o envia un email</p>
-                </a>
-
-            </article>
-            <article class="footer__container  columnas__seguinos">
-                <h4>Seguinos</h4>
-                <a href="">
-                    <p><i class="fa-brands fa-facebook"></i> Facebook</p>
-                </a>
-                <a href="">
-                    <p><i class="fa-brands fa-instagram"></i> Instagram</p>
-                </a>
-            </article>
-
-
-        </section>
-
-
-
-
-
-
-    </footer>
-
+    
 
 </body>
 

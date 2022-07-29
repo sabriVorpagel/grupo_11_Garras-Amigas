@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/img/logo.png" type="image/png">
-    <title> Garras Amigas | Registro </title>
     <link rel="stylesheet" href="/css/styles.css">
+    <title> Garras Amigas | Login </title>
     <script src="https://kit.fontawesome.com/1d79aed36b.js" crossorigin="anonymous"></script>
 </head>
 
@@ -15,45 +15,33 @@
 
 <body>
     <header class="home__header">
-        <div class="home__header--header">
-
+        <section class="home__header__section">
             <div class="home__header--logo">
-                <img src="/img/garrasLogo.png" alt="logo">
+                <a href="/"><img src="/img/garras amigas.png"></a>
             </div>
-
-            <div class="home__header--btn-menu">
-                <label for="btn-menu"><i class="fa-solid fa-bars"></i></label>
+            <div class="home__header--burger">
+                <button><i class="fas fa-bars"></i></button>
             </div>
-        </div>
-
-        <input type="checkbox" id="btn-menu">
-        <div class="container-menu">
-            <div class="cont-menu">
-                <nav>
-
-                    <div class="home__header--contacto">
-                        <a href="/login"><i class="fa-regular fa-circle-user"></i> Ingresa</a>
-                    </div>
-                    <div class="home__header--serch-bar">
-                        <input type="text" placeholder="  Buscar productos, marcas">
-                        <!-- <button><i class="fa-solid fa-magnifying-glass"></i></button> -->
-                    </div>
-                    <hr>
-
-                    <ul>
-                        <li><a href="/productos">Productos </a></li>
-                        <li><a href="/dudas">Dudas?</a></li>
-                        <li><a href="/guia">Guía de compra</a></li>
-                        <li><a href="/contacto">Contacto</a></li>
-                        <li><a href="/talles">Guía de talles</a></li>
-                    </ul>
-                </nav>
-                <label for="btn-menu">✖️</label>
+            <div class="home__header--buscador">
+                <form action="">
+                    <input type="text">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
             </div>
-        </div>
-
-
-
+            <div class="home__header--login--carrito">
+                <a href="/login"><i class="fa-solid fa-user"></i></a>
+                <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="home__header--menu">
+                <ul>
+                    <li><a>PRODUCTOS</a></li>
+                    <li><a>DUDAS</a></li>
+                    <li><a>GUIA DE COMPRAS</a></li>
+                    <li><a>CONTACTO</a></li>
+                    <li><a>GUIA DE TALLES</a></li>
+                </ul>
+            </div>
+        </section>
     </header>
 
     <!-- MAIN -->
@@ -76,9 +64,11 @@
             <form action="" class="main__register__form" method="">
                 <label for="">Email</label>
                 <input type="email" placeholder="miEmail@hola.com" name="email" />
+                <small  class="texto--error">El email es obligatorio</small>
+
                 <label for="">Contraseña</label>
                 <input type="password" placeholder="************" name="contrasenia" />
-               
+                <small  class="texto--error">El password debe contener entre 6 y 12 caracteres</small>
              
 
                 <div class="main__register__botones__send">
@@ -105,67 +95,12 @@
         </section>
     </main>
 
-    
    
-
-    <!-- footer -->
-
-    <footer>
-
-        <section class="footer__section__container">
-
-            <article class="footer__container columnas__enlaces">
-
-                <h4> Enlaces Rápidos</h4>
-                <a href="">
-                    <p>#SomosGarrasAmigas</p>
-                </a>
-                <a href="">
-                    <p>Guía de compra</p>
-                </a>
-                <a href="">
-                    <p>Preguntas frecuentes</p>
-                </a>
-                <a href="">
-                    <p>Política cambio o devolución</p>
-                </a>
-                <a href="">
-                    <p>Contactanos</p>
-                </a>
-            </article>
-
-            <article class="footer__container  columnas__ayuda">
-                <h4> ¿Necesitas Ayuda?</h4>
-                <p>Estamos acá para audarte en lo que necesites, no dudes en contactarnos si tenés alguna pregunta o
-                    necesitas asistencia</p>
-                <p>Lun-Vie 9:00 am - 6:00 pm</p>
-                <p> <a href=""><i class="fa-brands fa-whatsapp"></i> +5491150487437</p></a>
-                <a href="">
-                    <p> <i class="fa-light fa-at"></i> o envia un email</p>
-                </a>
-
-            </article>
-            <article class="footer__container  columnas__seguinos">
-                <h4>Seguinos</h4>
-                <a href="">
-                    <p><i class="fa-brands fa-facebook"></i> Facebook</p>
-                </a>
-                <a href="">
-                    <p><i class="fa-brands fa-instagram"></i> Instagram</p>
-                </a>
-            </article>
-
-
-        </section>
-
-
-
-
-
-
-    </footer>
-
-
 </body>
 
 </html>
+   
+
+   
+
+
