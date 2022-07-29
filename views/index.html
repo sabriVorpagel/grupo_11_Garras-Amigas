@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="shortcut icon" href="/img/logo.png">
     <script src="https://kit.fontawesome.com/ae7c764a16.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="home__header">
         <section class="home__header__section">
             <div class="home__header--logo">
-                <a href="/"><img src="/img/WhatsApp Image 2022-07-15 at 9.36.05 PM.jpeg"></a>
+                <a href="/"><img src="/img/garras amigas.png"></a>
             </div>
             <div class="home__header--burger">
                 <button><i class="fas fa-bars"></i></button>
@@ -20,14 +21,12 @@
             <div class="home__header--buscador">
                 <form action="">
                     <input type="text">
-                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
             </div>
-            <div class="home__header--login">
+            <div class="home__header--login--carrito">
                 <a href="/login"><i class="fa-solid fa-user"></i></a>
-            </div>
-            <div class="home__header--carrito">
-                <a href="/productCart"><i class="fa-regular fa-bag-shopping"></i></a>
+                <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
             <div class="home__header--menu">
                 <ul>
@@ -38,122 +37,165 @@
                     <li><a>GUIA DE TALLES</a></li>
                 </ul>
             </div>
-            <div class="home__header--banner">
-                /* imagen del banner*/
-            </div>
         </section>
     </header>
     <main class="home__main">
+        <div class="home__main--banner">
+            <img src="/img/purina.jpg">
+        </div>
         <section class="home__main__section--novedades">
             <h2>NOVEDADES</h2>
-            <article class="home__main__section--article">
-                <a href="/productdetail"><img src="/img/kit collar.jpeg"></a>
-                <div>
-                    <h4>Kit collar Floral</h4>
-                    <p>$5.000</p>
-                    <a href="/productCart"><i class="fa-regular fa-bag-shopping"> AÑADIR AL CARRITO</i></a>
-                </div>
-            </article>
-            <article class="home__main__section--article">
-                <a href="/productdetail"><img src="/img/Correa.jpeg"></a>
-                <div>
-                    <h4>Correa Turquesa</h4>
-                    <p>$2.000</p>
-                    <a href="/productCart"><i class="fa-regular fa-bag-shopping"> AÑADIR AL CARRITO</i></a>
-                </div>
-            </article>
-            <article class="home__main__section--article">
-                <a href="/productdetail"><img src="/img/kit completo 1.jpeg"></a>
-                <div>
-                    <h4>Kit Completo Dinos</h4>
-                    <p>$7.000</p>
-                    <a href="/productCart"><i class="fa-regular fa-bag-shopping"> AÑADIR AL CARRITO</i></a>
-                </div>
-            </article>
-            <article class="home__main__section--article">
-                <a href="/productdetail"><img src="/img/Mochila.jpeg"></a>
-                <div>
-                    <h4>Mochila</h4>
-                    <p>$7.000</p>
-                    <a href="/productCart"><i class="fa-regular fa-bag-shopping"> AÑADIR AL CARRITO</i></a>
-                </div>
-            </article>
+                <section class="home__main__articulos">
+                <article class="home__main__section--article">
+                    <a href="/productdetail"><img src="/img/kit completo 1.jpeg"></a>
+                    <div class="home__main__section__article--div">
+                        <h4>Kit collar Floral</h4>
+                        <p>$5.000</p>
+                        <a href="/productCart" class="home__main__section__article--div--a"><i class="fa-solid fa-cart-shopping"></i>Añadir al carrito</a>
+                    </div>
+                </article>
+                <article class="home__main__section--article">
+                    <a href="/productdetail"><img src="/img/Correa.jpeg"></a>
+                    <div class="home__main__section__article--div">
+                        <h4>Correa Turquesa</h4>
+                        <p>$2.000</p>
+                        <a href="/productCart" class="home__main__section__article--div--a"><i class="fa-solid fa-cart-shopping"></i>Añadir al carrito</a>
+                    </div>
+                </article>
+                <article class="home__main__section--article">
+                    <a href="/productdetail"><img src="/img/kit completo 1.jpeg"></a>
+                    <div class="home__main__section__article--div">
+                        <h4>Kit Completo Dinos</h4>
+                        <p>$7.000</p>
+                        <a href="/productCart" class="home__main__section__article--div--a"><i class="fa-solid fa-cart-shopping"></i>Añadir al carrito</a>
+                    </div>
+                </article>
+                <article class="home__main__section--article">
+                    <a href="/productdetail"><img src="/img/Mochila.jpeg"></a>
+                    <div class="home__main__section__article--div">
+                        <h4>Mochila</h4>
+                        <p>$7.000</p>
+                        <a href="/productCart" class="home__main__section__article--div--a"><i class="fa-solid fa-cart-shopping"></i>Añadir al carrito</a>
+                    </div>
+                </article>
+            </section>
         </section>
         <section class="home__main__section--destacados">
             <h2>DESTACADOS</h2>
-            <article class="home__main__section--article">
-                <a href="/productdetail"><img src="/img/kit collar.jpeg"></a>
-                <div>
-                    <h4>Kit collar Floral</h4>
-                    <p>$5.000</p>
-                    <a href="/productCart"><i class="fa-regular fa-bag-shopping"> AÑADIR AL CARRITO</i></a>
-                </div>
-            </article>
-            <article class="home__main__section--article">
-                <a href="/productdetail"><img src="/img/kit completo 2.jpeg"></a>
-                <div>
-                    <h4>Kit Completo Kawaii</h4>
-                    <p>$7.000</p>
-                    <a href="/productCart"><i class="fa-regular fa-bag-shopping"> AÑADIR AL CARRITO</i></a>
-                </div>
-            </article>
-            <article class="home__main__section--article">
-                <a href="/productdetail"><img src="/img/kit completo 1.jpeg"></a>
-                <div>
-                    <h4>Kit Completo Dinos</h4>
-                    <p>$7.000</p>
-                    <a href="/productCart"><i class="fa-regular fa-bag-shopping"> AÑADIR AL CARRITO</i></a>
-                </div>
-            </article>
-            <article class="home__main__section--article">
-                <a href="/productdetail"><img src="/img/Mochila.jpeg"></a>
-                <div>
-                    <h4>Mochila</h4>
-                    <p>$7.000</p>
-                    <a href="/productCart"><i class="fa-regular fa-bag-shopping"> AÑADIR AL CARRITO</i></a>
-                </div>
-            </article>
+            <section class="home__main__articulos">
+                <article class="home__main__section--article">
+                    <a href="/productdetail"><img src="/img/kit completo 1.jpeg"></a>
+                    <div class="home__main__section__article--div">
+                        <h4>Kit collar Floral</h4>
+                        <p>$5.000</p>
+                        <a href="/productCart" class="home__main__section__article--div--a"><i class="fa-solid fa-cart-shopping"></i>Añadir al carrito</a>
+                    </div>
+                </article>
+                <article class="home__main__section--article">
+                    <a href="/productdetail"><img src="/img/kit completo 2.jpeg"></a>
+                    <div class="home__main__section__article--div">
+                        <h4>Kit Completo Kawaii</h4>
+                        <p>$7.000</p>
+                        <a href="/productCart" class="home__main__section__article--div--a"><i class="fa-solid fa-cart-shopping"></i>Añadir al carrito</a>
+                    </div>
+                </article>
+                <article class="home__main__section--article">
+                    <a href="/productdetail"><img src="/img/kit completo 1.jpeg"></a>
+                    <div class="home__main__section__article--div">
+                        <h4>Kit Completo Dinos</h4>
+                        <p>$7.000</p>
+                        <a href="/productCart" class="home__main__section__article--div--a"><i class="fa-solid fa-cart-shopping"></i>Añadir al carrito</a>
+                    </div>
+                </article>
+                <article class="home__main__section--article">
+                    <a href="/productdetail"><img src="/img/Mochila.jpeg"></a>
+                    <div class="home__main__section__article--div">
+                        <h4>Mochila</h4>
+                        <p>$7.000</p>
+                        <a href="/productCart" class="home__main__section__article--div--a"><i class="fa-solid fa-cart-shopping"></i>Añadir al carrito</a>
+                    </div>
+                </article>
+            </section>
         </section>
         <section class="home__main__section--ofertas">
             <h2>OFERTAS</h2>
-            <article class="home__main__section--article">
-                <a href="/productdetail"><img src="/img/kit collar.jpeg"></a>
-                <div>
-                    <h4>Kit collar Floral</h4>
-                    <p>$5.000</p>
-                    <a href="/productCart"><i class="fa-regular fa-bag-shopping"> AÑADIR AL CARRITO</i></a>
-                </div>
-            </article>
-            <article class="home__main__section--article">
-                <a href="/productdetail"><img src="/img/Correa.jpeg"></a>
-                <div>
-                    <h4>Correa Turquesa</h4>
-                    <p>$2.000</p>
-                    <a href="/productCart"><i class="fa-regular fa-bag-shopping"> AÑADIR AL CARRITO</i></a>
-                </div>
-            </article>
-            <article class="home__main__section--article">
-                <a href="/productdetail"><img src="/img/kit completo 1.jpeg"></a>
-                <div>
-                    <h4>Kit Completo Dinos</h4>
-                    <p>$7.000</p>
-                    <a href="/productCart"><i class="fa-regular fa-bag-shopping"> AÑADIR AL CARRITO</i></a>
-                </div>
-            </article>
-            <article class="home__main__section--article">
-                <a href="/productdetail"><img src="/img/Mochila.jpeg"></a>
-                <div>
-                    <h4>Mochila</h4>
-                    <p>$7.000</p>
-                    <a href="/productCart"><i class="fa-regular fa-bag-shopping"> AÑADIR AL CARRITO</i></a>
-                </div>
-            </article>
-        </section>
-        <section class="home__main__section--carrusel">
-            /*carrusel*/
+            <section class="home__main__articulos">
+                <article class="home__main__section--article">
+                    <a href="/productdetail"><img src="/img/kit completo 1.jpeg"></a>
+                    <div class="home__main__section__article--div">
+                        <h4>Kit collar Floral</h4>
+                        <p>$5.000</p>
+                        <a href="/productCart" class="home__main__section__article--div--a"><i class="fa-solid fa-cart-shopping"></i>Añadir al carrito</a>
+                    </div>
+                </article>
+                <article class="home__main__section--article">
+                    <a href="/productdetail"><img src="/img/Correa.jpeg"></a>
+                    <div class="home__main__section__article--div">
+                        <h4>Correa Turquesa</h4>
+                        <p>$2.000</p>
+                        <a href="/productCart" class="home__main__section__article--div--a"><i class="fa-solid fa-cart-shopping"></i>Añadir al carrito</a>
+                    </div>
+                </article>
+                <article class="home__main__section--article">
+                    <a href="/productdetail"><img src="/img/kit completo 1.jpeg"></a>
+                    <div class="home__main__section__article--div">
+                        <h4>Kit Completo Dinos</h4>
+                        <p>$7.000</p>
+                        <a href="/productCart" class="home__main__section__article--div--a"><i class="fa-solid fa-cart-shopping"></i>Añadir al carrito</a>
+                    </div>
+                </article>
+                <article class="home__main__section--article">
+                    <a href="/productdetail"><img src="/img/Mochila.jpeg"></a>
+                    <div class="home__main__section__article--div">
+                        <h4>Mochila</h4>
+                        <p>$7.000</p>
+                        <a href="/productCart" class="home__main__section__article--div--a"><i class="fa-solid fa-cart-shopping"></i>Añadir al carrito</a>
+                    </div>
+                </article>
+            </section>
         </section>
     </main>
-    <footer></footer>
-
+    <footer class="home__footer">
+        <div class="home__footer__divContainer home__footer__divContainer0">
+            <h2>Enlaces rapidos</h2>
+            <ul>
+                <li><a href="#">#Somos Garras Amigas</a></li>
+                <li><a href="#">#Guia de compra</a></li>
+                <li><a href="#">#Preguntas frecuentes</a></li>
+                <li><a href="#">#Politica de cambio o devolución</a></li>
+                <li><a href="#">#Contactanos</a></li>
+            </ul>
+        </div>
+        <div class="home__footer__divContainer1 home__footer__divContainer">
+            <h2>¿Necesitas ayuda?</h2>
+            <p>Estamos aqui para ayudarte a que tu experiencia con nosotros sea lo mas comoda posible</p>
+            <p>Ante cualquier duda, nuestros horarios de atencion es de lunes a viernes desde las 9:00am - 18:00pm</p>
+        </div>
+        <div class="home__footer__divContainer2 home__footer__divContainer">
+            <h2>¡Siguenos en nuestras redes!</h2>
+            <div class="home__footer__divContainer2--direccion">
+                <i class="fa-brands fa-whatsapp"></i>
+                <a href="#">Whatsapp</a>
+            </div>
+            <div class="home__footer__divContainer2--direccion">
+                <i class="fa-brands fa-square-facebook"></i>
+                <a href="#">Facebook</a>
+            </div>
+            <div class="home__footer__divContainer2--direccion">
+                <i class="fa-brands fa-instagram"></i>
+                <a href="#"></i>Instagram</a>
+            </div>
+        </div>
+        <div class="home__footer__divContainer2--textarea">
+            <form action="/" class="home__footer__divContainer2--textarea--form">
+                <h2>¡Dejanos tu comentario!</h2>
+                <textarea name="comentario" id="comentario" cols="40" rows="10" maxlength="300"></textarea>
+                <div class="home__footer__form__botones">
+                    <input class="footer__input__reset" type="reset" name="comentario" id="comentario" value="Reset">
+                    <input class="footer__input__submit" type="submit" name="comentario" id="comentario" value="Enviar">
+                </div>
+            </form>
+        </div>
+    </footer>
 </body>
 </html>
