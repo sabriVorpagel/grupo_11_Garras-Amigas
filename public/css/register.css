@@ -134,11 +134,10 @@
     margin-bottom: 15px;
     width: 80%;
     font-size: 13px;
-   
-
-
 }
-
+.redes__sociales__g a{
+    color: #fff;
+}
 .redes__sociales__f {
     background-color: #3b5998;
     height: 37px;
@@ -147,10 +146,10 @@
     padding: 8px;
     width: 80%;
     font-size: 13px;
-
-
 }
-
+.redes__sociales__f a{
+    color: #fff;
+}
 
 
 /* footer */
