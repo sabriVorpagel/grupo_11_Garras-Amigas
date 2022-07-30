@@ -1,14 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <link rel="shortcut icon" href="/img/Logo-Garras-Amiga.png" type="image/png">
     <link rel="stylesheet" href="/css/styles.css">
-    <script src="https://kit.fontawesome.com/ae7c764a16.js" crossorigin="anonymous"></script>
+    <title> Garras Amigas | Login </title>
+    <script src="https://kit.fontawesome.com/1d79aed36b.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <header class="home__header">
+        <section class="home__header__section">
+            <div class="home__header--logo">
+                <a href="/"><img src="/img/Logo-Garras-Amiga.png"></a>
+            </div>
+            <div class="home__header--burger">
+                <button><i class="fas fa-bars"></i></button>
+            </div>
+            <div class="home__header--buscador">
+                <form action="">
+                    <input type="text">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+            <div class="home__header--login--carrito">
+                <a href="/login"><i class="fa-solid fa-user"></i></a>
+                <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="home__header--menu">
+                <ul>
+                    <li><a href="/productos">Productos</a></li>
+                    <li><a href="/dudas">Dudas</a></li>
+                    <li><a href="/guiadecompras">Guia de compras</a></li>
+                    <li><a href="/contacto">Contacto</a></li>
+                    <li><a href="/guiadetalles">Guia de talles</a></li>
+                </ul>
+            </div>
+        </section>
+    </header>
+    <main class="main__register">
+        <section class="main__register__container">
+            <h1>Ingresa</h1>
+            <!-- <div class="main__register__container__text">
+                <p>¿Ya tenes un perfil ?</p><a href="/login">Iniciar Sesión</a>              
+            </div> -->
+            <form action="" class="main__register__form" method="">
+                <label for="">Email</label>
+                <input type="email" placeholder="miEmail@hola.com" name="email" />
+                <small  class="texto--error">El email es obligatorio</small>
+
+                <label for="">Contraseña</label>
+                <input type="password" placeholder="************" name="contrasenia" />
+                <small  class="texto--error">El password debe contener entre 6 y 12 caracteres</small>
+             
+                <div class="main__register__botones__send">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+            <hr>
+            <p>O Ingresa con</p>          
+            <div class="redes__sociales__f">
+                <a href=""><i class="fa-brands fa-facebook"></i>
+                    Ingresa con Facebook</a>
+                <!-- <button class="form__button form__button--send" type="submit">Registrate</button> -->
+            </div>
+            <div class="redes__sociales__g ">
+                <a href=""><i class="fa-brands fa-google-plus"></i>
+                    Ingresa  con Google</a>
+                <!-- <button class="form__button form__button--send" type="submit">Registrate</button> -->
+            </div>
+            
+        </section>
+    </main>
+
+   
 </body>
+
 </html>
+   
+
+   
+
+
