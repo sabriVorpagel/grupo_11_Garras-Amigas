@@ -12,10 +12,7 @@
     --textoSizeProducto: 16px
 }
 
-
-
 /*Main*/
-
 .home__main{
     display: flex;
     flex-wrap: wrap;
@@ -118,46 +115,13 @@
     color:#666666;
 }
 
-
-/*TELEFONO*/
-@media (min-width:320px) {
-    /*HEADER*/
-.home__header--menu{
-    display: none;
-}
-}
 /*TABLET*/
 @media (min-width:768px){
-    /*Heder*/
-    .home__header--logo{
-        width: 15%;
-    }
-    .home__header--burger {
-        display: none;
-    }
-    .home__header--buscador{
-        width: 60%;
-    }
-    .home__header--login--carrito a i{
-        font-size: 22px;
-    }
-    .home__header--buscador form input{
-        width: 90%;
-        padding: 10px 0;
-    }
-    .home__header--buscador form button{
-        width: 10%;
-        padding: 10px 0;
-    }
-    .home__header--menu{
-        display: block;
-    }
     /*Main*/
     .home__main__section--article{
         width: 45%;
     }
 }
-
 
 /*Laptop*/
 @media (min-width:1024px) {

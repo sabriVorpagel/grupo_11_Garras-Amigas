@@ -6,7 +6,6 @@
     --colorCelesteClaro: #6998AB;
     --colorAzul: #406882;
 
- /*linear-gradient(90deg,#00c4cc,#7d2ae8)*/
     --textoSizeCuerpo: 15px;
     --textoSizeTitulares: 24px;
     --textoSizePrecios: 18px;
@@ -542,6 +541,9 @@
 /*DESKTOP*/
 @media (min-width: 1024px){
     /*HOME | FOOTER*/
+    .home__header--menu{
+        display: flex;
+    }
     .home__footer{
         display: flex;
         width: 100%;
