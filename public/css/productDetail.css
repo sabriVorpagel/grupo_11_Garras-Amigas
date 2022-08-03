@@ -301,7 +301,7 @@
     color: grey;
 }
 .home__main__producto--descripcion-clasificacion-form div label:hover, .home__main__producto--descripcion-clasificacion-form div label:hover ~ label {
-  color: orange;
+    color: orange;
 }
 .home__main__producto--descripcion--comentario{
     display: flex;
@@ -330,6 +330,7 @@
     background-color: var(--colorAzul);
     flex-direction: column;
     flex-wrap: wrap;
+    align-items: baseline;
 }
 .home__footer__divContainer{
     text-align: center;
