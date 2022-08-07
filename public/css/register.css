@@ -37,115 +37,13 @@ a {
 /* HEADER */
 
 
-/*Header*/
-.home__header{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-}
-.home__header__section{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background-color: var(--colorCelesteClaro);
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-.home__header--logo{
-    width: 20%;
-}
-.home__header--logo a img{
-    width: 100%;
-}
-.home__header--burger {
-    display: flex;
-    flex-direction: row;
-    width: 10%;
-}
-.home__header--burger button{
-    border: none;
-    color: white;
-    background-color: transparent;
-}
-
-.home__header--buscador{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 50%;
-}
-.home__header--buscador form{
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-}
-.home__header--buscador form input{
-    width: 85%;
-    color: white;
-    border: none;
-    border-radius: 5px 0px 0px 5px;
-
-}
-
-
-
-
-.home__header--buscador form button{
-    width: 15%;
-    border: none;
-    border-radius: 0px 5px 5px 0px;
-}
-.home__header--buscador form button i{
-    color: #666666;
-    text-align: center;
-}
-.home__header--login--carrito{
-    width: 20%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-.home__header--login--carrito a i{
-    width: 50%;
-    color: white;
-}
-
-.home__header--menu{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 100%;
-} 
-.home__header--menu ul{
-    display: flex;
-    flex-direction: row;
-    width: 100% ;
-    justify-content: space-evenly;
-    padding-bottom: 5px;
-}
-.home__header--menu ul li a{
-    width: 50%;
-    color: white;
-    font-family: "Roboto"; 
-    font-weight: 300;
-}
-
 
 
 /* main */
 
 .main__register {
-    font-size: medium;
     padding: 5%;
     color: #3d3c3c;
-    font-weight:700;
-    
 }
 
 .main__register__container {
@@ -154,87 +52,77 @@ a {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    background-image: url(/img/fondo.png);
+    background-repeat: no-repeat;
+    background-position: 98% 28%;
+    background-size: 60%;
+    
    
 }
 
 .main__register h1 {
-    text-decoration: underline;
     text-align: center;
-    font-size: 25px;
+    font-size: 15px;
     color: #6F97B0;
-    margin-bottom: -20px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 40px;
+    
     
 }
 
-
-.main__register__container__text {
-    font-size: 12px;
-    display: inline-block;
-    text-align: center;
-    margin-top: 0;
-}
-
-.main__register__container__text a {
-    color: #3b5998;
-}
-
-
 .main__register__form {
     width: 90%;
-    gap: 20px;
+    gap: 40px;
     margin-top: 20px;
+    /* background-color: rgba(5, 7, 12, 0.2); */
+    border-radius: 5px;
+   
     
 }
 
 .main__register__form input {
     width: 100%;
-    height: 30px;
-    border: none;
-    border-bottom: solid 1px #000000;
-    border-radius: 5px;
-    
+    height: 50px;
+    background: transparent;
+   
 }
 
 .main__register__form label {
     width: 100%;
-    display: block;
-}
-
-.main__register__form p {
-    padding-top: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    
     
 }
 
-.texto--error{
+.main__register__form p {
+    padding-top: 8px;
+    
+    
+}
+
+/* .texto--error{
     color: red;
     font-size: 8px;
     margin-top: -3pxt t t;
-}
+} */
 
-.main__register__form small{
+/* .main__register__form small{
     width: 100%;
-}
+} */
 
-.main__register__botones__send {
+.main__register__botones__send  {
     width: 100%;
-    border-radius: 5px;
+    border-radius: 50px;
     align-items: center;
     margin-top: 20px;
     position: relative;
     transition: all 450ms;
+    margin-top: 60px;
+    
     
 
-}
-
-.main__register__botones__send button {
-    width: 48%;
-    padding: 10px 0;
-    color: #6F97B0;
-    outline: none;
-    border-radius: 10px;
-    font-weight: 700;
-    position: relative;
-    border: solid 2px #6F97B0;
 }
 
 .main__register__botones__send button:hover {
@@ -246,42 +134,92 @@ a {
 }
 
 
+.main__register__botones__redes{
+   
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(69, 69, 69);
+    font-weight: 300;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+   
+}
 
-.main__register__container p {
-    font-size: 15px;
-    
+.main__register__botones__redes p {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.main__register__botones__redes i{
+    width: 30%;
 }
 
 
-.redes__sociales__g {
-    background-color: rgb(100, 81, 81);
-    height: 37px;
-    border-radius: 10px;
-    text-align: center;
-    padding: 8px;
-    margin-bottom: 15px;
-    width: 80%;
-    font-size: 13px;
+/* .main__register__container p {
+   text-align: center;
+    font-size: 14px;
+    color: rgb(69, 69, 69);
+    font-weight: 300;
+    letter-spacing: 5px;
+    width: 100%;
+    margin-bottom: 20px;
+} */
+
+.redes__sociales--fa i{
+    width: 30%;
+    font-size: 40px;
+    border-radius: 50%;
+    color:#2664bb;
+    justify-content: center;
+    margin-bottom: 10px;
+   
+}
+.redes__sociales--go i{
+    width: 30%;
+    font-size: 40px;
+    border-radius: 50%;
+    color:#bc5242;
+    justify-content: center;
+    margin-bottom: 10px;
+
+}
+
+.redes__sociales--insta i{
+    width: 30%;
+    font-size: 40px;
+    border-radius: 50%;
+    color:#bd29e2d8;
+    justify-content: center;
+    margin-bottom: 10px;
    
 
-
 }
 
-.redes__sociales__f {
-    background-color: #3b5998;
-    height: 37px;
-    border-radius: 10px;
-    text-align: center;
-    padding: 8px;
-    width: 80%;
-    font-size: 13px;
-
-
+.main__register__inciar{
+    width: 100%;
+   
 }
 
 
+.main__register__inciar p {
+    width: 100%;
+    font-size: 12px;
+   
+} 
 
-/* footer */
+.main__register__inciar a {
+    width: 40%;
+    font-size: 12px;
+    color:#2664bb;
+}
+
+
+
+
 
 
 /*TELEFONO*/
