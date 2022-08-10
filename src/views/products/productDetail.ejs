@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProductDetail</title>
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <script src="https://kit.fontawesome.com/ae7c764a16.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="/images/Logo-Garras-Amiga.png" type="image/png">
+</head>
+<body>
+    <header class="home__header">
+        <section class="home__header__section">
+            <div class="home__header--logo">
+                <a href="/"><img src="/images/Logo-Garras-Amiga.png"></a>
+            </div>
+            <div class="home__header--burger">
+                <button><i class="fas fa-bars"></i></button>
+            </div>
+            <div class="home__header--buscador">
+                <form action="">
+                    <input type="text">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+            <div class="home__header--login--carrito">
+                <a href="/login"><i class="fa-solid fa-user"></i></a>
+                <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="home__header--menu">
+                <ul>
+                    <li><a href="/productos">Productos</a></li>
+                    <li><a href="/dudas">Dudas</a></li>
+                    <li><a href="/guiadecompras">Guia de compras</a></li>
+                    <li><a href="/contacto">Contacto</a></li>
+                    <li><a href="/guiadetalles">Guia de talles</a></li>
+                </ul>
+            </div>
+        </section>
+    </header>
+    <main class="home__main">
+        <figure class="home__main__anuncio">
+            <img src="/img/Anuncio.png" alt="">
+        </figure>
+        <article class="home__main__producto">
+            <h2>Titulo del producto</h2>
+            <div class="home__main__producto-img">  
+                <figure class="home__main__producto-imagen">
+                    <img src="/img/kit-collar.jpeg" alt="">
+                </figure>
+                <div class="home__main__producto-imagenes">
+                    <img src="/img/kit-completo-1.jpeg" alt="">
+                    <img src="/img/kit-completo-2.jpeg" alt="">
+                    <img src="/img/Correa.jpeg" alt="">
+                </div>              
+            </div>
+        </article>  
+        <article class="home__main__producto--datos">     
+            <div class="home__main__producto--descripcion--datos">
+                <p class="precio">$1500</p>
+                <p class="descuento">%40</p>
+                <span>Stock:<input type="number" min="0" max="99" value="99"></span>
+                <div class="home__main__producto--descripcion--datos-botones">
+                    <a href="/" class="boton">Metodos de envio</a>
+                    <a href="/" class="boton1">Metodos de pago</a>
+                </div>  
+            </div>            
+            <div class="home_main__producto--descripcion-caja-de-botones">
+                <form action="/" class="home__main__producto--descripcion-botones color-boton-celeste">
+                    <input type="submit" name="comprarAhora" id="comprarAhora" value="Comprar Ahora"></a>
+                </form>   
+                <form action="/productCart" class="home__main__producto--descripcion-botones color-boton-verde">
+                    <input type="submit" name="agregarCarrito" id="agregarCarrito" value="Agregar al carrito"></a>
+                </form>
+            </div>
+        </article>
+        <article class="home__main__producto--detalles">
+            <div class="home__main__producto--descripcion">
+                <h4>Descripcion del producto</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem pariatur, cupiditate, quia corporis deleniti cum, consequuntur tempore dolor blanditiis sed consequatur! Odit ad dolorem harum magnam totam veritatis quod vel.</p>
+            </div>
+            <div class="home__main__producto--descripcion-opinion">
+                <div class="home__main__producto--descripcion--producto">
+                    <h4>Opiniones</h4>             
+                        <form action="" class="home__main__producto--descripcion-clasificacion-form">  
+                            <h4>Clalificación</h4>
+                            <div>
+                              <input id="radio1" type="radio" name="estrellas" value="5">
+                              <label for="radio1">★</label>
+                              <input id="radio2" type="radio" name="estrellas" value="4">
+                              <label for="radio2">★</label>
+                              <input id="radio3" type="radio" name="estrellas" value="3">
+                              <label for="radio3">★</label>
+                              <input id="radio4" type="radio" name="estrellas" value="2">
+                              <label for="radio4">★</label>
+                              <input id="radio5" type="radio" name="estrellas" value="1">
+                              <label for="radio5">★</label>
+                            </div>
+                        </form>
+                    <div class="home__main__producto--descripcion--comentario">
+                        <p><img src="/img/Logo-Garras-Amiga.png" alt="Foto de perfil">Nombre de usuario</p>
+                        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex repudiandae, quae dolores saepe numquam exercitationem at, et odit laborum dignissimos maiores consectetur, nemo dolore necessitatibus alias repellendus est nostrum non.</span>
+                    </div>                       
+                </div>
+            </div>
+        </article>               
+    </main>
+    <footer class="home__footer">
+        <div class="home__footer__divContainer home__footer__divContainer0">
+            <h2>Enlaces rapidos</h2>
+            <ul>
+                <li><a href="#">#Somos Garras Amigas</a></li>
+                <li><a href="#">#Guia de compra</a></li>
+                <li><a href="#">#Preguntas frecuentes</a></li>
+                <li><a href="#">#Politica de cambio o devolución</a></li>
+                <li><a href="#">#Contactanos</a></li>
+            </ul>
+        </div>
+        <div class="home__footer__divContainer1 home__footer__divContainer">
+            <h2>¿Necesitas ayuda?</h2>
+            <p>Estamos aqui para ayudarte a que tu experiencia con nosotros sea lo mas comoda posible</p>
+            <p>Ante cualquier duda, nuestros horarios de atencion es de lunes a viernes desde las 9:00am - 18:00pm</p>
+        </div>
+        <div class="home__footer__divContainer2 home__footer__divContainer">
+            <h2>¡Siguenos en nuestras redes!</h2>
+            <div class="home__footer__divContainer2--direccion">
+                <i class="fa-brands fa-whatsapp"></i>
+                <a href="#">Whatsapp</a>
+            </div>
+            <div class="home__footer__divContainer2--direccion">
+                <i class="fa-brands fa-square-facebook"></i>
+                <a href="#">Facebook</a>
+            </div>
+            <div class="home__footer__divContainer2--direccion">
+                <i class="fa-brands fa-instagram"></i>
+                <a href="#"></i>Instagram</a>
+            </div>
+        </div>
+        <div class="home__footer__divContainer2--textarea">
+            <form action="/" class="home__footer__divContainer2--textarea--form">
+                <h2>¡Dejanos tu comentario!</h2>
+                <textarea name="comentario" id="comentario" cols="40" rows="10" maxlength="300"></textarea>
+                <div class="home__footer__form__botones"> 
+                    <input class="footer__input__reset" type="reset" name="comentario" id="comentario" value="Reset">
+                    <input class="footer__input__submit" type="submit" name="comentario" id="comentario" value="Enviar">   
+                </div>
+            </form>
+        </div>
+    </footer>
+</body>
+</html>
