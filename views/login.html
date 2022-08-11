@@ -14,7 +14,66 @@
 <!-- HEADER -->
 
 <body>
-    
+    <header class="home__header">
+        <div class="home__header--header">
+
+            <div class="home__header--logo">
+                <a href="/"><img src="/img/garrasLogo.png" alt="logo"></a>
+            </div>
+            <div class="home__header--serch-bar--header">
+                <input type="text" placeholder="  Buscar productos, marcas">
+
+            </div>
+
+            <div class="home__header--btn__menu">
+                <label for="btn-menu"><i class="fa-solid fa-bars"></i></label>
+            </div>
+
+        </div>
+
+
+        <input type="checkbox" id="btn-menu">
+
+
+        <div class="home__header--container-menu">
+            <div class="home__header--cont-menu">
+
+
+                <div class="home__header--contacto">
+                    <a href="/login"><i class="fa-regular fa-circle-user"></i> Ingresa</a>
+                </div>
+                <div class="home__header--carrito">
+                    <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i> Mis compras</a>
+
+                </div>
+                <div class="home__header--serch-bar">
+                    <input type="text" placeholder="  Buscar productos, marcas">
+
+                </div>
+
+                <hr>
+                <nav>
+                    <ul>
+                        <li><a href="/productos">Productos </a></li>
+                        <li><a href="/dudas">Dudas?</a></li>
+                        <li><a href="/guia">Guía de compra</a></li>
+                        <li><a href="/contacto">Contacto</a></li>
+                        <li><a href="/talles">Guía de talles</a></li>
+                    </ul>
+
+                    <div>
+                        <img src="/img/gatoAcostado.png" width="200px">
+                    </div>
+
+                </nav>
+
+                <label for="btn-menu">✖️</label>
+            </div>
+        </div>
+
+
+
+    </header>
 
     <!-- MAIN -->
 
@@ -29,50 +88,55 @@
 
             <h1>Ingresa</h1>
 
-            <!-- <div class="main__login__container__text">
-                <p>¿Ya tenes un perfil ?</p><a href="/login">Iniciar Sesión</a>
-                
-            </div> -->
-            <form action="" class="main__login__form" method="">
-                <label for="">Email</label>
-                <input type="email" placeholder="miEmail@hola.com" name="email" />
-            <!-- <small  class="texto--error">El email es obligatorio</small> -->
+            <div class="main__login__iniciar">
+                <p>¿Aún no tenes una cuenta?</p><a href="/register">Registrate</a>
 
-                <label for="">Contraseña</label>
-                <input type="password" placeholder="************" name="contrasenia" />
+            </div>
+            <form action="" class="main__login__form" method="">
+
+                <!-- <label for="">Email</label> -->
+                <input type="email" placeholder="  EMAIL" name="email" />
+                <!-- <small  class="texto--error">El email es obligatorio</small> -->
+
+                <!-- <label for="">Contraseña</label> -->
+                <input type="password" placeholder="  CONTRASEÑA" name="contrasenia" />
                 <!-- <small  class="texto--error">El password debe contener entre 6 y 12 caracteres</small> -->
-             
+
 
                 <div class="main__login__botones__send">
-                    
-                    <button type="submit">Enviar</button>
+
+                    <button type="submit">INGRESAR!</button>
                 </div>
             </form>
 
-            <hr>
-            
-            <p >O Ingresa con</p>
-            
-            <div class="redes__sociales__f">
-                <a href=""><i class="fa-brands fa-facebook"></i>
-                    Ingresa con Facebook</a>
-                <!-- <button class="form__button form__button--send" type="submit">Registrate</button> -->
+            <div class="main__register__botones__redes">
+
+                <h5>O INGRESA CON</h5>
+
+                <div class="redes__sociales--fa   ">
+
+                    <a href=""><i class="fa-brands fa-facebook"></i> </a>
+                </div>
+
+                <div class="redes__sociales--insta  ">
+
+                    <a href=""><i class="fa-brands fa-instagram"></i> </a>
+                </div>
+
+                <div class="redes__sociales--go  ">
+
+                    <a href=""><i class="fa-brands fa-google-plus"></i> </a>
+
+
+                </div>
             </div>
-            <div class="redes__sociales__g ">
-                <a href=""><i class="fa-brands fa-google-plus"></i>
-                    Ingresa  con Google</a>
-                <!-- <button class="form__button form__button--send" type="submit">Registrate</button> -->
-            </div>
-            
+
         </section>
     </main>
-
    
+
+
+
 </body>
 
 </html>
-   
-
-   
-
-
