@@ -7,6 +7,4 @@ const {detail} = require('../controllers/productsControllers');
 
 router.get('/productDetail',detail)
 
-
-
 module.exports = router;
