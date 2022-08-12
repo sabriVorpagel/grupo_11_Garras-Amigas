@@ -18,11 +18,9 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-<<<<<<< HEAD
-app.use(express.static(path.join(__dirname,'..', 'public')));
-=======
+
 app.use(express.static(path.join(__dirname, '../public')));
->>>>>>> c072c8be55bd9c936d6cc3d9e50b9d65cf0e3f66
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
