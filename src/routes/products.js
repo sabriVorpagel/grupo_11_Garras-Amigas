@@ -5,6 +5,8 @@ const {productDetail, productCart} = require('../controllers/productsControllers
 
 /* /products */
 
-router.get('/productDetail', productDetail)
+router
+    .get('/productDetail', productDetail)
+    .get('/productCart', productCart)
 
 module.exports = router;
