@@ -1,5 +1,5 @@
 module.exports = {
-    productDetail: (req,res) => {
+    detail: (req,res) => {
         return res.render('productDetail')
     }
 }
