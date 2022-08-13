@@ -2,7 +2,7 @@
 .home__footer{
     display: flex;
     width: 100%;
-    background-color: var(--colorAzul);
+    background-color: #6F97B0;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: baseline;

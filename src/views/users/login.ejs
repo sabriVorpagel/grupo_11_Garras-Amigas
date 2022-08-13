@@ -1,37 +1,33 @@
 <%- include('../partials/head', {title: 'Login'}) %> 
 <body>
     <%- include('../partials/header') %> 
-    <main class="main__register">
-        <section class="main__register__container">
+    <main class="main__login">
+        <section class="main__login__container">
             <h1>Ingresa</h1>
-          <div class="main__register__container__text">
-                <p>¿No tienes un perfil ?</p><a href="/register">¡Registrate!</a>              
+            <div class="main__login__iniciar">
+                <p>¿Aún no tenes una cuenta?</p><a href="/users/register">Registrate</a>
             </div>
-            <form action="" class="main__register__form" method="">
-                <label for="">Email</label>
-                <input type="email" placeholder="miEmail@hola.com" name="email" />
-                <small  class="texto--error">El email es obligatorio</small>
-
-                <label for="">Contraseña</label>
-                <input type="password" placeholder="************" name="contrasenia" />
-                <small  class="texto--error">El password debe contener entre 6 y 12 caracteres</small>
-             
-                <div class="main__register__botones__send">
-                    <button type="submit">Enviar</button>
+            <form action="" class="main__login__form" method="">
+                <input type="email" placeholder="  EMAIL" name="email" />
+                <!-- <small  class="texto--error">El email es obligatorio</small> -->
+                <input type="password" placeholder="  CONTRASEÑA" name="contrasenia" />
+                <!-- <small  class="texto--error">El password debe contener entre 6 y 12 caracteres</small> -->
+                <div class="main__login__botones__send">
+                    <button type="submit">INGRESAR!</button>
                 </div>
             </form>
-            <hr>
-            <p>O Ingresa con</p>          
-            <div class="redes__sociales__f">
-                <a href=""><i class="fa-brands fa-facebook"></i>
-                    Ingresa con Facebook</a>
-                <!-- <button class="form__button form__button--send" type="submit">Registrate</button> -->
+            <div class="main__register__botones__redes">
+                <h5>O INGRESA CON</h5>
+                <div class="redes__sociales--fa   ">
+                    <a href=""><i class="fa-brands fa-facebook"></i> </a>
+                </div>
+                <div class="redes__sociales--insta  ">
+                    <a href=""><i class="fa-brands fa-instagram"></i> </a>
+                </div>
+                <div class="redes__sociales--go  ">
+                    <a href=""><i class="fa-brands fa-google-plus"></i> </a>
+                </div>
             </div>
-            <div class="redes__sociales__g ">
-                <a href=""><i class="fa-brands fa-google-plus"></i>
-                    Ingresa  con Google</a>
-                <!-- <button class="form__button form__button--send" type="submit">Registrate</button> -->
-            </div>      
         </section>
     </main>
     <%- include('../partials/footer') %> 
