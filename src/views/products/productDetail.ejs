@@ -3,18 +3,18 @@
     <%- include('../partials/header') %>
     <main class="home__main">
         <figure class="home__main__anuncio">
-            <img src="/img/Anuncio.png" alt="">
+            <img src="/images/Anuncio.png" alt="">
         </figure>
         <article class="home__main__producto">
             <h2>Titulo del producto</h2>
             <div class="home__main__producto-img">  
                 <figure class="home__main__producto-imagen">
-                    <img src="/img/kit-collar.jpeg" alt="">
+                    <img src="/images/kit-collar.jpeg" alt="">
                 </figure>
                 <div class="home__main__producto-imagenes">
-                    <img src="/img/kit-completo-1.jpeg" alt="">
-                    <img src="/img/kit-completo-2.jpeg" alt="">
-                    <img src="/img/Correa.jpeg" alt="">
+                    <img src="/images/kit-completo-1.jpeg" alt="">
+                    <img src="/images/kit-completo-2.jpeg" alt="">
+                    <img src="/images/Correa.jpeg" alt="">
                 </div>              
             </div>
         </article>  
@@ -34,6 +34,9 @@
                 </form>   
                 <form action="/products/cart" class="home__main__producto--descripcion-botones color-boton-verde">
                     <input type="submit" name="agregarCarrito" id="agregarCarrito" value="Agregar al carrito"></a>
+                </form>
+                <form action="/products/edit" class="home__main__producto--descripcion-botones color-boton-rosa">
+                    <input type="submit" name="editar" id="editar" value="Editar producto">
                 </form>
             </div>
         </article>

@@ -1,0 +1,150 @@
+.main__create{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+.main__caja{
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    background-color: rgba(5, 7, 12, 0.3);
+    padding: 10px;
+}
+.main__caja__formulario{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.main__formulario__cajas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+.main__formulario__cajas label{
+    font-size: 14px;
+    width: 100%;
+}
+.main__formulario__cajas input{
+    width: 80%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+.main__formulario__cajasSelectoras{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+.main__formulario__cajasSelectoras select{
+    width: 80%;
+    padding: 5px 0;
+    border: none;
+    color: black;
+    border-radius: 5px;
+}
+.main__formulario__cajasSelectoras select#colores, .main__formulario__cajasSelectoras select#talles{
+    width: 65%;
+}
+.main__formulario__cajaImagen{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.main__formulario__cajaImagen input#imagenProduct{
+    width: 80%;
+}
+.main__formulario__cajaPrecio, .main__formulario__cajaDescuento{
+    width: 40%;
+    padding: 5px;
+}
+.main__formulario__cajaPrecio input{
+    border: none;
+    text-align: center;
+    background-color: #fff;
+    width: 60%;
+    padding: 5px;
+    border-radius: 5px;
+}
+.main__formulario__cajaDescuento input{
+    width: 40%;
+    text-align: center;
+    background-color: #fff;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+.main__formulario__botones{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+.main__formulario__botones input{
+    width: 50%;
+    padding: 5px;
+    border: none;
+    border-radius: 7px;
+}
+.reset{
+    color: black;
+    background-color: var(--colorRosa);
+}
+.submit{
+    color: black;
+    background-color: var(--colorVerde);
+}
+
+@media (min-width: 768px){
+    .main__caja{
+        width: 80%;
+    }
+    .main__caja__formulario{
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .main__formulario__cajas{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 50%;
+    }
+    .main__formulario__cajasSelectoras{
+        width: 40%;
+    }
+    
+    .main__formulario__cajaImagen{
+        width: 40%;
+    }
+    .main__formulario__cajaPrecio, .main__formulario__cajaDescuento{
+        width: 20%;
+    }
+    .main__formulario__cajaPrecio input{
+        width: 80%;
+    }
+    .main__formulario__cajaDescuento input{
+        width: 80%;
+    }
+    .main__formulario__botones{
+        width: 50%;
+        flex-direction: column;
+    }
+}
+@media (min-width: 1024px){
+    .main__caja{
+        width: 50%;
+        padding: 20px 0;
+    }
+}

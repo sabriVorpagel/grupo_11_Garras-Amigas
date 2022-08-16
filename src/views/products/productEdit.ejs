@@ -1,8 +1,66 @@
 <%- include('../partials/head', {title: 'Editar'}) %> 
 <body>
     <%- include('../partials/header') %>
-    <main>
-        
+    <main class="main__create">
+        <div class="main__caja">
+            <form action="/" class="main__caja__formulario">
+                <div class="main__formulario__cajas">
+                    <label for="producto">Nombre del producto</label>
+                    <input type="text" name="producto" id="producto">
+                </div>
+                <div class="main__formulario__cajas">
+                    <label for="descripcion">Descripción</label>
+                    <input type="text" name="descripcion" id="descripcion" maxlength="1000">
+                </div>
+                <div class="main__formulario__cajasSelectoras">
+                    <select name="categoria" id="categoria">
+                        <option value="categoria">--Selecciona una categoria--</option>
+                        <option value="comida">Comida</option>
+                        <option value="juguetes">Juguetes</option>
+                        <option value="ofertas">Ofertas</option>
+                        <option value="paseo">Paseo</option>
+                        <option value="golosinas">Golosinas</option>
+                    </select>
+                </div>
+                <div class="main__formulario__cajaImagen">
+                    <label for="imagenProduct">Selecciona imagen del producto</label>
+                    <input type="file" name="imagenProduct" id="imagenProduct">
+                </div>
+                <div class="main__formulario__cajasSelectoras">
+                    <select name="colores" id="colores">
+                        <option value="Colores" selected>--Selecciona un color--</option>
+                        <option value="Color1">Rosa</option>
+                        <option value="Color2">Amarrillo</option>
+                        <option value="Color3">Verde</option>
+                        <option value="Color4">Celeste</option>
+                        <option value="Color5">Azul</option>
+                        <option value="Color6">Celeste Claro</option>
+                        <option value="Color7">Blanco</option>
+                    </select>
+                </div>
+                <div class="main__formulario__cajasSelectoras">
+                    <select name="talles" id="talles">
+                        <option value="talle">--Selecciona un talle--</option>
+                        <option value="Talle1">X</option>
+                        <option value="Talle2">XX</option>
+                        <option value="Talle3">XXL</option>
+                    </select>
+                </div>
+                <div class="main__formulario__cajaPrecio">
+                    <label for="precio">$</label>
+                    <input type="number" name="precio" id="precio" value="0"  min="0" max="9999999">
+                </div>
+                <div class="main__formulario__cajaDescuento">
+                    <label for="descuento">%</label>
+                    <input type="number" name="descuento" id="descuento" min="0" max="100" value="0">
+                </div>
+                
+                <div class="main__formulario__botones">
+                    <input type="submit" class="submit" value="Guardar Cambios">
+                    <input type="reset" class="reset" value="Cancelar Cambios">  
+                </div>
+            </form>
+        </div>
     </main>
     <%- include('../partials/footer') %>
 </body>

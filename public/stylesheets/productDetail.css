@@ -147,6 +147,10 @@
     background-color: var(--colorVerde);
     color: #fff;
 }
+.color-boton-rosa input{
+    background-color: var(--colorRosa);
+    color: #fff;
+}
 .home__main__producto--detalles{
     display: flex;
     justify-content: center;
