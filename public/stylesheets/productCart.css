@@ -12,11 +12,6 @@
     --textoSizePrecios: 18px;
     --textoSizeProducto: 16px
 }
-*{
-    box-sizing: border-box;
-    margin: 0;
-    font-family: 'Roboto';
-}
 /*CART | MAIN*/
 .cart__main{
     display: flex;
