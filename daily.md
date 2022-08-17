@@ -1,0 +1,5 @@
+ ## _** Implementar daily Sprint 3**_
+
+En este Sprint implementamos mucho más las dailys, ya decidimos codear juntos y poder darnos una mano ante cualquier circunstancia. Nos juntamos  la primera vez para dividir las tareas, coordinar horarios, ya que al finalizar el Sprint 2 nos juntamos y discutimos con respecto a la falta de comunicación es estábamos teniendo y eso nos estaba dificultando llegar a saber que había hecho nuestro compañero. 
+Luego de tener las tareas separadas  coordinamos en juntarnos todos los días un rato después de clases, esto nos facilitó el trabajo como grupo y poder tener más clara la situación de cada integrante del grupo. Mediante cualquier circunstancia en el proyecto entre todos tratamos de resolverla. 
+Los impedimentos que tuvimos fueron cuando tuvimos que rearmar las rutas del proyecto, como grupo tratamos de resolver el problema observando trabajos realizados anteriormente con ese contenido, y una vez resuelto el inconveniente decidimos hablar con los profesores para saber si estaba realizado de la forma correcta.  

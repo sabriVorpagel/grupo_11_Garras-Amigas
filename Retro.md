@@ -1,4 +1,4 @@
-# _**Retrospectiva**_
+# _**Retrospectiva 1**_
 
 ## _**Comenzar a hacer**_
 
@@ -26,3 +26,12 @@
 ### _**Dejar de hacer**_
 
 > Mandar informacion importante por whatsapp.
+
+# _**Retrospectiva 2**_
+
+## _**Hacer más**_
+
+> Realizar más dailys diariamente para mantenernos al tanto del trabajo del compañero.
+
+> Comunicar el progreso individual.  
+
