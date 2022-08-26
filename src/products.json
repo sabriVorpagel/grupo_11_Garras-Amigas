@@ -1,0 +1,332 @@
+[
+    {
+    "id": 1,
+    "name": "LLavero Bolsitas",
+    "price": 1500,
+    "discount": 25,
+    "category": "producto",
+    "description": "...",
+    "stock": 30,
+    "image": "bolcitas.productos.jpeg"
+    },
+    {
+    "id": 2,
+    "name": "Cartera Camina",
+    "price": 25000,
+    "discount": 10,
+    "category": "producto",
+    "description": "...",
+    "stock": 15,
+    "image": "cartera.producto.jpeg"
+    },
+    {
+    "id": 3,
+    "name": "Casita Camina",
+    "price": 15000,
+    "discount": 20,
+    "category": "producto",
+    "description": "...",
+    "stock": 46,
+    "image": "casita.producto.jpeg"
+    },
+    {
+    "id": 4,
+    "name": "Collar Nudo",
+    "price": 500,
+    "discount": 0,
+    "category": "producto",
+    "description": "...",
+    "stock": 100,
+    "image": "collar.nudo.producto.jpeg"
+    },
+    {
+    "id": 5,
+    "name": "Collar kit x3",
+    "price": 1500,
+    "discount": 15,
+    "category": "producto",
+    "description": "...",
+    "stock": 24,
+    "image": "collar.producto.jpeg"
+    },
+    {
+    "id": 6,
+    "name": "Collar pompon",
+    "price": 760,
+    "discount": 0,
+    "category": "producto",
+    "description": "...",
+    "stock": 74,
+    "image": "collar.rosa.producto.jpeg"
+    },
+    {
+    "id": 7,
+    "name": "Correa extendible",
+    "price": 1600,
+    "discount": 5,
+    "category": "producto",
+    "description": "...",
+    "stock": 10,
+    "image": "correa.producto.jpeg"
+    },
+    {
+    "id": 8,
+    "name": "Correa reforsada",
+    "price": 1200,
+    "discount": 0,
+    "category": "producto",
+    "description": "...",
+    "stock": 7,
+    "image": "correa.verde.producto.jpeg"
+    },
+    {
+    "id": 9,
+    "name": "Kit Dog completo",
+    "price": 3200,
+    "discount": 25,
+    "category": "producto",
+    "description": "...",
+    "stock": 60,
+    "image": "kit.correa.producto.jpeg"
+    },
+    {
+    "id": 10,
+    "name": "Kit plato mesa",
+    "price": 6800,
+    "discount": 25,
+    "category": "producto",
+    "description": "...",
+    "stock": 4,
+    "image": "kit.platos.productos.jpeg"
+    },
+    {
+    "id": 11,
+    "name": "Manta para el auto",
+    "price": 10000,
+    "discount": 20,
+    "category": "producto",
+    "description": "...",
+    "stock": 40,
+    "image": "manta.producto.jpeg"
+    },
+    {
+    "id": 12,
+    "name": "Mochila Viajera",
+    "price": 8000,
+    "discount": 50,
+    "category": "producto",
+    "description": "...",
+    "stock": 55,
+    "image": "mochila.producto.jpeg"
+    },
+    {
+    "id": 13,
+    "name": "Peine",
+    "price": 400,
+    "discount": 0,
+    "category": "producto",
+    "description": "...",
+    "stock": 130,
+    "image": "peine.producto.jpeg"
+    },
+    {
+    "id": 14,
+    "name": "Kit platitos cat",
+    "price": 7400,
+    "discount": 20,
+    "category": "producto",
+    "description": "...",
+    "stock": 32,
+    "image": "platitos.cat.productos.jpeg"
+    },
+    {
+    "id": 15,
+    "name": "Plato individual",
+    "price": 500,
+    "discount": 20,
+    "category": "producto",
+    "description": "...",
+    "stock": 100,
+    "image": "platitos.colores.producto.jpeg"
+    },
+    {
+    "id": 16,
+    "name": "Kit Platos nude",
+    "price": 1500,
+    "discount": 0,
+    "category": "producto",
+    "description": "...",
+    "stock": 150,
+    "image": "platitos.jpeg"
+    },
+    {
+    "id": 17,
+    "name": "Deportivo",
+    "price": 2500,
+    "discount": 5,
+    "category": "ropa",
+    "description": "...",
+    "stock": 32,
+    "image": "ropita.cat.jpeg"
+    },
+    {
+    "id": 18,
+    "name": "Dino Jogging",
+    "price": 3000,
+    "discount": 35,
+    "category": "ropa",
+    "description": "...",
+    "stock": 12,
+    "image": "ropita.dino.colores.jpeg"
+    },
+    {
+    "id": 19,
+    "name": "Dino Disfras",
+    "price": 1800,
+    "discount": 16,
+    "category": "ropa",
+    "description": "...",
+    "stock": 46,
+    "image": "ropita.dino.jpeg"
+    },
+    {
+    "id": 20,
+    "name": "Buzo Oversize",
+    "price": 2600,
+    "discount": 50,
+    "category": "ropa",
+    "description": "...",
+    "stock": 160,
+    "image": "ropita.dog.jpg"
+    },
+    {
+    "id": 21,
+    "name": "Poncho",
+    "price": 2000,
+    "discount": 0,
+    "category": "ropa",
+    "description": "...",
+    "stock": 16,
+    "image": "ropita.poncho.jpeg"
+    },
+    {
+    "id": 22,
+    "name": "Camita dog",
+    "price": 11000,
+    "discount": 30,
+    "category": "camas",
+    "description": "...",
+    "stock": 160,
+    "image": "camita.amarrilla.jpeg"
+    },
+    {
+    "id": 23,
+    "name": "Camita Plegable",
+    "price": 12500,
+    "discount": 10,
+    "category": "camas",
+    "description": "...",
+    "stock": 50,
+    "image": "camita.cat.jpg"
+    },
+    {
+    "id": 24,
+    "name": "Camita Nudo",
+    "price": 14000,
+    "discount": 25,
+    "category": "camas",
+    "description": "...",
+    "stock": 70,
+    "image": "camita.dog.jpg"
+    },
+    {
+    "id": 25,
+    "name": "Camita Viajera",
+    "price": 8000,
+    "discount": 40,
+    "category": "camas",
+    "description": "...",
+    "stock": 50,
+    "image": "camita.colchones.jpg"
+    },
+    {
+    "id": 26,
+    "name": "Camita Piña",
+    "price": 12000,
+    "discount": 0,
+    "category": "camas",
+    "description": "...",
+    "stock": 25,
+    "image": "camita.piña.jpeg"
+    },
+    {
+    "id": 27,
+    "name": "Camita sillon",
+    "price": 13500,
+    "discount": 45,
+    "category": "camas",
+    "description": "...",
+    "stock": 17,
+    "image": "camita.sillon.jpeg"
+    },
+    {
+    "id": 28,
+    "name": "Colchon",
+    "price": 10000,
+    "discount": 0,
+    "category": "camas",
+    "description": "...",
+    "stock": 70,
+    "image": "camitas.duo.jpeg"
+    },
+    {
+    "id": 29,
+    "name": "Juguete cat",
+    "price": 13500,
+    "discount": 25,
+    "category": "juguetes",
+    "description": "...",
+    "stock": 53,
+    "image": "juguete.cat.jpg"
+    },
+    {
+    "id": 30,
+    "name": "Huesito ",
+    "price": 1300,
+    "discount": 15,
+    "category": "juguetes",
+    "description": "...",
+    "stock": 13,
+    "image": "juguete.dog.1.jpg"
+    },
+    {
+    "id": 31,
+    "name": "Pelota Nudo",
+    "price": 3500,
+    "discount": 25,
+    "category": "juguetes",
+    "description": "...",
+    "stock": 93,
+    "image": "juguete.dog.2.jpg"
+    },
+    {
+    "id": 32,
+    "name": "Pelotas",
+    "price": 3700,
+    "discount": 30,
+    "category": "juguetes",
+    "description": "...",
+    "stock": 33,
+    "image": "juguete.dog.3.jpg"
+    },
+    {
+    "id": 33,
+    "name": " Kit Huesitos Pelotas",
+    "price": 3700,
+    "discount": 0,
+    "category": "juguetes",
+    "description": "...",
+    "stock": 56,
+    "image": "juguete.kit.jpeg"
+    }
+]
