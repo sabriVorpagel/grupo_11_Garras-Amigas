@@ -3,34 +3,43 @@
         <div class="home__header--logo">
             <a href="/"><img src="/images/garrasLogo.png" alt="logo"></a>
         </div>
-        <div class="home__header--serch-bar--header">
-            <input type="text" placeholder="  Buscar productos, marcas">
-        </div>
-        <div class="home__header--btn__menu">
-            <label for="btn-menu"><i class="fa-solid fa-bars"></i></label>
+        <div class="home__header--menu">
+           <label for="btn-menu"><img src="/images/menuRedondo.png" width="45"> </label>
+            
         </div>
     </div>
+    <form action="" class="home__header--search--header">
+        <input type="text" placeholder="  Buscar productos, marcas">
+        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </form>
     <input type="checkbox" id="btn-menu">
     <div class="home__header--container-menu">
+
+       
         <div class="home__header--cont-menu">
             <div class="home__header--contacto">
-                <a href="/users/login"><i class="fa-regular fa-circle-user"></i> Ingresa</a>
+                <a href="/users/login"><i class="fa-solid fa-person-walking-arrow-right"></i>   Ingresa</a>
+            </div>
+            <div class="home__header--edit">
+                <a href="/users/edit"><i class="fa-regular fa-circle-user"></i>   Edita tu perfil</a>
             </div>
             <div class="home__header--carrito">
-                <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i>  Mis compras</a>
+                <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i>    Mis compras</a>
             </div>
-            <div class="home__header--serch-bar">
+        
+            <form action="" class="home__header--search">
                 <input type="text" placeholder="  Buscar productos, marcas">
-            </div>
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
             <hr>
             <nav>
                 <ul>
-                    <li><a href="/productos">Productos </a></li>
-                    <li><a href="/dudas">Dudas?</a></li>
-                    <li><a href="/guia">Guía de compra</a></li>
-                    <li><a href="/contacto">Contacto</a></li>
-                    <li><a href="/talles">Guía de talles</a></li>
-                    <li><a href="/products/create">Agregar producto</a></li>
+                    <li><a href="/productos"> • PRODUCTOS </a></li>
+                    <li><a href="/dudas"> • DUDAS?</a></li>
+                    <li><a href="/guia"> • GUIA DE COMPRAS</a></li>
+                    <li><a href="/contacto"> • CONTACTO</a></li>
+                    <li><a href="/talles"> • GUIA DE TALLES</a></li>
+                    <li><a href="/products/create"> • AGREGAR PRODUCTO</a></li>
                 </ul>
                 <div>
                     <img src="/images/gatoAcostado.png" width="200px">

@@ -1,3 +1,6 @@
+// const {users} = require ('../data/users')
+
+
 module.exports = {
     register : (req,res) => {
         return res.render('users/register')
@@ -5,7 +8,7 @@ module.exports = {
     login : (req,res) => {
         return res.render('users/login')
     },
-    edit :(req, res) => {
-        return res.render('users/edit')
-    }
+    // edit :(req, res) => {
+    //     return res.render('users/registerEdit')
+    // }
 }
