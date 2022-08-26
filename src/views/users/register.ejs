@@ -7,16 +7,64 @@
             <div class="main__register__iniciar">
                 <p>¿Ya tenes un perfil ?</p><a href="/users/login">Inicia Sesión</a>
             </div>
-            <form action="" class="main__register__form" method="">
-                <input placeholder="  NOMBRE" type="text" id="nombre" autocomplete="off" name="firstName">
-                <!-- <small  class="texto--error">El nombre es obligatorio</small> -->
-                <input placeholder="  EMAIL" type="email" id="email" name="email">
-                <!-- <small  class="texto--error">El email es obligatorio</small> -->
-                <input placeholder="  CONTRASEÑA" type="password" id="password" name="password">
-                <!-- <small  class="texto--error">El password debe contener entre 6 y 12 caracteres</small> -->
-                <a href="#" class="contraseña">
-                    <h5> ¿Olvidaste tu contraseña? </h5>
-                </a>
+            <form  action=""  method="" class="main__register__form">
+
+                <div class="main__register__input">
+                    <input placeholder="  NOMBRE" type="text" id="firstName" atocomplete="off" name="firstName">
+                    <!-- <small  class="texto--error">El nombre es obligatorio</small> -->
+                </div>
+
+                <div class="main__register__input">
+                    <input placeholder="  APELLIDO" type="text" id="lastName" autocomplete="off" name="lastName">
+                    <!-- <small  class="texto--error">El apellido es obligatorio</small> -->
+                </div>
+
+                <div class="main__register__input ">
+                    <input placeholder="  NÚMERO DE TELEFONO" type="number" id="phone" autocomplete="off" name="phone">
+                    <!-- <small  class="texto--error">El número de teléfono es obligatorio</small> -->
+                </div>
+
+                <div class="main__register__input ">
+                    <input placeholder="  EMAIL" type="email" id="email" name="email">
+                    <!-- <small  class="texto--error">El email es obligatorio</small> -->
+                </div>
+
+                <div class="main__register__input">
+                    <input placeholder="  CONTRASEÑA" type="password" id="password" name="password">
+                    <!-- <small  class="texto--error">La contraseña debe contener entre 6 y 12 caracteres</small> -->
+                </div>
+
+                <div class="main__register__input">
+                    <input placeholder="  REPETIR CONTRASEÑA" type="password" id="re-password" autocomplete="off" name="re-password">
+                    <!-- <small  class="texto--error">Las contraseñas no coinciden </small> -->
+                </div>
+
+                <div class="main__register__input">
+                    <input placeholder="  DIRECCIÓN" type="text" id="direction" autocomplete="off" name="direction">
+                    <!-- <small  class="texto--error">La dirección es obligatorio</small> -->
+                </div>
+
+                <div class="main__register__input main__register__input--numeros">
+                    <input placeholder="  NÚMERO" type="number" id="number" autocomplete="off" name="number">
+                    <!-- <small  class="texto--error">El número es obligatorio</small> -->
+                </div>
+
+                <div class="main__register__input main__register__input--numeros">
+                    <input placeholder="  CODIGO POSTAL" type="number" id="cp" autocomplete="off" name="cp">
+                    <!-- <small  class="texto--error">El codigo postal es obligatorio</small> -->
+                </div>
+
+                <div class="main__register__input">
+                    <input placeholder="  LOCALIDAD" type="text" id="location" autocomplete="off" name="location">
+                    <!-- <small  class="texto--error">La localidad es obligatorio</small> -->
+                </div>
+
+                <div class="main__register__input">
+                    <input placeholder="  PROVINCIA" type="text" id="province" autocomplete="off" name="province">
+                    <!-- <small  class="texto--error">La provincia es obligatoria</small> -->
+                </div>
+
+                <!-- <a href="#" class="main__register__contraseña" >¿Olvidaste tu contraseña?</a> -->
 
                 <div class="main__register__botones__send">
                     <button type="submit">ENVIAR!</button>
@@ -24,13 +72,13 @@
             </form>
             <div class="main__register__botones__redes">
                 <h5>O REGISTRATE CON</h5>
-                <div class="redes__sociales--fa   ">
+                <div>
                     <a href=""><i class="fa-brands fa-facebook"></i> </a>
                 </div>
-                <div class="redes__sociales--insta  ">
+                <div>
                     <a href=""><i class="fa-brands fa-instagram"></i> </a>
                 </div>
-                <div class="redes__sociales--go  ">
+                <div>
                     <a href=""><i class="fa-brands fa-google-plus"></i> </a>
                 </div>
             </div>

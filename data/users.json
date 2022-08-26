@@ -1,0 +1,18 @@
+[
+    {
+        "id": "id",
+        "name": "firstName",
+        "lastName": "lastName",
+        "phone" : "phone",
+        "email": "email",
+        "password": "password",
+        "re-password" : "re-password",
+        "direction" : "direction",
+        "number" : "number",
+        "cp" : "cp",
+        "province" : "province",
+        "location" : "location",
+        "image": "image"
+
+    }
+]
