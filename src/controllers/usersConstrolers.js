@@ -4,5 +4,8 @@ module.exports = {
     },
     login : (req,res) => {
         return res.render('users/login')
+    },
+    edit :(req, res) => {
+        return res.render('users/edit')
     }
 }

@@ -1,17 +1,17 @@
 /* general */
 
 :root {
-        --colorRosa:#FF6B6B;
-        --colorAmarrillo:#FFD93D;
-        --colorVerde: #6BCB77;
-        --colorCeleste: #4D96FF;
-        --colorCelesteClaro: #6998AB;
-        --colorAzul: #406882;
-    
-        --textoSizeCuerpo: 15px;
-        --textoSizeTitulares: 24px;
-        --textoSizePrecios: 18px;
-        --textoSizeProducto: 16px 
+    --colorRosa: #FF6B6B;
+    --colorAmarrillo: #FFD93D;
+    --colorVerde: #6BCB77;
+    --colorCeleste: #4D96FF;
+    --colorCelesteClaro: #6998AB;
+    --colorAzul: #406882;
+
+    --textoSizeCuerpo: 15px;
+    --textoSizeTitulares: 24px;
+    --textoSizePrecios: 18px;
+    --textoSizeProducto: 16px
 }
 
 * {
@@ -19,6 +19,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 /* main */
 .main__login {
     padding: 0 10px;
@@ -34,32 +35,38 @@
     background-size: cover;
     background-attachment: scroll;
 }
+
 .main__login__container {
     background-color: rgba(5, 7, 12, 0.3);
     border: solid 1px #fff;
     margin: 10px 0;
     border-radius: 30px;
 }
+
 .main__login h1 {
     text-align: center;
-    font-size: 15px;
+    font-size: 25px;
     color: #fff;
     font-weight: 400;
     letter-spacing: 15px;
     margin-top: 15px;
     margin-bottom: 16px;
 }
+
 .main__login__iniciar {
     width: 100%;
     text-align: center;
+    color: #fff;
 
 }
+
 .main__login__inciar p {
     text-align: center;
     font-size: 12px;
     color: #fff;
     margin-top: 20px;
 }
+
 .main__login__iniciar a {
     width: 40%;
     font-size: 15px;
@@ -67,6 +74,7 @@
     margin-bottom: 20px;
     align-items: center;
 }
+
 /* .texto--error{
     color: red;
     font-size: 8px;
@@ -74,22 +82,29 @@
 } */
 .main__login__form {
     gap: 40px;
-    margin: 20px 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    justify-content: space-evenly;
 }
+
 .main__login__form input {
-    width: 100%;
+    width: 90%;
     height: 46px;
     background: rgba(5, 7, 12, 0.1);
     border: none;
-    border-radius: 50px;
+    border-radius: 5px;
     margin-bottom: 40px;
 }
+
 .main__login__form ::placeholder {
     color: #fff;
 }
+
 .main__login__botones__send button {
     width: 100%;
-    border-radius: 50px;
+    border-radius: 5px;
     align-items: center;
     transition: all 450ms;
     color: #fff;
@@ -97,7 +112,9 @@
     height: 46px;
     border: solid 1px #fff;
     margin-bottom: 20px;
+    padding: 0 95px;
 }
+
 .main__login__botones__send button:hover {
     background-color: #6F97B0;
     color: #fff;
@@ -105,6 +122,7 @@
         background-color, 0.5s,
         color, 0.5;
 }
+
 .main__login__botones__redes {
     display: flex;
     flex-wrap: wrap;
@@ -117,6 +135,7 @@
     margin-bottom: 23px;
     padding: 10px;
 }
+
 .main__login__botones__redes h5 {
     color: #fff;
     width: 100%;
@@ -124,18 +143,21 @@
     font-size: 12px;
     text-align: center;
 }
+
 .redes__sociales--fa i {
     margin-top: 40px;
     width: 15%;
     font-size: 30px;
     color: #FFF;
 }
+
 .redes__sociales--go i {
     margin-top: 40px;
     width: 15%;
     font-size: 30px;
     color: #FFF;
 }
+
 .redes__sociales--insta i {
     margin-top: 40px;
     width: 15%;
@@ -145,39 +167,119 @@
 
 /*TABLET*/
 @media (min-width:768px) {
+
     .main__login {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: flex-end;
+        width: 100%;
+        padding: 50px;
+        background-position: 50% 88%;
     }
+
     .main__login__container {
-         background-repeat: no-repeat;
-        background-position: inherit;
-        width: 50%;
-        background-size: contain;
-        background-attachment: scroll;
-        margin-top: 60px;
+        width: 70%;
+        flex-direction: row;
+        justify-content: space-evenly;
     }
-    .main__login__container__text a {
-        color: #3b5998;
-        font-size: 20px;
+
+    .main__login h1 {
+        letter-spacing: 20px;
+        font-size: 25px;
     }
-    .main__login__form {
-        width: 94%;
-    }
-    .redes__sociales__g {
-        width: 50%;
-    }
-    .redes__sociales__f {
-        width: 50%;
-    }
+
+}
+
+.main__login__iniciar {
+    margin-bottom: 50px;
+}
+
+.main__login__iniciar p {
+    font-size: 21px;
+    color: #fff;
+    margin: 15px;
+    letter-spacing: 5px;
+}
+
+.main__login__iniciar a {
+    font-size: 24px;
+}
+
+.main__login__form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.main__login__input {
+    width: 50%;
+    margin: 0 px;
+}
+
+.main__login__input--numeros {
+    width: 25%;
+    justify-content: space-evenly;
+}
+
+.main__login__form ::placeholder {
+    font-size: 10px;
 }
 
 
+@media(min-width:1024px) {
+
+    .main__login {
+        width: 100%;
+        padding: 50px;
+        background-position: 100% 100%;
+    }
+
+    .main__login__container {
+        width: 50%;
+        margin-left: auto;
+    }
+
+    .main__login h1 {
+        text-align: center;
+        width: 100%;
+        letter-spacing: 20px;
+        font-size: 40px;
+
+    }
+
+    .main__login__iniciar {
+        margin-bottom: 50px;
+    }
+
+    .main__login__iniciar p {
+        font-size: 20px;
+        margin: 15px;
+        letter-spacing: 9px;
+    }
+
+    .main__login__iniciar a {
+        font-size: 28px;
+    }
+
+    .main__login__form {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .main__login__input {
+        width: 50%;
+        margin: 0 px;
+    }
+
+    .main__login__input--numeros {
+        width: 25%;
+        justify-content: space-evenly;
+    }
+
+    .main__login__form ::placeholder {
+        font-size: 10px;
+    }
 
 
 
- 
-
-
+}
