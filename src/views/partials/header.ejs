@@ -3,19 +3,43 @@
         <div class="home__header--logo">
             <a href="/"><img src="/images/garrasLogo.png" alt="logo"></a>
         </div>
+        <form action="" class="home__header--search--header">
+            <input type="text" placeholder="  Buscar productos, marcas">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
         <div class="home__header--menu">
-           <label for="btn-menu"><img src="/images/menuRedondo.png" width="45"> </label>
-            
+            <button></button><label for="btn-menu"><i class="fa-solid fa-bars"></i></label></button>
         </div>
-    </div>
-    <form action="" class="home__header--search--header">
-        <input type="text" placeholder="  Buscar productos, marcas">
-        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-    </form>
-    <input type="checkbox" id="btn-menu">
-    <div class="home__header--container-menu">
+        <div class="home__header--favicon">
+            <div class="home__header--contacto--2">
+                <a href="/users/login"><i class="fa-solid fa-person-walking-arrow-right"></i> </a>
+            </div>
+            <div class="home__header--edit--2">
+                <a href="/users/edit"><i class="fa-regular fa-circle-user"></i>  </a>
+            </div>
+            <div class="home__header--carrito--2">
+                <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i> </a>
+            </div>
+        </div>
 
-       
+    </div>
+    
+    <div class="home__header--header--2">
+        <nav class="home__header__nav--2">
+            <ul>
+                <li><a href="/productos"> PRODUCTOS </a></li>
+                <li><a href="/dudas"> DUDAS?</a></li>
+                <li><a href="/guia"> GUIA DE COMPRAS</a></li>
+                <li><a href="/contacto">CONTACTO</a></li>
+                <li><a href="/talles">GUIA DE TALLES</a></li>
+                <li><a href="/products/create">AGREGAR PRODUCTO</a></li>
+            </ul>       
+        </nav>
+    </div>
+
+    <input type="checkbox" id="btn-menu">
+    
+    <div class="home__header--container-menu">
         <div class="home__header--cont-menu">
             <div class="home__header--contacto">
                 <a href="/users/login"><i class="fa-solid fa-person-walking-arrow-right"></i>   Ingresa</a>

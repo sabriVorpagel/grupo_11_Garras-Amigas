@@ -146,6 +146,7 @@
         width: 100%;
         flex-direction: row;
         justify-content: space-evenly;
+        margin-left: auto;
     }
   
     .main__register h1 {
@@ -207,7 +208,8 @@
         text-align: center;
         width: 100%;
         letter-spacing: 20px;
-        font-size: 40px;
+        font-size: 20px;
+        
 
     }
     .main__register__iniciar {

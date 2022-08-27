@@ -169,71 +169,78 @@
 @media (min-width:768px) {
 
     .main__login {
-        width: 100%;
-        padding: 50px;
-        background-position: 50% 88%;
+        /* width: 100%; */
+        padding: 0 50px;
+        background-position: 60% 100%;
     }
 
     .main__login__container {
-        width: 70%;
-        flex-direction: row;
-        justify-content: space-evenly;
+        width: 50%;
+        margin-left: auto;
     }
+    
 
     .main__login h1 {
         letter-spacing: 20px;
         font-size: 25px;
     }
 
+    .main__login__iniciar {
+        margin-bottom: 50px;
+    }
+    
+    .main__login__iniciar p {
+        font-size: 15px;
+        color: #fff;
+        margin: 15px;
+        letter-spacing: 5px;
+    }
+    
+    .main__login__iniciar a {
+        font-size: 24px;
+    }
+    
+    .main__login__form {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        gap:0%;
+        justify-content: space-evenly;
+    }
+    
+    .main__login__input {
+        width: 50%;
+        margin: 0 px;
+    }
+    
+    .main__login__input--numeros {
+        width: 25%;
+        justify-content: space-evenly;
+    }
+    
+    .main__login__form ::placeholder {
+        font-size: 10px;
+    }
+
 }
 
-.main__login__iniciar {
-    margin-bottom: 50px;
-}
 
-.main__login__iniciar p {
-    font-size: 21px;
-    color: #fff;
-    margin: 15px;
-    letter-spacing: 5px;
-}
-
-.main__login__iniciar a {
-    font-size: 24px;
-}
-
-.main__login__form {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-evenly;
-}
-
-.main__login__input {
-    width: 50%;
-    margin: 0 px;
-}
-
-.main__login__input--numeros {
-    width: 25%;
-    justify-content: space-evenly;
-}
-
-.main__login__form ::placeholder {
-    font-size: 10px;
-}
 
 
 @media(min-width:1024px) {
 
+    .main__login{
+        padding: 0 50px;
+    }
+
     .main__login {
         width: 100%;
         padding: 50px;
-        background-position: 100% 100%;
+        background-position: 0 85%;
     }
 
     .main__login__container {
-        width: 50%;
+        width: 40%;
         margin-left: auto;
     }
 
@@ -267,7 +274,7 @@
     }
 
     .main__login__input {
-        width: 50%;
+        width: 30%;
         margin: 0 px;
     }
 

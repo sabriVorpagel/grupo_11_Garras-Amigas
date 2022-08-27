@@ -1,6 +1,15 @@
+const {loadProducts} = require('../data/db_Module');
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
 module.exports = {
-    index: (req, res) => {
-      return res.render("index");
-    }
-  };
   
+  index :  (req, res ) => {
+    const products = loadProducts();
+      res.render('index', {
+        products,
+        toThousand
+    });
+  },
+};
+  
+
