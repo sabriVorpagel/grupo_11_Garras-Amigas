@@ -5,9 +5,10 @@
     "price": 1500,
     "discount": 25,
     "category": "producto",
+    "subCategory": "novedades",
     "description": "...",
     "stock": 30,
-    "image": "bolcitas.productos.jpeg"
+    "image": "bolcitas.producto.jpeg"
     },
     {
     "id": 2,
@@ -15,6 +16,7 @@
     "price": 25000,
     "discount": 10,
     "category": "producto",
+    "subCategory": "novedades",
     "description": "...",
     "stock": 15,
     "image": "cartera.producto.jpeg"
@@ -25,6 +27,7 @@
     "price": 15000,
     "discount": 20,
     "category": "producto",
+    "subCategory": "...",
     "description": "...",
     "stock": 46,
     "image": "casita.producto.jpeg"
@@ -35,6 +38,7 @@
     "price": 500,
     "discount": 0,
     "category": "producto",
+    "subCategory": "...",
     "description": "...",
     "stock": 100,
     "image": "collar.nudo.producto.jpeg"
@@ -45,6 +49,7 @@
     "price": 1500,
     "discount": 15,
     "category": "producto",
+    "subCategory": "...",
     "description": "...",
     "stock": 24,
     "image": "collar.producto.jpeg"
@@ -55,9 +60,10 @@
     "price": 760,
     "discount": 0,
     "category": "producto",
+    "subCategory": "...",
     "description": "...",
     "stock": 74,
-    "image": "collar.rosa.producto.jpeg"
+    "image": "collar.rosa.producto.jpg"
     },
     {
     "id": 7,
@@ -65,9 +71,10 @@
     "price": 1600,
     "discount": 5,
     "category": "producto",
+    "subCategory": "...",
     "description": "...",
     "stock": 10,
-    "image": "correa.producto.jpeg"
+    "image": "correa.producto.jpg"
     },
     {
     "id": 8,
@@ -75,6 +82,7 @@
     "price": 1200,
     "discount": 0,
     "category": "producto",
+    "subCategory": "...",
     "description": "...",
     "stock": 7,
     "image": "correa.verde.producto.jpeg"
@@ -85,9 +93,10 @@
     "price": 3200,
     "discount": 25,
     "category": "producto",
+    "subCategory": "ofertas",
     "description": "...",
     "stock": 60,
-    "image": "kit.correa.producto.jpeg"
+    "image": "kit.correa.producto.jpg"
     },
     {
     "id": 10,
@@ -95,16 +104,18 @@
     "price": 6800,
     "discount": 25,
     "category": "producto",
+    "subCategory": "...",
     "description": "...",
     "stock": 4,
-    "image": "kit.platos.productos.jpeg"
+    "image": "kit.platos.producto.jpg"
     },
     {
     "id": 11,
     "name": "Manta para el auto",
     "price": 10000,
-    "discount": 20,
+    "discount": 0,
     "category": "producto",
+    "subCategory": "destacados",
     "description": "...",
     "stock": 40,
     "image": "manta.producto.jpeg"
@@ -113,8 +124,9 @@
     "id": 12,
     "name": "Mochila Viajera",
     "price": 8000,
-    "discount": 50,
+    "discount": 0,
     "category": "producto",
+    "subCategory": "novedades",
     "description": "...",
     "stock": 55,
     "image": "mochila.producto.jpeg"
@@ -125,9 +137,10 @@
     "price": 400,
     "discount": 0,
     "category": "producto",
+    "subCategory": "destacados",
     "description": "...",
     "stock": 130,
-    "image": "peine.producto.jpeg"
+    "image": "peine.producto.jpg"
     },
     {
     "id": 14,
@@ -135,9 +148,10 @@
     "price": 7400,
     "discount": 20,
     "category": "producto",
+    "subCategory": "ofertas",
     "description": "...",
     "stock": 32,
-    "image": "platitos.cat.productos.jpeg"
+    "image": "platitos.cat.producto.jpeg"
     },
     {
     "id": 15,
@@ -145,6 +159,7 @@
     "price": 500,
     "discount": 20,
     "category": "producto",
+    "subCategory": "...",
     "description": "...",
     "stock": 100,
     "image": "platitos.colores.producto.jpeg"
@@ -155,6 +170,7 @@
     "price": 1500,
     "discount": 0,
     "category": "producto",
+    "subCategory": "...",
     "description": "...",
     "stock": 150,
     "image": "platitos.jpeg"
@@ -165,6 +181,7 @@
     "price": 2500,
     "discount": 5,
     "category": "ropa",
+    "subCategory": "...",
     "description": "...",
     "stock": 32,
     "image": "ropita.cat.jpeg"
@@ -175,6 +192,7 @@
     "price": 3000,
     "discount": 35,
     "category": "ropa",
+    "subCategory": "...",
     "description": "...",
     "stock": 12,
     "image": "ropita.dino.colores.jpeg"
@@ -185,6 +203,7 @@
     "price": 1800,
     "discount": 16,
     "category": "ropa",
+    "subCategory": "novedades",
     "description": "...",
     "stock": 46,
     "image": "ropita.dino.jpeg"
@@ -195,6 +214,7 @@
     "price": 2600,
     "discount": 50,
     "category": "ropa",
+    "subCategory": "ofertas",
     "description": "...",
     "stock": 160,
     "image": "ropita.dog.jpg"
@@ -205,6 +225,7 @@
     "price": 2000,
     "discount": 0,
     "category": "ropa",
+    "subCategory": "destacados",
     "description": "...",
     "stock": 16,
     "image": "ropita.poncho.jpeg"
@@ -215,6 +236,7 @@
     "price": 11000,
     "discount": 30,
     "category": "camas",
+    "subCategory": "...",
     "description": "...",
     "stock": 160,
     "image": "camita.amarrilla.jpeg"
@@ -225,6 +247,7 @@
     "price": 12500,
     "discount": 10,
     "category": "camas",
+    "subCategory": "...",
     "description": "...",
     "stock": 50,
     "image": "camita.cat.jpg"
@@ -235,6 +258,7 @@
     "price": 14000,
     "discount": 25,
     "category": "camas",
+    "subCategory": "ofertas",
     "description": "...",
     "stock": 70,
     "image": "camita.dog.jpg"
@@ -245,6 +269,7 @@
     "price": 8000,
     "discount": 40,
     "category": "camas",
+    "subCategory": "ofestas",
     "description": "...",
     "stock": 50,
     "image": "camita.colchones.jpg"
@@ -255,6 +280,7 @@
     "price": 12000,
     "discount": 0,
     "category": "camas",
+    "subCategory": "destacados",
     "description": "...",
     "stock": 25,
     "image": "camita.piña.jpeg"
@@ -265,6 +291,7 @@
     "price": 13500,
     "discount": 45,
     "category": "camas",
+    "subCategory": "...",
     "description": "...",
     "stock": 17,
     "image": "camita.sillon.jpeg"
@@ -275,6 +302,7 @@
     "price": 10000,
     "discount": 0,
     "category": "camas",
+    "subCategory": "...",
     "description": "...",
     "stock": 70,
     "image": "camitas.duo.jpeg"
@@ -285,6 +313,7 @@
     "price": 13500,
     "discount": 25,
     "category": "juguetes",
+    "subCategory": "...",
     "description": "...",
     "stock": 53,
     "image": "juguete.cat.jpg"
@@ -295,6 +324,7 @@
     "price": 1300,
     "discount": 15,
     "category": "juguetes",
+    "subCategory": "...",
     "description": "...",
     "stock": 13,
     "image": "juguete.dog.1.jpg"
@@ -305,6 +335,7 @@
     "price": 3500,
     "discount": 25,
     "category": "juguetes",
+    "subCategory": "...",
     "description": "...",
     "stock": 93,
     "image": "juguete.dog.2.jpg"
@@ -315,6 +346,7 @@
     "price": 3700,
     "discount": 30,
     "category": "juguetes",
+    "subCategory": "...",
     "description": "...",
     "stock": 33,
     "image": "juguete.dog.3.jpg"
@@ -325,6 +357,7 @@
     "price": 3700,
     "discount": 0,
     "category": "juguetes",
+    "subCategory": "...",
     "description": "...",
     "stock": 56,
     "image": "juguete.kit.jpeg"

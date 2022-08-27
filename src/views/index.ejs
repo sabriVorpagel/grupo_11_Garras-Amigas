@@ -7,113 +7,47 @@
         </div>
         <section class="home__main__section--novedades">
             <h2>NOVEDADES</h2>
-                <section class="home__main__articulos">
-                <article class="home__main__section--article">
-                    <a href="/products/detail"><img src="/images/kit-completo-1.jpeg"></a>
-                    <div class="home__main__section__article--div">
-                        <h4>Kit collar Floral</h4>
-                        <p>$5.000</p>
-                        <a href="/products/cart" class="home__main__section__article--div--a"><i class="fa-solid fa-cart-shopping"></i>Añadir al carrito</a>
-                    </div>
-                </article>
-                <article class="home__main__section--article">
-                    <a href="/products/detail"><img src="/images/Correa.jpeg"></a>
-                    <div class="home__main__section__article--div">
-                        <h4>Correa Turquesa</h4>
-                        <p>$2.000</p>
-                        <a href="/products/cart" class="home__main__section__article--div--a"><i class="fa-solid fa-cart-shopping"></i>Añadir al carrito</a>
-                    </div>
-                </article>
-                <article class="home__main__section--article">
-                    <a href="/products/detail"><img src="/images/kit-completo-1.jpeg"></a>
-                    <div class="home__main__section__article--div">
-                        <h4>Kit Completo Dinos</h4>
-                        <p>$7.000</p>
-                        <a href="/products/cart" class="home__main__section__article--div--a"><i class="fa-solid fa-cart-shopping"></i>Añadir al carrito</a>
-                    </div>
-                </article>
-                <article class="home__main__section--article">
-                    <a href="/products/detail"><img src="/images/kit completo 2.jpeg"></a>
-                    <div class="home__main__section__article--div">
-                        <h4>Mochila</h4>
-                        <p>$7.000</p>
-                        <a href="/products/cart" class="home__main__section__article--div--a"><i class="fa-solid fa-cart-shopping"></i>Añadir al carrito</a>
-                    </div>
-                </article>
+            <section class="home__main__articulos">
+                <% productNovedades.forEach(({id, name, price, image, discount}) => { %>
+                    <%- include('./partials/product',{
+                        id,
+                        name,
+                        price,
+                        image,
+                        discount,
+                        toThousand
+                    }) %> 
+                <% }) %>
             </section>
         </section>
         <section class="home__main__section--destacados">
             <h2>DESTACADOS</h2>
             <section class="home__main__articulos">
-                <article class="home__main__section--article">
-                    <a href="/products/detail"><img src="/images/kit-completo-1.jpeg"></a>
-                    <div class="home__main__section__article--div">
-                        <h4>Kit collar Floral</h4>
-                        <p>$5.000</p>
-                        <a href="/products/cart" class="home__main__section__article--div--a"><i class="fa-solid fa-cart-shopping"></i>Añadir al carrito</a>
-                    </div>
-                </article>
-                <article class="home__main__section--article">
-                    <a href="/products/detail"><img src="/images/kit-completo-2.jpeg"></a>
-                    <div class="home__main__section__article--div">
-                        <h4>Kit Completo Kawaii</h4>
-                        <p>$7.000</p>
-                        <a href="/products/cart" class="home__main__section__article--div--a"><i class="fa-solid fa-cart-shopping"></i>Añadir al carrito</a>
-                    </div>
-                </article>
-                <article class="home__main__section--article">
-                    <a href="/products/detail"><img src="/images/kit-completo-1.jpeg"></a>
-                    <div class="home__main__section__article--div">
-                        <h4>Kit Completo Dinos</h4>
-                        <p>$7.000</p>
-                        <a href="/products/cart" class="home__main__section__article--div--a"><i class="fa-solid fa-cart-shopping"></i>Añadir al carrito</a>
-                    </div>
-                </article>
-                <article class="home__main__section--article">
-                    <a href="/products/detail"><img src="/images/kit completo 1.jpeg"></a>
-                    <div class="home__main__section__article--div">
-                        <h4>Mochila</h4>
-                        <p>$7.000</p>
-                        <a href="/products/cart" class="home__main__section__article--div--a"><i class="fa-solid fa-cart-shopping"></i>Añadir al carrito</a>
-                    </div>
-                </article>
+                <% productDestacados.forEach(({id, name, price, image, discount}) => { %>
+                    <%- include('./partials/product',{
+                        id,
+                        name,
+                        price,
+                        image,
+                        discount,
+                        toThousand
+                    }) %> 
+                <% }) %>
             </section>
         </section>
         <section class="home__main__section--ofertas">
             <h2>OFERTAS</h2>
             <section class="home__main__articulos">
-                <article class="home__main__section--article">
-                    <a href="/products/detail"><img src="/images/kit-completo-1.jpeg"></a>
-                    <div class="home__main__section__article--div">
-                        <h4>Kit collar Floral</h4>
-                        <p>$5.000</p>
-                        <a href="/products/cart" class="home__main__section__article--div--a"><i class="fa-solid fa-cart-shopping"></i>Añadir al carrito</a>
-                    </div>
-                </article>
-                <article class="home__main__section--article">
-                    <a href="/products/detail"><img src="/images/Correa.jpeg"></a>
-                    <div class="home__main__section__article--div">
-                        <h4>Correa Turquesa</h4>
-                        <p>$2.000</p>
-                        <a href="/products/cart" class="home__main__section__article--div--a"><i class="fa-solid fa-cart-shopping"></i>Añadir al carrito</a>
-                    </div>
-                </article>
-                <article class="home__main__section--article">
-                    <a href="/products/detail"><img src="/images/kit-completo-1.jpeg"></a>
-                    <div class="home__main__section__article--div">
-                        <h4>Kit Completo Dinos</h4>
-                        <p>$7.000</p>
-                        <a href="/products/cart" class="home__main__section__article--div--a"><i class="fa-solid fa-cart-shopping"></i>Añadir al carrito</a>
-                    </div>
-                </article>
-                <article class="home__main__section--article">
-                    <a href="/products/detail"><img src="/images/kit completo 1.jpeg"></a>
-                    <div class="home__main__section__article--div">
-                        <h4>Mochila</h4>
-                        <p>$7.000</p>
-                        <a href="/products/cart" class="home__main__section__article--div--a"><i class="fa-solid fa-cart-shopping"></i>Añadir al carrito</a>
-                    </div>
-                </article>
+                <% productOfertas.forEach(({id, name, price, image, discount}) => { %>
+                    <%- include('./partials/product',{
+                        id,
+                        name,
+                        price,
+                        image,
+                        discount,
+                        toThousand
+                    }) %> 
+                <% }) %>
             </section>
         </section>
     </main>

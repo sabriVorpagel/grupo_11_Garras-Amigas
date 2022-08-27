@@ -5,9 +5,15 @@ module.exports = {
   
   index :  (req, res ) => {
     const products = loadProducts();
+    let productDestacados= products.filter(product => product.subCategory === "destacados");
+    let productNovedades= products.filter(product => product.subCategory === "novedades");
+    let productOfertas= products.filter(product => product.subCategory === "ofertas");
       res.render('index', {
         products,
-        toThousand
+        toThousand, 
+        productDestacados,
+        productNovedades,
+        productOfertas
     });
   },
 };
