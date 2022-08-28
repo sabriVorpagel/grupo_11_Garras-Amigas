@@ -35,6 +35,7 @@ a {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+   
 }
 
 .home__header--logo {
@@ -77,6 +78,7 @@ a {
     opacity: 0;
     visibility: hidden;
     overflow: hidden;
+   
 }
 
 #btn-menu:checked~.home__header--container-menu {
@@ -87,12 +89,17 @@ a {
 .home__header--cont-menu {
     width: 100%;
     max-width: 250px;
-    background: #6F97B0;
-    height: 100vh;
+    background: #607EAA;
+    /* background-image: url('/images/fonfoSalchi.png'); */
+    height: 80vh;
     position: relative;
     transition: all 500ms ease;
     transform: translateX(-100%);
+    border-radius: 0 10px 10px 0 ;
+    height: 130vh;
 }
+
+
 
 #btn-menu:checked~.home__header--container-menu .home__header--cont-menu {
     transform: translateX(0%);
@@ -100,7 +107,7 @@ a {
 
 .home__header--cont-menu nav {
     /* transform: translateY(5%); */
-    transform: translateY(15%);
+    transform: translateY(5%);
 }
 
 .home__header--cont-menu nav a {
@@ -108,7 +115,7 @@ a {
     text-decoration: none;
     font-size: 13px;
     letter-spacing: 3px;
-    color: #c7c7c7;
+    color: #fff;
     padding: 15px;
     border-left: 5px solid transparent;
     transition: all 400ms ease;
@@ -128,22 +135,38 @@ a {
     cursor: pointer;
     font-size: 18px;
 }
+.home__header--contacto-edit{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
 
+.home__header--contacto-edit button{
+    background-color: rgba(5, 7, 12, 0.1);
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+ 
+}
 .home__header--contacto {
     padding-top: 20px;
+    width: 33%;
+    padding: 10px 15px;
 }
 
 .home__header--contacto,
 .home__header--carrito,
 .home__header--edit {
-    width: 100%;
-    padding: 10px 15px;
+    width: 20%;
+    padding: 8px 0px;
 }
 
 .home__header--contacto a,
 .home__header--carrito a,
 .home__header--edit a {
-    width: 20%;
+    width: 20;
     color: #fff;
     font-size: 18px;
 }
@@ -154,7 +177,6 @@ a {
 
 .home__header--search {
     position: relative;
-    margin-top: 7px;
     width: 80%;
     margin-left: 18px;
 }
@@ -164,6 +186,8 @@ a {
     border: 1px solid grey;
     border-radius: 5px;
     padding: 8px;
+    margin-top: 39px;
+    margin-left: 5px;
 }
 
 .home__header--search button {
@@ -174,7 +198,7 @@ a {
     top: 0;
     right: 0;
     font-size: 18px;
-    margin: 7px;
+    margin-top: 45px;
     border-left: 1px solid grey;
 }
 
