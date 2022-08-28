@@ -1,0 +1,23 @@
+<%- include('../partials/head', {title: 'productos'}) %> 
+<body>
+    <%- include('../partials/header') %> 
+    <main class="product__main">
+        <section class="product__main__section">
+            <h2>TODOS LOS PRODUCTOS</h2>
+            <section class="product__main__articulos">
+                <% products.forEach(({id, name, price, image, discount}) => { %>
+                    <%- include('../partials/product',{
+                        id,
+                        name,
+                        price,
+                        image,
+                        discount,
+                        toThousand
+                    }) %> 
+                <% }) %>
+            </section>
+        </section>
+    </main>
+    <%- include('../partials/footer') %> 
+</body>
+</html>
