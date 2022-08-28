@@ -3,7 +3,7 @@
     <%- include('../partials/header') %>
     <main class="main__create">
         <div class="main__caja">
-            <form action="/" class="main__caja__formulario">
+            <form action="/products/edit/<%= productToEdit.id %>?_method=PUT " class="main__caja__formulario">
                 <div class="main__formulario__cajas">
                     <label for="producto">Nombre del producto</label>
                     <input type="text" name="producto" id="producto">

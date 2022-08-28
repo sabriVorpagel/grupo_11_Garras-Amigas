@@ -48,7 +48,7 @@
                 <form action="/products/cart" class="home__main__producto--descripcion-botones color-boton-verde">
                     <input type="submit" name="agregarCarrito" id="agregarCarrito" value="Agregar al carrito"></a>
                 </form>
-                <form action="/products/edit" class="home__main__producto--descripcion-botones color-boton-rosa">
+                <form action="/products/edit/<%= product.id %> " class="home__main__producto--descripcion-botones color-boton-rosa">
                     <input type="submit" name="editar" id="editar" value="Editar producto">
                 </form>
                 <form action="/products/product" class="home__main__producto--descripcion-botones color-boton-rosa">
