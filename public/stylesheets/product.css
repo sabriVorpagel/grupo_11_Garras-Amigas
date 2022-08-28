@@ -1,0 +1,21 @@
+.product__main{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+}
+.product__main__section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    width: 100%;
+}
+.product__main__section h2{
+    background-color: var(--colorAzul);
+    width: 100%;
+    font-family: "Roboto";
+    font-size: var(--textoSizeTitulares);
+    font-weight: 600;
+    gap: 10px;
+}
+

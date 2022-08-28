@@ -6,23 +6,36 @@
             <img src="/images/Anuncio.png" alt="">
         </figure>
         <article class="home__main__producto">
-            <h2>Titulo del producto</h2>
-            <div class="home__main__producto-img">  
-                <figure class="home__main__producto-imagen">
-                    <img src="/images/kit-collar.jpeg" alt="">
-                </figure>
-                <div class="home__main__producto-imagenes">
-                    <img src="/images/kit-completo-1.jpeg" alt="">
-                    <img src="/images/kit-completo-2.jpeg" alt="">
-                    <img src="/images/Correa.jpeg" alt="">
-                </div>              
-            </div>
+            <section class="container-slider">
+                <div class="carrousel" id="slider">
+                    <div class="grande">
+                        <img src="/images/productos/<%= product.image %> " alt="" class="slider__img">
+                    </div>
+                    <ul class="puntos">
+                        <li class="punto activo"></li>
+                        <li class="punto"></li>
+                    </ul>
+                </div>
+            </section>
         </article>  
-        <article class="home__main__producto--datos">     
+        <article class="home__main__producto--datos"> 
+            <h2><%= product.name %> </h2>     
             <div class="home__main__producto--descripcion--datos">
-                <p class="precio">$1500</p>
-                <p class="descuento">%40</p>
-                <span>Stock:<input type="number" min="0" max="99" value="99"></span>
+                <% if (product.discount > 0) {%> 
+                    <p class="precio">
+                        <span>$<%= product.price %> </span>
+                        /
+                        <b>%<%= product.discount %></b>
+                    </p>
+                    <p class="descuento">
+                        $<%= toThousand(product.price - (product.price * product.discount / 100)) %>
+                    </p>
+                    <%}else{ %> 
+                    <p class="precio">
+                        $<%= toThousand(product.price) %>
+                    </p>
+                    <% } %> 
+                <span>Stock: <%= product.stock %> </span>
                 <div class="home__main__producto--descripcion--datos-botones">
                     <a href="/" class="boton">Metodos de envio</a>
                     <a href="/" class="boton1">Metodos de pago</a>
@@ -37,6 +50,9 @@
                 </form>
                 <form action="/products/edit" class="home__main__producto--descripcion-botones color-boton-rosa">
                     <input type="submit" name="editar" id="editar" value="Editar producto">
+                </form>
+                <form action="/products/product" class="home__main__producto--descripcion-botones color-boton-rosa">
+                    <input type="submit" name="delete" id="delete" value="Eliminar">
                 </form>
             </div>
         </article>
@@ -72,5 +88,6 @@
         </article>               
     </main>
     <%- include('../partials/footer') %>
+    <script src="javascripts/slider.js"></script>
 </body>
 </html>

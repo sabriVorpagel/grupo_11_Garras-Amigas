@@ -52,7 +52,7 @@
     "subCategory": "...",
     "description": "...",
     "stock": 24,
-    "image": "collar.producto.jpeg"
+    "image": "collar.producto.jpg"
     },
     {
     "id": 6,
@@ -162,7 +162,7 @@
     "subCategory": "...",
     "description": "...",
     "stock": 100,
-    "image": "platitos.colores.producto.jpeg"
+    "image": "platitos.colores.producto.jpg"
     },
     {
     "id": 16,
@@ -184,7 +184,7 @@
     "subCategory": "...",
     "description": "...",
     "stock": 32,
-    "image": "ropita.cat.jpeg"
+    "image": "ropita.cat.jpg"
     },
     {
     "id": 18,
@@ -239,7 +239,7 @@
     "subCategory": "...",
     "description": "...",
     "stock": 160,
-    "image": "camita.amarrilla.jpeg"
+    "image": "camita.amarilla.jpeg"
     },
     {
     "id": 23,
@@ -349,7 +349,7 @@
     "subCategory": "...",
     "description": "...",
     "stock": 33,
-    "image": "juguete.dog.3.jpg"
+    "image": "juguete.dog.3.jpeg"
     },
     {
     "id": 33,
