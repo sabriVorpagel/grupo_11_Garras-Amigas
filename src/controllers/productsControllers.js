@@ -4,6 +4,7 @@ const path = require('path');
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 module.exports = {
+
     product: (req, res) => { 
         const products = loadProducts();
         return res.render('products/product', {
@@ -19,10 +20,10 @@ module.exports = {
         })
     },
     cart: (req,res) => {
-        return res.render('products/cart')
+        return res.render('products/productCart')
     },
     edit: (req, res) => {
-        return res.render('products/edit')
+        return res.render('products/productEdit')
     },
     create: (req, res) => {
         return res.render('products/productCreate')
@@ -30,5 +31,3 @@ module.exports = {
 }
 
 
-
-   
