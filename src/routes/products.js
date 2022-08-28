@@ -6,7 +6,7 @@ const { product,detail, cart, create, edit} = require('../controllers/productsCo
 /* /products */
 
 router
-    .get('/products', product)
+    .get('/product', product)
     .get('/detail/:id', detail)
     .get('/cart', cart)
     .get('/create', create)
