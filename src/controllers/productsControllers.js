@@ -16,10 +16,10 @@ module.exports = {
         return res.render('products/cart')
     },
     edit: (req, res) => {
-        return res.render('products/edit')
+        return res.render('products/registerEdit')
     },
     create: (req, res) => {
-        return res.render('products/create')
+        return res.render('products/productCreate')
     }
 }
 
