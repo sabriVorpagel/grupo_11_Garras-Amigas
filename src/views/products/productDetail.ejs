@@ -6,19 +6,17 @@
             <img src="/images/Anuncio.png" alt="">
         </figure>
         <article class="home__main__producto">
-            <div class="home__main__producto-img">
-                <ul class="carrusel">               
-                    <li id="carrusel1"><img src="/images/<%= product.image %>"></li>
-                    <li id="carrusel2"><img src="/images/<%= product.image %>"></li>
-                    <li id="carrusel3"><img src="/images/<%= product.image %>"></li>
-                    <li id="carrusel4"><img src="/images/<%= product.image %>"></li>
-                    <li id="carrusel5"><img src="/images/<%= product.image %>"></li>
-                    <li id="carrusel6"><img src="/images/<%= product.image %>"></li>
-                </ul>               
-                    <button aria-label="Siguiente" class="carrusel-siguiente">
-                    </button>
-                </div>       
-            </div>
+            <section class="container-slider">
+                <div class="carrousel" id="slider">
+                    <div class="grande">
+                        <img src="/images/productos/<%= product.image %> " alt="" class="slider__img">
+                    </div>
+                    <ul class="puntos">
+                        <li class="punto activo"></li>
+                        <li class="punto"></li>
+                    </ul>
+                </div>
+            </section>
         </article>  
         <article class="home__main__producto--datos"> 
             <h2><%= product.name %> </h2>     
@@ -52,6 +50,9 @@
                 </form>
                 <form action="/products/edit" class="home__main__producto--descripcion-botones color-boton-rosa">
                     <input type="submit" name="editar" id="editar" value="Editar producto">
+                </form>
+                <form action="/products/product" class="home__main__producto--descripcion-botones color-boton-rosa">
+                    <input type="submit" name="delete" id="delete" value="Eliminar">
                 </form>
             </div>
         </article>
@@ -87,5 +88,6 @@
         </article>               
     </main>
     <%- include('../partials/footer') %>
+    <script src="javascripts/slider.js"></script>
 </body>
 </html>
