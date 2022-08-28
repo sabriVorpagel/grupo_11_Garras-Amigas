@@ -4,22 +4,23 @@ const path = require('path');
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 module.exports = {
-    detail: (req,res) => {
-        const products = loadProducts();
-        const product = products.find(product => product.id === +req.params.id);
-        return res.render('/products/detail' ,{
-            product,
-            toThousand
-        })
-    },
+    detail: (req, res) => {
+		// Do the magic
+		let products = loadProducts();
+		let product = products.find(product => product.id === +req.params.id);
+		return res.render('products/productDetail', {
+			product,
+			toThousand
+		})
+	},
     cart: (req,res) => {
-        return res.render('products/cart')
+        return res.render('products/productCart')
     },
     edit: (req, res) => {
-        return res.render('products/edit')
+        return res.render('products/productEdit')
     },
     create: (req, res) => {
-        return res.render('products/create')
+        return res.render('products/productCreate')
     }
 }
 

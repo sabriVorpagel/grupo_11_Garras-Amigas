@@ -5,9 +5,8 @@ module.exports = {
   
   index :  (req, res ) => {
     const products = loadProducts();
-      res.render('index', {
-        products,
-        toThousand
+    return res.render("index",{
+      products
     });
   },
 };
