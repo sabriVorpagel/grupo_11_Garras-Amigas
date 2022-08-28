@@ -4,9 +4,15 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 module.exports = {
   
   index :  (req, res ) => {
-    const products = loadProducts();
-    return res.render("index",{
-      products
+    let productDestacados= products.filter(product => product.subCategory === "destacados");
+    let productNovedades= products.filter(product => product.subCategory === "novedades");
+    let productOfertas= products.filter(product => product.subCategory === "ofertas");
+      res.render('index', {
+        products,
+        toThousand, 
+        productDestacados,
+        productNovedades,
+        productOfertas
     });
   },
 };

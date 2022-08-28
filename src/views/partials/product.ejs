@@ -1,0 +1,11 @@
+<article class="home__main__section--article">
+    <a href="/products/detail/<%= id %> "><img src="/images/productos/<%= image %>" width="200"; height="200"></a>
+    <div class="home__main__section__article--div">
+        <h4><%= name %> </h4>
+        <p>$<%= toThousand((price - (price * discount / 100)).toFixed(0)) %>  </p>
+        <% if (discount > 0) { %>
+        <p><%= discount %>%</p>
+        <% } %>
+        <a href="/products/cart" class="home__main__section__article--div--a"><i class="fa-solid fa-cart-shopping"></i>Añadir al carrito</a>
+    </div>
+</article>
