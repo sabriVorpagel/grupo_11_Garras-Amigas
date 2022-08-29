@@ -7,8 +7,21 @@
 .product__main__section{
     display: flex;
     flex-wrap: wrap;
-    flex-direction:row;
+    flex-direction: row;
     width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+.product__main__section section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
 }
 .product__main__section h2{
     background-color: var(--colorAzul);
@@ -16,6 +29,64 @@
     font-family: "Roboto";
     font-size: var(--textoSizeTitulares);
     font-weight: 600;
-    gap: 10px;
+    color :white;
+    text-align: center;
+}
+/* .product__main__articulos{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 5px;
+} */
+.home__main__section--article{
+    justify-content: center;
+    width: 100%;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    margin-bottom: 10px;
+}
+.home__main__section--article img{
+    width: 100%;
+}
+.home__main__section__article--div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.home__main__section__article--div h4{
+    font-size: var(--textoSizeProducto);
+    color:#666666;
+    text-align: center;
+}
+.home__main__section__article--div p{
+    display: flex;
+    flex-direction: row;
+    font-size: var(--textoSizePrecios);
+    color:#666666; 
+    width: 45%;
+}
+.home__main__section__article--div--a{
+    font-size: var(--textoSizeCuerpo);
+    color: #666666;
+}
+.home__main__section__article--div i{
+    font-size: var(--textoSizeCuerpo);
+    color:#666666;
+}
+
+/*TABLET*/
+@media (min-width:768px){
+    /*Main*/
+    .home__main__section--article{
+        width: 45%;
+    }
+}
+
+/*Laptop*/
+@media (min-width:1024px) {
+    /*Main*/
+    .home__main__section--article{
+        width: 22%;}
 }
 

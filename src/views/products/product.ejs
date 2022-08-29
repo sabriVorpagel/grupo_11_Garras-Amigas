@@ -4,7 +4,7 @@
     <main class="product__main">
         <section class="product__main__section">
             <h2>TODOS LOS PRODUCTOS</h2>
-            <section class="product__main__articulos">
+            <section>
                 <% products.forEach(({id, name, price, image, discount}) => { %>
                     <%- include('../partials/product',{
                         id,
