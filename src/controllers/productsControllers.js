@@ -33,7 +33,7 @@ module.exports = {
     },
     // Create -  Method to store
     store: (req,res) =>{
-        const {name, price, discount, description, category, subCategory} = req.body;
+        const {name, price, discount, description, category, subCategory, stock } = req.body;
 		let products = loadProducts();
 		const newProduct = {
 			id: products[products.length -1].id +1,
@@ -44,6 +44,7 @@ module.exports = {
 			discount: +discount,
 			category,
             subCategory,
+			stock: +stock,
 			image: 'kit-collar.jpeg'
 		}
         let productsModify = [...products, newProduct];
