@@ -49,7 +49,7 @@ module.exports = {
         let productsModify = [...products, newProduct];
 		storeProducts(productsModify);
 
-		return res.redirect('/')
+		return res.redirect('products/product')
     },
     update: (req, res) => {
 		// Do the magic
