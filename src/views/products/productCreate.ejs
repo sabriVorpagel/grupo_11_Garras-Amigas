@@ -3,26 +3,33 @@
     <%- include('../partials/header') %>
     <main class="main__create">
         <div class="main__caja">
-            <form action="/" method="POST" class="main__caja__formulario">
+            <form action="/products/store" method="POST" class="main__caja__formulario">
                 <div class="main__formulario__cajas">
-                    <label for="producto">NOMBRE DEL PRODUCTO</label>
-                    <input type="text" name="producto" id="producto">
+                    <label for="name">NOMBRE DEL PRODUCTO</label>
+                    <input type="text" name="name" id="name">
                 </div>
                 <div class="main__formulario__cajas">
-                    <label for="descripcion">DESCRIPCION</label>
-                    <input type="text" name="descripcion" id="descripcion" maxlength="1000">
+                    <label for="description">DESCRIPCION</label>
+                    <input type="text" name="description" id="description" maxlength="1000">
                 </div>
                 <div class="main__formulario__cajasSelectoras">
-                    <select name="categoria" id="categoria">
+                    <select name="category" id="category">
                         <option value="categoria">--Selecciona una categoria--</option>
-                        <option value="comida">Comida</option>
+                        <option value="cama">Cama</option>
                         <option value="juguetes">Juguetes</option>
-                        <option value="ofertas">Ofertas</option>
-                        <option value="paseo">Paseo</option>
-                        <option value="golosinas">Golosinas</option>
+                        <option value="productos">Productos</option>
+                        <option value="ropa">Ropa</option>
                     </select>
                 </div>
                 <div class="main__formulario__cajasSelectoras">
+                    <select name="subCategory" id="subCategory">
+                        <option value="categoria">--Selecciona una clase--</option>
+                        <option value="ofertas">Oferta</option>
+                        <option value="novedades">Novedades</option>
+                        <option value="destacados">Destacados</option>
+                    </select>
+                </div>
+                <!-- <div class="main__formulario__cajasSelectoras">
                     <select name="colores" id="colores">
                         <option value="Colores" selected>--Selecciona un color--</option>
                         <option value="Color1">Rosa</option>
@@ -33,26 +40,30 @@
                         <option value="Color6">Celeste Claro</option>
                         <option value="Color7">Blanco</option>
                     </select>
-                </div>
-                <div class="main__formulario__cajasSelectoras">
+                </div> -->
+                <!-- <div class="main__formulario__cajasSelectoras">
                     <select name="talles" id="talles">
                         <option value="talle">--Selecciona un talle--</option>
                         <option value="Talle1">X</option>
                         <option value="Talle2">XX</option>
                         <option value="Talle3">XXL</option>
                     </select>
-                </div>
+                </div> -->
                 <div class="main__formulario__cajaImagen">
-                    <label for="imagenProduct">IMAGEN DEL PRODUCTO</label>
-                    <input type="file" name="imagenProduct" id="imagenProduct">
+                    <label for="image">IMAGEN DEL PRODUCTO</label>
+                    <input type="file" name="image" id="image">
                 </div>
                 <div class="main__formulario__cajaPrecio">
-                    <label for="precio">$</label>
-                    <input type="number" name="precio" id="precio" value="0"  min="0" max="9999999">
+                    <label for="price">$</label>
+                    <input type="number" name="price" id="price" value="0"  min="0" max="9999999">
                 </div>
                 <div class="main__formulario__cajaDescuento">
-                    <label for="descuento">%</label>
-                    <input type="number" name="descuento" id="descuento" min="0" max="100" value="0">
+                    <label for="discount">%</label>
+                    <input type="number" name="discount" id="discount" min="0" max="100" value="0">
+                </div>
+                <div class="main__formulario__cajaPrecio">
+                    <label for="stock">Stock</label>
+                    <input type="number" name="stock" id="stock" value="0"  min="0" max="9999999">
                 </div>
                 
                 <div class="main__formulario__botones">
