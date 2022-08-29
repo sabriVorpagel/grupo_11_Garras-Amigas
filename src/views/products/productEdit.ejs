@@ -29,10 +29,6 @@
                         <option value="destacados">Destacados</option>
                     </select>
                 </div>
-                <div class="main__formulario__cajaImagen">
-                    <label for="image">Selecciona imagen del producto</label>
-                    <input type="file" name="image" id="image" value="<%= productToEdit.image %>">
-                </div>
                 <!-- <div class="main__formulario__cajasSelectoras">
                     <select name="colores" id="colores">
                         <option value="Colores" selected>--Selecciona un color--</option>
@@ -54,7 +50,7 @@
                     </select>
                 </div> -->
                 <div class="main__formulario__cajaPrecio">
-                    <label for="stock">Stock</label>
+                    <label for="stock">Stk</label>
                     <input type="number" name="stock" id="stock"   min="0" max="9999999" value="<%= productToEdit.stock %>">
                 </div>
                 <div class="main__formulario__cajaPrecio">
@@ -65,7 +61,10 @@
                     <label for="discount">%</label>
                     <input type="number" name="discount" id="discount" min="0" max="100" value="<%= productToEdit.discount %>">
                 </div>
-                
+                <div class="main__formulario__cajaImagen">
+                    <label for="image">Selecciona imagen del producto</label>
+                    <input type="file" name="image" id="image" value="<%= productToEdit.image %>">
+                </div>
                 <div class="main__formulario__botones">
                     <input type="submit" class="submit" value="Guardar Cambios">
                     <input type="reset" class="reset" value="Cancelar Cambios">  
