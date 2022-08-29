@@ -5,28 +5,31 @@
         <div class="main__caja">
             <form action="/products/edit/<%= productToEdit.id %>?_method=PUT " class="main__caja__formulario">
                 <div class="main__formulario__cajas">
-                    <label for="producto">Nombre del producto</label>
-                    <input type="text" name="producto" id="producto">
+                    <label for="name">Nombre del producto</label>
+                    <input type="text" name="name" id="name" value="<%= productToEdit.name %>">
                 </div>
                 <div class="main__formulario__cajas">
                     <label for="descripcion">Descripción</label>
-                    <input type="text" name="descripcion" id="descripcion" maxlength="1000">
+                    <input type="text" name="description" id="descripcion" maxlength="1000" value="<%= productToEdit.descripcion %>">
                 </div>
                 <div class="main__formulario__cajasSelectoras">
-                    <select name="categoria" id="categoria">
+                    <select name="category" id="category" value="<%= productToEdit.category %>">
                         <option value="categoria">--Selecciona una categoria--</option>
-                        <option value="comida">Comida</option>
+                        <option value="cama">Cama</option>
                         <option value="juguetes">Juguetes</option>
-                        <option value="ofertas">Ofertas</option>
-                        <option value="paseo">Paseo</option>
-                        <option value="golosinas">Golosinas</option>
+                        <option value="productos">Productos</option>
+                        <option value="ropa">Ropa</option>
                     </select>
                 </div>
-                <div class="main__formulario__cajaImagen">
-                    <label for="imagenProduct">Selecciona imagen del producto</label>
-                    <input type="file" name="imagenProduct" id="imagenProduct">
-                </div>
                 <div class="main__formulario__cajasSelectoras">
+                    <select name="subCategory" id="subCategory" value="<%= productToEdit.subCategory %>">
+                        <option value="categoria">--Selecciona una clase--</option>
+                        <option value="ofertas">Oferta</option>
+                        <option value="novedades">Novedades</option>
+                        <option value="destacados">Destacados</option>
+                    </select>
+                </div>
+                <!-- <div class="main__formulario__cajasSelectoras">
                     <select name="colores" id="colores">
                         <option value="Colores" selected>--Selecciona un color--</option>
                         <option value="Color1">Rosa</option>
@@ -45,16 +48,23 @@
                         <option value="Talle2">XX</option>
                         <option value="Talle3">XXL</option>
                     </select>
+                </div> -->
+                <div class="main__formulario__cajaPrecio">
+                    <label for="stock">Stk</label>
+                    <input type="number" name="stock" id="stock"   min="0" max="9999999" value="<%= productToEdit.stock %>">
                 </div>
                 <div class="main__formulario__cajaPrecio">
-                    <label for="precio">$</label>
-                    <input type="number" name="precio" id="precio" value="0"  min="0" max="9999999">
+                    <label for="price">$</label>
+                    <input type="number" name="price" id="price"   min="0" max="9999999" value="<%= productToEdit.price %>">
                 </div>
                 <div class="main__formulario__cajaDescuento">
-                    <label for="descuento">%</label>
-                    <input type="number" name="descuento" id="descuento" min="0" max="100" value="0">
+                    <label for="discount">%</label>
+                    <input type="number" name="discount" id="discount" min="0" max="100" value="<%= productToEdit.discount %>">
                 </div>
-                
+                <div class="main__formulario__cajaImagen">
+                    <label for="image">Selecciona imagen del producto</label>
+                    <input type="file" name="image" id="image" value="<%= productToEdit.image %>">
+                </div>
                 <div class="main__formulario__botones">
                     <input type="submit" class="submit" value="Guardar Cambios">
                     <input type="reset" class="reset" value="Cancelar Cambios">  

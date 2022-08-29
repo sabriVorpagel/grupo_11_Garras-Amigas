@@ -35,7 +35,6 @@ a {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-   
 }
 
 .home__header--logo {
@@ -78,7 +77,6 @@ a {
     opacity: 0;
     visibility: hidden;
     overflow: hidden;
-   
 }
 
 #btn-menu:checked~.home__header--container-menu {
@@ -98,8 +96,6 @@ a {
     border-radius: 0 10px 10px 0 ;
     height: 130vh;
 }
-
-
 
 #btn-menu:checked~.home__header--container-menu .home__header--cont-menu {
     transform: translateX(0%);
@@ -148,7 +144,6 @@ a {
     height: 50px;
     border: none;
     border-radius: 50px;
- 
 }
 .home__header--contacto {
     padding-top: 20px;
@@ -221,7 +216,7 @@ a {
         padding: 0 50px;
     }
     
-    .home__header--header {
+    .home__header--header--2 {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;

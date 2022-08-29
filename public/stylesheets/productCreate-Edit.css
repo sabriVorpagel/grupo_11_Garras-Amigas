@@ -175,8 +175,53 @@
     }
 }
 @media (min-width: 1024px){
-    .main__caja{
+    .main__caja__formulario{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        
+    }
+    .main__formulario__cajas{
+        width: 45%;
+    }
+    .main__formulario__cajas label{
+        font-size: 15px;
+    }
+    .main__formulario__cajas input{
+        width: 100%;
+    }
+    .main__formulario__cajasSelectoras{
+        width: 45%;
+    }
+    .main__formulario__cajasSelectoras select{
+        width: 100%;
+    }
+    .main__formulario__cajaImagen {
+        width: 39%;
+    }
+    .main__formulario__cajaImagen label{
+        width: 45%;
+        font-size: 15px;
+        margin-left: -2px;
+    }
+    .main__formulario__cajaImagen input{
+        height: 30px;
+    }
+    .main__formulario__cajaImagen input#imagenProduct{
         width: 50%;
-        padding: 20px 0;
+    }
+    .main__formulario__cajaPrecio,
+    .main__formulario__cajaDescuento{
+        width: 25%;
+    }
+    .main__formulario__cajaPrecio input,
+    .main__formulario__cajaDescuento input{
+        width: 100%;
+    }
+    .main__formulario__botones{
+        width: 55%;
+    }
+    .main__formulario__botones input{
+        width: 45%;
     }
 }
