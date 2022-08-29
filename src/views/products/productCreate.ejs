@@ -3,7 +3,7 @@
     <%- include('../partials/header') %>
     <main class="main__create">
         <div class="main__caja">
-            <form action="/products/store" method="POST" class="main__caja__formulario">
+            <form action="/products/create" method="POST" class="main__caja__formulario">
                 <div class="main__formulario__cajas">
                     <label for="name">NOMBRE DEL PRODUCTO</label>
                     <input type="text" name="name" id="name">
@@ -13,20 +13,19 @@
                     <input type="text" name="description" id="description" maxlength="1000">
                 </div>
                 <div class="main__formulario__cajasSelectoras">
-                    <select name="category" id="category">
-                        <option value="categoria">--Selecciona una categoria--</option>
-                        <option value="cama">Cama</option>
-                        <option value="juguetes">Juguetes</option>
-                        <option value="productos">Productos</option>
-                        <option value="ropa">Ropa</option>
+                    <select name="categoria" id="categoria" aria-label="Default select example">
+                        <option value="" selected hidden>--Seleccione una categoria--</option>
+                        <% categorias.forEach(categoria => { %>
+                            <option value="<%= categoria %>"><%= categoria %></option>
+                        <% }) %> 
                     </select>
                 </div>
                 <div class="main__formulario__cajasSelectoras">
-                    <select name="subCategory" id="subCategory">
-                        <option value="categoria">--Selecciona una clase--</option>
-                        <option value="ofertas">Oferta</option>
-                        <option value="novedades">Novedades</option>
-                        <option value="destacados">Destacados</option>
+                    <select name="clase" id="clase" aria-label="Default select example">
+                        <option value="" selected hidden>--Seleccione una clase--</option>
+                        <% clases.forEach(clase => { %>
+                            <option value="<%= clase %>"><%= clase %></option>
+                        <% }) %> 
                     </select>
                 </div>
                 <!-- <div class="main__formulario__cajasSelectoras">
@@ -55,15 +54,15 @@
                 </div>
                 <div class="main__formulario__cajaPrecio">
                     <label for="price">$</label>
-                    <input type="number" name="price" id="price" value="0"  min="0" max="9999999">
+                    <input type="number" name="price" id="price" value="">
                 </div>
                 <div class="main__formulario__cajaDescuento">
+                    <input type="number" name="discount" id="discount" value="">
                     <label for="discount">%</label>
-                    <input type="number" name="discount" id="discount" min="0" max="100" value="0">
                 </div>
                 <div class="main__formulario__cajaPrecio">
                     <label for="stock">Stock</label>
-                    <input type="number" name="stock" id="stock" value="0"  min="0" max="9999999">
+                    <input type="number" name="stock" id="stock" value="">
                 </div>
                 
                 <div class="main__formulario__botones">

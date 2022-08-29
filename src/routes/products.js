@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const { product,detail, cart, create, edit, store, update} = require('../controllers/productsControllers');
+const { product,detail, cart, create, edit, store, update, remove} = require('../controllers/productsControllers');
 
 /* /products */
 
@@ -13,10 +13,10 @@ router
     .get('/cart', cart)
     /*** CREATE ONE PRODUCT ***/
     .get('/create', create)
-    .post('/store', store)
+    .post('/create', store)
     /*** EDIT ONE PRODUCT ***/ 
     .get('/edit/:id', edit)
     .put('/update/:id', update)
     /*** DELETE ONE PRODUCT***/ 
-
+    .delete('/delete/:id', remove)
 module.exports = router;

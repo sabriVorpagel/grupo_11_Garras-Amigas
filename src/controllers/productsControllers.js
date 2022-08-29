@@ -1,4 +1,4 @@
-const {loadProducts, storeProducts} = require('../data/db_Module');
+const {loadProducts, storeProducts, loadCategorys, loadClass} = require('../data/db_Module');
 const fs = require('fs');
 const path = require('path');
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -6,7 +6,7 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 module.exports = {
     product: (req, res) => { 
         const products = loadProducts();
-        return res.render('products/product', {
+        return res.render('products/products', {
             products,
             toThousand,}) 
     },
@@ -22,58 +22,73 @@ module.exports = {
         return res.render('products/productCart')
     },
     edit: (req, res) => {
-        let productToEdit = loadProducts().find(product => product.id === +req.params.id);
+		const products = loadProducts();
+		const categorias = loadCategorys();
+		const clases = loadClass();
+        const product = products.find(product => product.id === +req.params.id);
 		return res.render('products/productEdit', {
-			productToEdit
+			categorias,
+			clases,
+			product
 		})
     },
-    // Create - Form to create
-    create: (req, res) => {
-        return res.render('products/productCreate')
-    },
-    // Create -  Method to store
-    store: (req,res) =>{
-        const {name, price, discount, description, category, subCategory, stock } = req.body;
-		let products = loadProducts();
-		const newProduct = {
-			id: products[products.length -1].id +1,
-			...req.body,
-			name: name,
-			price: +price,
-			description: description,
-			discount: +discount,
-			category,
-            subCategory,
-			stock: +stock,
-			image: 'kit-collar.jpeg'
-		}
-        let productsModify = [...products, newProduct];
-		storeProducts(productsModify);
-
-		return res.redirect('products/product')
-    },
-    update: (req, res) => {
-		// Do the magic
-		const {name, price, discount, description, category, subCategory, stock} = req.body;
-		let productsModify = loadProducts().map(product => {
-			if(product.id === +req.params.id){
+	update: (req, res) =>{
+		const products = loadProducts();
+		const {id} = req.params;
+		const {name, price, discount, description, clases, categorias, stock} = req.body;
+		const produtsModify = products.map(product => {
+			if(product.id === +id){
 				return {
-					id: products.id,
+					...product,
 					name: name.trim(),
 					price: +price,
-					description: description.trim(),
 					discount: +discount,
-                    stock: +stock,
-					category,
-                    subCategory,
-					image: product.image
+					clases,
+					categorias,
+					stock: +stock,
+					description
 				}
 			}
 			return product
 		})
-		storeProducts(productsModify)
-		return res.redirect('/products/product' + req.params.id )
+		storeProducts(produtsModify);
+
+		return res.redirect('/products/detail/' + req.params.id)
 	},
+    // Create - Form to create
+    create: (req, res) => {
+		const categorias = loadCategorys();
+		const clases = loadClass();
+        return res.render('products/productCreate',{
+			categorias: categorias.sort(),
+			clases: clases.sort()
+		})
+    },
+	store: (req,res) =>{
+		const products = loadProducts();
+		const {name, price, discount, description, clases, categorias, stock} = req.body;
+		const id = products[products.length - 1].id;
+		const newProduct ={
+			id: id +1,
+			...req.body,
+			name: name.trim(),
+			price: +price,
+			discount: +discount,
+			image: "Correa.jpeg",
+			description,
+			clases,
+			categorias
+		}
+		const productsNew = [...products, newProduct];
+		storeProducts(productsNew);
+		return res.redirect('/products/product')
+	},
+	remove: (req, res) => {
+		const products = loadProducts();
+		const productsModify = products.filter(product => product.id !== +req.params.id);
+		storeProducts(productsModify);
+		return res.redirect('/products/product')
+	}
 }
 
 

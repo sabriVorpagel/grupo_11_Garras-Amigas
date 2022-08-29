@@ -1,34 +1,40 @@
 <%- include('../partials/head', {title: 'Product'}) %> 
 <body>
     <%- include('../partials/header') %>
-    <main class="home__main">
-        <figure class="home__main__anuncio">
-            <img src="/images/Anuncio.png" alt="">
+    <main class="detail__main">
+        <figure class="detail__main__anuncio">
+            <img src="/images/productos/Anuncio.png" alt="">
         </figure>
-        <article class="home__main__producto">
-            <section class="container-slider">
-                <div class="carrousel" id="slider">
-                    <div class="grande">
+        <article class="detail__main__producto">
+                <div class="detail__main__producto-padre">
+                    <div class="detail__main__product-img">
                         <img src="/images/productos/<%= product.image %> " alt="" class="slider__img">
                     </div>
-                    <ul class="puntos">
-                        <li class="punto activo"></li>
-                        <li class="punto"></li>
-                    </ul>
+                    <div class="detail__main__product-contenedor-imagenes">
+                        <div class="detail__main__product-imagenes">
+                            <img src="/images/productos/<%= product.image %> " alt="">
+                        </div>    
+                        <div class="detail__main__product-imagenes">
+                            <img src="/images/productos/<%= product.image %> " alt="">
+                        </div>    
+                        <div class="detail__main__product-imagenes">
+                            <img src="/images/productos/<%= product.image %> " alt="">
+                        </div>
+                        <div class="detail__main__product-imagenes">
+                            <img src="/images/productos/<%= product.image %> " alt="">
+                        </div>
+                    </div>
                 </div>
-            </section>
         </article>  
-        <article class="home__main__producto--datos"> 
-            <h2><%= product.name %> </h2>     
-            <div class="home__main__producto--descripcion--datos">
-                <% if (product.discount > 0) {%> 
+        <article class="detail__main__producto--datos">  
+            <div class="detail__main__producto--descripcion--datos">
+                <h2><%= product.name %> </h2>   
+                <% if (product.discount > 0) {%>                  
                     <p class="precio">
-                        <span>$<%= product.price %> </span>
-                        /
-                        <b>%<%= product.discount %></b>
+                        $<%= toThousand(product.price - (product.price * product.discount / 100)) %>
                     </p>
                     <p class="descuento">
-                        $<%= toThousand(product.price - (product.price * product.discount / 100)) %>
+                        <%= product.discount %>%
                     </p>
                     <%}else{ %> 
                     <p class="precio">
@@ -36,53 +42,45 @@
                     </p>
                     <% } %> 
                 <span>Stock: <%= product.stock %> </span>
-                <div class="home__main__producto--descripcion--datos-botones">
+                <div class="detail__main__producto--descripcion--datos-botones">
                     <a href="/" class="boton">Metodos de envio</a>
                     <a href="/" class="boton1">Metodos de pago</a>
                 </div>  
             </div>            
-            <div class="home_main__producto--descripcion-caja-de-botones">
-                <form action="/" class="home__main__producto--descripcion-botones color-boton-celeste">
-                    <input type="submit" name="comprarAhora" id="comprarAhora" value="Comprar Ahora"></a>
-                </form>   
-                <form action="/products/cart" class="home__main__producto--descripcion-botones color-boton-verde">
+            <div class="detail_main__producto--descripcion-caja-de-botones">
+                <form action="/products/cart" class="detail__main__producto--descripcion-botones color-boton-verde">
                     <input type="submit" name="agregarCarrito" id="agregarCarrito" value="Agregar al carrito"></a>
                 </form>
-                <form action="/products/edit/<%= product.id %> " class="home__main__producto--descripcion-botones color-boton-rosa">
+                <form action="/products/edit/<%= product.id %>" class="detail__main__producto--descripcion-botones color-boton-naranja">
                     <input type="submit" name="editar" id="editar" value="Editar producto">
                 </form>
-                <form action="/products/product" class="home__main__producto--descripcion-botones color-boton-rosa">
+                <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" class="detail__main__producto--descripcion-botones color-boton-rojo">
                     <input type="submit" name="delete" id="delete" value="Eliminar">
                 </form>
             </div>
         </article>
-        <article class="home__main__producto--detalles">
-            <div class="home__main__producto--descripcion">
+        <article class="detail__main__producto--detalles">
+            <div class="detail__main__producto--descripcion">
                 <h4>Descripcion del producto</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem pariatur, cupiditate, quia corporis deleniti cum, consequuntur tempore dolor blanditiis sed consequatur! Odit ad dolorem harum magnam totam veritatis quod vel.</p>
+                <p><%= product.description %> </p>
             </div>
-            <div class="home__main__producto--descripcion-opinion">
-                <div class="home__main__producto--descripcion--producto">
-                    <h4>Opiniones</h4>             
-                        <form action="" class="home__main__producto--descripcion-clasificacion-form">  
-                            <h4>Clalificación</h4>
-                            <div>
-                              <input id="radio1" type="radio" name="estrellas" value="5">
-                              <label for="radio1">★</label>
-                              <input id="radio2" type="radio" name="estrellas" value="4">
-                              <label for="radio2">★</label>
-                              <input id="radio3" type="radio" name="estrellas" value="3">
-                              <label for="radio3">★</label>
-                              <input id="radio4" type="radio" name="estrellas" value="2">
-                              <label for="radio4">★</label>
-                              <input id="radio5" type="radio" name="estrellas" value="1">
-                              <label for="radio5">★</label>
-                            </div>
-                        </form>
-                    <div class="home__main__producto--descripcion--comentario">
-                        <p><img src="/images/Logo-Garras-Amiga.png" alt="Foto de perfil">Nombre de usuario</p>
-                        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex repudiandae, quae dolores saepe numquam exercitationem at, et odit laborum dignissimos maiores consectetur, nemo dolore necessitatibus alias repellendus est nostrum non.</span>
-                    </div>                       
+            <div class="detail__main__producto--descripcion-opinion">
+                <div class="detail__main__producto--descripcion--producto">           
+                    <form action="" class="detail__main__producto--descripcion-clasificacion-form">  
+                        <h4>Clalificación</h4>
+                        <div>
+                            <input id="radio1" type="radio" name="estrellas" value="5">
+                            <label for="radio1">★</label>
+                            <input id="radio2" type="radio" name="estrellas" value="4">
+                            <label for="radio2">★</label>
+                            <input id="radio3" type="radio" name="estrellas" value="3">
+                            <label for="radio3">★</label>
+                            <input id="radio4" type="radio" name="estrellas" value="2">
+                            <label for="radio4">★</label>
+                            <input id="radio5" type="radio" name="estrellas" value="1">
+                            <label for="radio5">★</label>
+                        </div>
+                    </form>                      
                 </div>
             </div>
         </article>               
