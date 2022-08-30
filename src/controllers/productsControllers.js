@@ -23,19 +23,19 @@ module.exports = {
     },
     edit: (req, res) => {
 		const products = loadProducts();
-		const categorias = loadCategorys();
-		const clases = loadClass();
+		const categorys = loadCategorys();
+		const subCategorys = loadClass();
         const product = products.find(product => product.id === +req.params.id);
 		return res.render('products/productEdit', {
-			categorias,
-			clases,
+			categorys,
+			subCategorys,
 			product
 		})
     },
 	update: (req, res) =>{
 		const products = loadProducts();
 		const {id} = req.params;
-		const {name, price, discount, description, clases, categorias, stock} = req.body;
+		const {name, price, discount, description, subCategory, category, stock} = req.body;
 		const produtsModify = products.map(product => {
 			if(product.id === +id){
 				return {
@@ -43,8 +43,8 @@ module.exports = {
 					name: name.trim(),
 					price: +price,
 					discount: +discount,
-					clases,
-					categorias,
+					subCategory,
+					category,
 					stock: +stock,
 					description
 				}
@@ -66,7 +66,7 @@ module.exports = {
     },
 	store: (req,res) =>{
 		const products = loadProducts();
-		const {name, price, discount, description, clases, categorias, stock} = req.body;
+		const {name, price, discount, description, subCategory, category, stock} = req.body;
 		const id = products[products.length - 1].id;
 		const newProduct ={
 			id: id +1,
@@ -74,10 +74,11 @@ module.exports = {
 			name: name.trim(),
 			price: +price,
 			discount: +discount,
+			stock: +stock,
 			image: "Correa.jpeg",
 			description,
-			clases,
-			categorias
+			subCategory,
+			category
 		}
 		const productsNew = [...products, newProduct];
 		storeProducts(productsNew);

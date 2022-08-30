@@ -3,7 +3,7 @@
     <%- include('../partials/header') %>
     <main class="main__create">
         <div class="main__caja">
-            <form action="/products/update/<%= product.id %>?_method=PUT" method="POST" class="main__caja__formulario">
+            <form action="/products/update/<%= product.id %>?_method=PUT " method="POST" class="main__caja__formulario">
                 <div class="main__formulario__cajas">
                     <label for="name">Nombre del producto</label>
                     <input type="text" name="name" id="name" value="<%= product.name %>">
@@ -13,16 +13,16 @@
                     <input type="text" name="description" id="descripcion" maxlength="1000" value="<%= product.description %>">
                 </div>
                 <div class="main__formulario__cajasSelectoras">
-                    <select name="categoria" id="categoria" aria-label="Default select example">
-                        <% categorias.forEach(categoria => { %>
-                            <option value="<%= categoria %>" <%= product.categoria === categoria && 'selected' %>><%= categoria %></option>
+                    <select name="category" id="category" aria-label="Default select example">
+                        <% categorys.forEach(category => { %>
+                            <option value="<%= category %>" <%= product.category === category && 'selected' %>><%= category %></option>
                         <% }) %> 
                     </select>
                 </div>
                 <div class="main__formulario__cajasSelectoras">
-                        <select name="clase" id="clase" aria-label="Default select example">
-                            <% clases.forEach(clase => { %>
-                                <option value="<%= clase %>" <%= product.clase === clase && 'selected'%>><%= clase %></option>
+                        <select name="subCategory" id="subCategory" aria-label="Default select example">
+                            <% subCategorys.forEach(subCategory => { %>
+                                <option value="<%= subCategory %>" <%= product.subCategory === subCategory && 'selected'%>><%= subCategory %></option>
                             <% }) %> 
                     </select>
                 </div>
@@ -47,7 +47,7 @@
                     </select>
                 </div> -->
                 <div class="main__formulario__cajaPrecio">
-                    <label for="stock">Stk</label>
+                    <label for="stock">Stock</label>
                     <input type="number" name="stock" id="stock" value="<%= product.stock %>">
                 </div>
                 <div class="main__formulario__cajaPrecio">
