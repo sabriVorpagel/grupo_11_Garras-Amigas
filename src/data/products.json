@@ -122,10 +122,10 @@
    },
    {
       "id": 12,
-      "name": "Mochila Viajera",
+      "name": "Mochila de Viaje",
       "price": 8000,
       "discount": 0,
-      "category": "producto",
+      "category": "Productos",
       "subCategory": "novedades",
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem pariatur, cupiditate, quia corporis deleniti cum, consequuntur tempore dolor blanditiis sed consequatur! Odit ad dolorem harum magnam totam veritatis quod vel.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ab porro placeat minus nemo nam. Et quasi, voluptatum quibusdam minus veritatis quis. Repudiandae voluptatum totam voluptate pariatur sunt soluta vitae!",
       "stock": 55,
