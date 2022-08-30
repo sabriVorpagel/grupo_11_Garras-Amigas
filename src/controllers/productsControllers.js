@@ -57,11 +57,11 @@ module.exports = {
 	},
     // Create - Form to create
     create: (req, res) => {
-		const categorias = loadCategorys();
-		const clases = loadClass();
+		const categorys = loadCategorys();
+		const subCategorys = loadClass();
         return res.render('products/productCreate',{
-			categorias: categorias.sort(),
-			clases: clases.sort()
+			categorys: categorys.sort(),
+			subCategorys: subCategorys.sort()
 		})
     },
 	store: (req,res) =>{

@@ -22,7 +22,7 @@
                 <div class="main__formulario__cajasSelectoras">
                         <select name="subCategory" id="subCategory" aria-label="Default select example">
                             <% subCategorys.forEach(subCategory => { %>
-                                <option value="<%= subCategory %>" <%= product.subCategory === subCategory && 'selected'%>><%= subCategory %></option>
+                                <option value="<%= subCategory %>" <%= product.subCategory === subCategory && 'selected' %>><%= subCategory %></option>
                             <% }) %> 
                     </select>
                 </div>
