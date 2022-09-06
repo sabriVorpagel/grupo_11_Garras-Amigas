@@ -82,7 +82,7 @@
 .main__login__form input {
     width: 90%;
     height: 46px;
-    background: rgba(5, 7, 12, 0.1);
+    background: rgba(5, 7, 12, 0.2 );
     border: none;
     border-radius: 5px;
     gap:  10px;

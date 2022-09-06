@@ -30,7 +30,6 @@
     background-size: cover;
     background-attachment: scroll;
     margin-top: 20px;
-   
 }
 
 .main__perfil__container {
@@ -77,11 +76,6 @@
     letter-spacing: 3px;
 }
 
-/* .texto--error{
-    color: red;
-    font-size: 8px;
-    margin-top: -3pxt t t;
-} */
 .main__perfil__form {
     width: 100%;
 }
@@ -89,7 +83,7 @@
 .main__perfil__form input {
     width: 90%;
     height: 46px;
-    background: rgba(5, 7, 12, 0.1);
+    background: rgba(5, 7, 12, 0.2);
     border: none;
     border-radius: 5px;
     gap:  10px;
@@ -136,36 +130,6 @@
     margin-bottom: 23px;
     padding: 10px;
 }
-
-.main__perfil__botones__redes h5 {
-    color: #fff;
-    width: 100%;
-    font-weight: 100;
-    font-size: 12px;
-    text-align: center;
-}
-
-.redes__sociales--fa i {
-    margin-top: 40px;
-    width: 15%;
-    font-size: 30px;
-    color: #FFF;
-}
-
-.redes__sociales--go i {
-    margin-top: 40px;
-    width: 15%;
-    font-size: 30px;
-    color: #FFF;
-}
-
-.redes__sociales--insta i {
-    margin-top: 40px;
-    width: 15%;
-    font-size: 30px;
-    color: #FFF;
-}
-
 /*TABLET*/
 @media (min-width:768px) {
 

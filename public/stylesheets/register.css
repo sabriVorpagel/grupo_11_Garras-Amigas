@@ -27,6 +27,7 @@
     color: #fff;
     font-weight: 400;
     letter-spacing: 15px;
+    text-align: center;
 }
 
 .main__register__iniciar {
@@ -44,7 +45,7 @@
 
 .main__register__iniciar a {
     width: 40%;
-    font-size: 15px;
+    font-size: 20px;
     color: #2664bb;
     align-items: center;
     letter-spacing: 3px;
@@ -63,6 +64,7 @@
     gap:  10px;
     margin: 20px 10px;
     padding: 5px;
+    
 }
 
 .main__register__form ::placeholder {
@@ -71,24 +73,12 @@
     letter-spacing: 3px;
 }
 
-/* .main__register__contraseña {
-    margin: 10px 50px;
-    color: #fff;
-    padding-bottom: 30px;
-    border: red 2px solid;
-} */
+.main__register__botones__send {
+    width: 100%
+}
 
-/* .texto--error{
-    color: red;
-    font-size: 8px;
-    margin-top: -3pxt t t;
-} */
-
-/* .main__register__form small{
-    width: 100%;
-} */
 .main__register__botones__send button {
-    width: 90%;
+    width: 93%;
     border-radius: 5px;
     transition: all 450ms;
     color: #fff;
@@ -126,7 +116,7 @@
     font-size: 12px;
     text-align: center;
 }
-.main__register__botones__redes i {
+.redes__sociales a{
     margin-top: 40px;
     width: 15%;
     font-size: 30px;
@@ -142,14 +132,12 @@
         padding: 50px;
         background-position: 38% 94%;
     }
-    
     .main__register__container {
         width: 100%;
         flex-direction: row;
         justify-content: space-evenly;
         margin-left: auto;
     }
-  
     .main__register h1 {
         text-align: center;
         width: 100%;
@@ -187,9 +175,6 @@
     .main__register__form ::placeholder {
         font-size: 10px;
     }
-    
-   
-   
 }
 
 @media(min-width:1024px){
@@ -197,7 +182,7 @@
     .main__register {
         width: 100%;
         padding: 50px;
-        background-position: 38% 93%;
+        background-position: 30% ;
     }
     
     .main__register__container {
@@ -246,7 +231,5 @@
         font-size: 10px;
     }
     
-   
-   
 }
     
