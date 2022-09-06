@@ -2,19 +2,19 @@
 .main__register {
     width: 100%;
     padding: 10px;
-    background-image: url('/images/descargaBorroso.png');
+    background-image: url('/images/ffondo.png');
     background-repeat: no-repeat;
-    background-position: 30% 100%;
-    background-size: contain;
+    background-position: center;
+    background-size: cover;
     background-attachment: scroll;
-    background-color: #94B3D3;
+    margin-top: 20px;
 }
 
 .main__register__container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    background-color: rgba(5, 7, 12, 0.3);
+    background-color: rgba(5, 7, 12, 0.4);
     border: solid 1px #fff;
     margin: 10px 0;
     border-radius: 30px;
@@ -36,7 +36,7 @@
 
 .main__register__iniciar p {
     text-align: center;
-    font-size: 15px;
+    font-size: 20px;
     color: #fff;
     margin: 15px;
     letter-spacing: 3px;
@@ -57,7 +57,7 @@
 .main__register__form input {
     width: 90%;
     height: 46px;
-    background: rgba(5, 7, 12, 0.1);
+    background: rgba(5, 7, 12, 0.2);
     border: none;
     border-radius: 5px;
     gap:  10px;
@@ -66,7 +66,7 @@
 }
 
 .main__register__form ::placeholder {
-    color: rgb(172, 165, 165);
+    color: #fff;
     font-size: 12px;
     letter-spacing: 3px;
 }
@@ -140,7 +140,7 @@
     .main__register {
         width: 100%;
         padding: 50px;
-        background-position: 30% 20%;
+        background-position: 38% 94%;
     }
     
     .main__register__container {
@@ -197,7 +197,7 @@
     .main__register {
         width: 100%;
         padding: 50px;
-        background-position: 30% 20%;
+        background-position: 38% 93%;
     }
     
     .main__register__container {
@@ -234,7 +234,7 @@
     
     .main__register__input {
         width: 50%;
-        margin: 0 px;
+        margin: 0 ;
     }
 
     .main__register__input--numeros{

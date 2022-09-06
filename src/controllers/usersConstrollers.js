@@ -8,12 +8,12 @@ module.exports = {
     login : (req,res) => {
         return res.render('users/login')
     },
-    edit :(req, res) => {
+    perfil :(req, res) => {
         const users = loadUsers();
 
         const user = users.find(user => user.id === +req.params.id);
 
-        return res.render('users/registerEdit', {
+        return res.render('users/perfil', {
         user
         })
     },
