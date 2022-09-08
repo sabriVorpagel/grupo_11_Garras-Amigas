@@ -1,0 +1,57 @@
+<%- include('../partials/head', {title: 'Mi perfil'}) %> 
+<body>
+    <%- include('../partials/header') %> 
+    <main class="main__profile">
+        <section class="main__profile__container">
+            <h1>Mi Perfil</h1>
+            <form  action=""  method="" class="main__profile__form">
+                <div class="main__profile__img">
+                    <img src="/images/default.jpg" id="" alt="" width="100">
+                </div>
+                <div class="main__profile__editor">
+                    <label for="iamge">Editar imagen</label>
+                    <input type="file" id="image" name="image">
+                </div>
+                <div class="main__profile__input">
+                    <input placeholder="  NOMBRE" type="text" id="firstName" atocomplete="off" name="firstName">
+                </div>
+                <div class="main__profile__input">
+                    <input placeholder="  APELLIDO" type="text" id="lastName" autocomplete="off" name="lastName">
+                </div>
+                <div class="main__profile__input ">
+                    <input placeholder="  NÚMERO DE TELEFONO" type="number" id="phone" autocomplete="off" name="phone">
+                </div>
+                <div class="main__profile__input ">
+                    <input placeholder="  EMAIL" type="email" id="email" name="email">
+                </div>
+                <div class="main__profile__input">
+                    <input placeholder="  CONTRASEÑA" type="password" id="password" name="password">
+                </div>
+                <div class="main__profile__input">
+                    <input placeholder="  REPETIR CONTRASEÑA" type="password" id="re-password" autocomplete="off" name="re-password">
+                </div>
+                <div class="main__profile__input">
+                    <input placeholder="  DIRECCIÓN" type="text" id="direction" autocomplete="off" name="direction">
+                </div>
+                <div class="main__profile__input main__profile__input--numeros">
+                    <input placeholder="  NÚMERO" type="number" id="number" autocomplete="off" name="number">
+                </div>
+                <div class="main__profile__input main__profile__input--numeros">
+                    <input placeholder="  CODIGO POSTAL" type="number" id="postal_code" autocomplete="off" name="postal_code">
+                </div>
+                <div class="main__profile__input">
+                    <input placeholder="  LOCALIDAD" type="text" id="location" autocomplete="off" name="location">
+                </div>
+                <div class="main__profile__input">
+                    <input placeholder="  PROVINCIA" type="text" id="province" autocomplete="off" name="province">
+                </div>
+                <div class="main__profile__botones__send">
+                    <button type="submit">ENVIAR!</button>
+                </div>
+            </form>
+            
+        </section>
+    </main>
+    <%- include('../partials/footer') %> 
+</body>
+</html>

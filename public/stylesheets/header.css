@@ -88,7 +88,8 @@ a {
     width: 100%;
     max-width: 250px;
     background: #607EAA;
-    /* background-image: url('/images/fonfoSalchi.png'); */
+    /* background-image: url('/images/perroheader.png'); */
+    background-repeat: no-repeat;
     height: 80vh;
     position: relative;
     transition: all 500ms ease;
@@ -136,6 +137,7 @@ a {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
+    margin-top: 12px;
 }
 
 .home__header--contacto-edit button{
@@ -177,12 +179,12 @@ a {
 }
 
 .home__header--search input {
-    width: 100%;
+    width: 113%;
     border: 1px solid grey;
     border-radius: 5px;
     padding: 8px;
     margin-top: 39px;
-    margin-left: 5px;
+    margin-left: -6px;
 }
 
 .home__header--search button {
@@ -209,26 +211,27 @@ a {
     font-size: 18px;
 }
 
+.img-final{
+    margin: 20px;
+}
+
 
 
 @media(min-width: 768px) {
-    .home__header{
-        padding: 0 50px;
-    }
-    
     .home__header--header--2 {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
         width: 100%;
+        border-top:#607EAA solid 0.5px;
         justify-content: space-around;
     }
     .home__header--logo {
         width: 20%;
     }
     .home__header--logo img {
-        width: 80%;
+        width: 95%;
         margin: 5px;
     }
     .home__header--search {

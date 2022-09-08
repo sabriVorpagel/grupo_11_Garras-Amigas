@@ -19,11 +19,15 @@ const loadCategorys = () => {
 const loadUsers = () => {
     return JSON.parse(fs.readFileSync(path.join(__dirname, 'users.json'), 'utf-8'));
 };
+const storeUsers = (users) => {
+    fs.writeFileSync(path.join(__dirname, 'users.json'), JSON.stringify(users, null, 3), 'utf-8');
+};
 
 module.exports = {
     loadProducts,
     storeProducts,
     loadCategorys,
     loadClass,
-    loadUsers
+    loadUsers,
+    storeUsers
 }
