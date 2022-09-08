@@ -7,7 +7,7 @@
             <div class="main__register__iniciar">
                 <p>¿Ya tenes un perfil ?</p><a href="/users/login">Inicia Sesión</a>
             </div>
-            <form  action=""  method="" class="main__register__form">
+            <form  action=""  method="POST" enctype="multipart/form-data" class="main__register__form">
                 <div class="main__register__input">
                     <input placeholder="  NOMBRE" type="text" id="firstName" atocomplete="off" name="firstName">
                 </div>
@@ -24,16 +24,16 @@
                     <input placeholder="  CONTRASEÑA" type="password" id="password" name="password">
                 </div>
                 <div class="main__register__input">
-                    <input placeholder="  REPETIR CONTRASEÑA" type="password" id="re-password" autocomplete="off" name="re-password">
+                    <input placeholder="  REPETIR CONTRASEÑA" type="password" id="password2" autocomplete="off" name="re-password">
                 </div>
                 <div class="main__register__input">
                     <input placeholder="  DIRECCIÓN" type="text" id="direction" autocomplete="off" name="direction">
                 </div>
                 <div class="main__register__input--numeros">
-                    <input placeholder="  ALTURA" type="number" id="number" autocomplete="off" name="number">
+                    <input placeholder="  ALTURA" type="number" id="heigth" autocomplete="off" name="heigth">
                 </div>
                 <div class="main__register__input--numeros">
-                    <input placeholder="  CODIGO POSTAL" type="number" id="cp" autocomplete="off" name="cp">
+                    <input placeholder="  CODIGO POSTAL" type="number" id="postal_code" autocomplete="off" name="postal_code">
                 </div>
                 <div class="main__register__input">
                     <input placeholder="  LOCALIDAD" type="text" id="location" autocomplete="off" name="location">                  </div>
@@ -41,7 +41,7 @@
                     <input placeholder="  PROVINCIA" type="text" id="province" autocomplete="off" name="province">
                 </div>
                 <div class="main__register__input">
-                    <label for="imgUsers" class="form-label">Agrega tu foto de perfil</label>
+                    <label for="imgUsers">Agrega tu foto de perfil</label>
                     <input id="imgUsers" type="file" name="imgUsers" autocomplete="off">
                 </div>
                 <div class="main__register__botones__send">
