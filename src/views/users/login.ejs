@@ -7,9 +7,11 @@
             <div class="main__login__iniciar">
                 <p>¿Aún no tenes una cuenta?</p><a href="/users/register">Registrate </a>
             </div>
-            <form action="" class="main__login__form" method="">
-                <input type="email" placeholder="  EMAIL" name="email" />
+            <form action="/" class="main__login__form" method="POST">
+                <input type="email" placeholder="  EMAIL" name="email"  value="<%= locals.old && old.email ? old.email: null %>"/>
+                <small><%= locals.errors && errors.email ? errors.email.msg :null  %></small>
                 <input type="password" placeholder="  CONTRASEÑA" name="contrasenia" />
+                <small><%= locals.errors && errors.password ? errors.password.msg :null  %></small>
                 <a href="#" class="main__perfil__contraseña" >¿Olvidaste tu contraseña?</a>
                 <div class="main__login__botones__send">
                     <button type="submit">INGRESA!</button>

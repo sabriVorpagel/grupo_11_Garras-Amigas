@@ -14,15 +14,18 @@
             <label for="btn-menu"><i class="fa-solid fa-bars"></i></label>
         </div>
         <div class="home__header--favicon">
+            <% if(locals.userLogin) { %> 
+            <div class="home__header--edit--2">
+                <a href="/users/profile "><i class="fa-regular fa-circle-user"></i> </a>
+            </div>
+            <div class="home__header--carrito--2">
+                <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i> </a>
+            </div>
+            <% }else{  %> 
             <div class="home__header--contacto--2">
                 <a href="/users/login"><i class="fa-solid fa-person-walking-arrow-right"></i></a>
             </div>
-        <div class="home__header--edit--2">
-            <a href="/users/profile "><i class="fa-regular fa-circle-user"></i> </a>
-        </div>
-        <div class="home__header--carrito--2">
-            <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i> </a>
-        </div>
+            <% } %> 
     </div>
     <!--  NAVEGADOR QUE SE VE DEBAJO DEL HEADER -->
     <div class="home__header--header--2">
@@ -53,15 +56,18 @@
                 <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
             <div class="home__header--contacto-edit">
-            <div class="home__header--contacto">
-                <button><a href="/users/login"><i class="fa-solid fa-person-walking-arrow-right"></i></a></button>
-            </div>
-            <div class="home__header--edit">
-                <button><a href="/users/profile "><i class="fa-regular fa-circle-user"></i></a></button>
-            </div>
-            <div class="home__header--carrito">
-                <button><a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a></button>
-            </div>
+            <% if(locals.userLogin) { %> 
+                <div class="home__header--edit">
+                    <a href="/users/profile "><i class="fa-regular fa-circle-user"></i> </a>
+                </div>
+                <div class="home__header--carrito">
+                    <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i> </a>
+                </div>
+            <% }else{  %> 
+                <div class="home__header--contacto">
+                    <a href="/users/login"><i class="fa-solid fa-person-walking-arrow-right"></i></a>
+                </div>
+            <% } %> 
             <hr>
             <div>
                 <nav>

@@ -43,5 +43,19 @@
       "postal": 1661,
       "location": "bellavista",
       "province": "buenosaires"
+   },
+   {
+      "id": 4,
+      "firstName": "Sabrina",
+      "lastName": "vorpagel",
+      "phone": 12364595,
+      "email": "vorpagelsabrinafacultad@gmail.com",
+      "password": "$2a$10$BgN8bRcp1e0XZBJ9gJizYumj4FdjrEThXvEtZHeDKCVl/l9om/6Ji",
+      "password2": "12341234",
+      "direction": "holaj",
+      "heigth": 1236,
+      "postal": 123,
+      "location": "lanus",
+      "province": "tucuman"
    }
 ]

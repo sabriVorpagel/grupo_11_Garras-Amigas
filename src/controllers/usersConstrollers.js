@@ -44,9 +44,19 @@ module.exports = {
     login : (req,res) => {
         return res.render('users/login')
     }, 
-    // processLogin : (req, res) =>{
-    //     return res.send(req.body)
-    // },
+    processLogin : (req, res) =>{
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+            let {id, email, password, imgUsers} = loadUsers().find(user => user.email === req.body.email);
+        req.session.userLogin= {id, email, password, imgUsers} 
+            return res.redirect('/products/product')
+        }else {
+            return res.render('users/login', {
+                errors : errors.mapped(), 
+                old: req.body
+            })
+        }
+    },
     profile :(req, res) => {
         return res.render('users/profile')
     },

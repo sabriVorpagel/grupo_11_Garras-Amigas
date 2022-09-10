@@ -5,11 +5,13 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride = require('method-override');
+const session = require('express-session'); 
 // rutas
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productRouter = require('./routes/products');
 
+const {localsUserCheck} = require('./middlewares/usersLogin');
 
 
 const app = express();
@@ -22,6 +24,11 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(session({ 
+  secret : 'Garras Amigas',
+  resave : true , 
+  saveUnitialized : false }));
+app.use(localsUserCheck)
 
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(methodOverride('_method'));
