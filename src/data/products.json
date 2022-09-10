@@ -361,5 +361,16 @@
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem pariatur, cupiditate, quia corporis deleniti cum, consequuntur tempore dolor blanditiis sed consequatur! Odit ad dolorem harum magnam totam veritatis quod vel.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ab porro placeat minus nemo nam. Et quasi, voluptatum quibusdam minus veritatis quis. Repudiandae voluptatum totam voluptate pariatur sunt soluta vitae!",
       "stock": 56,
       "image": "juguete.kit.jpeg"
+   },
+   {
+      "id": 34,
+      "name": "aspiradora katcher",
+      "description": "holsdfs",
+      "category": "Productos",
+      "subCategory": "",
+      "image": "Correa.jpeg",
+      "price": 18000,
+      "discount": 50,
+      "stock": 3641
    }
 ]

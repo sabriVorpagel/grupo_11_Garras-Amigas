@@ -1,6 +1,6 @@
 [
    {
-      "id": "id",
+      "id": 1,
       "firstName": "firstName",
       "lastName": "lastName",
       "phone": "phone",
@@ -9,7 +9,7 @@
       "password2": "password2",
       "direction": "direction",
       "heigth": "heigth",
-      "postal_code": "postal_code",
+      "postal": "postal",
       "location": "location",
       "province": "province",
       "imgUsers": [
@@ -17,33 +17,31 @@
       ]
    },
    {
-      "id": "id1",
-      "firstName": "Veronica",
-      "lastName": "Velazco",
-      "phone": 123456,
-      "email": null,
-      "password": 123456,
-      "re-password": "123456",
-      "direction": "av. santa ana",
-      "heigth": 123,
-      "postal_code": 123,
-      "location": "caba",
-      "province": null,
-      "password2": null
+      "id": 2,
+      "firstName": "Sabrina",
+      "lastName": "vorpagel",
+      "phone": 16455235,
+      "email": "sabrivorpagel2512@gmail.com",
+      "password": "$2a$10$UkfYTsPpN9VAZDwrpXZS/.nfV14EQ98nW9yKYVCycJCIdGEOwoT7.",
+      "password2": "123123",
+      "direction": "riodiamante",
+      "heigth": 1442,
+      "postal": 1661,
+      "location": "bellavista",
+      "province": "buenosaires"
    },
    {
-      "id": "id11",
-      "firstName": "Veronica",
-      "lastName": "",
-      "phone": 0,
-      "email": null,
-      "password": 0,
-      "re-password": "",
-      "direction": "",
-      "heigth": 0,
-      "postal_code": 0,
-      "location": "",
-      "province": 0,
-      "password2": null
+      "id": 3,
+      "firstName": "Sabrina",
+      "lastName": "vorpagel",
+      "phone": 16455235,
+      "email": "sabryvorpa@yahoo.com.ar",
+      "password": "$2a$10$M4KeYXq/NHohZpF1V7KNI.Wp0ODj.pe31uvQ3/s2MT/oFYSbisQfy",
+      "password2": "456456",
+      "direction": "riodiamante",
+      "heigth": 1442,
+      "postal": 1661,
+      "location": "bellavista",
+      "province": "buenosaires"
    }
 ]
