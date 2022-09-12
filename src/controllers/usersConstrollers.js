@@ -21,12 +21,13 @@ module.exports = {
                 phone: +phone,
                 email : email.trim(), 
                 password : hashSync(password.trim(),10),
+                password2 : null,
                 direction : direction.trim(),
                 heigth : +heigth,
                 postal : +postal,
                 location :location.trim(),
                 province : province.trim(),
-                imgUsers: imgUsers 
+                imgUsers: null
             }
     
             const usersModify = [...users, newUser];
@@ -48,8 +49,8 @@ module.exports = {
         let errors = validationResult(req);
         if(errors.isEmpty()){
             let {id, email, password, imgUsers} = loadUsers().find(user => user.email === req.body.email);
-        req.session.userLogin= {id, email, password, imgUsers} 
-            return res.redirect('/products/product')
+        req.session.login= {id, email, password, imgUsers} 
+            return res.redirect('/')
         }else {
             return res.render('users/login', {
                 errors : errors.mapped(), 

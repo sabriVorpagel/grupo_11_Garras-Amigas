@@ -5,10 +5,10 @@
         <section class="main__register__container">
             <h1>REGÍSTRATE</h1>
             <div class="main__register__iniciar">
-                <p>¿Ya tenes un perfil ?</p><a href="/users/login">Inicia Sesión</a>
+                <a href="/users/login">¿Ya tenes un perfil ?</a>
             </div>
             <form  action=""  method="POST" enctype="multipart/form-data" class="main__register__form">
-                <div class="main__register__input">
+                <div class="main__register__input ">
                     <input placeholder="  NOMBRE" type="text" id="firstName" atocomplete="off" name="firstName" value="<%= locals.old && old.firstName ? old.firstName : null %>">
                     <small><%= locals.errors && errors.firstName ? errors.firstName.msg :null  %> </small>
                 </div>
@@ -37,11 +37,11 @@
                     <input placeholder="  DIRECCIÓN" type="text" id="direction" autocomplete="off" name="direction"  value="<%= locals.old && old.direction ? old.direction : null %>">
                     <small><%= locals.errors && errors.direction ? errors.direction.msg :null  %></small>
                 </div>
-                <div class="main__register__input--numeros">
+                <div class="main__register__input main__register--numeros">
                     <input placeholder="  ALTURA" type="number" id="heigth" autocomplete="off" name="heigth" value="<%= locals.old && old.heigth ? old.heigth : null %>">
                     <small><%= locals.errors && errors.heigth ? errors.heigth.msg :null  %></small>
                 </div>
-                <div class="main__register__input--numeros">
+                <div class="main__register__input  main__register--numeros">
                     <input placeholder="  CODIGO POSTAL" type="number" id="postal_code" autocomplete="off" name="postal" value="<%= locals.old && old.postal ? old.postal : null %>">
                     <small><%= locals.errors && errors.postal ? errors.postal.msg :null  %></small>
                 </div>
@@ -53,8 +53,8 @@
                     <input placeholder="  PROVINCIA" type="text" id="province" autocomplete="off" name="province" value="<%= locals.old && old.province ? old.province : null %>">
                     <small><%= locals.errors && errors.province ? errors.province.msg :null  %></small>
                 </div>
-                <div class="main__register__input">
-                    <label for="imgUsers">Agrega tu foto de perfil</label>
+                <div class="main__register__input main__register--foto">
+                    <label for="imgUsers">AGREGA TU FOTO DE PERFIL</label>
                     <input id="imgUsers" type="file" name="imgUsers" autocomplete="off">
                 </div>
                 <div class="main__register__botones__send">

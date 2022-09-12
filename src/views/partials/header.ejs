@@ -14,7 +14,7 @@
             <label for="btn-menu"><i class="fa-solid fa-bars"></i></label>
         </div>
         <div class="home__header--favicon">
-            <% if(locals.userLogin) { %> 
+            <% if(locals.login) { %> 
             <div class="home__header--edit--2">
                 <a href="/users/profile "><i class="fa-regular fa-circle-user"></i> </a>
             </div>
@@ -56,18 +56,19 @@
                 <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
             <div class="home__header--contacto-edit">
-            <% if(locals.userLogin) { %> 
-                <div class="home__header--edit">
-                    <a href="/users/profile "><i class="fa-regular fa-circle-user"></i> </a>
-                </div>
-                <div class="home__header--carrito">
-                    <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i> </a>
-                </div>
-            <% }else{  %> 
-                <div class="home__header--contacto">
-                    <a href="/users/login"><i class="fa-solid fa-person-walking-arrow-right"></i></a>
-                </div>
-            <% } %> 
+                <% if(locals.login) { %> 
+                    <div class="home__header--edit">
+                        <a href="/users/profile"><button><i class="fa-regular fa-circle-user"></i></button> </a>
+                    </div>
+                    <div class="home__header--carrito">
+                        <button><a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a></button>
+                    </div>
+                <% }else{  %> 
+                    <div class="home__header--contacto">
+                        <a href="/users/login"><i class="fa-solid fa-person-walking-arrow-right"></i></a>
+                    </div>
+                <% } %> 
+            </div>
             <hr>
             <div>
                 <nav>

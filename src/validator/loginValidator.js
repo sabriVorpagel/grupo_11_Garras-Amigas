@@ -6,13 +6,12 @@ module.exports = [
 
     check('email')
         .notEmpty().withMessage('El email es obligatorio').bail()
-        .isEmail().withMessage('Debe ser un email valido').bail()
-        ,
+        .isEmail().withMessage('Debe ser un email valido').bail(),
     body('password')
         .notEmpty()
         .withMessage('La contraseña es obligatoria')
         .custom((value, {req}) => {
-            const user = loadUsers().find(user => user.email === req.body.email && compareSync(value, user.password) );
+            const user = loadUsers().find(user => user.email === req.body.email.trim() && compareSync(value, user.password) );
             
             return !user ? false : true
             

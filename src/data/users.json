@@ -57,5 +57,34 @@
       "postal": 123,
       "location": "lanus",
       "province": "tucuman"
+   },
+   {
+      "id": 5,
+      "firstName": "vero",
+      "lastName": "vero",
+      "phone": 123456,
+      "email": "veroverona31@gmail.com",
+      "password": "$2a$10$Ueq2M7UTVcLOCiykYQFjAe8GBh3ByREgBwhCRrt7X4nQa7fAT5NE.",
+      "password2": "123456",
+      "direction": "bvhdwasgv",
+      "heigth": 4564,
+      "postal": 4564,
+      "location": "iokho",
+      "province": "iohi"
+   },
+   {
+      "id": 6,
+      "firstName": "Delfina",
+      "lastName": "DaSilva",
+      "phone": 1234546,
+      "email": "delfina@gmail.com",
+      "password": "$2a$10$Tmp0vMgwy/DxzJn6fL5htOh1RBhvMtEf9Bsl525opN/OyrW0o/k72",
+      "password2": null,
+      "direction": "fghfth",
+      "heigth": 123,
+      "postal": 123,
+      "location": "fgiedg",
+      "province": "bdkiscb",
+      "imgUsers": null
    }
 ]

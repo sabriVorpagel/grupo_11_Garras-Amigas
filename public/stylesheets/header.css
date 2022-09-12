@@ -88,7 +88,6 @@ a {
     width: 100%;
     max-width: 250px;
     background: #607EAA;
-    /* background-image: url('/images/perroheader.png'); */
     background-repeat: no-repeat;
     height: 80vh;
     position: relative;
@@ -146,6 +145,7 @@ a {
     height: 50px;
     border: none;
     border-radius: 50px;
+    border: solid 2px red;
 }
 .home__header--contacto {
     padding-top: 20px;
@@ -210,12 +210,9 @@ a {
     cursor: pointer;
     font-size: 18px;
 }
-
 .img-final{
     margin: 20px;
 }
-
-
 
 @media(min-width: 768px) {
     .home__header--header--2 {
@@ -224,14 +221,14 @@ a {
         flex-wrap: wrap;
         align-items: center;
         width: 100%;
-        border-top:#607EAA solid 0.5px;
         justify-content: space-around;
+        background-color: #6987b4;
     }
     .home__header--logo {
         width: 20%;
     }
     .home__header--logo img {
-        width: 95%;
+        width: 90%;
         margin: 5px;
     }
     .home__header--search {
@@ -240,16 +237,17 @@ a {
     .home__header--search--header {
         display: flex;
         position: relative;
-        width: 45%;
+        width: 60%;
     }
     .home__header--search--header input {
         width: 100%;
         border: 1px solid grey;
         border-radius: 5px;
         padding: 8px;
+       
     }
     .home__header--search--header button {
-        color: grey;
+        color: #6F97B0;
         border: none;
         background-color: transparent;
         position: absolute;
@@ -286,6 +284,7 @@ a {
         flex-direction: row;
         height: 40px;
         align-items: center;
+        background-color: #607EAA;
     }
     .home__header__nav--2 {
         width: 100%;
@@ -302,14 +301,14 @@ a {
     }
     .home__header__nav--2  a{
         font-size: 12px;
-        color: #6F97B0;
+        color: #fff;
         font-size: 15px;
         font-weight: 200;
         align-items: center;
         transition: all 0.3s ease;
     }
     .home__header__nav--2  a:hover{
-        border-bottom: 2px solid #6F97B0;
+        border-bottom: 2px solid #fff;
 		padding-bottom: 3px;
     }
 }
