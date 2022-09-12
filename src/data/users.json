@@ -86,5 +86,20 @@
       "location": "fgiedg",
       "province": "bdkiscb",
       "imgUsers": null
+   },
+   {
+      "id": 7,
+      "firstName": "Santiago",
+      "lastName": "Oviedo",
+      "phone": 2364450967,
+      "email": "oviedosantiagogabriel@gmail.com",
+      "password": "$2a$10$5phDmx1dMKKbExqoK5adROYXUz5Tfs2Kj0eTR.9Ovc5qvlxo5fO2y",
+      "password2": null,
+      "direction": "San",
+      "heigth": 782,
+      "postal": 6030,
+      "location": "Vedia",
+      "province": "BuenosAires",
+      "imgUsers": null
    }
 ]
