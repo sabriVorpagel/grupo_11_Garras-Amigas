@@ -69,7 +69,7 @@ module.exports = {
         });
     },
 
-    update : (req, res) =>{
+    editProfile: (req, res) =>{
         return res.send(req.body)
     },
     logout: (req, res) => {
