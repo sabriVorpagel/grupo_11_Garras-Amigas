@@ -86,5 +86,20 @@
       "location": "fgiedg",
       "province": "bdkiscb",
       "imgUsers": null
+   },
+   {
+      "id": 7,
+      "firstName": "Sabrina",
+      "lastName": "vorpagel",
+      "phone": 165452893,
+      "email": "hahsjsjkd@gmail.com",
+      "password": "$2a$10$aWZsYZwuMApj64XeX2E9Lu6dEGLJixbaR2/Cu5NUURVw8R/F4S8vy",
+      "password2": null,
+      "direction": "jajajajajajs",
+      "heigth": 1425,
+      "postal": 15423,
+      "location": "blabla",
+      "province": "blalbla",
+      "imgUsers": null
    }
 ]
