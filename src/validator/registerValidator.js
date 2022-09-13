@@ -4,6 +4,7 @@ const{loadUsers}= require('../data/db_Module');
 module.exports = [
     check('firstName')
         .notEmpty().withMessage('El nombre es obligatorio').bail()
+        .matches(/^[ÁÉÍÓÚA-Z][a-záéíóú]+(\s+[ÁÉÍÓÚA-Z]?[a-záéíóú]+)*$/)
         .isLength({
             min: 2
         }).withMessage('Minimo 2 caracteres').bail()
@@ -11,6 +12,7 @@ module.exports = [
 
     check('lastName')
         .notEmpty().withMessage('El apellido es obligatorio').bail()
+        .matches(/^[ÁÉÍÓÚA-Z][a-záéíóú]+(\s+[ÁÉÍÓÚA-Z]?[a-záéíóú]+)*$/)
         .isLength({
             min: 2
         }).withMessage('Minimo 2 caracteres').bail()
@@ -54,6 +56,7 @@ module.exports = [
 
     check('direction')
         .notEmpty().withMessage('La direccion es obligatorio').bail()
+        .matches(/^[ÁÉÍÓÚA-Z][a-záéíóú]+(\s+[ÁÉÍÓÚA-Z]?[a-záéíóú]+)*$/)
         .isLength({
             min: 2
         }).withMessage('Minimo 2 caracteres').bail()
@@ -73,6 +76,7 @@ module.exports = [
 
     check('location')
         .notEmpty().withMessage('La localidad es obligatorio').bail()
+        .matches(/^[ÁÉÍÓÚA-Z][a-záéíóú]+(\s+[ÁÉÍÓÚA-Z]?[a-záéíóú]+)*$/)
         .isLength({
             min: 2
         }).withMessage('Minimo 2 caracteres').bail()
@@ -80,6 +84,7 @@ module.exports = [
 
     check('province')
         .notEmpty().withMessage('La provincia es obligatorio').bail()
+        .matches(/^[ÁÉÍÓÚA-Z][a-záéíóú]+(\s+[ÁÉÍÓÚA-Z]?[a-záéíóú]+)*$/)
         .isLength({
             min: 2
         }).withMessage('Minimo 2 caracteres').bail()

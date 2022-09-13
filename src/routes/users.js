@@ -3,7 +3,7 @@ var router = express.Router();
 const multer = require ('multer');
 
 const {login, register, profile, processRegister, processLogin, update, logout} = require('../controllers/usersConstrollers');
-const {uploadUsers} = require('../middlewares/uploadFiles');
+const {uploadUsers } = require('../middlewares/uploadFiles');
 const loginValidator = require('../validator/loginValidator');
 const registerValidator = require('../validator/registerValidator');
 const publicRoute = require('../middlewares/publicRoute');

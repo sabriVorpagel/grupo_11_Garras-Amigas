@@ -4,7 +4,7 @@
     <main class="main__profile">
         <section class="main__profile__container">
             <h1>Mi Perfil</h1>
-            <form  action=""  method="" class="main__profile__form">
+            <form  action="/users/update/<%= user.id %>?_method=PUT"  method="POST" class="main__profile__form">
                 <div class="main__profile--profile">
                     <div class="main__profile__img">
                         <img src="/images/default.jpg" id="" alt="" width="100">
@@ -15,37 +15,37 @@
                     </div>
                 </div>
                 <div class="main__profile__input">
-                    <input placeholder="  NOMBRE" type="text" id="firstName" atocomplete="off" name="firstName">
+                    <input placeholder="  NOMBRE" type="text" id="firstName" atocomplete="off" name="firstName" value="<%= user.firstName %>">
                 </div>
                 <div class="main__profile__input">
-                    <input placeholder="  APELLIDO" type="text" id="lastName" autocomplete="off" name="lastName">
+                    <input placeholder="  APELLIDO" type="text" id="lastName" autocomplete="off" name="lastName" value="<%= user.lastName %>">
                 </div>
                 <div class="main__profile__input ">
-                    <input placeholder="  NÚMERO DE TELEFONO" type="number" id="phone" autocomplete="off" name="phone">
+                    <input placeholder="  NÚMERO DE TELEFONO" type="number" id="phone" autocomplete="off" name="phone" value="<%= user.phone %>">
                 </div>
                 <div class="main__profile__input ">
-                    <input placeholder="  EMAIL" type="email" id="email" name="email">
+                    <input placeholder="  EMAIL" type="email" id="email" name="email" value="<%= user.email %>">
                 </div>
                 <div class="main__profile__input">
-                    <input placeholder="  CONTRASEÑA" type="password" id="password" name="password">
+                    <input placeholder="  CONTRASEÑA" type="password" id="password" name="password" value="<%= user.password %>">
                 </div>
                 <div class="main__profile__input">
-                    <input placeholder="  REPETIR CONTRASEÑA" type="password" id="re-password" autocomplete="off" name="re-password">
+                    <input placeholder="  REPETIR CONTRASEÑA" type="password" id="password2" autocomplete="off" name="password2" value="<%= user.password2 %>">
                 </div>
                 <div class="main__profile__input">
-                    <input placeholder="  DIRECCIÓN" type="text" id="direction" autocomplete="off" name="direction">
+                    <input placeholder="  DIRECCIÓN" type="text" id="direction" autocomplete="off" name="direction" value="<%= user.direction %>">
                 </div>
                 <div class="main__profile__input main__profile__input--numeros">
-                    <input placeholder="  NÚMERO" type="number" id="number" autocomplete="off" name="number">
+                    <input placeholder="  ALTURA" type="number" id="heigth" autocomplete="off" name="heigth" value="<%= user.heigth %>">
                 </div>
                 <div class="main__profile__input main__profile__input--numeros">
-                    <input placeholder="  CODIGO POSTAL" type="number" id="postal_code" autocomplete="off" name="postal_code">
+                    <input placeholder="  CODIGO POSTAL" type="number" id="postal" autocomplete="off" name="postal" value="<%= user.postal %>">
                 </div>
                 <div class="main__profile__input">
-                    <input placeholder="  LOCALIDAD" type="text" id="location" autocomplete="off" name="location">
+                    <input placeholder="  LOCALIDAD" type="text" id="location" autocomplete="off" name="location" value="<%= user.location %>">
                 </div>
                 <div class="main__profile__input">
-                    <input placeholder="  PROVINCIA" type="text" id="province" autocomplete="off" name="province">
+                    <input placeholder="  PROVINCIA" type="text" id="province" autocomplete="off" name="province" value="<%= user.province %>">
                 </div>
                 <div class="main__profile__botones__send">
                     <button type="submit">    ENVIAR!    </button>
