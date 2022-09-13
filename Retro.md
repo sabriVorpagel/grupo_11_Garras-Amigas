@@ -82,3 +82,37 @@
 ### _**Dejar de hacer**_
 
 >Distraerse.
+
+# _**Retrospectiva 4° sprint**_
+
+## _**Comenzar a hacer**_
+
+>Comunicar dudas en cualquier horario, luego esperar respuesta.
+
+>Mejorar la comunicacion, terminologias, gramatica, etc.
+
+>Comenzar siempre que se inicie el nuevo sprint.
+
+### _**Hacer más**_
+
+>Juntarnos para hacer otros proyectos para mejorar la cooperación.
+
+>Tomar descansos de 10 minutos y charlar cosas no referentes al trabajo para relajarse.
+
+### _**Continuar haciendo**_
+
+>Comunicar problemas por Trello a traves del encargado del trello(Turno rotativo).
+
+>Realizar dailys.
+
+### _**Hacer menos**_
+
+>Trabajar sin parar.
+
+>Trabajar estresados.
+
+### _**Dejar de hacer**_
+
+>Distraerse.
+
+>No estudiar a ultimo momento.
