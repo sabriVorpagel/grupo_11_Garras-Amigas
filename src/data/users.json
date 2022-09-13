@@ -86,5 +86,20 @@
       "location": "fgiedg",
       "province": "bdkiscb",
       "imgUsers": null
+   },
+   {
+      "id": 7,
+      "firstName": "Sabrina",
+      "lastName": "vorpagel",
+      "phone": 156642383,
+      "email": "hahsjsjkd@gmail.com",
+      "password": "$2a$10$nVoMlon24sDgeDe7rmXPY./2Cz8jN3y7dltapn4yAfQK3PEB5bZc.",
+      "password2": null,
+      "direction": "riodiamante",
+      "heigth": 1442,
+      "postal": 1231,
+      "location": "lanuz",
+      "province": "tucuman",
+      "imgUsers": null
    }
 ]
