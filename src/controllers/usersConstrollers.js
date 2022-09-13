@@ -70,7 +70,10 @@ module.exports = {
     },
 
     editProfile: (req, res) =>{
-        return res.send(req.body)
+        const user = user.find(user => user.id === +req.params.id);
+		return res.render('users/profile', {
+			storeUsers
+		})
     },
     logout: (req, res) => {
     req.session.destroy();
