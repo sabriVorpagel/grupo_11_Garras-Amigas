@@ -1,3 +1,4 @@
 module.exports= {
-    localsUserCheck : require('./localsUserCheck')
+    localsUserCheck : require('./localsUserCheck'),
+    
 }

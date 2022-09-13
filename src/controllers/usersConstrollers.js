@@ -10,7 +10,7 @@ module.exports = {
         const errors = validationResult(req);
 
         if(errors.isEmpty()){
-            const {firstName, lastName, email, password, phone, direction, heigth,postal, location, province,imgUsers } = req.body;
+            const {firstName, lastName, email, password, password2, phone, direction, heigth,postal, location, province,imgUsers } = req.body;
             const users = loadUsers();
     
             const newUser = {
@@ -59,10 +59,19 @@ module.exports = {
         }
     },
     profile :(req, res) => {
+        let users = loadUsers().find(user =>user.id === req.session.login.id);
+
         return res.render('users/profile')
     },
     update : (req, res) =>{
         return res.send(req.body)
-    }
+    },
+    logout: (req, res) => {
+    req.session.destroy();
+    res.cookie('Garras Amigas', null, { maxAge: -1 });
+    return res.redirect("/");
+  },
+  
+
 
 }
