@@ -14,10 +14,10 @@ module.exports = [
         .isLength({
             min: 2
         }).withMessage('Minimo 2 caracteres').bail()
-        .isAlpha().withMessage('Solo caracteres alfabeticos'),
+        .isAlpha().withMessage('Solo caracteres alfabéticos'),
 
         check('phone')
-        .notEmpty().withMessage('El telefono es obligatorio').bail()
+        .notEmpty().withMessage('El télefono es obligatorio').bail()
         .isNumeric({
             min: 10,
             max : 10
@@ -26,7 +26,7 @@ module.exports = [
 
     body('email')
         .notEmpty().withMessage('El email es obligatorio').bail()
-        .isEmail().withMessage('Debe ser un email valido').bail()
+        .isEmail().withMessage('Debe ser un email válido').bail()
         .custom((value, {req}) => {
             const user = loadUsers().find(user => user.email === value);
             if(user){
@@ -50,7 +50,7 @@ module.exports = [
                 return false
             }
             return true
-        }).withMessage('Las contraseñas no coinsiden'),
+        }).withMessage('Las contraseñas no coinciden'),
 
     check('direction')
         .notEmpty().withMessage('La direccion es obligatorio').bail()
