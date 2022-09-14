@@ -58,20 +58,25 @@ module.exports = {
             })
         }
     },
-    profile :(req, res) => {
-        let users = loadUsers().find(user =>user.id === req.session.login.id);
 
-        return res.render('users/profile')
+    profile: (req, res) => {
+        const users = loadUsers();
+        const id = req.session.login.id;
+        const user = users.find((user) => user.id === +id);
+        return res.render("users/profile", {
+        title: "Garras Amigas | Mi perfil",
+        user,
+        });
     },
-    update : (req, res) =>{
+
+    editProfile: (req, res) =>{
         return res.send(req.body)
     },
     logout: (req, res) => {
     req.session.destroy();
-    res.cookie('Garras Amigas', null, { maxAge: -1 });
+    res.cookie('garrasAmigas', null, { maxAge: -1 });
     return res.redirect("/");
-  },
-  
+    },
 
 
 }
