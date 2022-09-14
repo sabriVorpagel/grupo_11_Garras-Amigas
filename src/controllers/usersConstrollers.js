@@ -60,9 +60,7 @@ module.exports = {
     },
 
     profile: (req, res) => {
-        const users = loadUsers();
-        const id = req.session.login.id;
-        const user = users.find((user) => user.id === +id);
+        const user = loadUsers().find(user => user.id === req.session.userLogin.id);
         return res.render("users/profile", {
         title: "Garras Amigas | Mi perfil",
         user,

@@ -101,5 +101,20 @@
       "location": "blabla",
       "province": "blalbla",
       "imgUsers": null
+   },
+   {
+      "id": 8,
+      "firstName": "Santiago",
+      "lastName": "Oviedo",
+      "phone": 2364450967,
+      "email": "oviedosantiagogabriel@gmail.com",
+      "password": "$2a$10$y1WH0J8Bhu2mkEANsv8LFuPJoL4ENXJQnfpY2EN9Nc983N/5pTYyO",
+      "password2": null,
+      "direction": "San",
+      "heigth": 782,
+      "postal": 6030,
+      "location": "Vedia",
+      "province": "Bsas",
+      "imgUsers": null
    }
 ]
