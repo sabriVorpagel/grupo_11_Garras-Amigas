@@ -74,7 +74,7 @@ module.exports = {
     },
     logout: (req, res) => {
     req.session.destroy();
-    res.cookie('Garras Amigas', null, { maxAge: -1 });
+    res.cookie('garrasAmigas', null, { maxAge: -1 });
     return res.redirect("/");
     },
 
