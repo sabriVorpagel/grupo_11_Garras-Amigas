@@ -67,12 +67,12 @@ module.exports = {
         });
     },
 
-    update : (req, res) =>{
+    editProfile: (req, res) =>{
         return res.send(req.body)
     },
     logout: (req, res) => {
     req.session.destroy();
-    res.cookie('Garras Amigas', null, { maxAge: -1 });
+    res.cookie('garrasAmigas', null, { maxAge: -1 });
     return res.redirect("/");
     },
 

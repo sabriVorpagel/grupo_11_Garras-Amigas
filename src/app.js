@@ -11,7 +11,7 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productRouter = require('./routes/products');
 
-const {localsUserCheck} = require('./middlewares/usersLogin');
+const {localsUserCheck, coockieCheck } = require('./middlewares/usersLogin');
 
 
 const app = express();
@@ -25,10 +25,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(session({ 
-  secret : 'Garras Amigas',
-  resave : true , 
-  saveUnitialized : false }));
-app.use(localsUserCheck)
+  secret : 'garrasAmigas',
+  resave : false , 
+  saveUnitialized : true }));
+
+  app.use(coockieCheck);
+  app.use(localsUserCheck);
 
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(methodOverride('_method'));

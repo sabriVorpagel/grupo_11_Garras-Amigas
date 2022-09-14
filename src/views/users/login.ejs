@@ -12,6 +12,8 @@
                 <small><%= locals.errors && errors.email ? errors.email.msg :null  %></small>
                 <input type="password" placeholder="  CONTRASEÑA" name="password" />
                 <small><%= locals.errors && errors.password ? errors.password.msg :null  %></small>
+                <label for="">Recordarme</label>
+                <input type="checkbox" name="remember" id="recordame" />
                 <a href="#" class="main__perfil__contraseña" >¿Olvidaste tu contraseña?</a>
                 <div class="main__login__botones__send">
                     <button type="submit">INGRESA!</button>

@@ -6,4 +6,9 @@ Los impedimentos que tuvimos fueron cuando tuvimos que rearmar las rutas del pro
 
 ## _** Implementar daily Sprint 4**_
 
-Durante la semana que es el tiempo transcurrido de este sprint N°4, nos hemos reunido despues de clases, trabajamos en los archivos JSON y modificamos algunas de las vistas, como por ejemplo, Detalle del producto. El sabado 27 y domingo 28 nos hemos reunido un total de 8 horas por dia. Hemos realizado la funcionalidad de manera conjunta de la opcion, crear producto, editar , eliminar, guardar, mostrar, etc. cumplimos con lo pedido en este sprint y realizamos la entrega.
+Durante la semana que es el tiempo transcurrido de este sprint N°4, nos hemos reunido despues de clases, trabajamos en los archivos JSON y modificamos algunas de las vistas, como por ejemplo, Detalle del producto. El sabado 27 y domingo 28 nos hemos reunido un total de 8 horas por dia. Hemos realizado la funcionalidad de manera conjunta de la opcion, crear producto, editar , eliminar, guardar, mostrar, etc. cumplimos con lo pedido en este sprint y realizamos
+
+## _** Implementar daily Sprint 5**_
+
+ En el Sprint número 5 seguimos implementamdo las deylis diariamente, nos encontramos en un momento donde hay mayor compromiso, compañerismo y paciencia entre nosotoros.
+ Buscamos siempre la manera de llegar a las metas que nos proponemos, de forma colaborativa entre nosotros.
