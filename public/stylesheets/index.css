@@ -94,26 +94,33 @@
 }
 .home__main__section__article--div{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
 }
 .home__main__section__article--div h4{
     font-size: var(--textoSizeProducto);
     color:#666666;
+    width: 100%;
+    margin-top: 5px;
 }
 .home__main__section__article--div p{
     font-size: var(--textoSizePrecios);
     color:#666666;
+    width: 50%;
+    margin-top: 10px;
 }
 .home__main__section__article--div--a{
     font-size: var(--textoSizeCuerpo);
     color: #666666;
+    width: 100%;
+    margin-top: 10px;
 }
 .home__main__section__article--div i{
     font-size: var(--textoSizeCuerpo);
     color:#666666;
 }
+
 
 /*TABLET*/
 @media (min-width:768px){

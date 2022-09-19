@@ -15,10 +15,10 @@
       "name": "Cartera Camina",
       "price": 25000,
       "discount": 10,
-      "category": "producto",
+      "category": "Productos",
       "subCategory": "novedades",
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem pariatur, cupiditate, quia corporis deleniti cum, consequuntur tempore dolor blanditiis sed consequatur! Odit ad dolorem harum magnam totam veritatis quod vel.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ab porro placeat minus nemo nam. Et quasi, voluptatum quibusdam minus veritatis quis. Repudiandae voluptatum totam voluptate pariatur sunt soluta vitae!",
-      "stock": 15,
+      "stock": 0,
       "image": "cartera.producto.jpeg"
    },
    {
