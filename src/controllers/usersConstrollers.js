@@ -27,7 +27,7 @@ module.exports = {
                 postal : +postal,
                 location :location.trim(),
                 province : province.trim(),
-                imgUsers: null
+                imgUsers: imgUsers
             }
     
             const usersModify = [...users, newUser];
@@ -60,7 +60,7 @@ module.exports = {
     },
 
     profile: (req, res) => {
-        const user = loadUsers().find(user => user.id === req.session.userLogin.id);
+        const user = loadUsers().find(user => user.id === req.session.login.id);
         return res.render("users/profile", {
         title: "Garras Amigas | Mi perfil",
         user,
