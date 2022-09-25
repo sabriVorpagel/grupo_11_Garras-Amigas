@@ -1,0 +1,3 @@
+
+El usuario ingreso a la ruta: /img/kit-completo-1.jpeg
+El usuario ingreso a la ruta: /products/detail/javascripts/slider.js
