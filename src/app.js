@@ -12,6 +12,7 @@ const userLogs = require ('./middlewares/userLogs')
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productRouter = require('./routes/products');
+const admRouter = require('./routes/adm');
 
 const {localsUserCheck, coockieCheck } = require('./middlewares/usersLogin');
 
@@ -36,11 +37,14 @@ app.use(session({
 
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(methodOverride('_method'));
+app.use(userLogs);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productRouter);
-app.use(userLogs);
+app.use('/adm',admRouter);
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

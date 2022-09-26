@@ -13,9 +13,9 @@ module.exports = {
         productDestacados,
         productNovedades,
         productOfertas
-    })
+    });
   }
-  }
+}
 
 
   

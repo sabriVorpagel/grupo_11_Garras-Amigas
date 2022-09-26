@@ -1,22 +1,20 @@
 const express = require('express');
 const router = express.Router();
 
-const { product,detail, cart, create, edit, store, update, remove} = require('../controllers/productsControllers');
+const publicRoute = require('../middlewares/publicRoute');
+const privateRoute = require('../middlewares/privateRoute');
+
+
+const { product,detail, cart} = require('../controllers/productsControllers');
 
 /* /products */
 
 router
-    .get('/product', product)
+    .get('/product',publicRoute, product)
     /*** GET ONE PRODUCT ***/ 
-    .get('/detail/:id', detail)
+    .get('/detail/:id',publicRoute, detail)
     /*** GET CART ***/ 
-    .get('/cart', cart)
-    /*** CREATE ONE PRODUCT ***/
-    .get('/create', create)
-    .post('/create', store)
-    /*** EDIT ONE PRODUCT ***/ 
-    .get('/edit/:id', edit)
-    .put('/update/:id', update)
-    /*** DELETE ONE PRODUCT***/ 
-    .delete('/delete/:id', remove)
+    .get('/cart', privateRoute, cart)
+    
+    
 module.exports = router;

@@ -1,29 +1,31 @@
-<%- include('../partials/head', {title: 'Editar'}) %> 
+<%- include('../partials/head', {title: 'Crear'}) %> 
 <body>
     <%- include('../partials/header') %>
     <main class="main__create">
         <div class="main__caja">
-            <form action="/products/update/<%= product.id %>?_method=PUT " method="POST" class="main__caja__formulario">
+            <form action="/adm/create" method="POST" class="main__caja__formulario">
                 <div class="main__formulario__cajas">
-                    <label for="name">Nombre del producto</label>
-                    <input type="text" name="name" id="name" value="<%= product.name %>">
+                    <label for="name">NOMBRE DEL PRODUCTO</label>
+                    <input type="text" name="name" id="name">
                 </div>
                 <div class="main__formulario__cajas">
-                    <label for="descripcion">Descripción</label>
-                    <input type="text" name="description" id="descripcion" maxlength="1000" value="<%= product.description %>">
+                    <label for="description">DESCRIPCION</label>
+                    <input type="text" name="description" id="description" maxlength="1000">
                 </div>
                 <div class="main__formulario__cajasSelectoras">
                     <select name="category" id="category" aria-label="Default select example">
+                        <option value="" selected hidden>--Seleccione una categoria--</option>
                         <% categorys.forEach(category => { %>
-                            <option value="<%= category %>" <%= product.category === category && 'selected' %>><%= category %></option>
+                            <option value="<%= category %>"><%= category %></option>
                         <% }) %> 
                     </select>
                 </div>
                 <div class="main__formulario__cajasSelectoras">
-                        <select name="subCategory" id="subCategory" aria-label="Default select example">
-                            <% subCategorys.forEach(subCategory => { %>
-                                <option value="<%= subCategory %>" <%= product.subCategory === subCategory && 'selected' %>><%= subCategory %></option>
-                            <% }) %> 
+                    <select name="subCategory" id="subCategory" aria-label="Default select example">
+                        <option value="" selected hidden>--Seleccione una clase--</option>
+                        <% subCategorys.forEach(subCategory => { %>
+                            <option value="<%= subCategory %>"><%= subCategory %></option>
+                        <% }) %> 
                     </select>
                 </div>
                 <!-- <div class="main__formulario__cajasSelectoras">
@@ -37,8 +39,8 @@
                         <option value="Color6">Celeste Claro</option>
                         <option value="Color7">Blanco</option>
                     </select>
-                </div>
-                <div class="main__formulario__cajasSelectoras">
+                </div> -->
+                <!-- <div class="main__formulario__cajasSelectoras">
                     <select name="talles" id="talles">
                         <option value="talle">--Selecciona un talle--</option>
                         <option value="Talle1">X</option>
@@ -46,22 +48,23 @@
                         <option value="Talle3">XXL</option>
                     </select>
                 </div> -->
-                <div class="main__formulario__cajaPrecio">
-                    <label for="stock">Stock</label>
-                    <input type="number" name="stock" id="stock" value="                                                                                                                                 ">
+                <div class="main__formulario__cajaImagen">
+                    <label for="image">IMAGEN DEL PRODUCTO</label>
+                    <input type="file" name="image" id="image">
                 </div>
                 <div class="main__formulario__cajaPrecio">
                     <label for="price">$</label>
-                    <input type="number" name="price" id="price" value="<%= product.price %>">
+                    <input type="number" name="price" id="price" value="">
                 </div>
                 <div class="main__formulario__cajaDescuento">
+                    <input type="number" name="discount" id="discount" value="">
                     <label for="discount">%</label>
-                    <input type="number" name="discount" id="discount" value="<%= product.discount %>">
                 </div>
-                <div class="main__formulario__cajaImagen">
-                    <label for="image">Selecciona imagen del producto</label>
-                    <input type="file" name="image" id="image" value="<%= product.image %>">
+                <div class="main__formulario__cajaPrecio">
+                    <label for="stock">Stock</label>
+                    <input type="number" name="stock" id="stock" value="">
                 </div>
+                
                 <div class="main__formulario__botones">
                     <input type="submit" class="submit" value="Guardar Cambios">
                     <input type="reset" class="reset" value="Cancelar Cambios">  

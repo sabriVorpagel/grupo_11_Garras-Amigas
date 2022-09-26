@@ -47,6 +47,19 @@
                     <a href="/" class="boton1">Metodos de pago</a>
                 </div>  
             </div>     
+                  
+            <div class="detail_main__producto--descripcion-caja-de-botones">
+                <form action="/product/cart" class="detail__main__producto--descripcion-botones color-boton-verde">
+                    <input type="submit" name="agregarCarrito" id="agregarCarrito" value="Agregar al carrito"></a>
+                </form>
+                <form action="/adm/edit/<%= product.id %>" class="detail__main__producto--descripcion-botones color-boton-naranja">
+                    <input type="submit" name="editar" id="editar" value="Editar producto">
+                </form>
+                <form action="/adm/delete/<%= product.id %>?_method=DELETE" method="POST" class="detail__main__producto--descripcion-botones color-boton-rojo">
+                    <input type="submit" name="delete" id="delete" value="Eliminar">
+                </form>
+            </div>
+            
         </article>
         <article class="detail__main__producto--detalles">
             <div class="detail__main__producto--descripcion">

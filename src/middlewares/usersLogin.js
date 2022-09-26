@@ -1,5 +1,6 @@
 module.exports= {
     localsUserCheck : require('./localsUserCheck'),
-    coockieCheck :  require('./coockieCheck')
+    coockieCheck :  require('./coockieCheck'),
+    adminCheck : require('./adminCheck')
     
 }
