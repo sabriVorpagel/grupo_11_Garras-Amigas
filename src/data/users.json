@@ -14,7 +14,8 @@
       "province": "province",
       "imgUsers": [
          "image"
-      ]
+      ],
+      "rol": "user"
    },
    {
       "id": 2,
@@ -28,7 +29,8 @@
       "heigth": 1442,
       "postal": 1661,
       "location": "bellavista",
-      "province": "buenosaires"
+      "province": "buenosaires",
+      "rol": "admin"
    },
    {
       "id": 3,
@@ -42,7 +44,8 @@
       "heigth": 1442,
       "postal": 1661,
       "location": "bellavista",
-      "province": "buenosaires"
+      "province": "buenosaires",
+      "rol": "admin"
    },
    {
       "id": 4,
@@ -56,7 +59,8 @@
       "heigth": 1236,
       "postal": 123,
       "location": "lanus",
-      "province": "tucuman"
+      "province": "tucuman",
+      "rol": "admin"
    },
    {
       "id": 5,
@@ -70,7 +74,8 @@
       "heigth": 4564,
       "postal": 4564,
       "location": "iokho",
-      "province": "iohi"
+      "province": "iohi",
+      "rol": "admin"
    },
    {
       "id": 6,
@@ -85,7 +90,8 @@
       "postal": 123,
       "location": "fgiedg",
       "province": "bdkiscb",
-      "imgUsers": null
+      "imgUsers": null,
+      "rol": "user"
    },
    {
       "id": 7,
@@ -100,7 +106,8 @@
       "postal": 15423,
       "location": "blabla",
       "province": "blalbla",
-      "imgUsers": null
+      "imgUsers": null,
+      "rol": "user"
    },
    {
       "id": 8,
@@ -115,6 +122,23 @@
       "postal": 6030,
       "location": "Vedia",
       "province": "Bsas",
-      "imgUsers": null
+      "imgUsers": null,
+      "rol": "admin"
+   },
+   {
+      "id": 9,
+      "firstName": "Pedro",
+      "lastName": "Papel",
+      "phone": 2364450967,
+      "email": "pedropapel@gmail.com",
+      "password": "$2a$10$vaUelkrL2LFaMOYAXcwRbOMqVq4dsddBjW1siIIUbpXI9H9g3TsIy",
+      "password2": null,
+      "direction": "Pablo",
+      "heigth": 500,
+      "postal": 6030,
+      "location": "Vedia",
+      "province": "Bs",
+      "imgUsers": null,
+      "rol": "user"
    }
 ]

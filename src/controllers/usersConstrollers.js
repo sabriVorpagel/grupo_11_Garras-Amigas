@@ -48,8 +48,8 @@ module.exports = {
     processLogin : (req, res) =>{
         let errors = validationResult(req);
         if(errors.isEmpty()){
-            let {id, email, password, imgUsers} = loadUsers().find(user => user.email === req.body.email);
-        req.session.login= {id, email, password, imgUsers} 
+            let {id, email, password, imgUsers, rol} = loadUsers().find(user => user.email === req.body.email);
+        req.session.login= {id, email, password, imgUsers, rol} 
             return res.redirect('/')
         }else {
             return res.render('users/login', {

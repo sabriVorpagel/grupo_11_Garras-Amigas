@@ -11,7 +11,7 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productRouter = require('./routes/products');
 
-const {localsUserCheck, coockieCheck } = require('./middlewares/usersLogin');
+const {localsUserCheck, coockieCheck, adminUserCheck} = require('./middlewares/usersLogin');
 
 
 const app = express();
