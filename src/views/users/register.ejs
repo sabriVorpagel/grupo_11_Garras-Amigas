@@ -9,7 +9,7 @@
             </div>
             <form  action=""  method="POST" enctype="multipart/form-data" class="main__register__form">
                 <div class="main__register__input ">
-                    <input placeholder="  NOMBRE" type="text" id="firstName" atocomplete="off" name="firstName" value="<%= locals.old && old.firstName ? old.firstName : null %>">
+                    <input placeholder="  NOMBRE" type="text" id="firstName" autocomplete="off" name="firstName" value="<%= locals.old && old.firstName ? old.firstName : null %>">
                     <small><%= locals.errors && errors.firstName ? errors.firstName.msg :null  %> </small>
                 </div>
                 <div class="main__register__input">
