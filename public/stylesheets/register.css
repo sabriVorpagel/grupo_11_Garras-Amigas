@@ -9,8 +9,8 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    background-color: rgb(253, 253, 253);
-    border: #93ABD3  double 4px;
+    background-color: rgb(167 165 165 / 35%);
+    
     margin: 24px 0;
     border-radius: 0 25px 0 25px;
 }

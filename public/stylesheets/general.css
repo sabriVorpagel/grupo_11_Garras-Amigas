@@ -15,6 +15,11 @@
     box-sizing: border-box;
     margin: 0; 
 }
+body{
+    
+    
+}
+
 ul, ol{
     padding: 0;
     text-decoration: none; 

@@ -1,24 +1,20 @@
-/* general */
+@keyframes onHover {
+    0%{
+        left: 110%;
+        top:90%;
+    }
 
-:root {
-    --colorRosa: #FF6B6B;
-    --colorAmarrillo: #FFD93D;
-    --colorVerde: #6BCB77;
-    --colorCeleste: #4D96FF;
-    --colorCelesteClaro: #6998AB;
-    --colorAzul: #406882;
-
-    --textoSizeCuerpo: 15px;
-    --textoSizeTitulares: 24px;
-    --textoSizePrecios: 18px;
-    --textoSizeProducto: 16px
+    50% {
+        left: 10%;
+        top:-30%;
+    }
+    100% {
+        left: -10%;
+        top:-10%;
+    }
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 /* main */
 .main__login {
@@ -32,18 +28,18 @@
     flex-wrap: wrap;
     flex-direction: column;
     justify-content:space-evenly;
-    background-color: rgb(253, 253, 253);
-    border: #93ABD3  double 4px;
+    background-color:  #52565396;;
+    /* box-shadow: 20px -13px 0px #10101144; */
     margin: 24px 0;
-    border-radius: 0 25px 0 25px;
+    border-radius: 25px;
 }
 
 .main__login h1 {
     padding: 16px;
-    font-size: 21px;
-    color: #b65c74;
-    font-weight: 400;
-    letter-spacing: 8px;
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: bolder;
+    letter-spacing: 11px;
     text-align: center;
 }
 
@@ -51,13 +47,19 @@
     width: 100%;
     text-align: center;
     display: inline-block;
-    font-size: 15px;
-    color: #513252;
-    align-items: center;
+    font-size: 22px;
+    color: #ffffff;
     letter-spacing: 3px;
 }
 .main__login__iniciar a {
-    color: #513252;
+    color: #f5ff5b;
+    font-weight: bold;
+}
+.main__login__iniciar a:hover {
+    color: #68be36;
+    font-weight: bold;
+    font-size: 35px;
+
 }
 .main__login__form {
     width: 100%;
@@ -103,7 +105,7 @@
     margin: 50px;
 }
 
-.main__login__botones__redes {
+.botones__redes {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -114,20 +116,57 @@
     margin-bottom: 23px;
     padding: 10px;
     color: #fff;
-}
-.main__login__botones__redes h5 {
-    color: #b65c74;
-    width: 100%;
-    font-weight: 100;
-    font-size: 12px;
+    /* position: absolute; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    max-width: 1200px;
     text-align: center;
+    border: solid red 3px;
+
 }
-.main__login__botones__redes i{
-    margin-top: 40px;
-    width: 15%;
-    font-size: 30px;
-    color: #b65c74;
+.botones__redes .btn-redes {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    background: #fff;
+    box-shadow: 0 5px 15px -5px #aaa;
+    margin: 10px;
+    border-radius: 30px;
+    overflow:hidden;
+    position: relative;
+    color:#4D96FF;
 }
+.botones__redes .btn-redes i{
+    position: relative;
+    z-index: 4;
+    line-height: 90px;
+    font-size: 26px;
+    transition: 0.3s ease-in-out;
+}
+.botones__redes .btn-redes::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: linear-gradient(red, blue);
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+}
+.botones__redes .btn-redes:hover i{
+    color: #fff;
+    transform: scale(1.3);
+
+}
+.botones__redes .btn-redes:hover::before{
+    animation: onHover 0.7s 1;
+    left: -10%;
+    top: -10%;
+
+}
+
 
 /**TABLET*/
 @media (min-width:768px) {

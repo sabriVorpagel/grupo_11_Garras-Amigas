@@ -14,6 +14,9 @@ module.exports = {
         productNovedades,
         productOfertas
     })
+  },
+  inicio : (req, res) => {
+    return res.render('inicio');
   }
   }
 

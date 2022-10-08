@@ -1,9 +1,11 @@
 var express = require('express');
-const {index} = require('../controllers/indexControllers');
+const {index, inicio} = require('../controllers/indexControllers');
 var router = express.Router();
 
 
 /* GET home page. */
 router
-      .get("/",index)
+      .get('/', inicio)
+      .get("/index",index)
+      
 module.exports = router;

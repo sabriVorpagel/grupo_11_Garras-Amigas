@@ -16,18 +16,18 @@ module.exports = {
             const newUser = {
                 id: users[users.length - 1] ? users[users.length - 1].id + 1 : 1,
                 ...req.body,
-                firstName : firstName.trim(),
-                lastName : lastName.trim(),
+                firstName : firstName,
+                lastName : lastName,
                 phone: +phone,
-                email : email.trim(), 
-                password : hashSync(password.trim(),10),
-                password2 : null,
-                direction : direction.trim(),
+                email : email, 
+                password : hashSync(password,10),
+                password2 : password2,
+                direction : direction,
                 heigth : +heigth,
                 postal : +postal,
-                location :location.trim(),
-                province : province.trim(),
-                imgUsers: null
+                location :location,
+                province : province,
+                imgUsers: imgUsers
             }
     
             const usersModify = [...users, newUser];

@@ -101,5 +101,16 @@
       "location": "blabla",
       "province": "blalbla",
       "imgUsers": null
+   },
+   {
+      "id": 8,
+      "firstName": "Vero",
+      "lastName": "Vero",
+      "phone": 123456,
+      "email": "verojjj@gmail.com",
+      "password": "$2a$10$JFgLNbrVds3WnRXcY2Ktm.Vtus9hBZF4oQ5zqNf083a9nrkroWe2W",
+      "password2": "123456",
+      "heigth": null,
+      "postal": null
    }
 ]
