@@ -1,28 +1,65 @@
-<header class="header--gral">
-    <nav class="nav--gral">
-        <div class="header__icon"><a href="/">GA<b class="punto">.</b></a></div>
+<header>
+    <nav class="header--nav">
+        <a href="/"><div class="header--logo"> G A<b>.</b></a></div>
+            
+        <ul class="header--navItems">
+            <li><a href="/index">Home</a></li>
+            <li><a href="/products/product">productos</a></li>
+            <li><a href="/products/create">agr. producto</a></li>
+        </ul>
         <div class="header--links">
             <% if(locals.login) { %>
                 <a href="/users/profile ">perfil</a>
                 <a href="/products/cart">carrito</a>
-                <a href="/users/logout">salir </a>
+                <a href="/users/logout">salir</a>
             <% }else{ %>
-                <a href="/users/login">LOGIN</a>
+                <a href="/users/login">logeate</a>
+                
             <% } %>
         </div>
+       
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <nav class="nav--gral">
+        <div class="header__icon"><a href="/">GA<b class="punto">.</b></a></div>
+       
         <div class="header--search">
             <input type="search" placeholder="Busca!!!">
             <span class="fa fa-search"></span>
         </div>
         <input type="checkbox" id="check">
         <label for="check" class="bar-btn"><span class="fa fa-bars"></span ></label>
-        <ul class="header--nav">
-            <li><a href="/products/product">Productos</a></li>
-            <li><a href="#">Contacto</a></li>
-            <li><a href="/products/create">Ag. PRODUCTO</a></li>
-            <li><a href="/">Inicio</a></li>
-        </ul>
-    </nav>
+        <div class="header--nav">
+           
+            <ul>
+                <li><a href="/products/product">Productos</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="/products/create">Ag. PRODUCTO</a></li>
+                <li><a href="/">Inicio</a></li>
+             
+                <div class="links">
+                    <% if(locals.login) { %>
+                        <a href="/users/profile "><i class="fa-regular fa-circle-user"></i></a>
+                        <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="/users/logout"><i class="fa-solid fa-arrow-right-from-bracket"> </a>
+                    <% }else{ %>
+                        <a href="/users/login">LOGEATE</a>
+                    <% } %>
+                </div>
+            </ul>     
+        </div>
+    </nav> -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <!-- <script>
         var typingEffect = new Typed(".header__icon",{
@@ -32,9 +69,7 @@
             backSpeed: 80,
             backDelay: 1500
         })
-    </script>-->
+    </script>
 </header>  
-<!-- <i class="fa-regular fa-circle-user"</i>
-    <i class="fa-solid fa-cart-shopping"></i> 
-    <i class="fa-solid fa-arrow-right-from-bracket">
+
      -->

@@ -1,69 +1,40 @@
 <%- include('../partials/head', {title: 'Login'}) %> 
+ 
 <body >
-    <%- include('../partials/header') %> 
-    <main class="login--container">
-        <div class="form-box">
-            <div class="button-box">
-                <div id="elegir"> </div>
-                <button type="button" class="toggle-btn">Iniciar Sesión</button>
-                <button type="button" class="toggle-btn">Registrate</button>
-               
-            </div>
-            <div class="login-redes">
-                <a href="#" class="btn-redes"><i class="fa-brands fa-facebook"></i> </a>
-                <a href="#" class="btn-redes"><i class="fa-brands fa-instagram"></i> </a>
-                <a href="#" class="btn-redes"><i class="fa-brands fa-google-plus"></i> </a>
+ <%- include('../partials/header') %> 
+   
+    <main class="main--login">
+        <div class="login--container">
+            <img class="iamge-container" src="/images/perroAma.png" alt="">
+            <div class="login-info-container">
+                <h1>Logueate con</h1>
+                <div class="social-login">
+                    <div class="social-login-element">
+                        <a href="#" class="btn-redes"><i class="fa-brands fa-facebook"></i> </a>
+                        <a href="#" class="btn-redes"><i class="fa-brands fa-instagram"></i> </a>
+                        <a href="#" class="btn-redes"><i class="fa-brands fa-google-plus"></i> </a>
+                    </div>
+                </div>
+                <p>o</p>
+                <form action="/users/login" class="imputs-container" method="POST">
+                    <input type="email" class="input" placeholder="  EMAIL" name="email"  value="<%= locals.old && old.email ? old.email: null %>"/>
+                    <small><%= locals.errors && errors.email ? errors.email.msg :null  %></small>
+                    <input type="password" class="input" placeholder="  CONTRASEÑA" name="password" />
+                    <small><%= locals.errors && errors.password ? errors.password.msg :null  %></small>
+                    <a href="#" class="span" >¿Olvidaste tu contraseña?</a>
+                    <label class="recordame" for="checkbox">Recordarme</label>
+                    <input class="check"  type="checkbox" name="remember" id="recordame"/>
+                    <button class="login-btn"type="submit">INGRESA!</button>
+                    <p>¿Aún no tenes una cuenta?</p><a  class="span" href="/users/register">Registrate </a>
+                </form>
                 
             </div>
+           
         </div>
-    </main> 
-</body>           
+    </main>
+</body>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <section class="login__container">
-    <h1>Ingresa</h1>
-    <div class="login__iniciar">
-        <p>¿Aún no tenes una cuenta?</p><a href="/users/register">Registrate </a>
-    </div>
-    <form action="/users/login" class="login__form" method="POST">
-        <input type="email" placeholder="  EMAIL" name="email"  value="<%= locals.old && old.email ? old.email: null %>"/>
-        <small><%= locals.errors && errors.email ? errors.email.msg :null  %></small>
-        <input type="password" placeholder="  CONTRASEÑA" name="password" />
-        <small><%= locals.errors && errors.password ? errors.password.msg :null  %></small>
-        <label for="">Recordarme</label>
-        <input type="checkbox" name="remember" id="recordame" />
-        <a href="#" class="perfil__contraseña" >¿Olvidaste tu contraseña?</a>
-        <div class="login__botones__send">
-            <button type="submit">INGRESA!</button>
-        </div>
-    </form>
-    <div class="login__botones__redes">
-        <h5>O INGRESA CON</h5>
-        
-            <a href="#" class="btn-redes"><i class="fa-brands fa-facebook"></i> </a>
-        
-        
-            <a href="#" class="btn-redes"><i class="fa-brands fa-instagram"></i> </a>
-        
-        
-            <a href="#" class="btn-redes"><i class="fa-brands fa-google-plus"></i> </a>
-        
-    </div>
-</section> -->
    
 
    

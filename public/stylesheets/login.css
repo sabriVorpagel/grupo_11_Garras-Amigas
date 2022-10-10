@@ -3,63 +3,123 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-
-.login--container{
-    height: 100vh;
-    width: 100%;
-    background: pink;
-    
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5));url();
-    background-position: center;
-    background-size: cover;
-    position: absolute; */
+:root {
+    --login-bg:#f8f3ff;
+    --titulos:#9089cc;
+    --botones:#674baf;
+    --rosa:#e882e8;
+   
 }
-
-.form-box{
-    width: 370px;
-    height: 455px;
-    /* position: relative; */
-    margin: 6% auto;
-    background: #fff;
-    padding: 5px;
+.main--login{
+    height: 100vh;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+.login--container{
+    height: 30.75em;
+    width: 43em;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
     border-radius: 10px;
 }
-.button-box{
-    width: 240px;
-    margin: 30px auto;
-    position:relative;
-    box-shadow: 0, 0, 20px 9px #1c2331;
-    border-radius: 30px;
-    
-}
-.toggle-btn{
-    padding: 10px 22px;
-    cursor: pointer;
-    background: transparent;
-    border: 0px;
-    outline: none;
-    position:relative;
- 
-}
-#elegir{
-    top: 0;
-    left: 0;
-    /* position: absolute; */
-    width:120px;
-    height: 100%;
-    background: linear-gradient(45deg, #7f00ff, pink);
-    border-radius:30px;
-    transition: 0.8s ;
-}
-.login-redes{
+.login-info-container{
+    width: 50%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 3.5rem;
+    background-color: var(--login-bg);
+    margin-top: 31px;
+}
+.iamge-container{
+    width: 50%;
+    padding-top: 2em;
+    box-sizing: border-box;
+}
+.login-info-container h1{
+    text-transform: capitalize;
+    font-size: 2.25rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--titulos);
+}
+.social-login{
+    width: 100%;
+    display: flex;
     justify-content: space-evenly;
 }
-.login-redes a{
-    color:#7f00ff;
-    font-size: 30px;
-
-
+.social-login-element{
+    width: 12.5rem;
+    height: 3.75rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-content: space-around;
+    margin-top: 10px;
+}
+.social-login-element a{
+    color:#964c95;
+}
+.social-login-element a:hover{
+    color: var(--rosa);
+    cursor: pointer;
+}
+.login-info-container p{
+    font-size: 1.25em;
+}
+.imputs-container{
+    height: 55%;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.input, .login-btn{
+    width: 90%;
+    height: 3.25em;
+    font-size: 1em;
+}
+.input{
+    padding-left: 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+    margin-bottom: 11px;
+}
+.input:hover{
+    border: 2px solid var(--botones);
+    cursor: pointer;
+}
+.login-btn{
+    width: 80%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--botones);
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+}
+.recordame, .check{
+    color: var(--rosa);
+    cursor: pointer;
+    margin: 5px;
+}
+.imputs-container p{
+    margin:0;
+}
+.span{
+    color: var(--rosa);
+    font-weight: 600;
+    cursor: pointer;
+}
 
