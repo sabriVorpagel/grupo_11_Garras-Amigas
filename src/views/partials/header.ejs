@@ -1,36 +1,40 @@
-<header>
-    <div class="header__container">
-        <nav>
-        <div class="logo" ><a href="/"> G A<b>.</b></a></div>
-        <button class="header--menu"
-            onclick="document.querySelector('.header--nav').classList.toggle('show')">
-            <i class="fa fa-bars"> Menu </i>
-        </button>
-       
-        <form action="" class="header--search">
-            <input type="text" placeholder="  Buscar" />
-            <button type="submit">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-        </form>
-        <nav>
-            <div class="header--links">
-                <% if(locals.login) { %>
-                    <a href="/users/profile "><i class="fa-regular fa-circle-user"></i> </a>
-                    <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i> </a>
-                    <a href="/users/logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> </a>
-                <% }else{ %>
-                    <a href="/users/login"><i class="fa-solid fa-person-walking-arrow-right"></i></a>
-                <% } %>
-            </div>
-            <ul class="header__nav">
-                <li><a href="/products/product"> PRODUCTOS </a></li>
-                <li><a href="/contacto">CONTACTO</a></li>
-                <li><a href="/talles">GUIA DE TALLES</a></li>
-                <li><a href="/products/create">AGREGAR PRODUCTO</a></li>
-            </ul>
-            
-        </nav>
-        </nav>
-    </div>
-</header>
+<header class="header--gral">
+    <nav class="nav--gral">
+        <div class="header__icon"><a href="/">GA<b class="punto">.</b></a></div>
+        <div class="header--links">
+            <% if(locals.login) { %>
+                <a href="/users/profile ">perfil</a>
+                <a href="/products/cart">carrito</a>
+                <a href="/users/logout">salir </a>
+            <% }else{ %>
+                <a href="/users/login">LOGIN</a>
+            <% } %>
+        </div>
+        <div class="header--search">
+            <input type="search" placeholder="Busca!!!">
+            <span class="fa fa-search"></span>
+        </div>
+        <input type="checkbox" id="check">
+        <label for="check" class="bar-btn"><span class="fa fa-bars"></span ></label>
+        <ul class="header--nav">
+            <li><a href="/products/product">Productos</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="/products/create">Ag. PRODUCTO</a></li>
+            <li><a href="/">Inicio</a></li>
+        </ul>
+    </nav>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- <script>
+        var typingEffect = new Typed(".header__icon",{
+            strings : ['GARRAS',''],
+            loop: true,
+            typeSpeed: 100,
+            backSpeed: 80,
+            backDelay: 1500
+        })
+    </script>-->
+</header>  
+<!-- <i class="fa-regular fa-circle-user"</i>
+    <i class="fa-solid fa-cart-shopping"></i> 
+    <i class="fa-solid fa-arrow-right-from-bracket">
+     -->

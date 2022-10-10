@@ -1,19 +1,19 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     font-family: "poppins";
 }
-body{
+.body--inicio{
     overflow:hidden;
 }
 
-.container{
+.inicio--container{
     width: 100%;
-    min-height: 100hv;
+    /* min-height: 100hv; */
     background-color: #f3f5f8;
 }
-nav{
+.inicio--nav{
     display: flex;
     width: 100%;
     justify-content: space-around;
@@ -21,7 +21,7 @@ nav{
     line-height: 80px;
     z-index: 111;
 }
-.logo{
+.inicio--logo{
     display:flex;
     font-size: 40px;
     font-weight: 800;
@@ -34,30 +34,30 @@ b{
     font-size: 70px;
     color:#7f00ff;
 }
-.navItems{
+.inicio--navItems{
     display: flex;
 }
-.navItems li{
+.inicio--navItems li{
     list-style: none;
     margin: 0 15px;
 }
-.navItems li a{
+.inicio--navItems li a{
     font-size: 25px;
     color: #3d535f;
     letter-spacing: 3px;
     text-decoration: none;
     text-transform: capitalize;
 }
-.navItems li:hover a
-.links a:hover {
+.inicio--navItems li:hover a
+.inicio--links a:hover {
     color:#7f00ff;
 }
-.links a{
+.inicio--links a{
     font-size: 30px;
     color: #3d535f;
     margin: 25px 10px;
 }
-.wrapper{
+.inicio--wrapper{
     display: flex;
     width: 100%;
     height: calc(100vh - 80px);
@@ -66,7 +66,7 @@ b{
     padding: 0 10%;
     overflow: hidden;
 }
-.wrapper::before{
+.inicio--wrapper::before{
     position: absolute;
     content: '';
     height: 350px;
@@ -78,7 +78,7 @@ b{
     animation: object1 6s linear infinite;
 
 }
-.wrapper::after{
+.inicio--wrapper::after{
     position: absolute;
     content: '';
     height: 100px;
@@ -102,21 +102,21 @@ b{
         top: 41%;
     }
 }
-.cols{
+.inicio--cols{
     width:50%
 }
-.cols0{
+.inicio--cols0{
     z-index: 5;
 
 }
-.topline{
+.inicio--topline{
     display: block;
     position: relative;
     font-size: 35px;
     letter-spacing: 5px;
     color:#3d535f;
 }
-.topline::after{
+.inicio--topline::after{
     position: absolute;
     content: '';
     height: 4px;
@@ -130,7 +130,7 @@ h1{
     font-weight:999;
     color:#3d535f;
 }
-.multiText{
+.inicio--multiText{
     color: #7f00ff;
     text-transform: capitalize;
 }
@@ -140,12 +140,12 @@ p{
     font-size:1.2em;
     color:#3d535f;
 }
-.btns{
+.inicio--btns{
     width: 100%;
     position:relative;
     left: 150px;
 }
-button{
+.inicio--btns button{
     outline: none;
     border: none;
     cursor: pointer;
@@ -157,17 +157,17 @@ button{
     margin: 40px 5px;
     letter-spacing: 2px;
     text-transform: capitalize;
-    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.inicio--4);
 }
-button:hover{
+.inicio--btns button:hover{
     background-color:#7f00ff;
 }
-.imgbox{
+.inicio--imgbox{
     position: relative;
     width: 100%;
     height:100%;
 }
-.imgbox img{
+.inicio--imgbox img{
     position: relative;
     height:50%;
     width: calc(100% - 60px);
@@ -183,7 +183,7 @@ button:hover{
         top: -10px;
     }
 }
-.imgbox #splash{
+.inicio--imgbox #splash{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -201,23 +201,23 @@ button:hover{
 }
 @media(max-width: 768px) {
    
-    .logo{
+    .inicio--logo{
         font-size: 30px;
     }
    
-    .navItems li a{
+    .inicio--navItems li a{
         font-size: 20px;
     }
-    .navItems li:hover a
-    .links a:hover {
+    .inicio--navItems li:hover a
+    .inicio--links a:hover {
         color:#7f00ff;
     }
-    .wrapper::before{
+    .inicio--wrapper::before{
         
         height: 250px;
         width: 250px;
     }
-    .wrapper::after{
+    .inicio--wrapper::after{
         height: 50px;
         width: 50px;
     }
@@ -233,47 +233,47 @@ button:hover{
             top: 41%;
         }
     }
-    .cols{
+    .inicio--cols{
         width:50%
     }
-    .cols0{
+    .inicio--cols0{
         z-index: 5;
     
     }
-    .topline{
+    .inicio--topline{
         font-size: 22px;
     }
     h1{
         font-size: 3em;
     }
-    .multiText{
+    .inicio--multiText{
         color: #7f00ff;
         text-transform: capitalize;
     }
-    button{
+    .inicio--btns button{
         font-size: 20px;
     }
 }
 @media ( max-width: 320px){
     
-    .logo{
+    .inicio--logo{
         display: none;
     }
     b{
         display: none;
     }
   
-    .navItems li a{
+    .inicio--navItems li a{
         font-size: 15px;
        
     }
-    .wrapper::before{
+    .inicio--wrapper::before{
         
         height: 150px;
         width: 150px;
         
     }
-    .wrapper::after{
+    .inicio--wrapper::after{
        
         height: 25px;
         width: 25px;
@@ -291,21 +291,21 @@ button:hover{
             top: 41%;
         }
     }
-    .cols{
+    .inicio--cols{
         width:50%
     }
-    .cols0{
+    .inicio--cols0{
         z-index: 5;
 
     }
-    .topline{
+    .inicio--topline{
         display: block;
         position: relative;
         font-size: 25px;
         letter-spacing: 5px;
         color:#3d535f;
     }
-    .topline::after{
+    .inicio--topline::after{
         position: absolute;
         content: '';
         height: 4px;
@@ -319,22 +319,22 @@ button:hover{
         font-weight:999;
         color:#3d535f;
     }
-    .multiText{
+    .inicio--multiText{
         color: #7f00ff;
         text-transform: capitalize;
     }
     p{
         display: block;
         width: 90%;
-        font-size:1.2em;
+        font-size:1.inicio--2em;
         color:#3d535f;
     }
-    .btns{
+    .inicio--btns{
         width: 100%;
         position:relative;
         left: 150px;
     }
-    button{
+    .inicio--btns button{
         outline: none;
         border: none;
         cursor: pointer;
@@ -346,17 +346,17 @@ button:hover{
         margin: 40px 5px;
         letter-spacing: 2px;
         text-transform: capitalize;
-        box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 15px 10px rgba(0, 0, 0, 0.inicio--4);
     }
-    button:hover{
+    .inicio--btns button:hover{
         background-color:#7f00ff;
     }
-    .imgbox{
+    .inicio--imgbox{
         position: relative;
         width: 100%;
         height:100%;
     }
-    .imgbox img{
+    .inicio--imgbox img{
         position: relative;
         height:50%;
         width: calc(100% - 60px);
@@ -372,7 +372,7 @@ button:hover{
             top: -10px;
         }
     }
-    .imgbox #splash{
+    .inicio--imgbox #splash{
         display: none;
     }
 }

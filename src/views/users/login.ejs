@@ -1,40 +1,70 @@
 <%- include('../partials/head', {title: 'Login'}) %> 
-<body>
+<body class="login--body">
     <%- include('../partials/header') %> 
-    <main class="main__login">
-        <section class="main__login__container">
-            <h1>Ingresa</h1>
-            <div class="main__login__iniciar">
-                <p>¿Aún no tenes una cuenta?</p><a href="/users/register">Registrate </a>
+    <main class="login--container">
+        <div class="login--back">
+            <div class="massage">
+                <h2>Bienvenido</h2>
+                <p>¿Aún no tenes una cuenta?</p>
+                <a href="/users/register">Registrate </a>
+
             </div>
-            <form action="/users/login" class="main__login__form" method="POST">
+            <form action="/users/login" class="login__form" method="POST">
                 <input type="email" placeholder="  EMAIL" name="email"  value="<%= locals.old && old.email ? old.email: null %>"/>
                 <small><%= locals.errors && errors.email ? errors.email.msg :null  %></small>
                 <input type="password" placeholder="  CONTRASEÑA" name="password" />
                 <small><%= locals.errors && errors.password ? errors.password.msg :null  %></small>
                 <label for="">Recordarme</label>
                 <input type="checkbox" name="remember" id="recordame" />
-                <a href="#" class="main__perfil__contraseña" >¿Olvidaste tu contraseña?</a>
-                <div class="main__login__botones__send">
+                <a href="#" class="perfil__contraseña" >¿Olvidaste tu contraseña?</a>
+                <div class="login__botones__send">
                     <button type="submit">INGRESA!</button>
                 </div>
             </form>
-            <div class="botones__redes">
-                <h5>O INGRESA CON</h5>
-                
-                    <a href="#" class="btn-redes"><i class="fa-brands fa-facebook"></i> </a>
-                
-                
-                    <a href="#" class="btn-redes"><i class="fa-brands fa-instagram"></i> </a>
-                
-                
-                    <a href="#" class="btn-redes"><i class="fa-brands fa-google-plus"></i> </a>
-                
-            </div>
-        </section>
+           
+        </div>
+        
+        <div class="login__botones__redes">
+            <h5>O INGRESA CON</h5>
+            <a href="#" class="btn-redes"><i class="fa-brands fa-facebook"></i> </a>
+            <a href="#" class="btn-redes"><i class="fa-brands fa-instagram"></i> </a>
+            <a href="#" class="btn-redes"><i class="fa-brands fa-google-plus"></i> </a>
+        </div>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
+
+<!-- <section class="login__container">
+    <h1>Ingresa</h1>
+    <div class="login__iniciar">
+        <p>¿Aún no tenes una cuenta?</p><a href="/users/register">Registrate </a>
+    </div>
+    <form action="/users/login" class="login__form" method="POST">
+        <input type="email" placeholder="  EMAIL" name="email"  value="<%= locals.old && old.email ? old.email: null %>"/>
+        <small><%= locals.errors && errors.email ? errors.email.msg :null  %></small>
+        <input type="password" placeholder="  CONTRASEÑA" name="password" />
+        <small><%= locals.errors && errors.password ? errors.password.msg :null  %></small>
+        <label for="">Recordarme</label>
+        <input type="checkbox" name="remember" id="recordame" />
+        <a href="#" class="perfil__contraseña" >¿Olvidaste tu contraseña?</a>
+        <div class="login__botones__send">
+            <button type="submit">INGRESA!</button>
+        </div>
+    </form>
+    <div class="login__botones__redes">
+        <h5>O INGRESA CON</h5>
+        
+            <a href="#" class="btn-redes"><i class="fa-brands fa-facebook"></i> </a>
+        
+        
+            <a href="#" class="btn-redes"><i class="fa-brands fa-instagram"></i> </a>
+        
+        
+            <a href="#" class="btn-redes"><i class="fa-brands fa-google-plus"></i> </a>
+        
+    </div>
+</section> -->
    
 
    

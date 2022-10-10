@@ -14,27 +14,41 @@
     }
 }
 
+.login{
+    display: flex;
+    width: 350px;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 25px;
+    column-gap:20px;
+}
+.login--card{
+    flex: 0 0 100px;
+    padding: 30px;
+    scroll-snap-align: start;
+    border-radius: 30px;
+
+}
 
 
-/* main */
-.main__login {
+/* 
+.login {
     width: 100%;
     padding: 20px;
     margin: auto;
 }
 
-.main__login__container {
+.login__container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content:space-evenly;
     background-color:  #52565396;;
-    /* box-shadow: 20px -13px 0px #10101144; */
+    /* box-shadow: 20px -13px 0px #10101144; 
     margin: 24px 0;
     border-radius: 25px;
 }
 
-.main__login h1 {
+.login h1 {
     padding: 16px;
     font-size: 30px;
     color: #ffffff;
@@ -43,7 +57,7 @@
     text-align: center;
 }
 
-.main__login__iniciar {
+.login__iniciar {
     width: 100%;
     text-align: center;
     display: inline-block;
@@ -51,20 +65,20 @@
     color: #ffffff;
     letter-spacing: 3px;
 }
-.main__login__iniciar a {
+.login__iniciar a {
     color: #f5ff5b;
     font-weight: bold;
 }
-.main__login__iniciar a:hover {
+.login__iniciar a:hover {
     color: #68be36;
     font-weight: bold;
     font-size: 35px;
 
 }
-.main__login__form {
+.login__form {
     width: 100%;
 }
-.main__login__form input {
+.login__form input {
     width: 90%;
     height: 35px;
     background: transparent;
@@ -74,13 +88,13 @@
     padding: 5px;
 }
 
-.main__login__form ::placeholder {
+.login__form ::placeholder {
     color: #fda312;
     font-size: 10px;
     letter-spacing: 2px;
 }
 
-.main__login__botones__send button {
+.login__botones__send button {
     width: 93%;
     border-radius: 0 15px 0 15px;
     transition: all 450ms;
@@ -92,20 +106,20 @@
     padding: 0 10px;
 }
 
-.main__login__botones__send button:hover {
+.login__botones__send button:hover {
     background-color: #FFC18E;
     color: #fff;
     transition:
         background-color, 0.5s,
         color, 0.5;
 }
-.main__perfil__contraseña {
+.perfil__contraseña {
     color: #513252;
     text-align: center;
     margin: 50px;
-}
+} */
 
-.botones__redes {
+/* .login__botones__redes {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -116,7 +130,7 @@
     margin-bottom: 23px;
     padding: 10px;
     color: #fff;
-    /* position: absolute; */
+    /* position: absolute; 
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -126,7 +140,7 @@
     border: solid red 3px;
 
 }
-.botones__redes .btn-redes {
+.login__botones__redes .btn-redes {
     display: inline-block;
     width: 90px;
     height: 90px;
@@ -138,14 +152,14 @@
     position: relative;
     color:#4D96FF;
 }
-.botones__redes .btn-redes i{
+.login__botones__redes .btn-redes i{
     position: relative;
     z-index: 4;
     line-height: 90px;
     font-size: 26px;
     transition: 0.3s ease-in-out;
 }
-.botones__redes .btn-redes::before {
+.login__botones__redes .btn-redes::before {
     content: "";
     position: absolute;
     width: 120%;
@@ -155,37 +169,37 @@
     left: -110%;
     top: 90%;
 }
-.botones__redes .btn-redes:hover i{
+.login__botones__redes .btn-redes:hover i{
     color: #fff;
     transform: scale(1.3);
 
 }
-.botones__redes .btn-redes:hover::before{
+.login__botones__redes .btn-redes:hover::before{
     animation: onHover 0.7s 1;
     left: -10%;
     top: -10%;
 
-}
+} */
 
 
-/**TABLET*/
+/*TABLET
 @media (min-width:768px) {
-    .main__login {
+    .login {
         width: 65%;
         display: flex;
         flex-direction: row;
         margin: auto;
     }
-    .main__login__container {
+    .login__container {
         width: 100%;
     }
-    .main__login__form {
+    .login__form {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
         justify-content: space-evenly;
     }
-    .main__login__form input {
+    .login__form input {
         width: 90%;
         height: 35px;
         background: transparent;
@@ -194,20 +208,20 @@
         margin: 20px 15px;
         padding: 5px;
     }
-    .main__login__input {
+    .login__input {
         width: 90%;
         margin: 0;
     }
    
-    .main__login__form ::placeholder {
+    .login__form ::placeholder {
         font-size: 10px;
     }
-    .main__perfil__contraseña {
+    .perfil__contraseña {
         color: #513252;
         text-align: center;
         width: 100%;
     }
-    .main__login__botones__send {
+    .login__botones__send {
         width: 50%
     }
 
