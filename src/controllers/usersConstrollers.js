@@ -55,7 +55,7 @@ module.exports = {
         if(errors.isEmpty()){
             let {id, email, password} = loadUsers().find(user => user.email === req.body.email);
         req.session.login= {id, email, password} 
-            return res.redirect('/')
+            return res.redirect('/home')
         }else {
             return res.render('users/login', {
                 errors : errors.mapped(), 
@@ -72,19 +72,7 @@ module.exports = {
         title: "Garras Amigas | Mi perfil",
         user,
         });
-        // req.session.login = {
-        //     id: newUser.id,
-        //     firstName: newUser.firstName,
-        //     lastname: newUser.lastname,
-        //     phone: newUser.phone,
-        //     email : newUser.email, 
-        //     password : newUser.password,
-        //     direction : newUser.direction,
-        //     heigth : newUser.heigth,
-        //     location : newUser.location,
-        //     province : newUser.province,
-        //     imgUsers:  imgUsers ? imgUsers : ['default.png']
-        // };
+       
     },
 
     editProfile: (req, res) =>{
@@ -93,7 +81,7 @@ module.exports = {
     logout: (req, res) => {
     req.session.destroy();
     res.cookie('garrasAmigas', null, { maxAge: -1 });
-    return res.redirect("/");
+    return res.redirect("/home");
     },
 
 
