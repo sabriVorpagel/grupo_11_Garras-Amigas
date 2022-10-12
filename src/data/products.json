@@ -361,5 +361,16 @@
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem pariatur, cupiditate, quia corporis deleniti cum, consequuntur tempore dolor blanditiis sed consequatur! Odit ad dolorem harum magnam totam veritatis quod vel.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ab porro placeat minus nemo nam. Et quasi, voluptatum quibusdam minus veritatis quis. Repudiandae voluptatum totam voluptate pariatur sunt soluta vitae!",
       "stock": 56,
       "image": "juguete.kit.jpeg"
+   },
+   {
+      "id": 34,
+      "name": "bolso",
+      "description": "bolso",
+      "category": "Productos",
+      "subCategory": "ofertas",
+      "image": "Correa.jpeg",
+      "price": 12,
+      "discount": 2,
+      "stock": 23
    }
 ]

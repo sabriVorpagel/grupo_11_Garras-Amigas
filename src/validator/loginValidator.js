@@ -5,11 +5,20 @@ const {compareSync} = require('bcryptjs');
 module.exports = [
 
     check('email')
-        .notEmpty().withMessage('El email es obligatorio').bail()
-        .isEmail().withMessage('Debe ser un email valido').bail(),
+        .notEmpty()
+        .withMessage('El email es obligatorio')
+        .bail()
+        .isEmail()
+        .withMessage('Debe ser un email válido')
+        .bail(),
     body('password')
         .notEmpty()
         .withMessage('La contraseña es obligatoria')
+        .bail()
+        .isLength({
+            min : 6, 
+            max : 12
+        }).withMessage('La contraseña debe tener entre 6 y 12 caracteres')
         .custom((value, {req}) => {
             const user = loadUsers().find(user => user.email === req.body.email.trim() && compareSync(value, user.password) );
             
@@ -18,3 +27,5 @@ module.exports = [
         }).withMessage('Credenciales invalidas'),
 
 ]
+
+   

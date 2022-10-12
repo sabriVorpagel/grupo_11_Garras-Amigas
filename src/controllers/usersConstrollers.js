@@ -12,7 +12,7 @@ module.exports = {
         const errors = validationResult(req);
 
         if(errors.isEmpty()){
-            const {firstName, lastName, email, password, password2, phone, direction, heigth,postal, location, province,imgUsers } = req.body;
+            const {firstName, lastName, email, password, password2, phone, direction, heigth, location, province,imgUsers } = req.body;
             const users = loadUsers();
     
             const newUser = {
@@ -28,23 +28,12 @@ module.exports = {
                 heigth : +heigth,
                 location :location.trim(),
                 province : province.trim(),
-                imgUsers: ["default.png"]
+                imgUsers: users.imgUsers
+                
             };
 
              // inicio session una vez creado el usuario
-                req.session.login = {
-                    id: newUser.id,
-                    firstName: newUser.firstName,
-                    lastname: newUser.lastname,
-                    phone: newUser.phone,
-                    email : newUser.email, 
-                    password : newUser.password,
-                    direction : newUser.direction,
-                    heigth : newUser.heigth,
-                    location : newUser.location,
-                    province : newUser.province,
-                    imgUsers: newUser.imgUsers,
-                };
+               
     
             const usersModify = [...users, newUser];
             storeUsers(usersModify);
@@ -64,8 +53,8 @@ module.exports = {
     processLogin : (req, res) =>{
         let errors = validationResult(req);
         if(errors.isEmpty()){
-            let {id, email, password, imgUsers} = loadUsers().find(user => user.email === req.body.email);
-        req.session.login= {id, email, password, imgUsers} 
+            let {id, email, password} = loadUsers().find(user => user.email === req.body.email);
+        req.session.login= {id, email, password} 
             return res.redirect('/')
         }else {
             return res.render('users/login', {
@@ -83,6 +72,19 @@ module.exports = {
         title: "Garras Amigas | Mi perfil",
         user,
         });
+        // req.session.login = {
+        //     id: newUser.id,
+        //     firstName: newUser.firstName,
+        //     lastname: newUser.lastname,
+        //     phone: newUser.phone,
+        //     email : newUser.email, 
+        //     password : newUser.password,
+        //     direction : newUser.direction,
+        //     heigth : newUser.heigth,
+        //     location : newUser.location,
+        //     province : newUser.province,
+        //     imgUsers:  imgUsers ? imgUsers : ['default.png']
+        // };
     },
 
     editProfile: (req, res) =>{
