@@ -232,5 +232,44 @@
       "heigth": 123,
       "location": "gig",
       "province": "gyugu"
+   },
+   {
+      "id": 17,
+      "firstName": "aaa",
+      "lastName": "aaa",
+      "phone": 123456,
+      "email": "aaa@gmail.com",
+      "password": "$2a$10$MpCZAMmG.mZNhsWsUXwl4.OHX7b//Kis2w3ijAQktrVQfqBOH9xGq",
+      "password2": null,
+      "direction": "uygvu",
+      "heigth": 54,
+      "location": "ugyug",
+      "province": "gyuguy"
+   },
+   {
+      "id": 18,
+      "firstName": "veronicaaaaaaa",
+      "lastName": "vet",
+      "phone": "123456",
+      "email": "verito@gmail.com",
+      "password": "$2a$10$0ii1Jo.TiBnhO6Y0GqLJBe4IuAPV6XwFXJWmoo4KhPkLWelUwfi2m",
+      "password2": null,
+      "direction": "vdvd",
+      "heigth": "123",
+      "location": "yufyu",
+      "province": "fyufu"
+   },
+   {
+      "id": 19,
+      "firstName": "cosme fulanito",
+      "lastName": "fiufiu",
+      "phone": "123456",
+      "email": "cosme@gmail.com",
+      "password": "$2a$10$NJFBywTClMg9rp9f9k1aAO5k7mDijch/thgSaJeLTwbtw3pzzlRh.",
+      "password2": null,
+      "direction": "bhdsfci",
+      "heigth": "5487",
+      "location": "ygy",
+      "province": "gygy"
    }
 ]

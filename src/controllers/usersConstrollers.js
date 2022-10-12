@@ -17,7 +17,7 @@ module.exports = {
     
             const newUser = {
                 id: users[users.length - 1] ? users[users.length - 1].id + 1 : 1,
-                ...req.body,
+                
                 firstName : firstName.trim(),
                 lastName : lastName.trim(),
                 phone: +phone,
@@ -28,11 +28,11 @@ module.exports = {
                 heigth : +heigth,
                 location :location.trim(),
                 province : province.trim(),
-                imgUsers: users.imgUsers
+                imgUsers: req.file ? req.file.filename : 'default.jpg',
                 
             };
 
-             // inicio session una vez creado el usuario
+             
                
     
             const usersModify = [...users, newUser];
@@ -53,8 +53,13 @@ module.exports = {
     processLogin : (req, res) =>{
         let errors = validationResult(req);
         if(errors.isEmpty()){
-            let {id, email, password} = loadUsers().find(user => user.email === req.body.email);
-        req.session.login= {id, email, password} 
+            let {id, email, password} = loadUsers().find(
+                user => user.email === req.body.email);
+        req.session.login= {
+            id, 
+            email, 
+            password
+        }; 
             return res.redirect('/')
         }else {
             return res.render('users/login', {
@@ -63,33 +68,45 @@ module.exports = {
             })
         }
     },
-
+    
     profile: (req, res) => {
-        const users = loadUsers();
-        const id = req.session.login?.id;
-        const user = users.find((user) => user.id === +id);
+        const users = loadUsers().find((user) => user.id === req.session.login.id);
+       
         return res.render("users/profile", {
         title: "Garras Amigas | Mi perfil",
-        user,
+        users,
         });
-        // req.session.login = {
-        //     id: newUser.id,
-        //     firstName: newUser.firstName,
-        //     lastname: newUser.lastname,
-        //     phone: newUser.phone,
-        //     email : newUser.email, 
-        //     password : newUser.password,
-        //     direction : newUser.direction,
-        //     heigth : newUser.heigth,
-        //     location : newUser.location,
-        //     province : newUser.province,
-        //     imgUsers:  imgUsers ? imgUsers : ['default.png']
-        // };
     },
 
     editProfile: (req, res) =>{
-        return res.send(req.body)
+        let users = loadUsers().find((user) => user.id === req.session.login.id);
+        return res.render("users/editProfile", {
+            users,
+         })
     },
+
+    update: (req, res) => {
+        const  users = loadUsers();
+        
+        const { firstName, lastName, email, password, password2, phone, direction, heigth, location, province,imgUsers } = req.body;
+
+        const usersModify = loadUsers().map((user) => {
+            if (user.id === +req.params.id) {
+                return {
+                ...user,
+                ...req.body,
+                imgUsers:  imgUsers,
+                };
+            }
+            return user;
+    })
+    
+        storeUsers(usersModify);
+        return res.redirect("/users/profile");
+    },
+
+
+
     logout: (req, res) => {
     req.session.destroy();
     res.cookie('garrasAmigas', null, { maxAge: -1 });

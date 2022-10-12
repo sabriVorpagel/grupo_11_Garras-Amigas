@@ -4,55 +4,61 @@
     <main class="main__profile">
         <section class="main__profile__container">
             <h1>Mi Perfil</h1>
-            <form  action="/users/editProfile/<%= user.id %>?_method=PUT"  method="POST" class="main__profile__form">
+           
+                
                 <div class="main__profile--profile">
                     <div class="main__profile__img">
-                        <img src="/images/users/<% user.id %>  user.imgUsers  ? user.imgUsers : 'default.png' %>" id="imgUsers" alt="imgUsers">
+                        <img src="/images/users/<%=users.imgUsers %> ">
                         
                         
                     </div>
-                    <div class="main__profile__editor">
+                   
+                    <!-- <div class="main__profile__editor">
                         <label for="iamge">Editar imagen</label>
                         <input type="file" id="image" name="image">
-                    </div>
+                    </div> -->
                 </div>
                 <div class="main__profile__input">
-                    <input placeholder="  NOMBRE" type="text" id="firstName" atocomplete="off" name="firstName" value="<%= user.firstName %>">
+                    <input placeholder="  NOMBRE" type="text" id="firstName" atocomplete="off" name="firstName" value="<%= users.firstName %>">
                 </div>
                 <div class="main__profile__input">
-                    <input placeholder="  APELLIDO" type="text" id="lastName" autocomplete="off" name="lastName" value="<%= user.lastName %>">
+                    <input placeholder="  APELLIDO" type="text" id="lastName" autocomplete="off" name="lastName" value="<%= users.lastName %>">
                 </div>
                 <div class="main__profile__input ">
-                    <input placeholder="  NÚMERO DE TELEFONO" type="number" id="phone" autocomplete="off" name="phone" value="<%= user.phone %>">
+                    <input placeholder="  NÚMERO DE TELEFONO" type="number" id="phone" autocomplete="off" name="phone" value="<%= users.phone %>">
                 </div>
                 <div class="main__profile__input ">
-                    <input placeholder="  EMAIL" type="email" id="email" name="email" value="<%= user.email %>">
+                    <input placeholder="  EMAIL" type="email" id="email" name="email" value="<%= users.email %>">
                 </div>
                 <div class="main__profile__input">
-                    <input placeholder="  CONTRASEÑA" type="password" id="password" name="password" value="<%= user.password %>">
+                    <input placeholder="  CONTRASEÑA" type="password" id="password" name="password" value="<%= users.password %>">
                 </div>
                 <div class="main__profile__input">
-                    <input placeholder="  REPETIR CONTRASEÑA" type="password" id="password2" autocomplete="off" name="password2" value="<%= user.password2 %>">
+                    <input placeholder="  REPETIR CONTRASEÑA" type="password" id="password2" autocomplete="off" name="password2" value="<%= users.password2 %>">
                 </div>
                 <div class="main__profile__input">
-                    <input placeholder="  DIRECCIÓN" type="text" id="direction" autocomplete="off" name="direction" value="<%= user.direction %>">
+                    <input placeholder="  DIRECCIÓN" type="text" id="direction" autocomplete="off" name="direction" value="<%= users.direction %>">
                 </div>
                 <div class="main__profile__input main__profile__input--numeros">
-                    <input placeholder="  ALTURA" type="number" id="heigth" autocomplete="off" name="heigth" value="<%= user.heigth %>">
+                    <input placeholder="  ALTURA" type="number" id="heigth" autocomplete="off" name="heigth" value="<%= users.heigth %>">
                 </div>
                 <div class="main__profile__input main__profile__input--numeros">
-                    <input placeholder="  CODIGO POSTAL" type="number" id="postal" autocomplete="off" name="postal" value="<%= user.postal %>">
+                    <input placeholder="  CODIGO POSTAL" type="number" id="postal" autocomplete="off" name="postal" value="<%= users.postal %>">
                 </div>
                 <div class="main__profile__input">
-                    <input placeholder="  LOCALIDAD" type="text" id="location" autocomplete="off" name="location" value="<%= user.location %>">
+                    <input placeholder="  LOCALIDAD" type="text" id="location" autocomplete="off" name="location" value="<%= users.location %>">
                 </div>
                 <div class="main__profile__input">
-                    <input placeholder="  PROVINCIA" type="text" id="province" autocomplete="off" name="province" value="<%= user.province %>">
+                    <input placeholder="  PROVINCIA" type="text" id="province" autocomplete="off" name="province" value="<%= users.province %>">
                 </div>
-                <div class="main__profile__botones__send">
-                    <button type="submit">    ENVIAR!    </button>
-                </div>
-            </form>
+         
+            <div class="main__profile__boton-edit">
+                <a href="/users/editProfile/<%= users.id %>">
+                  <button>Editar Perfil</button></a
+                >
+                <a href="/users/logout"> <button >Salir</button></a>
+              </div>
+            </div>
             
         </section>
     </main>
