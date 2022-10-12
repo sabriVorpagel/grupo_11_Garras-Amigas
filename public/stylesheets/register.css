@@ -1,4 +1,321 @@
-/* main */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --register-bg:#f8f3ff;
+    --titulos:#9089cc;
+    --botones:#674baf;
+    --rosa:#e882e8;
+   
+}
+.main--register{
+    height: 160vh;
+    width:100%;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+.register--container{
+    height: 48.75em;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.register-info-container{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 3.5rem;
+    background-color: var(--register-bg);
+    margin: auto;
+    border-radius: 10px;
+}
+
+.register-info-container h1{
+    text-transform: capitalize;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--titulos);
+    margin-top: -27px;
+}
+.rg-btn-redes{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(90deg, #e882e8, #a18cd1);
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    font-size: 24px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 50%;
+    transition: scale 0.15s;
+
+}
+.rg-btn-redes:hover{
+    scale: 0.9
+}
+.rg-btn-redes::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: 50%;
+    opacity: 0;
+    scale: 0.95;
+    pointer-events: none;
+}
+.rg-btn-redes:hover::after{
+    animation: pulse 1s;
+}
+@keyframes pulse{
+    0%{
+        opacity: 0.8;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        scale: 2;
+        opacity: 0;
+    }
+} 
+.register-info-container p{
+    margin: 10px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    text-transform: capitalize;
+}
+.reg-imputs-container{
+    height: 62%;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5px;
+}
+.input-register-register, .register-btn{
+    width: 90%;
+    height: 30px;
+    font-size: 1em;
+}
+.input-register{
+    padding-left: 20px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 11px;
+}
+.input-register:hover{
+    border: 2px solid var(--botones);
+    cursor: pointer;
+}
+.register-btn{
+    width: 80%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--botones);
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+}
+.recordame, .check{
+    color: var(--rosa);
+    cursor: pointer;
+    margin: 5px;
+}
+.imputs-container p{
+    margin:0;
+}
+.span{
+    color: var(--rosa);
+    font-weight: 100;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+@media(min-width:768px){
+    
+    .main--register{
+        height: 120vh;
+    }
+    .register--container{
+        height: 38.75em;
+        width: 43em;
+        
+    }
+    .register-info-container{
+        width: 50%;
+        height: 100vh;
+        margin-top: 31px;
+    }
+    .register-info-container h1{
+        font-size: 2.25rem;
+    }
+    .social-register-element{
+        width: 12.5rem;
+        height: 3.75rem;
+        font-size: 35px;;
+    }
+    .social-register-element a:hover{
+        color: var(--rosa);
+        cursor: pointer;
+    }
+    .register-info-container p{
+        font-size: 1.25em;
+    }
+    .imputs-container{
+        height: 65%;
+    }
+    
+    .input{
+        font-weight: 100;
+    }
+}
+@media (min-width:1024px){
+    .main--register{
+        height: 130vh;
+    }
+    .register--container{
+        height: 39.75em;
+        width: 43em;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+    .register-info-container{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: var(--register-bg);
+        margin-top: 31px;
+    }
+    .iamge-container{
+        display: flex;
+        width: 50%;
+        padding-top: 2em;
+        box-sizing: border-box;
+    }
+    .register-info-container h1{
+        text-transform: capitalize;
+        font-size: 2.25rem;
+        font-weight: 100;
+        letter-spacing: 1px;
+        color: var(--titulos);
+    }
+    .social-register{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .social-register-element{
+        width: 12.5rem;
+        height: 3.75rem;
+        font-size: 2.2rem;
+        font-weight: 100;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-content: space-around;
+        margin-top: 10px;
+    }
+    .social-register-element a{
+        color:#964c95;
+    }
+    .social-register-element a:hover{
+        color: var(--rosa);
+        cursor: pointer;
+    }
+    .register-info-container p{
+        font-size: 1.25em;
+    }
+    .imputs-container{
+        height: 55%;
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .input, .register-btn{
+        width: 90%;
+        height: 3.25em;
+        font-size: 1em;
+    }
+    .input{
+        padding-left: 20px;
+        border: none;
+        border-radius: 5px;
+        font-weight: 100;
+        letter-spacing: 1px;
+        box-sizing: border-box;
+        margin-bottom: 11px;
+    }
+    .input:hover{
+        border: 2px solid var(--botones);
+        cursor: pointer;
+    }
+    .register-btn{
+        width: 80%;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+        background-color: var(--botones);
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 5px;
+    }
+    .recordame, .check{
+        color: var(--rosa);
+        cursor: pointer;
+        margin: 5px;
+    }
+    .imputs-container p{
+        margin:0;
+    }
+    .register-span{
+        color: var(--rosa);
+        font-weight: 100;
+        cursor: pointer;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* main
 .main__register {
     width: 100%;
     padding: 20px;
@@ -117,7 +434,7 @@
 }
 
 
-/*TABLET*/
+/*TABLET
 @media (min-width:768px) {
     .main__register {
         width: 65%;
@@ -279,4 +596,4 @@
         color: #b65c74;
     }
 }
-    
+     */
