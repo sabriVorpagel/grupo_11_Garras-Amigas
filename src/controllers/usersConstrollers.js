@@ -1,6 +1,8 @@
 const {loadUsers , storeUsers } = require ('../data/db_Module');
 const {validationResult} = require('express-validator'); 
 const {hashSync}= require('bcryptjs');
+const fs = require('fs');
+const path = require('path');
 
 module.exports = {
     register : (req,res) => {
@@ -24,11 +26,25 @@ module.exports = {
                 password2 : null,
                 direction : direction.trim(),
                 heigth : +heigth,
-                postal : +postal,
                 location :location.trim(),
                 province : province.trim(),
-                imgUsers: null
-            }
+                imgUsers: ["default.png"]
+            };
+
+             // inicio session una vez creado el usuario
+                req.session.login = {
+                    id: newUser.id,
+                    firstName: newUser.firstName,
+                    lastname: newUser.lastname,
+                    phone: newUser.phone,
+                    email : newUser.email, 
+                    password : newUser.password,
+                    direction : newUser.direction,
+                    heigth : newUser.heigth,
+                    location : newUser.location,
+                    province : newUser.province,
+                    imgUsers: newUser.imgUsers,
+                };
     
             const usersModify = [...users, newUser];
             storeUsers(usersModify);
@@ -61,7 +77,7 @@ module.exports = {
 
     profile: (req, res) => {
         const users = loadUsers();
-        const id = req.session.login.id;
+        const id = req.session.login?.id;
         const user = users.find((user) => user.id === +id);
         return res.render("users/profile", {
         title: "Garras Amigas | Mi perfil",

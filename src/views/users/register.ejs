@@ -41,10 +41,6 @@
                     <input placeholder="  ALTURA" type="number" id="heigth" autocomplete="off" name="heigth" value="<%= locals.old && old.heigth ? old.heigth : null %>">
                     <small><%= locals.errors && errors.heigth ? errors.heigth.msg :null  %></small>
                 </div>
-                <div class="main__register__input  main__register--numeros">
-                    <input placeholder="  CODIGO POSTAL" type="number" id="postal_code" autocomplete="off" name="postal" value="<%= locals.old && old.postal ? old.postal : null %>">
-                    <small><%= locals.errors && errors.postal ? errors.postal.msg :null  %></small>
-                </div>
                 <div class="main__register__input">
                     <input placeholder="  LOCALIDAD" type="text" id="location" autocomplete="off" name="location" value="<%= locals.old && old.location ? old.location : null %>">
                     <small><%= locals.errors && errors.location ? errors.location.msg :null  %></small>                  

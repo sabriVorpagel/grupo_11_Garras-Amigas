@@ -7,7 +7,8 @@
             <form  action="/users/editProfile/<%= user.id %>?_method=PUT"  method="POST" class="main__profile__form">
                 <div class="main__profile--profile">
                     <div class="main__profile__img">
-                        <img src="/images/default.jpg" id="" alt="" width="100">
+                        <img src="/images/default.png<%= user.imgUsers %>" alt="imgUsers">
+                        
                     </div>
                     <div class="main__profile__editor">
                         <label for="iamge">Editar imagen</label>
