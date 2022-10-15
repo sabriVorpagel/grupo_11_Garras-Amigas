@@ -7,14 +7,14 @@
 
             </div>
             <div class="profile-user-avatar">
-               <img src="/images/users/<%=users.imgUsers%>"/>
+                <img src="/images/users/<%=users.imgUsers%>"/>
             </div>
         </div>
         <div class="profile-user-body">
             <div class="profile-user-bio">
                 <h3 class="profile-name">
                 <div>
-                    <p><%= users.firstName %><%= users.lastName %></p> 
+                    <p><%= users.firstName %>  <%= users.lastName %></p> 
                 </div>
                 </h3>
             </div>
@@ -44,12 +44,10 @@
                     <p>Provincia:</p>
                     <h4><%= users.province %></h4>
                 </div>
+            
+                <a class="btn-profile" href="/users/editProfile/<%= users.id %>"><button>Editar Perfil</button></a>
+                <a class="btn-profile" href="/users/logout"> <button >Salir</button></a>
             </div>
-
-        </div>
-        <div>
-            <a href="/users/editProfile/<%= users.id %>"><button>Editar Perfil</button></a>
-            <a href="/users/logout"> <button >Salir</button></a>
         </div>
 
     </main>

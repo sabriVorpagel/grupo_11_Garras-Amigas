@@ -15,7 +15,19 @@
          "image"
       ],
       "rol": "user"
+   },
+   {
+      "id": 2,
+      "firstName": "hamster",
+      "lastName": "cito",
+      "phone": 123456,
+      "email": "hamster@gmail.com",
+      "password": "$2a$10$9.gKYMx8sHAPzxdJJby2ReGpChVX/u5Pg7mQ7CKtMsehFLefEubQy",
+      "password2": null,
+      "direction": "solis",
+      "heigth": 123,
+      "location": "banfield",
+      "province": "bsas",
+      "imgUsers": "imgUsers-1665802679766.png"
    }
-  
-   
 ]
