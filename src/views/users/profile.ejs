@@ -1,67 +1,59 @@
 <%- include('../partials/head', {title: 'Mi perfil'}) %> 
 <body>
     <%- include('../partials/header') %> 
-    <main class="main__profile">
-        <section class="main__profile__container">
-            <h1>Mi Perfil</h1>
-           
-                
-                <div class="main__profile--profile">
-                    <div class="main__profile__img">
-                        <img src="/images/users/<%=users.imgUsers %> ">
-                        
-                        
-                    </div>
-                   
-                    <!-- <div class="main__profile__editor">
-                        <label for="iamge">Editar imagen</label>
-                        <input type="file" id="image" name="image">
-                    </div> -->
-                </div>
-                <div class="main__profile__input">
-                    <input placeholder="  NOMBRE" type="text" id="firstName" atocomplete="off" name="firstName" value="<%= users.firstName %>">
-                </div>
-                <div class="main__profile__input">
-                    <input placeholder="  APELLIDO" type="text" id="lastName" autocomplete="off" name="lastName" value="<%= users.lastName %>">
-                </div>
-                <div class="main__profile__input ">
-                    <input placeholder="  NÚMERO DE TELEFONO" type="number" id="phone" autocomplete="off" name="phone" value="<%= users.phone %>">
-                </div>
-                <div class="main__profile__input ">
-                    <input placeholder="  EMAIL" type="email" id="email" name="email" value="<%= users.email %>">
-                </div>
-                <div class="main__profile__input">
-                    <input placeholder="  CONTRASEÑA" type="password" id="password" name="password" value="<%= users.password %>">
-                </div>
-                <div class="main__profile__input">
-                    <input placeholder="  REPETIR CONTRASEÑA" type="password" id="password2" autocomplete="off" name="password2" value="<%= users.password2 %>">
-                </div>
-                <div class="main__profile__input">
-                    <input placeholder="  DIRECCIÓN" type="text" id="direction" autocomplete="off" name="direction" value="<%= users.direction %>">
-                </div>
-                <div class="main__profile__input main__profile__input--numeros">
-                    <input placeholder="  ALTURA" type="number" id="heigth" autocomplete="off" name="heigth" value="<%= users.heigth %>">
-                </div>
-                <div class="main__profile__input main__profile__input--numeros">
-                    <input placeholder="  CODIGO POSTAL" type="number" id="postal" autocomplete="off" name="postal" value="<%= users.postal %>">
-                </div>
-                <div class="main__profile__input">
-                    <input placeholder="  LOCALIDAD" type="text" id="location" autocomplete="off" name="location" value="<%= users.location %>">
-                </div>
-                <div class="main__profile__input">
-                    <input placeholder="  PROVINCIA" type="text" id="province" autocomplete="off" name="province" value="<%= users.province %>">
-                </div>
-         
-            <div class="main__profile__boton-edit">
-                <a href="/users/editProfile/<%= users.id %>">
-                  <button>Editar Perfil</button></a
-                >
-                <a href="/users/logout"> <button >Salir</button></a>
-              </div>
+    <main class="seccion-profile-user">
+        <div class="profile-user-header">
+            <div class="profile-user-portada" >
+
             </div>
-            
-        </section>
+            <div class="profile-user-avatar">
+               <img src="/images/users/<%=users.imgUsers%>"/>
+            </div>
+        </div>
+        <div class="profile-user-body">
+            <div class="profile-user-bio">
+                <h3 class="profile-name">
+                <div>
+                    <p><%= users.firstName %><%= users.lastName %></p> 
+                </div>
+                </h3>
+            </div>
+        
+            <div class="lista-datos">
+                <div class="datos-user">
+                    <p>Número de teléfono:</p> 
+                    <h4><%= users.phone %></h4>
+                </div> 
+                <div class="datos-user"> 
+                    <p> Email:</p>
+                    <h4><%= users.email %></h4>
+                </div> 
+                <div class="datos-user">
+                    <p>Dirección:</p>
+                    <h4><%= users.direction %></h4>
+                </div>
+                <div class="datos-user"> 
+                    <p>Altura:</p>
+                    <h4><%= users.heigth %></h4>
+                </div>
+                <div class="datos-user"> 
+                    <p>Localidad:</p>
+                    <h4><%= users.location %></h4>
+                </div>
+                <div class="datos-user"> 
+                    <p>Provincia:</p>
+                    <h4><%= users.province %></h4>
+                </div>
+            </div>
+
+        </div>
+        <div>
+            <a href="/users/editProfile/<%= users.id %>"><button>Editar Perfil</button></a>
+            <a href="/users/logout"> <button >Salir</button></a>
+        </div>
+
     </main>
+
     <%- include('../partials/footer') %> 
 </body>
 </html>

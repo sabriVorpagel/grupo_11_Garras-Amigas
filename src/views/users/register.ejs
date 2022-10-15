@@ -1,76 +1,71 @@
 <%- include('../partials/head', {title: 'Register'}) %> 
 <body>
     <%- include('../partials/header') %> 
-    <main class="main__register">
-        <section class="main__register__container">
-            <h1>INGRESA TUS DATOS</h1>
-            <div class="main__register__iniciar">
-                <a href="/users/login">¿Ya tienes una cuenta ?</a>
+    <main class="main--reg">
+        <div class="reg--container">
+            <div class="reg-info-container">
+            <h1>Registrate con</h1>
+            <div class="social-login">
+                <div class="social-login-element">
+                    <a href="#" class="btn-redes"><i class="fa-brands fa-facebook-f"></i> </a>
+                    <a href="#" class="btn-redes"><i class="fa-brands fa-instagram"></i> </a>
+                    <a href="#" class="btn-redes"><i class="fa-brands fa-google"></i> </a>
+                </div>
             </div>
-            <form  action=""  method="POST" enctype="multipart/form-data" class="main__register__form">
-                <div class="main__register__input ">
-                    <input placeholder="  NOMBRE" type="text" id="firstName" atocomplete="off" name="firstName" value="<%= locals.old && old.firstName ? old.firstName : null %>">
-                    <small><%= locals.errors && errors.firstName ? errors.firstName.msg :null  %> </small>
+            <p>o ingresa tus datos</p>
+            <form  action=""  method="POST" enctype="multipart/form-data" class="imputs-container-reg">
+                <div>
+                    <input class="input-reg" placeholder="  NOMBRE" type="text" id="firstName" atocomplete="off" name="firstName" value="<%= locals.old && old.firstName ? old.firstName : null %>">
+                    <small class="small-reg"><%= locals.errors && errors.firstName ? errors.firstName.msg :null  %> </small>
                 </div>
-                <div class="main__register__input">
-                    <input placeholder="  APELLIDO" type="text" id="lastName" autocomplete="off" name="lastName" value="<%= locals.old && old.lastName ? old.lastName : null %>">
-                    <small><%= locals.errors && errors.lastName ? errors.lastName.msg :null  %></small>
+                <div>
+                    <input class="input-reg" placeholder="  APELLIDO" type="text" id="lastName" autocomplete="off" name="lastName" value="<%= locals.old && old.lastName ? old.lastName : null %>">
+                    <small class="small-reg"><%= locals.errors && errors.lastName ? errors.lastName.msg :null  %></small>
                 </div>
-                <div class="main__register__input ">
-                    <input placeholder="  NÚMERO DE TELEFONO" type="number" id="phone" autocomplete="off" name="phone" value="<%= locals.old && old.phone ? old.phone : null %>">
-                    <small><%= locals.errors && errors.phone ? errors.phone.msg :null  %></small>
+                <div>
+                    <input class="input-reg" placeholder="  TELÉFONO" type="number" id="phone" autocomplete="off" name="phone" value="<%= locals.old && old.phone ? old.phone : null %>">
+                    <small class="small-reg"><%= locals.errors && errors.phone ? errors.phone.msg :null  %></small>
 
                 </div>
-                <div class="main__register__input ">
-                    <input placeholder="  EMAIL" type="email" id="email" name="email" value="<%= locals.old && old.email ? old.email: null %>">
-                    <small><%= locals.errors && errors.email ? errors.email.msg :null  %></small>
+                <div>
+                    <input class="input-reg" placeholder="  EMAIL" type="email" id="email" name="email" value="<%= locals.old && old.email ? old.email: null %>">
+                    <small class="small-reg"><%= locals.errors && errors.email ? errors.email.msg :null  %></small>
                 </div>
-                <div class="main__register__input">
-                    <input placeholder="  CONTRASEÑA" type="password" id="password" name="password">
-                    <small><%= locals.errors && errors.password ? errors.password.msg :null  %></small>
+                <div>
+                    <input class="input-reg" placeholder="  CONTRASEÑA" type="password" id="password" name="password">
+                    <small class="small-reg"><%= locals.errors && errors.password ? errors.password.msg :null  %></small>
                 </div>
-                <div class="main__register__input">
-                    <input placeholder="  REPETIR CONTRASEÑA" type="password" id="password2" autocomplete="off" name="password2">
-                    <small><%= locals.errors && errors.password2 ? errors.password2.msg :null  %></small>
+                <div>
+                    <input class="input-reg" placeholder="  REPETIR CONTRASEÑA" type="password" id="password2" autocomplete="off" name="password2">
+                    <small class="small-reg"><%= locals.errors && errors.password2 ? errors.password2.msg :null  %></small>
                 </div>
-                <div class="main__register__input">
-                    <input placeholder="  DIRECCIÓN" type="text" id="direction" autocomplete="off" name="direction"  value="<%= locals.old && old.direction ? old.direction : null %>">
-                    <small><%= locals.errors && errors.direction ? errors.direction.msg :null  %></small>
+                <div>
+                    <input class="input-reg" placeholder="  DIRECCIÓN" type="text" id="direction" autocomplete="off" name="direction"  value="<%= locals.old && old.direction ? old.direction : null %>">
+                    <small class="small-reg"><%= locals.errors && errors.direction ? errors.direction.msg :null  %></small>
                 </div>
-                <div class="main__register__input main__register--numeros">
-                    <input placeholder="  ALTURA" type="number" id="heigth" autocomplete="off" name="heigth" value="<%= locals.old && old.heigth ? old.heigth : null %>">
-                    <small><%= locals.errors && errors.heigth ? errors.heigth.msg :null  %></small>
+                <div>
+                    <input class="input-reg" placeholder="  ALTURA" type="number" id="heigth" autocomplete="off" name="heigth" value="<%= locals.old && old.heigth ? old.heigth : null %>">
+                    <small class="small-reg"><%= locals.errors && errors.heigth ? errors.heigth.msg :null  %></small>
                 </div>
-                <div class="main__register__input">
-                    <input placeholder="  LOCALIDAD" type="text" id="location" autocomplete="off" name="location" value="<%= locals.old && old.location ? old.location : null %>">
-                    <small><%= locals.errors && errors.location ? errors.location.msg :null  %></small>                  
+                <div>
+                    <input class="input-reg" placeholder="  LOCALIDAD" type="text" id="location" autocomplete="off" name="location" value="<%= locals.old && old.location ? old.location : null %>">
+                    <small class="small-reg"><%= locals.errors && errors.location ? errors.location.msg :null  %></small>                  
                 </div>
-                <div class="main__register__input">
-                    <input placeholder="  PROVINCIA" type="text" id="province" autocomplete="off" name="province" value="<%= locals.old && old.province ? old.province : null %>">
-                    <small><%= locals.errors && errors.province ? errors.province.msg :null  %></small>
+                <div>
+                    <input class="input-reg" placeholder="  PROVINCIA" type="text" id="province" autocomplete="off" name="province" value="<%= locals.old && old.province ? old.province : null %>">
+                    <small class="small-reg"><%= locals.errors && errors.province ? errors.province.msg :null  %></small>
                 </div>
-                <div class="main__register__input main__register--foto">
-                    <label for="imgUsers">AGREGA TU FOTO DE PERFIL</label>
-                    <input id="imgUsers" type="file" name="imgUsers" autocomplete="off">
+                <div >
+                    <label class="label-reg" for="imgUsers">AGREGA TU FOTO DE PERFIL</label>
+                    <input class="input-reg-file" id="imgUsers" type="file" name="imgUsers" autocomplete="off">
                 </div>
-                <div class="main__register__botones__send">
-                    <button type="submit">ENVIAR!</button>
-                </div>
+               
+                    <button  class="login-btn" type="submit">ENVIAR!</button>
+               
             </form>
-            <div class="main__register__botones__redes">
-                <h5>O REGISTRATE CON</h5>
-                <div>
-                    <a href=""><i class="fa-brands fa-facebook"></i> </a>
-                </div>
-                <div>
-                    <a href=""><i class="fa-brands fa-instagram"></i> </a>
-                </div>
-                <div>
-                    <a href=""><i class="fa-brands fa-google-plus"></i> </a>
-                </div>
-            </div>
+           
         </section>
     </main>
-    <%- include('../partials/footer') %> 
+    
 </body>
 </html>

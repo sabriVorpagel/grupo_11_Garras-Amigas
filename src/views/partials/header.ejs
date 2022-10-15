@@ -1,89 +1,35 @@
-<header class="home__header">
-    <div class="home__header--header">
-        <!-- header de tablet y compu -->
-        <div class="home__header--logo">
-            <a href="/"><img src="/images/productos/garrasLogo.png" alt="logo" /></a>
-        </div>
-        <form action="" class="home__header--search--header">
-            <input type="text" placeholder="  Buscar productos, marcas" />
-            <button type="submit">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-        </form>
-        <div class="home__header--menu">
-            <label for="btn-menu"><i class="fa-solid fa-bars"></i></label>
-        </div>
-        <div class="home__header--favicon">
-            <% if(locals.login) { %> 
-            <div class="home__header--edit--2">
-                <a href="/users/profile "> perfil</a>
-            </div>
-            <div class="home__header--carrito--2">
-                <a href="/users/logout">carrito</a>
-            </div>
-           
-            <% }else{  %> 
-            <div class="home__header--contacto--2">
-                <a href="/users/login">logeate</i></a>
-            </div>
-            <% } %> 
-    </div>
-    <!--  NAVEGADOR QUE SE VE DEBAJO DEL HEADER -->
-    <div class="home__header--header--2">
-        <nav class="home__header__nav--2">
-            <ul>
-                <li><a href="/products/product"> PRODUCTOS </a></li>
-                <li><a href="/dudas"> DUDAS?</a></li>
-                <li><a href="/guia"> GUIA DE COMPRAS</a></li>
-                <li><a href="/contacto">CONTACTO</a></li>
-                <li><a href="/talles">GUIA DE TALLES</a></li>
-                <li><a href="/products/create">AGREGAR PRODUCTO</a></li>
+<header>
+    <main class="header-main">
+        <nav class="header--nav">
+            <a href="/"><div class="header--logo"> GA<b>.</b></a></div>
+                
+            <ul class="header--navItems">
+                <li><a href="/index">Home</a></li>
+                <li><a href="/products/product">productos</a></li>
+                <li><a href="/products/create">agr. producto</a></li>
             </ul>
+            <div class="header--links">
+                <% if(locals.login) { %>
+                    <a class="hebtn-redes" href="/users/profile "><i class="fa-regular fa-circle-user"></i></a>
+                    <a class="hebtn-redes" href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                <% }else{ %>
+                    <a class="hebtn-redes" href="/users/login"><i class="fa-solid fa-person-walking-arrow-right"></i></a>
+                <% } %>
+            </div>
+        
+        
         </nav>
-    </div>
-
-
-    <!-- FIN DEL HEADER DE TABLET  Y DESCKTOP -->
-
-
-    <!-- COMIeNZO DEL HEADER DE MOVIL -->
-
-    <input type="checkbox" id="btn-menu" />
-
-    <div class="home__header--container-menu">
-        <div class="home__header--cont-menu">
-            <form action="" class="home__header--search">
-                <input type="text" placeholder="  Buscar productos, marcas" />
-                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-            <div class="home__header--contacto-edit">
-                <% if(locals.login) { %> 
-                    <div class="home__header--edit">
-                        <a href="/users/profile"><button><i class="fa-regular fa-circle-user"></i></button> </a>
-                    </div>
-                    <div class="home__header--carrito">
-                        <button><a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a></button>
-                    </div>
-                <% }else{  %> 
-                    <div class="home__header--contacto">
-                        <a href="/users/login"><i class="fa-solid fa-person-walking-arrow-right"></i></a>
-                    </div>
-                <% } %> 
-            </div>
-            <hr>
-            <div>
-                <nav>
-                    <ul>
-                        <li><a href="/products/product"> • PRODUCTOS </a></li>
-                        <li><a href="/dudas"> • DUDAS?</a></li>
-                        <li><a href="/guia"> • GUIA DE COMPRAS</a></li>
-                        <li><a href="/contacto"> • CONTACTO</a></li>
-                        <li><a href="/talles"> • GUIA DE TALLES</a></li>
-                        <li><a href="/products/create"> • AGREGAR PRODUCTO</a></li>
-                    </ul>
-                </nav>  
-                <img class="img-final" src="/images/baño.png" width="200" />
-            </div>
-        <label for="btn-menu">✖️</label>
-    </div>
+ </main>
 </header>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> -->
+    <!-- <script>
+        var typingEffect = new Typed(".header__icon",{
+            strings : ['GARRAS',''],
+            loop: true,
+            typeSpeed: 100,
+            backSpeed: 80,
+            backDelay: 1500
+        })
+    </script> -->
+  
