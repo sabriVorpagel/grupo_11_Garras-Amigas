@@ -1,4 +1,5 @@
-const {loadProducts, storeProducts, loadCategorys, loadClass} = require('../data/db_Module');
+const {loadProducts, storeProducts, loadCategorys, loadClass} = require('../data/db_Module')
+
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 

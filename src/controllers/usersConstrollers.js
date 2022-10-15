@@ -53,9 +53,9 @@ module.exports = {
     processLogin : (req, res) =>{
         let errors = validationResult(req);
         if(errors.isEmpty()){
-            let {id, email, password} = loadUsers().find(user => user.email === req.body.email);
-        req.session.login= {id, email, password} 
-            return res.redirect('/home')
+            let {id, email, password, imgUsers, rol} = loadUsers().find(user => user.email === req.body.email);
+        req.session.login= {id, email, password, imgUsers, rol} 
+            return res.redirect('/')
         }else {
             return res.render('users/login', {
                 errors : errors.mapped(), 
@@ -72,7 +72,6 @@ module.exports = {
         title: "Garras Amigas | Mi perfil",
         user,
         });
-       
     },
 
     editProfile: (req, res) =>{

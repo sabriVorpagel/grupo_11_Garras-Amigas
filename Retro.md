@@ -116,3 +116,41 @@
 >Distraerse.
 
 >No estudiar a ultimo momento.
+
+# _**Retrospectiva 5° sprint**_
+
+## _**Comenzar a hacer**_
+
+>Ponerse al dia y ayudarnos entre todos a la hora de realizar los trabajos referentes al curso.
+
+>Implementar daily de 15 minutos minimo.
+
+>Trabajo individual y comunicar progresos en la daily con vocabulario tecnico y entendible.
+
+>Juntarnos para hacer otros proyectos para mejorar la cooperación.
+
+### _**Hacer más**_
+
+>Tomar descansos de 15  minutos y charlar cosas no referentes al trabajo para relajarse.
+
+### _**Continuar haciendo**_
+
+>Comunicar problemas por Trello a traves del encargado del trello(Turno rotativo).
+
+>Mejorar la comunicacion, terminologias, gramatica, etc.
+
+>Comenzar siempre que se inicie el nuevo sprint.
+
+>Comunicar dudas en cualquier horario, luego esperar respuesta.
+
+### _**Hacer menos**_
+
+>Trabajar sin parar.
+
+>Trabajar estresados.
+
+>Distraerse.
+
+### _**Dejar de hacer**_
+
+>No estudiar a ultimo momento.

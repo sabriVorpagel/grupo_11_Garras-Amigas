@@ -39,7 +39,10 @@
                 <li><a href="/guia"> GUIA DE COMPRAS</a></li>
                 <li><a href="/contacto">CONTACTO</a></li>
                 <li><a href="/talles">GUIA DE TALLES</a></li>
-                <li><a href="/products/create">AGREGAR PRODUCTO</a></li>
+                <% if(locals.login) { %>
+                    <% if(locals.login.rol === "admin") { %>  
+                <li><a href="/products/create"> • AGREGAR PRODUCTO</a></li>
+                <% }} %> 
             </ul>
         </nav>
     </div>
@@ -81,7 +84,10 @@
                         <li><a href="/guia"> • GUIA DE COMPRAS</a></li>
                         <li><a href="/contacto"> • CONTACTO</a></li>
                         <li><a href="/talles"> • GUIA DE TALLES</a></li>
+                        <% if(locals.login) { %>
+                            <% if(locals.login.rol === "admin") { %>  
                         <li><a href="/products/create"> • AGREGAR PRODUCTO</a></li>
+                        <% }} %> 
                     </ul>
                 </nav>  
                 <img class="img-final" src="/images/baño.png" width="200" />
