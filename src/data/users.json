@@ -29,5 +29,19 @@
       "location": "banfield",
       "province": "bsas",
       "imgUsers": "imgUsers-1665802679766.png"
+   },
+   {
+      "id": 3,
+      "firstName": "sabrina",
+      "lastName": "vorpagel",
+      "phone": 133264525,
+      "email": "sabrivorpagel2512@gmail.com",
+      "password": "$2a$10$sX3wKdVwbKy8LsYdSXdSkeNpNBYbMSUxZILmEqvfqxal.e.Q8Aj.O",
+      "password2": null,
+      "direction": "rio",
+      "heigth": 1442,
+      "location": "bella",
+      "province": "buenos",
+      "imgUsers": "default.jpg"
    }
 ]
