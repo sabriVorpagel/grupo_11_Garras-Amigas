@@ -5,7 +5,7 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 module.exports = {
     product: (req, res) => { 
 		let products = db.Product.findAll({
-			include : 'images'
+			include : ['images']
 		})
 
 		Promise.all([products])
