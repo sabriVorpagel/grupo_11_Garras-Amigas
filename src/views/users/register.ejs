@@ -15,11 +15,11 @@
             <p>o ingresa tus datos</p>
             <form  action=""  method="POST" enctype="multipart/form-data" class="imputs-container-reg">
                 <div>
-                    <input class="input-reg" placeholder="  NOMBRE" type="text" id="firstName" atocomplete="off" name="firstName" value="<%= locals.old && old.firstName ? old.firstName : null %>">
+                    <input class="input-reg" placeholder="  NOMBRE" type="text" id="firstName" atocomplete="off" name="firstName" value="<%= locals.old && old.name ? old.name : null %>">
                     <small class="small-reg"><%= locals.errors && errors.firstName ? errors.firstName.msg :null  %> </small>
                 </div>
                 <div>
-                    <input class="input-reg" placeholder="  APELLIDO" type="text" id="lastName" autocomplete="off" name="lastName" value="<%= locals.old && old.lastName ? old.lastName : null %>">
+                    <input class="input-reg" placeholder="  APELLIDO" type="text" id="lastName" autocomplete="off" name="lastName" value="<%= locals.old && old.surname ? old.surname : null %>">
                     <small class="small-reg"><%= locals.errors && errors.lastName ? errors.lastName.msg :null  %></small>
                 </div>
                 <div>
@@ -39,7 +39,7 @@
                     <input class="input-reg" placeholder="  REPETIR CONTRASEÑA" type="password" id="password2" autocomplete="off" name="password2">
                     <small class="small-reg"><%= locals.errors && errors.password2 ? errors.password2.msg :null  %></small>
                 </div>
-                <div>
+                <!-- <div>
                     <input class="input-reg" placeholder="  DIRECCIÓN" type="text" id="direction" autocomplete="off" name="direction"  value="<%= locals.old && old.direction ? old.direction : null %>">
                     <small class="small-reg"><%= locals.errors && errors.direction ? errors.direction.msg :null  %></small>
                 </div>
@@ -54,7 +54,7 @@
                 <div>
                     <input class="input-reg" placeholder="  PROVINCIA" type="text" id="province" autocomplete="off" name="province" value="<%= locals.old && old.province ? old.province : null %>">
                     <small class="small-reg"><%= locals.errors && errors.province ? errors.province.msg :null  %></small>
-                </div>
+                </div> -->
                 <div >
                     <label class="label-reg" for="imgUsers">AGREGA TU FOTO DE PERFIL</label>
                     <input class="input-reg-file" id="imgUsers" type="file" name="imgUsers" autocomplete="off">
