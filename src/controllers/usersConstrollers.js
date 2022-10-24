@@ -1,8 +1,7 @@
 const {loadUsers , storeUsers } = require ('../data/db_Module');
 const {validationResult} = require('express-validator'); 
 const {hashSync}= require('bcryptjs');
-const fs = require('fs');
-const path = require('path');
+const db = require('../database/models');
 
 module.exports = {
     register : (req,res) => {
@@ -10,31 +9,27 @@ module.exports = {
     },
     processRegister : (req,res) => {
         const errors = validationResult(req);
-
-        if(errors.isEmpty()){
-            const {firstName, lastName, email, password, password2, phone, direction, heigth, location, province,imgUsers } = req.body;
+        // const {name,surname,email,password} = req.body
+         if(errors.isEmpty()){
+            const {firstName, lastName, email, password, password2, phone,rol, direction, heigth, location, province,imgUsers } = req.body;
             const users = loadUsers();
     
             const newUser = {
-                id: users[users.length - 1] ? users[users.length - 1].id + 1 : 1,
-                
-                firstName : firstName.trim(),
-                lastName : lastName.trim(),
-                phone: +phone,
-                email : email.trim(), 
-                password : hashSync(password.trim(),10),
-                password2 : null,
-                direction : direction.trim(),
-                heigth : +heigth,
-                location :location.trim(),
-                province : province.trim(),
-                imgUsers: req.file ? req.file.filename : 'default.jpg',
-                
-            };
-
-             
+               id: users[users.length - 1] ? users[users.length - 1].id + 1 : 1,
                
-    
+               firstName : firstName.trim(),
+               lastName : lastName.trim(),
+               phone: +phone,
+               email : email.trim(), 
+               password : hashSync(password.trim(),10),
+               password2 : null,
+               rol: "user",
+               direction : direction.trim(),
+               heigth : +heigth,
+               location :location.trim(),
+               province : province.trim(),
+               imgUsers: req.file ? req.file.filename : 'default.jpg',              
+            }
             const usersModify = [...users, newUser];
             storeUsers(usersModify);
             return res.redirect('/users/login')
@@ -44,18 +39,45 @@ module.exports = {
                 old : req.body
             })
         }
-    
+        //     db.User.create({
+        //         name : name.trim(),
+        //         surname : surname.trim(),
+        //         email : email.trim(),
+        //         password : hashSync(password, 10),
+        //         rolId : 2
+        //     }).then(user => {
+        //     db.Address.create({
+        //             userId: user.id
+        //     }).then( () => {
+        //             return res.redirect('/users/login')
+        //     })
+        //     }).catch(error => console.log(error))  
     },
-
     login : (req,res) => {
         return res.render('users/login')
     }, 
     processLogin : (req, res) =>{
         let errors = validationResult(req);
         if(errors.isEmpty()){
-            let {id, email, password, imgUsers, rol} = loadUsers().find(user => user.email === req.body.email);
+            // db.User.findOne({
+            //     where : {
+            //         email : req.body.email
+            //     }
+            // }).then(({id, name, avatar, rolId}) => {
+            //     req.session.login = {
+            //         id,
+            //         name,
+            //         avatar,
+            //         rol : rolId
+            //     };
+            //     req.body.remember && res.cookie('garrasamigas',req.session.login, {maxAge : 1000 * 60});
+                
+            //     return res.redirect('/');
+
+            // }).catch(error => console.log(error))
+           let {id, email, password, imgUsers, rol} = loadUsers().find(user => user.email === req.body.email);
         req.session.login= {id, email, password, imgUsers, rol} 
-            return res.redirect('/')
+           return res.redirect('/')
         }else {
             return res.render('users/login', {
                 errors : errors.mapped(), 
@@ -65,8 +87,18 @@ module.exports = {
     },
     
     profile: (req, res) => {
+        // let user = db.User.findByPk(req.session.login.id)
+        // let interests = db.Interest.findAll()
+
+        // Promise.all([user,interests])
+        //     .then(([user,interests]) => {
+        //         return res.render('userProfile',{
+        //             user,
+        //             interests
+        //         })
+        //     })
+        //     .catch(error => console.log(error))
         const users = loadUsers().find((user) => user.id === req.session.login.id);
-       
         return res.render("users/profile", {
         title: "Garras Amigas | Mi perfil",
         users,
@@ -81,23 +113,20 @@ module.exports = {
     },
 
     update: (req, res) => {
-        const  users = loadUsers();
-        
-        const { firstName, lastName, email, password, password2, phone, direction, heigth, location, province,imgUsers } = req.body;
-
-        const usersModify = loadUsers().map((user) => {
-            if (user.id === +req.params.id) {
-                return {
-                ...user,
-                ...req.body,
-                imgUsers:  imgUsers,
-                };
-            }
-            return user;
+       const  users = loadUsers(); 
+       const { firstName, lastName, email, password, password2, phone, direction, heigth, location, province,imgUsers } = req.body;
+       const usersModify = loadUsers().map((user) => {
+           if (user.id === +req.params.id) {
+               return {
+               ...user,
+               ...req.body,
+               imgUsers:  imgUsers,
+               };
+           }
+           return user;
     })
-    
-        storeUsers(usersModify);
-        return res.redirect("/users/profile");
+       storeUsers(usersModify);
+       return res.redirect("/users/profile");
     },
 
 

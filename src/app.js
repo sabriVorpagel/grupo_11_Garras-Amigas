@@ -1,5 +1,5 @@
 // modulos
-require ('dotenv').config();
+require('dotenv').config();
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -12,8 +12,7 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productRouter = require('./routes/products');
 
-const {localsUserCheck, coockieCheck, adminUserCheck} = require('./middlewares/usersLogin');
-
+const {localsUserCheck, coockieCheck} = require('./middlewares/usersLogin');
 
 const app = express();
 
@@ -30,8 +29,8 @@ app.use(session({
   resave : false , 
   saveUnitialized : true }));
 
-  app.use(coockieCheck);
-  app.use(localsUserCheck);
+app.use(coockieCheck);
+app.use(localsUserCheck);
 
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(methodOverride('_method'));

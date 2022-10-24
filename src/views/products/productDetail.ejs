@@ -8,20 +8,20 @@
         <article class="detail__main__producto">
                 <div class="detail__main__producto-padre">
                     <div class="detail__main__product-img">
-                        <img src="/images/productos/<%= product.image %> " alt="" class="slider__img">
+                        <img src="/images/productos/<%= product.image ? product.image[0].file : 'Anuncio.png' %> " alt="" class="slider__img">
                     </div>
                     <div class="detail__main__product-contenedor-imagenes">
                         <div class="detail__main__product-imagenes">
-                            <img src="/images/productos/<%= product.image %> " alt="">
+                            <img src="/images/productos/<%= product.image ? product.image[0].file : 'Anuncio.png'  %> " alt="">
                         </div>    
                         <div class="detail__main__product-imagenes">
-                            <img src="/images/productos/<%= product.image %> " alt="">
+                            <img src="/images/productos/<%= product.image ? product.image[0].file : 'Anuncio.png'  %> " alt="">
                         </div>    
                         <div class="detail__main__product-imagenes">
-                            <img src="/images/productos/<%= product.image %> " alt="">
+                            <img src="/images/productos/<%= product.image ? product.image[0].file : 'Anuncio.png'  %> " alt="">
                         </div>
                         <div class="detail__main__product-imagenes">
-                            <img src="/images/productos/<%= product.image %> " alt="">
+                            <img src="/images/productos/<%= product.image ? product.image[0].file : 'Anuncio.png'  %> " alt="">
                         </div>
                     </div>
                 </div>
