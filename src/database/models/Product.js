@@ -1,61 +1,35 @@
-module.exports = (sequelize, dataTypes) => {
-
-    const alias = "Product";
-
-    const cols = {
-        id : {
-            type : dataTypes.INTEGER.UNSIGNED,
-            primaryKey : true,
-            allowNull : false,
-            autoIncrement : true
-        },
-       
-        name : {
-            type : dataTypes.STRING(105),
-            allowNull : true,
-        },
-        price : {
-            type : dataTypes.DECIMAL(3,1).UNSIGNED,
-            allowNull : true,
-        },
-        description : {
-            type : dataTypes.Text(255),
-            allowNull : true,
-        },
-        stock : {
-            type : dataTypes.INTEGER.UNSIGNED,
-            allowNull : true,
-        },
-        
-        categoriesId : {
-            type : dataTypes.INTEGER.UNSIGNED,
-            allowNull : true,
-            references : {
-                model : {
-                    tableName : 'Category'
-                },
-                key : 'id'
-            }
-        },
-        userId : {
-            type : dataTypes.INTEGER.UNSIGNED,
-            allowNull : true,
-            references : {
-                model : {
-                    tableName : 'User'
-                },
-                key : 'id'
-            }
-        }
-
+'use strict';
+const {
+  Model
+} = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
+  class Product extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+      // define association here
+      Product.belongsTo(models.Category,{
+        as: 'category',
+        foreignKey: 'categoryId'
+      });
+      Product.hasMany(models.Image,{
+        as: 'images',
+        foreignKey: 'productId'
+      })
     }
-
-    const config = {
-        tableName : 'products' ,
-        timestamp : true,
-        underscored : true,
-    }
-    const Product = sequelize.define(alias, cols, config)
-
-    return Product
-}
+  }
+  Product.init({
+    name: DataTypes.STRING,
+    price: DataTypes.INTEGER,
+    discount: DataTypes.INTEGER,
+    description: DataTypes.STRING,
+    categoryId: DataTypes.INTEGER
+  }, {
+    sequelize,
+    modelName: 'Product',
+  });
+  return Product;
+};

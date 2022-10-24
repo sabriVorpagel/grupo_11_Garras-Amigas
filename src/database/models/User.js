@@ -1,82 +1,41 @@
-module.exports = (sequelize, dataTypes) => {
-
-    const alias = "User";
-
-    const cols = {
-        id : {
-            type : dataTypes.INTEGER.UNSIGNED,
-            primaryKey : true,
-            allowNull : false,
-            autoIncrement : true
-        },
-       fisrt_name : {
-            type : dataTypes.STRING(105),
-            allowNull : true,
-        },
-        last_name : {
-            type : dataTypes.STRING(105),
-            allowNull : true,
-        },
-        direction : {
-            type : dataTypes.Text(255),
-            allowNull : true,
-        },
-        heigth : {
-            type : dataTypes.INTEGER,
-            allowNull : true,
-        },
-        email : {
-            type : dataTypes.STRING(105),
-            allowNull : true,
-        },
-        phone : {
-            type : dataTypes.INTEGER,
-            allowNull : true,
-        },
-        password : {
-            type : dataTypes.STRING(105),
-            allowNull : true,
-        },
-        
-        location : {
-            type : dataTypes.STRING(105),
-            allowNull : true,
-        },
-        province : {
-            type : dataTypes.STRING(105),
-            allowNull : true,
-        },
-        createdAt: {
-            type : dataTypes.DATETIME,
-            allowNull : true,
-        },
-        updateAt : {
-            type : dataTypes.DATETIME,
-            allowNull : true,
-        },
-        deleteAt : {
-            type : dataTypes.DATETIME,
-            allowNull : true,
-        },
-        rolId :{
-            type : dataTypes.INTEGER,
-            allowNull : true,
-            references : {
-                model : {
-                    tableName : 'User'
-                },
-                key : 'id'
-            }
-        },
-        }
+'use strict';
+const {
+  Model
+} = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
+  class User extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+      // define association here
+      User.belongsTo(models.Rol,{
+        as: 'rol',
+        foreignKey: 'rolId'
+      });
+      User.hasMany(models.Address,{
+        as: 'address',
+        foreignKey: 'userId'
+      });
+      User.hasMany(models.Order,{
+        as: 'order',
+        foreignKey: 'orderId'
+      })
     }
-
-    const config = {
-        tableName : 'users' ,
-        timestamp : true,
-        underscored : true,
-    }
-    const User = sequelize.define(alias, cols, config)
-
-    return User
-
+  }
+  User.init({
+    name: DataTypes.STRING,
+    surname: DataTypes.STRING,
+    email: DataTypes.STRING,
+    password: DataTypes.STRING,
+    birthday: DataTypes.DATE,
+    genderId: DataTypes.INTEGER,
+    rolId: DataTypes.INTEGER
+  }, {
+    sequelize,
+    modelName: 'User',
+  });
+  return User;
+};
