@@ -14,10 +14,6 @@ module.exports = {
 				toThousand
 			}))
 			.catch(error => console.log(error))
-        //const products = loadProducts();
-        //return res.render('products/products', {
-        //    products,
-        //    toThousand,}) 
     },
     detail: (req,res) => {
 		db.Product.findByPk(req.params.id,{
@@ -30,12 +26,6 @@ module.exports = {
 			})
 			})
 			.catch(error => console.log(error))
-        //const products = loadProducts();
-        //const product = products.find(product => product.id === +req.params.id);
-        //return res.render('products/productDetail' ,{
-        //    product,
-        //    toThousand
-        //})
     },
     cart: (req,res) => {
         return res.render('products/productCart')

@@ -13,7 +13,7 @@ module.exports = [
         .custom( (value,{req}) => {
             return db.User.findOne({
                 where : {
-                    email : req.body.email
+                    email : req.body.email.trim()
                 }
               }).then( user => {
                     if(!user || !compareSync(value, user.password)) {
