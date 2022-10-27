@@ -11,12 +11,12 @@ const privateRoute = require('../middlewares/privateRoute');
 /* /users */
 router
   .get('/register', publicRoute, register) 
-  .post('/register', uploadUsers.single('imgUsers'), registerValidator, processRegister) 
+  .post('/register', uploadUsers.single('avatar'), registerValidator, processRegister) 
   .get('/login',publicRoute, login) 
   .post('/login', loginValidator , processLogin)
   .get('/profile',privateRoute, profile)
   .get('/editProfile/:id', privateRoute, editProfile)
-  .put('/update/:id', uploadUsers.single('imgUsers'), update)
+  .put('/update/:id', uploadUsers.single('avatar'), update)
   .get('/logout',logout)
 
 module.exports = router;

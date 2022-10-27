@@ -14,41 +14,14 @@
                 </div>
                 <div class="main__formulario__cajasSelectoras">
                     <select name="category" id="category" aria-label="Default select example">
-                        <% categorys.forEach(category => { %>
-                            <option value="<%= category %>" <%= product.category === category && 'selected' %>><%= category %></option>
-                        <% }) %> 
+                        <% categories.forEach(categoria =>{ %> 
+						<option value="<% categoria.id %>" <%= locals.old && categoria.id === +old.categoryId ? 'selected' : null %>><% categoria.name %> </option>
+                    <% }) %> 
                     </select>
                 </div>
-                <div class="main__formulario__cajasSelectoras">
-                        <select name="subCategory" id="subCategory" aria-label="Default select example">
-                            <% subCategorys.forEach(subCategory => { %>
-                                <option value="<%= subCategory %>" <%= product.subCategory === subCategory && 'selected' %>><%= subCategory %></option>
-                            <% }) %> 
-                    </select>
-                </div>
-                <!-- <div class="main__formulario__cajasSelectoras">
-                    <select name="colores" id="colores">
-                        <option value="Colores" selected>--Selecciona un color--</option>
-                        <option value="Color1">Rosa</option>
-                        <option value="Color2">Amarrillo</option>
-                        <option value="Color3">Verde</option>
-                        <option value="Color4">Celeste</option>
-                        <option value="Color5">Azul</option>
-                        <option value="Color6">Celeste Claro</option>
-                        <option value="Color7">Blanco</option>
-                    </select>
-                </div>
-                <div class="main__formulario__cajasSelectoras">
-                    <select name="talles" id="talles">
-                        <option value="talle">--Selecciona un talle--</option>
-                        <option value="Talle1">X</option>
-                        <option value="Talle2">XX</option>
-                        <option value="Talle3">XXL</option>
-                    </select>
-                </div> -->
                 <div class="main__formulario__cajaPrecio">
                     <label for="stock">Stock</label>
-                    <input type="number" name="stock" id="stock" value="                                                                                                                                 ">
+                    <input type="number" name="stock" id="stock" value="<%= product.stock %> "                                                                                                                                 ">
                 </div>
                 <div class="main__formulario__cajaPrecio">
                     <label for="price">$</label>
@@ -60,7 +33,7 @@
                 </div>
                 <div class="main__formulario__cajaImagen">
                     <label for="image">Selecciona imagen del producto</label>
-                    <input type="file" name="image" id="image" value="<%= product.image %>">
+                    <input type="file" name="images" id="images" value="<%= product.images %>">
                 </div>
                 <div class="main__formulario__botones">
                     <input type="submit" class="submit" value="Guardar Cambios">

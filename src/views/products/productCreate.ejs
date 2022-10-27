@@ -3,7 +3,7 @@
     <%- include('../partials/header') %>
     <main class="main__create">
         <div class="main__caja">
-            <form action="/products/create" method="POST" class="main__caja__formulario">
+            <form action="/products/add" method="POST" class="main__caja__formulario">
                 <div class="main__formulario__cajas">
                     <label for="name">NOMBRE DEL PRODUCTO</label>
                     <input type="text" name="name" id="name">
@@ -15,42 +15,14 @@
                 <div class="main__formulario__cajasSelectoras">
                     <select name="category" id="category" aria-label="Default select example">
                         <option value="" selected hidden>--Seleccione una categoria--</option>
-                        <% categorys.forEach(category => { %>
-                            <option value="<%= category %>"><%= category %></option>
+                        <% categories.forEach(categoria =>{ %> 
+                            <option value="<% categoria.id %>" <%= locals.old && categoria.id === +old.categoryId ? 'selected' : null %>></option>
                         <% }) %> 
                     </select>
                 </div>
-                <div class="main__formulario__cajasSelectoras">
-                    <select name="subCategory" id="subCategory" aria-label="Default select example">
-                        <option value="" selected hidden>--Seleccione una clase--</option>
-                        <% subCategorys.forEach(subCategory => { %>
-                            <option value="<%= subCategory %>"><%= subCategory %></option>
-                        <% }) %> 
-                    </select>
-                </div>
-                <!-- <div class="main__formulario__cajasSelectoras">
-                    <select name="colores" id="colores">
-                        <option value="Colores" selected>--Selecciona un color--</option>
-                        <option value="Color1">Rosa</option>
-                        <option value="Color2">Amarrillo</option>
-                        <option value="Color3">Verde</option>
-                        <option value="Color4">Celeste</option>
-                        <option value="Color5">Azul</option>
-                        <option value="Color6">Celeste Claro</option>
-                        <option value="Color7">Blanco</option>
-                    </select>
-                </div> -->
-                <!-- <div class="main__formulario__cajasSelectoras">
-                    <select name="talles" id="talles">
-                        <option value="talle">--Selecciona un talle--</option>
-                        <option value="Talle1">X</option>
-                        <option value="Talle2">XX</option>
-                        <option value="Talle3">XXL</option>
-                    </select>
-                </div> -->
                 <div class="main__formulario__cajaImagen">
-                    <label for="image">IMAGEN DEL PRODUCTO</label>
-                    <input type="file" name="image" id="image">
+                    <label for="images">IMAGEN DEL PRODUCTO</label>
+                    <input type="file" name="images" id="images">
                 </div>
                 <div class="main__formulario__cajaPrecio">
                     <label for="price">$</label>

@@ -4,28 +4,20 @@
     <main class="main__profile">
         <section class="main__profile__container">
             <h1>Editar Perfil</h1>
-            <form  action="/users/update/<%= users.id %>?_method=PUT"  method="post" class="main__profile__form">
-                
-                <div class="main__profile--profile">
-                    
+            <form  action="/users/update/<%= users.id %>?_method=PUT"  method="post" class="main__profile__form">            
+                <div class="main__profile--profile">   
                     <div class="main__profile__img">
                     <figure>
-                        <img src="/images/users/<%= users.imgUsers %>"id="imgUsers" alt="imgUsers" id="imgUsers"/>
+                        <img src="/images/users/<%= users.avatar %>"id="avatar" alt="avatar" id="avatar"/>
                        
                     </figure>
-                   
-                  
-                           
-              
-                    
-             
                 <div class="main__profile__input">
-                    <label for="firstName" >Nombre</label>
-                    <input  type="text" id="firstName" name="firstName" value="<%= users.firstName %>">
+                    <label for="name" >Nombre</label>
+                    <input  type="text" id="name" name="name" value="<%= users.name %>">
                 </div>
                 <div class="main__profile__input">
-                    <label for="lastName" >Apellido</label>
-                    <input  type="text" id="lastName"  name="lastName" value="<%= users.lastName %>">
+                    <label for="surname" >Apellido</label>
+                    <input  type="text" id="surname"  name="surname" value="<%= users.surname %>">
                 </div>
                 <div class="main__profile__input ">
                     <label for="phone" >numero teléfonico</label>
