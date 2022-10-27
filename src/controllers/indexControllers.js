@@ -1,6 +1,6 @@
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const db = require('../database/models');
-const {Op} = require('sequelize')
+const {Op} = require('sequelize');
 module.exports = {
   inicio :  (req, res ) => {
     return res.render('inicio.ejs')

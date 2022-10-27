@@ -49,7 +49,7 @@
             </div>           
             <div class="detail_main__producto--descripcion-caja-de-botones">
             <% if(locals.login){ %> 
-                <% if(locals.login.rol === "admin"){ %>    
+                <% if(locals.login.rolId === 1){ %>    
                 <form action="/products/edit/<%= product.id %>" class="detail__main__producto--descripcion-botones color-boton-naranja">
                     <input type="submit" name="editar" id="editar" value="Editar producto">
                 </form>

@@ -47,7 +47,7 @@ module.exports = {
                     id,
                     name,
                     avatar,
-                    rol : rolId
+                    rolId
                 };
                 req.body.remember && res.cookie('garrasamigas',req.session.login, {maxAge : 1000 * 60});
                 
@@ -75,7 +75,7 @@ module.exports = {
     },
 
     editProfile: (req, res) =>{
-        let users = db.User.findByPk(req.session.login.id)
+        let users = db.User.findByPk(req.body.user)
         
         Promise.all([users])
             .then(([users]) => {
