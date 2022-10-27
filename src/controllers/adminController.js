@@ -5,6 +5,10 @@ const {validationResult} = require('express-validator');
 
 
 module.exports ={
+    administrador :  (req, res ) => {
+        return res.render('admi.ejs')
+    },
+
     //crear producto sin datos
     create: (req,res) =>{
         let categories = db.Category.findAll({
