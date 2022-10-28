@@ -20,7 +20,7 @@ module.exports ={
                 categories
             })
         })
-        .catch(error = console.log(error))
+        .catch(error => console.log(error))
     },
     store: (req,res) =>{
         let errors = validationResult(req);
@@ -57,7 +57,7 @@ module.exports ={
 
         let product = db.Product.findByPk(req.params.id);
 
-        Promise.all(categories, product)
+        Promise.all([categories, product])
         .then(([categories, product]) => {
             return res.render('products/productEdit',{
                 product,

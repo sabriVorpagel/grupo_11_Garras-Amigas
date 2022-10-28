@@ -14,8 +14,8 @@
                 </div>
                 <div class="main__formulario__cajasSelectoras">
                     <select name="category" id="category" aria-label="Default select example">
-                        <% categories.forEach(categoria =>{ %> 
-						<option value="<% categoria.id %>" <%= locals.old && categoria.id === +old.categoryId ? 'selected' : null %>><% categoria.name %> </option>
+                    <% categories.forEach(categoria =>{ %> 
+						<option value="<% categoria.id %>" <%= locals.old && categoria.id === +old.categoryId ? 'selected' : null %>><% categoria.name %></option>
                     <% }) %> 
                     </select>
                 </div>
