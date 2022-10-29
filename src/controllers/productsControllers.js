@@ -1,6 +1,6 @@
-const {loadProducts, storeProducts, loadCategorys, loadClass} = require('../data/db_Module')
-const db = require('../database/models')
+const db = require('../database/models');
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const { Op } = require("sequelize");
 
 module.exports = {
     product: (req, res) => { 
@@ -16,6 +16,7 @@ module.exports = {
 			.catch(error => console.log(error))
     },
     detail: (req,res) => {
+		
 		db.Product.findByPk(req.params.id,{
 			include : [{all : true}]
 		})
@@ -32,6 +33,33 @@ module.exports = {
 		.then(cart =>
 			res.render('products/productCart', {cart}))
 		.catch(error => console.log(error))
+    },
+	search : (req,res) => {
+        let { keywords } = req.query;
+		db.Product.findAll({
+			where: {
+				[Op.or]: [
+					{
+						name: {
+							[Op.substring]: keywords,
+						},
+					},
+					{
+						description: {
+							[Op.substring]: keywords,
+						},
+					},
+				],
+			},
+		})
+			.then((result) => {
+				return res.render("products/result", {
+					result,
+					toThousand,
+					keywords,
+				});
+			})
+            .catch(error => console.log(error))
     },
 }
 

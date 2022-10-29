@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const {edit, store, update, create, destroy } = require('../controllers/adminController')
-const { product,detail, cart} = require('../controllers/productsControllers');
+const { product,detail, cart, search} = require('../controllers/productsControllers');
 const adminCheck = require('../middlewares/adminUserCheck');
 const privateRoute = require('../middlewares/privateRoute');
 /* /products */
@@ -20,4 +20,6 @@ router
     .put('/update/:id', update)
     /*** DELETE ONE PRODUCT***/ 
     .delete('/delete/:id',adminCheck, destroy)
+    // Buscador
+    .get('/search',search)
 module.exports = router;

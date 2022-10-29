@@ -71,7 +71,7 @@ module.exports ={
         db.Product.update(
             {
                 ...req.body,
-                name: req.params.name.trim()
+                name: req.body.name.trim()
             },
             {
                 where: {id:req.params.id}

@@ -7,6 +7,10 @@
                 <li><a href="/index">Home</a></li>
                 <li><a href="/products/product">productos</a></li>
                 <!-- <li><a href="/products/create">agr. producto</a></li> -->
+                <form action="/products/search" class="menu_Form menu_Bar_Conten" method="get">
+                    <input type="search" name="keywords" >
+                    <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                </form>
             </ul>
             <div class="header--links">
                 <% if(locals.login) { %>
