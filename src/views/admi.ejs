@@ -1,0 +1,16 @@
+<%- include('./partials/head', {title: 'Administrador'}) %> 
+<body>
+    <%- include('./partials/header') %> 
+    <main>
+        <div>
+            <h2>titulo</h2>
+            <form action="/products/create" class="detail__main__producto--descripcion-botones color-boton-naranja">
+                <input type="submit" name="crear" id="crear" value="Crear Producto">
+            </form>
+            <!-- <form action="/users/delete/<%= "users.id" %>?_method=DELETE" method="POST" class="detail__main__producto--descripcion-botones color-boton-rojo">
+                <input type="submit" name="delete" id="delete" value="Eliminar Usuario">
+            </form> -->
+    </div>
+    </main>
+    <%- include('./partials/footer') %> 
+</body>

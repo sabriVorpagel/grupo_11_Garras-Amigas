@@ -5,12 +5,12 @@
         <section class="product__main__section">
             <h2>TODOS LOS PRODUCTOS</h2>
             <section>
-                <% products.forEach(({id, name, price, image, discount}) => { %>
+                <% products.forEach(({id, name, price, images, discount}) => { %>
                     <%- include('../partials/product',{
                         id,
                         name,
                         price,
-                        image,
+                        images,
                         discount,
                         toThousand
                     }) %> 
