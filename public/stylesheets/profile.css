@@ -31,15 +31,19 @@
     z-index: 1;
     overflow: hidden;
     margin-top: 80px;
+    border: solid rgb(0, 255, 128) 3px;
 }
 .profile-user-avatar img{
     width: 100%;
     position: relative;
     object-position: left 40% top 50% ;
+    
 }
 .profile-user-body{
     width: 90%;
-    margin-top: 60px;
+    margin: 60px 0;
+    border: solid rgb(0, 255, 128) 3px;
+
 }
 .profile-name{
     display: flex;
@@ -80,21 +84,32 @@
     align-content: stretch;
     justify-content: space-between
 }
-.datos-user p{
-    width: 100%;
-    color: grey;
+.label-profile{
+    font-size: 15px;
     text-transform: uppercase;
-    font-size: 13px;
+    letter-spacing: 3px;
+    color: violet;
     
 }
-.datos-user h4{
+.input-profile{
     width: 100%;
-    border: solid 1px #9089cc70;
-    color: #6f97b0;
-    text-transform: uppercase;
-    padding: 4px;
+    height: 35px;   
+    font-size: 1em;
+}
+.input-profile{
+    padding-left: 20px;
+    border: none;
     border-radius: 5px;
-    box-shadow: 0 0 12px rgb(0 0 0 / 20%);
+    box-sizing: border-box;
+    margin-bottom: 6px;
+    background: #c7667730;
+}
+.input-profile:hover{
+    border: 2px solid var(--botones);
+    cursor: pointer;
+}
+.input-profile::placeholder{
+    font-size:12px;
 }
 .seccion-profile-user .lista-datos p{
     padding: 5px 0;
@@ -119,6 +134,7 @@
 @media ( min-width: 768px){
     .profile-user-body{
         width: 70%;
+        
     }
     .profile-name{
         font-size: 24px;

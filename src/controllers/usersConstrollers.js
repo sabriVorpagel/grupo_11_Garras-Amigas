@@ -88,9 +88,9 @@ module.exports = {
 
     update: (req, res) => {
        const  users = loadUsers(); 
-       const { firstName, lastName, email, password, password2, phone, direction, heigth, location, province,imgUsers } = req.body;
+       const { name, surname, email, password, password2, phone, direction, heigth, location, province,avatar } = req.body;
        const usersModify = loadUsers().map((user) => {
-           if (user.id === +req.params.id) {
+           if (users.id === +req.params.id) {
                return {
                ...user,
                ...req.body,

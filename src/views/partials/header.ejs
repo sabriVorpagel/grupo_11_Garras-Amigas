@@ -1,17 +1,9 @@
 <header>
     <main class="header-main">
         <nav class="header--nav">
-            <a href="/"><div class="header--logo"> GA<b>.</b></a></div>
-                
-            <ul class="header--navItems">
-                <li><a href="/index">Home</a></li>
-                <li><a href="/products/product">productos</a></li>
-                <!-- <li><a href="/products/create">agr. producto</a></li> -->
-                <form action="/products/search" class="menu_Form menu_Bar_Conten" method="get">
-                    <input type="search" name="keywords" >
-                    <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
-                </form>
-            </ul>
+            <div class="header--logo">
+                <a href="/">G A<b>.</b></a>
+            </div>
             <div class="header--links">
                 <% if(locals.login) { %>
                     <a class="hebtn-redes" href="/users/profile "><i class="fa-regular fa-circle-user"></i></a>
@@ -20,7 +12,18 @@
                 <% }else{ %>
                     <a class="hebtn-redes" href="/users/login"><i class="fa-solid fa-person-walking-arrow-right"></i></a>
                 <% } %>
-            </div>      
+            </div>   
+            <ul class="header--navItems">
+                <li><a href="/index">Home</a></li>
+                <li><a href="/products/product">productos</a></li>
+                <li><a href="/#">Nosotros</a></li>
+                <!-- <li><a href="/products/create">agr. producto</a></li> -->
+            </ul>
+            <form action="/products/search" class="header--search" method="get">
+                <input type="search" name="keywords" >
+                <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+            </form>
+                 
         </nav>
     </main>
 </header>
