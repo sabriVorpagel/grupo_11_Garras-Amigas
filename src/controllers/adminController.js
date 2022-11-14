@@ -84,7 +84,18 @@ module.exports ={
         .catch(error => console.log(error))
     },
     //proceso de borrar en base de datos
-    destroy: (req,res) =>{
+    destroy: async(req,res) =>{
+        let product = await db.Product.findByPk(req.params.id,{
+            include: [{all : true}]
+        });
+        console.log(product)
+        let imageId = product.images[0].id;
+        console.log('images=',product.images)
+        db.Image.destroy({
+            where:{
+                id: imageId
+            }
+        })
         db.Product.destroy({
             where:{
                 id: req.params.id
