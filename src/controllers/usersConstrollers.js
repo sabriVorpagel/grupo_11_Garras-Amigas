@@ -75,7 +75,7 @@ module.exports = {
     },
 
     editProfile: (req, res) =>{
-        let users = db.User.findByPk(req.body.user)
+        let users = db.User.findByPk(req.params.id)
         
         Promise.all([users])
             .then(([users]) => {
