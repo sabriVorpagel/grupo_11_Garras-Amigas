@@ -1,22 +1,5 @@
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-:root {
-    --reg-bg:#f8f3ff;
-    --titulos:#9089cc;
-    --botones:#674bafcc;
-    --rosa:#e882e8;
-}
-.main--reg{
-    height: 108vh;
-    width: 100%;
-    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
-}
 .reg--container{
-    height: 42.75em;
+    height: 50.75em;
     width: 95%;
     margin: auto;
     display: flex;
@@ -24,24 +7,26 @@
     overflow: hidden;
     border-radius: 10px;
 }
+/* tarjeta blanca */ 
 .reg-info-container{
     width: 85%;
+    height: 140vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding-top: 3.5rem;
-    background-color: var(--reg-bg);
+    background-color: var(--all-bg);
     margin: auto;
     border-radius: 10px;
-    box-shadow: 16px 18px 3px 3px #12111142;
+    margin-top: 31px;
 }
 .reg-info-container p {
     margin: 28px;
     font-size: 17px;
-    color: grey;
-}
-.reg-info-container h1{
+    color: var(--titulos);
+}   
+.titulo{
     text-transform: capitalize;
     font-size: 28px;
     font-weight: 600;
@@ -49,7 +34,8 @@
     color: var(--titulos);
     margin-top: -27px;
 }
-.social-reg{
+/* botones redes */
+/* .social-reg{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -61,8 +47,8 @@
 }
 .btn-redes{
     position: relative;
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     background: linear-gradient(90deg, #e882e8, #a18cd1);
     display: flex;
     align-items: center;
@@ -104,102 +90,35 @@
         scale: 2;
         opacity: 0;
     }
-} 
-.imputs-container-reg{
-    height: 50%;
-    width: 85%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    gap: 5px;
-    margin-top:15px;
-}
-.input-reg, 
-.reg-btn{
-    width: 100%;
-    height: 35px;   
-    font-size: 1em;
-}
-.input-reg{
-    padding-left: 20px;
-    border: none;
-    border-radius: 5px;
-    box-sizing: border-box;
-    margin-bottom: 6px;
-    background: #c7667730;
-}
-.input-reg:hover{
-    border: 2px solid var(--botones);
-    cursor: pointer;
-}
-.input-reg::placeholder{
-    font-size:12px;
-}
-.input-reg-file{
-    border: solid 2px var(--rosa);
-    padding: 8px;
-    border-radius: 10px;
-    font-size: 10px;
-    width: 95%;
-}
-.reg-btn{
-    width: 100%;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #fff;
-    border-radius: 5px;
-    border: none;
-    background-color: var(--botones);
-    cursor: pointer;
-    border-radius: 5px;
-    margin: 20px;
-    margin-bottom: 50px;
-}
-.label-reg{
-    color: var(--rosa);
-    font-size: 13px;
-    display: inline-block;
-}
-.imputs-container-reg p{
-    margin:0;
-}
-.small-reg{
-    color: #ee7777;
-    font-size: 9px;
-    text-transform: uppercase;
-    margin-top:-5px;
-}
+}  */
 
 
-
-@media(min-width:768px){
+@media (min-width:768px){
     .reg-info-container{
         width: 65%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding-top: 3.5rem;
-        background-color: var(--reg-bg);
-        margin: auto;
-        border-radius: 10px;
-        box-shadow: 16px 18px 3px 3px #12111142;
+        height: 110vh;
     }
+    .btn-redes{
+        width: 50px;
+        height: 50px;
+    }
+    
+}
+@media (min-width:1024px){
+    
     .reg-info-container p {
         margin: 28px;
         font-size: 17px;
-        color: grey;
+        color: #e0e0e1;
     }
     .reg-info-container h1{
-        text-transform: capitalize;
-        font-size: 28px;
-        font-weight: 600;
-        letter-spacing: 1px;
-        color: var(--titulos);
-        margin-top: -27px;
+        font-size: 45px;
     }
-    .social-reg{
+    .reg--container{
+        height: 55.75em;
+        }
+    /* botones redes */
+    /* .social-all{
         width: 100%;
         display: flex;
         justify-content: space-evenly;
@@ -208,20 +127,11 @@
         display: flex;
         margin-top: 15px ;
         gap: 25px;
+        
     }
     .btn-redes{
-        position: relative;
-        width: 35px;
-        height: 35px;
-        background: linear-gradient(90deg, #e882e8, #a18cd1);
-        display: flex;
-        align-items: center;
-        justify-content:center ;
-        font-size: 24px;
-        text-decoration: none;
-        color: #fff;
-        border-radius: 50%;
-        transition: scale 0.15s;
+        width: 60px;
+        height: 60px;
     }
     .btn-redes:hover{
         scale: 0.9
@@ -254,162 +164,6 @@
             scale: 2;
             opacity: 0;
         }
-    } 
-    .imputs-container-reg{
-        height: 50%;
-        width: 70%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        gap: 5px;
-        margin-top:15px;
-    }
-    .input-reg{
-        padding-left: 20px;
-        border: none;
-        border-radius: 5px;
-        box-sizing: border-box;
-        margin-bottom: 6px;
-        background: #c7667730;
-        width: 100%;
-        height: 35px;   
-        font-size: 1em;
-        border: solid rgb(0, 255, 213) 3px;
-    }
-    .input-reg:hover{
-        border: 2px solid var(--botones);
-        cursor: pointer;
-    }
-    .input-reg::placeholder{
-        font-size:12px;
-    }
-    .input-reg-file{
-        border: solid 2px var(--rosa);
-        padding: 8px;
-        border-radius: 10px;
-        font-size: 10px;
-        width: 95%;
-        border: solid rgb(0, 153, 255) 3px;
-    }
-    .reg-btn{
-        width: 100%;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        color: #fff;
-        border-radius: 5px;
-        border: none;
-        background-color: var(--botones);
-        cursor: pointer;
-        border-radius: 5px;
-        margin: 25px;
-        margin-bottom: 50px;
-        height: 35px;   
-        font-size: 1em;
-    }
-    .label-reg{
-        color: var(--rosa);
-        font-size: 13px;
-        display: inline-block;
-    }
-    .imputs-container-reg p{
-        margin:0;
-    }
-    .small-reg{
-        color: #ee7777;
-        font-size: 9px;
-        text-transform: uppercase;
-        margin-top:-5px;
-    }
-   
-}
-@media (min-width:1024px){
-    .main--reg{
-        height:170vh;
-        
-    }
-    .reg--container{
-        height: 65.75em;
-        width: 66em;
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
-        overflow: hidden;
-        border-radius: 10px;
-       
-    }
-    .reg-info-container{
-        width: 60%;
-        display: flex;
-        height: 124vh;
-        align-items: center;
-        text-align: center;
-        background-color: var(--reg-bg);
-        margin-top: 31px;
-    }
-   
-    .reg-info-container h1{
-        text-transform: capitalize;
-        font-size: 2.25rem;
-        font-weight: 100;
-        letter-spacing: 1px;
-        color: var(--titulos);
-    }
-    .social-reg{
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-    }
-    .reg-info-container p{
-        font-size: 1.25em;
-    }
-    .imputs-container-reg{
-        height: 70%;
-        width: 75%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        align-content: center;
-        align-items: center;
-    }
-    .input-reg, .reg-btn{
-        width: 100%;
-        height: 44px;
-        font-size: 1em;
-    }
-    .input-reg{
-        padding-left: 20px;
-        border: none;
-        border-radius: 5px;
-        font-weight: 100;
-        letter-spacing: 1px;
-        box-sizing: border-box;
-        margin-bottom: 20px;
-    }
-    .input-reg:hover{
-        border: 2px solid var(--botones);
-        cursor: pointer;
-    }
-    .input-reg-file{
-        border: solid 2px var(--rosa);
-        padding: 15px;
-        border-radius: 10px;
-    }
-    .reg-btn{
-        width: 80%;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        color: #fff;
-        border-radius: 5px;
-        border: none;
-        background-color: var(--botones);
-        cursor: pointer;
-        border-radius: 5px;
-        margin: 5px;
-    }
-    .small-reg{
-        display: flex;
-    }
+    }  */
 
 }

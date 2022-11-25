@@ -1,13 +1,42 @@
-.seccion-profile-user{
+/* .main--profile{
+    height: 200vh;
+    width: 100%;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+.profile--container{
+    height: 67.75em;
+    width: 100%;
+    margin: auto;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 10px;
+}
+/* tarjeta blanca 
+.profile-info-container{
+    width: 85%;
+    display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    padding-top: 3.5rem;
+    background-color: var(--all-bg);
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 16px 18px 3px 3px #12111142;
+    margin-top: 31px;
 }
+.profile-info-container p {
+    margin: 28px;
+    font-size: 17px;
+    color: grey;
+}
+/*perfil fondo avatar 
 .profile-user-header{
-    width: 75%;
+    width: 90%;
     display: flex;
     justify-content: center;
+    margin-top: -40px;
 }
 .profile-user-portada{
     display: block;
@@ -19,8 +48,8 @@
 }
 .profile-user-avatar{
     display: flex;
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     align-items: center;
     justify-content: center;
     border: 4px solid #FFFFFF;
@@ -30,21 +59,32 @@
     position: absolute;
     z-index: 1;
     overflow: hidden;
-    margin-top: 80px;
-    border: solid rgb(0, 255, 128) 3px;
+    margin-top: 50px;
 }
 .profile-user-avatar img{
     width: 100%;
     position: relative;
     object-position: left 40% top 50% ;
-    
 }
-.profile-user-body{
-    width: 90%;
+cuerpo 
+ .profile-user-body{
+    width: 100%;
     margin: 60px 0;
-    border: solid rgb(0, 255, 128) 3px;
-
+    border: solid 3px red;
+} 
+.profile-user-bio {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 0 12px rgb(0 0 0 / 20%);
+    background-color: #fff;
+    border-radius: 15px;
+    text-align: center;
+    width: 100%;
+    border-bottom: 20px;
+    margin-top: 18px;
 }
+
 .profile-name{
     display: flex;
     width: 100%;
@@ -53,83 +93,10 @@
     color: #686464;
     justify-content: center;
     align-items: center;
+    margin-top: 30px;
 }
-.profile-user-bio {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 1.5rem 2rem;
-    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
-    background-color: #fff;
-    border-radius: 15px;
-    text-align: center;
-    width: 100%;
-    
-}
-.profile-user-bio{
-    margin-bottom: 1.25rem;
-}
-.seccion-profile-user {
-    padding: 0;
-}
-.lista-datos{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 1.5rem 2rem;
-    box-shadow: 0 0 12px rgb(0 0 0 / 20%);
-    background-color: #fff;
-    border-radius: 15px;
-    height: 100vh;
-    flex-direction: column;
-    align-content: stretch;
-    justify-content: space-between
-}
-.label-profile{
-    font-size: 15px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: violet;
-    
-}
-.input-profile{
-    width: 100%;
-    height: 35px;   
-    font-size: 1em;
-}
-.input-profile{
-    padding-left: 20px;
-    border: none;
-    border-radius: 5px;
-    box-sizing: border-box;
-    margin-bottom: 6px;
-    background: #c7667730;
-}
-.input-profile:hover{
-    border: 2px solid var(--botones);
-    cursor: pointer;
-}
-.input-profile::placeholder{
-    font-size:12px;
-}
-.seccion-profile-user .lista-datos p{
-    padding: 5px 0;
-}
-.btn-profile button{
-    border: none;
-    padding: 10px;
-    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
-    border-radius: 5px;
-    color:#fff;
-    text-transform: uppercase;
-    width: 100%;
-    display: inline-block;
-    margin-bottom: 15px;
-}
-.btn-profile button:hover{
-    background:  #fff;
-    color: #a18cd1;
-    border: solid #a18cd1 2px;
-    cursor: pointer;
+.all-btn a{
+    color: #fff;
 }
 @media ( min-width: 768px){
     .profile-user-body{
@@ -195,7 +162,7 @@
         border: solid #a18cd1 2px;
         cursor: pointer;
     }
-}
+} */
 
 
 

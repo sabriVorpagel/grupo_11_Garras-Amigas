@@ -1,63 +1,63 @@
 <%- include('../partials/head', {title: 'Mi perfil'}) %> 
 <body>
-    <%- include('../partials/header') %> 
-    <main class="seccion-profile-user">
-        <div class="profile-user-header">
-            <div class="profile-user-portada" >
-            </div>
-            <div class="profile-user-avatar">
-                <img src="/images/users/<%=users.avatar%>"/>
-            </div>
-        </div>
-        <div class="profile-user-body">
-            <div class="profile-user-bio">
-                <h3 class="profile-name">
-                <div>
-                    <p><%= users.name %> <%= users.surname %></p> 
+    <%- include('../partials/header') %>
+    <main class="main--profile">
+        <div class="profile--container">
+            <div class="profile-info-container">
+                <!-- foto y fondo -->
+                <div class="profile-user-header">
+                    <div class="profile-user-portada">
+                    </div>
+                    <div class="profile-user-avatar">
+                        <img src="/images/users/<%=users.avatar%>"/>
+                    </div>
                 </div>
-                </h3>
-            </div>
-        
-            <div class="lista-datos">
-                <div>
-                    <label class="label-profile" for="direction">Número de teléfono:</label>
-                    <input class="input-profile" type="text" id="direction" atocomplete="off" name="phone" value="<%= locals.old && old.phone ? old.phone : null %>">
-                    <small class="small-reg"><%= locals.errors && errors.phone ? errors.phone.msg :null  %> </small>
-                </div>
-                <div> 
-                    <label class="label-profile" for="direction">Número de teléfono:</label>
-                    <input class="input-profile" value="<%= users.email %>" >
-                    
-                </div> 
-                <div>
-                    <label class="label-profile" for="direction">Direccion:</label>
-                    <input class="input-profile" type="text" id="direction" atocomplete="off" ame="direction" value="<%= locals.old && old.direction ? old.direction : null %>">
-                    <small class="small-reg"><%= locals.errors && errors.direction ? errors.direction.msg :null  %> </small>
-                </div>
-                <div>
-                    <label class="label-profile" for="direction">Altura:</label>
-                    <input class="input-profile" type="number" id="heigth" atocomplete="off" name="heigth" value="<%= locals.old && old.heigth ? old.heigth : null %>">
-                    <small class="small-reg"><%= locals.errors && errors.heigth ? errors.heigth.msg :null  %> </small>
-                </div>
-                <div>
-                    <label class="label-profile" for="direction">Localidad:</label>
-                    <input class="input-profile" type="text" id="location" atocomplete="off" name="location" value="<%= locals.old && old.location ? old.location : null %>">
-                    <small class="small-reg"><%= locals.errors && errors.location ? errors.location.msg :null  %> </small>
-                </div>
-                <div>
-                    <label class="label-profile" for="direction">Provincia:</label>
-                    <input class="input-profile" type="text" id="province" atocomplete="off" name="province" value="<%= locals.old && old.province ? old.province : null %>">
-                    <small class="small-reg"><%= locals.errors && errors.province ? errors.province.msg :null  %> </small>
+                <!-- nombre -->
                 
+                    <div class="profile-user-bio">
+                        <h3 class="profile-name">
+                            <p><%= users.name %> <%= users.surname %></p> 
+                        </h3>
+                    </div>
+                
+                
+                    <from class="lista-datos">
+                        <div class="from-all"> 
+                            <label class="label-all" for="email">Email:</label>
+                            <input class="input-all" value="<%= users.email %>" >
+                        </div> 
+                        <div class="from-all">
+                            <label class="label-all" for="phone">Número de teléfono:</label>
+                            <input class="input-all" type="text" id="pone" atocomplete="off" name="phone" value="<%= locals.old && old.phone ? old.phone : null %>">
+                            <small class="small-all"><%= locals.errors && errors.phone ? errors.phone.msg :null  %> </small>
+                        </div>
+                        <div class="from-all">
+                            <label class="label-all" for="direction">Direccion:</label>
+                            <input class="input-all" type="text" id="direction" atocomplete="off" name="direction" value="<%= locals.old && old.direction ? old.direction : null %>">
+                            <small class="small-all"><%= locals.errors && errors.direction ? errors.direction.msg :null  %> </small>
+                        </div>
+                        <div class="from-all">
+                            <label class="label-all" for="heigth">Altura:</label>
+                            <input class="input-all" type="number" id="heigth" atocomplete="off" name="heigth" value="<%= locals.old && old.heigth ? old.heigth : null %>">
+                            <small class="small-all"><%= locals.errors && errors.heigth ? errors.heigth.msg :null  %> </small>
+                        </div>
+                        <div class="from-all">
+                            <label class="label-all" for="location">Localidad:</label>
+                            <input class="input-all" type="text" id="location" atocomplete="off" name="location" value="<%= locals.old && old.location ? old.location : null %>">
+                            <small class="small-all"><%= locals.errors && errors.location ? errors.location.msg :null  %> </small>
+                        </div>
+                        <div class="from-all">
+                            <label class="label-all" for="province">Provincia:</label>
+                            <input class="input-all" type="text" id="province" atocomplete="off" name="province" value="<%= locals.old && old.province ? old.province : null %>">
+                            <small class="small-all"><%= locals.errors && errors.province ? errors.province.msg :null  %> </small>
+                        </div>
+                        <button class="all-btn"><a href="/users/editProfile/<%= users.id %>">Editar Perfil</a></button>
+                        <button class="all-btn" ><a href="/users/logout">Salir</a></button>
+                    </from>
                 </div>
-            
-                <a class="btn-profile" href="/users/editProfile/<%= users.id %>"><button>Editar Perfil</button></a>
-                <a class="btn-profile" href="/users/logout"> <button >Salir</button></a>
             </div>
         </div>
-
     </main>
-
     <%- include('../partials/footer') %> 
 </body>
 </html>
