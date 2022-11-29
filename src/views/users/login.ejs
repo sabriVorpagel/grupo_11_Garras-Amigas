@@ -1,10 +1,10 @@
 <%- include('../partials/head', {title: 'Login'}) %> 
 <body >
  <%- include('../partials/header') %> 
-    <main class="main--all">
+    <main class="main--login">
         <div class="login--container">
             <div class="login-info-container">
-                <h1  class="titulo">Logueate con</h1>
+                <h1>Logueate con</h1>
                 <div class="social-all">
                     <div class="social-all-element">
                         <a href="#" class="btn-redes"><i class="fa-brands fa-facebook-f"></i> </a>
@@ -12,24 +12,25 @@
                         <a href="#" class="btn-redes"><i class="fa-brands fa-google"></i> </a>
                     </div>
                 </div>
-                <p class="subtitulo">o ingresa tus datos</p>
-                <form action="/users/login" class="imputs-container-all" method="POST">
-                    <div class="from-all">
+                <p >o ingresa tus datos</p>
+                <form action="/users/login" class="imputs-container" method="POST">
+                    <!-- <div class="from-all"> -->
                         <small class="small-all">
                             <%= locals.errors && errors.email ? errors.email.msg :null %>
                         </small>
-                        <input class="input-all" type="email"  placeholder="EMAIL" name="email"  value="<%= locals.old && old.email ? old.email: null %>"/>
-                    </div>
-                    <div class="from-all">
+                        <input class="input-login" type="email"  placeholder="EMAIL" name="email"  value="<%= locals.old && old.email ? old.email: null %>"/>
+                    <!-- </div> -->
+                    <!-- <div class="from-all"> -->
                         <small class="small-all">
                             <%= locals.errors && errors.password ? errors.password.msg :null %>
                         </small>
-                        <input class="input-all" type="password" id="password"  placeholder="CONTRASEÑA" name="password" />
-                    </div>
+                        <input class="input-login" type="password" id="password"  placeholder="CONTRASEÑA" name="password" />
+                    <!-- </div> -->
                     
                     <a href="#" class="span" >¿Olvidaste tu contraseña?</a>
-                    <button class="all-btn" type="submit">INGRESA!</button>
+                    <button class="login-btn" type="submit">INGRESA!</button>
                     <p class="cuenta">¿Aún no tenes una cuenta?</p>
+
                     <a class="span" href="/users/register">Registrate </a>
                 </form>          
             </div>
