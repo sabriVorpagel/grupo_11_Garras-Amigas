@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 :root {
-    --login-bg:#f8f3ff;
+    --login-bg:#f8f3ff; 
     --titulos:#9089cc;
     --botones:#674baf;
     --rosa:#e882e8;
@@ -232,6 +232,7 @@
         border-radius: 5px;
         box-sizing: border-box;
         margin-bottom: 11px;
+        border: solid red 3px;
     }
     .input:hover{
         border: 2px solid var(--botones);
