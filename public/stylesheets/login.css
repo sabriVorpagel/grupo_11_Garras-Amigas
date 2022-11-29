@@ -1,11 +1,10 @@
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 :root {
-    --login-bg:#f8f3ff; 
+    --login-bg:#f8f3ff;
     --titulos:#9089cc;
     --botones:#674baf;
     --rosa:#e882e8;
@@ -24,7 +23,7 @@
     justify-content: space-between;
     overflow: hidden;
     border-radius: 10px;
-    border: solid 
+    
     
 }
 .login-info-container{
@@ -158,7 +157,7 @@
     font-size: 17px;
     color: grey;
     display: inline-block;
-    border: solid red 2px;
+   
 }
 .imputs-container p{
     margin:0;
@@ -232,7 +231,6 @@
         border-radius: 5px;
         box-sizing: border-box;
         margin-bottom: 11px;
-        border: solid red 3px;
     }
     .input:hover{
         border: 2px solid var(--botones);
@@ -269,7 +267,7 @@
 }
 @media (min-width:1024px){
     .main--login{
-        height: 130vh;
+        height: 107vh;
     }
     .login--container{
         height: 42.75em;

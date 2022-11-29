@@ -1,0 +1,303 @@
+.main--editpro{
+    height: 200vh;
+    width: 100%;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+.editpro--container{
+    height: 77.75em;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 10px;
+}
+/* tarjeta blanca */
+.editpro-info-container{
+    width: 85%;
+    height: 190vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 3.5rem;
+    background-color: #FFFFFF;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 31px;
+}
+/* foto avatr */
+.editpro-user-header{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+}
+.editpro-user-avatar{
+    display: flex;
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #FFFFFF;
+    background-color: #DFE5F2;
+    border-radius: 50%;
+    box-shadow: 0 0 12px #000;
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.editpro-user-avatar img{
+    width: 100%;
+    position: relative;
+    object-position: left 40% top 50% ;
+}
+
+    
+
+
+
+
+@media(min-width:768px){
+    .editpro-info-container{
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: 3.5rem;
+        background-image: linear-gradient( 45deg,  #7f00ff 0%, #3d535f 100%);
+        box-shadow: 18px 18px 18px 18 px #12111142;
+        
+        margin: auto;
+        border-radius: 10px;
+       
+    }
+    .editpro-info-container p {
+        margin: 28px;
+        font-size: 17px;
+        color: grey;
+    }
+    .editpro-info-container h1{
+        text-transform: capitalize;
+        font-size: 28px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: var(--titulos);
+        margin-top: -27px;
+    }
+    .social-editpro{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .social-editpro-element{
+        display: flex;
+        margin-top: 15px ;
+        gap: 25px;
+    }
+    .btn-redes{
+        position: relative;
+        width: 35px;
+        height: 35px;
+        background: linear-gradient(90deg, #e882e8, #a18cd1);
+        display: flex;
+        align-items: center;
+        justify-content:center ;
+        font-size: 24px;
+        text-decoration: none;
+        color: #fff;
+        border-radius: 50%;
+        transition: scale 0.15s;
+    }
+    .btn-redes:hover{
+        scale: 0.9
+    }
+    .btn-redes::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        border-radius: 50%;
+        opacity: 0;
+        scale: 0.95;
+        pointer-events: none;
+    }
+    .btn-redes:hover::after{
+        animation: pulse 1s;
+    }
+    @keyframes pulse{
+        0%{
+            opacity: 0.8;
+        }
+        50%{
+            opacity: 0.5;
+        }
+        100%{
+            scale: 2;
+            opacity: 0;
+        }
+    } 
+    .imputs-container-editpro{
+        height: 50%;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 5px;
+        margin-top:15px;
+    }
+    .input-editpro{
+        padding-left: 20px;
+        border: none;
+        border-radius: 5px;
+        box-sizing: border-box;
+        margin-bottom: 6px;
+        background: #c7667730;
+        width: 100%;
+        height: 35px;   
+        font-size: 1em;
+        border: solid rgb(0, 255, 213) 3px;
+    }
+    .input-editpro:hover{
+        border: 2px solid var(--botones);
+        cursor: pointer;
+    }
+    .input-editpro::placeholder{
+        font-size:12px;
+    }
+    .input-editpro-file{
+        border: solid 2px var(--rosa);
+        padding: 8px;
+        border-radius: 10px;
+        font-size: 10px;
+        width: 95%;
+        border: solid rgb(0, 153, 255) 3px;
+    }
+    .editpro-btn{
+        width: 100%;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+        background-color: var(--botones);
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 25px;
+        margin-bottom: 50px;
+        height: 35px;   
+        font-size: 1em;
+    }
+    .label-editpro{
+        color: var(--rosa);
+        font-size: 13px;
+        display: inline-block;
+    }
+    .imputs-container-editpro p{
+        margin:0;
+    }
+    .small-editpro{
+        color: #ee7777;
+        font-size: 9px;
+        text-transform: uppercase;
+        margin-top:-5px;
+    }
+   
+}
+@media (min-width:1024px){
+    .main--editpro{
+        height:170vh;
+        
+    }
+    .editpro--container{
+        height: 65.75em;
+        width: 66em;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        border-radius: 10px;
+       
+    }
+    .editpro-info-container{
+        width: 60%;
+        display: flex;
+        height: 124vh;
+        align-items: center;
+        text-align: center;
+        background-color: var(--editpro-bg);
+        margin-top: 31px;
+    }
+   
+    .editpro-info-container h1{
+        text-transform: capitalize;
+        font-size: 2.25rem;
+        font-weight: 100;
+        letter-spacing: 1px;
+        color: var(--titulos);
+    }
+    .social-editpro{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .editpro-info-container p{
+        font-size: 1.25em;
+    }
+    .imputs-container-editpro{
+        height: 70%;
+        width: 75%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+    }
+    .input-editpro, .editpro-btn{
+        width: 100%;
+        height: 44px;
+        font-size: 1em;
+    }
+    .input-editpro{
+        padding-left: 20px;
+        border: none;
+        border-radius: 5px;
+        font-weight: 100;
+        letter-spacing: 1px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+    }
+    .input-editpro:hover{
+        border: 2px solid var(--botones);
+        cursor: pointer;
+    }
+    .input-editpro-file{
+        border: solid 2px var(--rosa);
+        padding: 15px;
+        border-radius: 10px;
+    }
+    .editpro-btn{
+        width: 80%;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+        background-color: var(--botones);
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 5px;
+    }
+    .small-editpro{
+        display: flex;
+    }
+
+}
