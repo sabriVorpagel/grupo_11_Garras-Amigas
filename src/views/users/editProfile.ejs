@@ -2,62 +2,58 @@
 <body>
     <%- include('../partials/header') %> 
     <main class="main--editpro">
-        <section class="editpro--container">
-            
-            <h2>Editar Perfil</h2>
-           
-            <figure class="editpro-user-avatar">
-                <img src="/images/users/<%= users.avatar %>"id="avatar" alt="avatar" id="avatar"/>
-            </figure>
-            </div>
-            <div class="editpro-user-body">
-            <form class="lista-datos--editpro" action="/users/update/<%= users.id %>?_method=PUT"  method="post" >            
-                <!-- <div class="main__editpro--profile">   
-                    <div class="main__editpro__img"> -->
+        <div class="editpro--container">
+            <div class="editpro-info-container">
+                <h1 class="titulo">Editar Perfil</h1>
+                <div class="editpro-user-header">
+                    <div class="editpro-user-avatar">
+                        <img src="/images/users/<%=users.avatar%>" id="avatar" alt="avatar" id="avatar"/>
+                    </div>
+                </div>
+                <form class="imputs-container-profile"" action="/users/update/<%= users.id %>?_method=PUT"  method="post" >            
+                    <div class="from-all">
+                        <label class="label-all for="name" >Nombre</label>
+                        <input class="input-all" type="text" id="name" name="name" value="<%= users.name %>">
+                    </div>
+                    <div class="from-all">
+                        <label class="label-all" for="surname" >Apellido</label>
+                        <input class="input-all" type="text" id="surname"  name="surname" value="<%= users.surname %>">
+                    </div>
+                    <div class="from-all">
+                        <label class="label-all"  for="phone" >numero teléfonico</label>
+                        <input class="input-all"  type="number" id="phone"  name="phone" value="<%= users.phone %>">
+                    </div>
+                    <div class="from-all">
+                        <label class="label-all"  for="email" >email</label>
+                        <input class="input-all"  type="email" id="email" name="email" value="<%= users.email %>">
+                    </div>
+                    <div class="from-all">
+                        <label class="label-all" for="password">password</label>
+                        <input class="input-all" type="password" id="password" name="password" value="<%= users.password %>">
+                    </div>
+                    <div class="from-all">
+                        <label class="label-all" for="direction" >Dirección</label>
+                        <input class="input-all" type="text" id="direction"  name="direction" value="<%= users.direction %>">
+                    </div>
+                    <div class="from-all">
+                        <label class="label-all" for="heigth" >altura</label>
+                        <input class="input-all" type="number" id="heigth"  name="heigth" value="<%= users.heigth %>">
+                    </div>
+                    <div class="from-all">
+                        <label class="label-all" for="location" >localidad</label>
+                        <input class="input-all" type="text" id="location"  name="location" value="<%= users.location %>">
+                    </div>
+                    <div class="from-all">
+                        <label class="label-all" for="province" >Provincia</label>
+                        <input class="input-all" type="text" id="province"  name="province" value="<%= users.province %>">
+                    </div>
+                    
+                        <input class="btn-all"  type="submit" class="submit" value="Guardar Cambios">
                    
-                <div>
-                    <label class="label-profile" for="name" >Nombre</label>
-                    <input class="input-profile" type="text" id="name" name="name" value="<%= users.name %>">
-                </div>
-                <div>
-                    <label class="label-profile" for="surname" >Apellido</label>
-                    <input class="input-profile" type="text" id="surname"  name="surname" value="<%= users.surname %>">
-                </div>
-                <div>
-                    <label class="label-profile"  for="phone" >numero teléfonico</label>
-                    <input class="input-profile"  type="number" id="phone"  name="phone" value="<%= users.phone %>">
-                </div>
-                <div>
-                    <label class="label-profile"  for="email" >email</label>
-                    <input class="input-profile"  type="email" id="email" name="email" value="<%= users.email %>">
-                </div>
-                <div>
-                    <label class="label-profile" for="password">password</label>
-                    <input class="input-profile" type="password" id="password" name="password" value="<%= users.password %>">
-                </div>
-                <div>
-                    <label class="label-profile" for="direction" >Dirección</label>
-                    <input class="input-profile" type="text" id="direction"  name="direction" value="<%= users.direction %>">
-                </div>
-                <div>
-                    <label class="label-profile" for="heigth" >altura</label>
-                    <input class="input-profile" type="number" id="heigth"  name="heigth" value="<%= users.heigth %>">
-                </div>
-                <div>
-                    <label class="label-profile" for="location" >localidad</label>
-                    <input class="input-profile" type="text" id="location"  name="location" value="<%= users.location %>">
-                </div>
-                <div>
-                    <label class="label-profile" for="province" >Provincia</label>
-                    <input class="input-profile" type="text" id="province"  name="province" value="<%= users.province %>">
-                </div>
-                <div class="editpro-btn">
-                    <input class="input-profile"  type="submit" class="submit" value="Guardar Cambios">
-                </div>
-            </form>
-            
-        </section>
-    </main>
+                </form>
+            </div>
+        </div>
+     </main>
     <%- include('../partials/footer') %> 
     
 </body>

@@ -1,10 +1,10 @@
-/* .main--profile{
+.main--profile{
     height: 200vh;
     width: 100%;
-    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    background-image: linear-gradient( 45deg, #7f00ff 0%, #e48dcb 100%);
 }
 .profile--container{
-    height: 67.75em;
+    height: 77.75em;
     width: 100%;
     margin: auto;
     display: flex;
@@ -12,9 +12,10 @@
     overflow: hidden;
     border-radius: 10px;
 }
-/* tarjeta blanca 
+/* tarjeta blanca */
 .profile-info-container{
     width: 85%;
+    height: 190vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,33 +24,19 @@
     background-color: var(--all-bg);
     margin: auto;
     border-radius: 10px;
-    box-shadow: 16px 18px 3px 3px #12111142;
     margin-top: 31px;
 }
-.profile-info-container p {
-    margin: 28px;
-    font-size: 17px;
-    color: grey;
-}
-/*perfil fondo avatar 
+/* foto avatr */
 .profile-user-header{
     width: 90%;
     display: flex;
     justify-content: center;
     margin-top: -40px;
 }
-.profile-user-portada{
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 8rem;
-    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
-    border-radius: 0 0 20px 20px;
-}
 .profile-user-avatar{
     display: flex;
-    width: 130px;
-    height: 130px;
+    width: 100px;
+    height: 100px;
     align-items: center;
     justify-content: center;
     border: 4px solid #FFFFFF;
@@ -59,111 +46,132 @@
     position: absolute;
     z-index: 1;
     overflow: hidden;
-    margin-top: 50px;
+    margin-bottom: 20px;
 }
 .profile-user-avatar img{
     width: 100%;
     position: relative;
     object-position: left 40% top 50% ;
 }
-cuerpo 
- .profile-user-body{
-    width: 100%;
-    margin: 60px 0;
-    border: solid 3px red;
-} 
-.profile-user-bio {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0.5rem 1rem;
-    box-shadow: 0 0 12px rgb(0 0 0 / 20%);
-    background-color: #fff;
-    border-radius: 15px;
-    text-align: center;
-    width: 100%;
-    border-bottom: 20px;
-    margin-top: 18px;
-}
 
-.profile-name{
-    display: flex;
+/* formulario */
+.imputs-container-profile {
+    height: 165vh;
     width: 100%;
-    font-size: 1.75rem;
-    margin-bottom: 0.5rem;
-    color: #686464;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    margin-top: 30px;
+    gap: 5px;
+    margin-top: 97px;
 }
-.all-btn a{
-    color: #fff;
+.input-all-profile {
+    border: none;
+    border-bottom: 2px solid grey;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    background: transparent;
+    width: 80%;
+    height: 35px;   
+    font-size: 1em; 
+    outline: transparent;
+    color: var(--inputs);
+}
+.all-btn-profile{
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--inputs);
+    border-radius: 5px;
+    border: solid 2px var(--inputs);
+    background: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 56%;
+    height: 40px;
+    font-size: 1em;
+    text-align: center;
+    padding: 8px;
 }
 @media ( min-width: 768px){
-    .profile-user-body{
-        width: 70%;
-        
+    .main--profile {
+        height: 122vh;
     }
-    .profile-name{
-        font-size: 24px;
-        height: 4vh;
+
+    /* tarjeta blanca */
+    .profile--container{
+        width: 75%
     }
-    .profile-user-bio {
+    .profile-info-container{
+        height: 105.75vh;
         display: flex;
-        flex-wrap: wrap;
-        padding: 1.5rem 2rem;
-        box-shadow: 0 0 12px rgba(0, 0, 0, .2);
-        background-color: #fff;
-        border-radius: 15px;
-        text-align: center;
-        width: 100%;
-        margin-bottom: 2.25rem;
-       
-    }
-    .lista-datos{
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
         flex-direction: row;
-        align-content: space-evenly;
-        justify-content: space-around;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        justify-content: space-evenly;
+    }
+    /* formulario */
+    .from-all-profile{
+        width: 40%;
+    }
+    .imputs-container-profile{
+        height: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
         align-items: center;
-        border: solid 2px red;
-    }
-    .datos-user {
-        display: flex;
-        flex-direction: row;
         flex-wrap: wrap;
-        align-content: center;
-        justify-content: space-between;
-        align-items: flex-start;
-        width: 45%;
+        align-content: flex-start;
     }
-    .datos-user p{
-        width: 200%;
-        color: grey;
-        text-transform: uppercase;
-        font-size: 13px;
-    }
-    
-    .btn-profile button{
+    .input-all-profile {
         border: none;
-        padding: 10px;
-        background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
-        border-radius: 5px;
-        color:#fff;
-        text-transform: uppercase;
-        width: 100%;
-        
-        margin-bottom: 15px;
+        border-bottom: 2px solid grey;
+        box-sizing: border-box;
+        margin-bottom: 25px;
+        background: transparent;
+        width: 80%;
+        height: 35px;   
+        font-size: 1em; 
+        outline: transparent;
+        color: var(--inputs);
     }
-    .btn-profile button:hover{
-        background:  #fff;
-        color: #a18cd1;
-        border: solid #a18cd1 2px;
+    .input-all-profile :hover{
+        border: 2px solid var(--botones);
         cursor: pointer;
     }
-} */
+    .input-all-profile ::placeholder{
+        font-size:12px;
+        color: var(--inputs);
+        
+    }
+    /* botones */
+    .all-btn-profile{
+        width: 33%;
+        height: 40px;
+        font-size: 1em;
+        text-align: center;
+        padding: 8px;
+    }
+    .all-btn-profile:hover{
+        background:  var(--inputs);
+        color: #FFFFFF;
+        border: solid #FFFFFF 2px;
+        cursor: pointer;
+    }
 
+}
+@media ( min-width: 1024px){
+    .profile-info-container{
+        height: 88.75vh;
+    }
+    .profile--container {
+        height: 72.75em;
+        width: 50%;
+    }
+    .all-btn-profile {
+        width: 35%;
+    }
+
+}
 
 
 

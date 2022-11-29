@@ -12,9 +12,10 @@
     --textoSizeProducto: 16px;
 
     --all-bg: #302c3099;
-    --titulos: #b8b8b9;
+    --inputs: #808080;
     --botones:#674bafcc;
     --rosa:#e882e8;
+    --titulos: #b6aeae;
     
 }
 *{
@@ -39,7 +40,7 @@ a{
 .main--all{
     height: 150vh;
     width: 100%;
-    background-image: linear-gradient(  45deg, #601bea 0%, #dd29aaee 100%);
+    background-image: linear-gradient( 45deg, #7f00ff 0%, #e48dcb 100%);
 }
 
 /* formularios */
@@ -58,13 +59,15 @@ a{
 }
 .input-all{
     border: none;
-    border-bottom: 2px solid var(--titulos);
+    border-bottom: 2px solid grey;
     box-sizing: border-box;
     margin-bottom: 25px;
     background: transparent;
     width: 80%;
     height: 35px;   
     font-size: 1em; 
+    outline: transparent;
+    color: var(--inputs)
 }
 .input-all:hover{
     border: 2px solid var(--botones);
@@ -72,17 +75,18 @@ a{
 }
 .input-all::placeholder{
     font-size:12px;
-    color: var(--titulos)
+    color: var(--inputs);
+    
 }
 .input-all-file{
-    border: solid 1px var(--titulos);
+    border: solid 1px var(--inputs);
     padding: 5px;
     border-radius: 10px;
     font-size: 10px;
     width: 80%;
 }
 .label-all{
-    color: var(--titulos);
+    color: var(--inputs);
     font-size: 13px;
     display: inline-block;
     width: 100%;
@@ -106,16 +110,16 @@ a{
 .all-btn{
     letter-spacing: 1px;
     text-transform: uppercase;
-    color:  var(--titulos);
+    color: var(--inputs);
     border-radius: 5px;
-    border: solid 2px var(--titulos);
+    border: solid 2px var(--inputs);
     background: transparent;
     cursor: pointer;
     border-radius: 5px;
     margin: 20px;
-    margin-top: 90px;
-    width: 80%;
-    height: 55px;   
+    margin-top: 65px;
+    width: 47%;
+    height: 40px;
     font-size: 1em;
     text-align: center;
 }
@@ -177,123 +181,61 @@ a{
         opacity: 0;
     }
 } 
+/* titulo y subtitulo */
+.subtitulo{
+    margin: 28px;
+    font-size: 17px;
+    color: var(--titulos);
+}   
+.titulo{
+    font-size: 23px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: var(--titulos);
+    margin-top: -27px;
+    margin-bottom: 20px;
+}
 
 @media (min-width:768px) {
- 
+    /* formulario */
     .from-all{
         width: 40%;
     }
     .imputs-container-all{
         height: 80%;
-        width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
-        gap: 5px;
-        margin-top: 15px;
         flex-wrap: wrap;
         align-content: stretch;
     }
     .input-all{
-        width: 80%;
+        width: 100%;
         height: 40px;   
-    }
-    
-    .input-all-file{
-        border-radius: 10px;
-        font-size: 10px;
-        width: 80%;
-    }
-    .all-btn{
-        width: 60%;
-        height: 40px;
-    }
-    .input-all::placeholder{
-        font-size: 15px;
-        color: grey;
     }
     /* botones redes */
     .btn-redes{
         width: 50px;
         height: 50px;
     }
+    .subtitulo{
+        margin: 30px;
+    }
 }
 @media (min-width:1024px) {
-    .from-all{
-        width: 40%;
+    .titulo {
+        font-size: 35px;
     }
-    .imputs-container-all{
-        height: 80%;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        align-content: stretch;
+    .btn-redes {
+        width: 65px;
+        height: 65px;
     }
-    .input-all{
-        width: 100%;
-        height: 40px;   
-    }
-    
-    .input-all-file{
-        border-radius: 10px;
-        font-size: 10px;
-        width: 80%;
+    .subtitulo {
+    margin: 34px;
+    font-size: 25px;
     }
     .all-btn{
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        color: var(--titulos);
-        border-radius: 5px;
-        border: solid 2px var(--titulos);
-        background: transparent;
-        cursor: pointer;
-        border-radius: 5px;
-        margin: 20px;
-        margin-top: 90px;
-        width: 60%;
-        height: 40px;
-        font-size: 1em;
-        text-align: center;
-    }
-    .input-all::placeholder{
-        font-size:20px;
-        color: var(--titulos)
-    }
-    /* botones redes */
-    .social-reg{
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-    }
-    .social-reg-element{
-        display: flex;
-        margin-top: 15px ;
-        gap: 25px;
-        
-    }
-    .btn-redes{
-        width: 60px;
-        height: 60px;
-    }
-    .btn-redes:hover{
-        scale: 0.9
-    }
-    .btn-redes::after{
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-        background: inherit;
-        border-radius: 50%;
-        opacity: 0;
-        scale: 0.95;
-        pointer-events: none;
-    }
-    .btn-redes:hover::after{
-        animation: pulse 1s;
+        height: 50px;
     }
 }

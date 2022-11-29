@@ -1,33 +1,37 @@
-/* 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-:root {
-    --editpro-bg:#f8f3ff;
-    --titulos:#9089cc;
-    --botones:#674bafcc;
-    --rosa:#e882e8;
-}
 .main--editpro{
-    height: 108vh;
+    height: 200vh;
     width: 100%;
-    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    background-image: linear-gradient( 45deg,  #7f00ff 0%, #3d535f 100%);
 }
 .editpro--container{
-    height: 42.75em;
-    width: 95%;
+    height: 77.75em;
+    width: 100%;
     margin: auto;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     overflow: hidden;
     border-radius: 10px;
-    border: solid 3px red;
+}
+/* tarjeta blanca */
+.editpro-info-container{
+    width: 85%;
+    height: 190vh;
+    display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    align-content: stretch;
     align-items: center;
+    text-align: center;
+    padding-top: 3.5rem;
+    background-color: var(--all-bg);
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 31px;
+}
+/* foto avatr */
+.editpro-user-header{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
 }
 .editpro-user-avatar{
     display: flex;
@@ -42,27 +46,14 @@
     position: absolute;
     z-index: 1;
     overflow: hidden;
-    margin-top: 80px;
-    border: solid rgb(0, 255, 128) 3px;
-    border: solid 3px rgb(255, 0, 140);
+    margin-bottom: 20px;
 }
 .editpro-user-avatar img{
     width: 100%;
     position: relative;
     object-position: left 40% top 50% ;
-    border: solid 3px rgb(0, 255, 242);
-    
 }
-.editpro-user-body{
-    width: 90%;
-    margin: 60px 0;
-    border: solid rgb(0, 255, 128) 3px;
-    border: solid 3px rgb(0, 17, 255);
 
-}
-.lista-datos{
-    height: 121vh;
-}
     
 
 
@@ -76,10 +67,12 @@
         align-items: center;
         text-align: center;
         padding-top: 3.5rem;
-        background-color: var(--editpro-bg);
+        background-image: linear-gradient( 45deg,  #7f00ff 0%, #3d535f 100%);
+        box-shadow: 18px 18px 18px 18 px #12111142;
+        
         margin: auto;
         border-radius: 10px;
-        box-shadow: 16px 18px 3px 3px #12111142;
+       
     }
     .editpro-info-container p {
         margin: 28px;
@@ -307,4 +300,4 @@
         display: flex;
     }
 
-} */
+}

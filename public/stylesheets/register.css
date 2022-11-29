@@ -21,77 +21,6 @@
     border-radius: 10px;
     margin-top: 31px;
 }
-.reg-info-container p {
-    margin: 28px;
-    font-size: 17px;
-    color: var(--titulos);
-}   
-.titulo{
-    text-transform: capitalize;
-    font-size: 28px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: var(--titulos);
-    margin-top: -27px;
-}
-/* botones redes */
-/* .social-reg{
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-}
-.social-reg-element{
-    display: flex;
-    margin-top: 15px ;
-    gap: 25px;
-}
-.btn-redes{
-    position: relative;
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(90deg, #e882e8, #a18cd1);
-    display: flex;
-    align-items: center;
-    justify-content:center ;
-    font-size: 24px;
-    text-decoration: none;
-    color: #fff;
-    border-radius: 50%;
-    transition: scale 0.15s;
-}
-.btn-redes:hover{
-    scale: 0.9
-}
-.btn-redes::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    border-radius: 50%;
-    opacity: 0;
-    scale: 0.95;
-    pointer-events: none;
-}
-.btn-redes:hover::after{
-    animation: pulse 1s;
-}
-@keyframes pulse{
-    0%{
-        opacity: 0.8;
-    }
-    50%{
-        opacity: 0.5;
-    }
-    100%{
-        scale: 2;
-        opacity: 0;
-    }
-}  */
-
 
 @media (min-width:768px){
     .reg-info-container{
@@ -102,68 +31,10 @@
         width: 50px;
         height: 50px;
     }
-    
 }
 @media (min-width:1024px){
-    
-    .reg-info-container p {
-        margin: 28px;
-        font-size: 17px;
-        color: #e0e0e1;
-    }
-    .reg-info-container h1{
-        font-size: 45px;
-    }
+  
     .reg--container{
         height: 55.75em;
-        }
-    /* botones redes */
-    /* .social-all{
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
     }
-    .social-reg-element{
-        display: flex;
-        margin-top: 15px ;
-        gap: 25px;
-        
-    }
-    .btn-redes{
-        width: 60px;
-        height: 60px;
-    }
-    .btn-redes:hover{
-        scale: 0.9
-    }
-    .btn-redes::after{
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-        background: inherit;
-        border-radius: 50%;
-        opacity: 0;
-        scale: 0.95;
-        pointer-events: none;
-    }
-    .btn-redes:hover::after{
-        animation: pulse 1s;
-    }
-    @keyframes pulse{
-        0%{
-            opacity: 0.8;
-        }
-        50%{
-            opacity: 0.5;
-        }
-        100%{
-            scale: 2;
-            opacity: 0;
-        }
-    }  */
-
 }

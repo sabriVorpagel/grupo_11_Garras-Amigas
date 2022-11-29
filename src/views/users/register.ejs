@@ -2,68 +2,68 @@
 
     <body>
         <%- include('../partials/header') %>
-            <main class="main--all">
-                <div class="reg--container">
-                    <div class="reg-info-container">
-                        <h1 class="titulo">Registrate con</h1>
-                        <div class="social-all">
-                            <div class="social-all-element">
-                                <a href="#" class="btn-redes"><i class="fa-brands fa-facebook-f"></i> </a>
-                                <a href="#" class="btn-redes"><i class="fa-brands fa-instagram"></i> </a>
-                                <a href="#" class="btn-redes"><i class="fa-brands fa-google"></i> </a>
-                            </div>
+        <main class="main--all">
+            <div class="reg--container">
+                <div class="reg-info-container">
+                    <h1 class="titulo">Registrate con</h1>
+                    <div class="social-all">
+                        <div class="social-all-element">
+                            <a href="#" class="btn-redes"><i class="fa-brands fa-facebook-f"></i> </a>
+                            <a href="#" class="btn-redes"><i class="fa-brands fa-instagram"></i> </a>
+                            <a href="#" class="btn-redes"><i class="fa-brands fa-google"></i> </a>
                         </div>
-                        <p>o ingresa tus datos</p>
-                        <form action="" method="POST" enctype="multipart/form-data" class="imputs-container-all">
-                            <div class="from-all">
-                                <small class="small-all">
-                                    <%= locals.errors && errors.name ? errors.name.msg :null %>
-                                </small>
-                                <input class="input-all" placeholder="NOMBRE" type="text" id="name" atocomplete="off"
-                                    name="name" value="<%= locals.old && old.name ? old.name : null %>">
-                            </div>
-                            <div class="from-all">
-                                <small class="small-all">
-                                    <%= locals.errors && errors.surname ? errors.surname.msg :null %>
-                                </small>
-                                <input class="input-all" placeholder="APELLIDO" type="text" id="surname"
-                                    autocomplete="off" name="surname"
-                                    value="<%= locals.old && old.surname ? old.surname : null %>">
-                            </div>
-                            <div class="from-all">
-                                <small class="small-all">
-                                    <%= locals.errors && errors.email ? errors.email.msg :null %>
-                                </small>
-                                <input class="input-all" placeholder="EMAIL" type="email" id="email" name="email"
-                                    value="<%= locals.old && old.email ? old.email: null %>">
-                            </div>
-                            <div class="from-all">
-                                <small class="small-all">
-                                    <%= locals.errors && errors.password ? errors.password.msg :null %>
-                                </small>
-                                <input class="input-all" placeholder="CONTRASEÑA" type="password" id="password"
-                                    name="password">
-                            </div>
-                            <div class="from-all">
-                                <small class="small-all">
-                                    <%= locals.errors && errors.password2 ? errors.password2.msg :null %>
-                                </small>
-                                <input class="input-all" placeholder="REPETIR CONTRASEÑA" type="password" id="password2"
-                                    autocomplete="off" name="password2">
-                                <br>
-                            </div>
-                            <div class="from-all">
-                                <label class="label-all" for="avatar">AGREGA TU FOTO DE PERFIL</label>
-                                <input class="input-all-file" id="avatar" type="file" name="avatar" autocomplete="off">
-                            </div>
+                    </div>
+                    <p class="subtitulo">o ingresa tus datos</p>
+                    <form action="" method="POST" enctype="multipart/form-data" class="imputs-container-all">
+                        <div class="from-all">
+                            <small class="small-all">
+                                <%= locals.errors && errors.name ? errors.name.msg :null %>
+                            </small>
+                            <input class="input-all" placeholder="NOMBRE" type="text" id="name" atocomplete="off"
+                                name="name" value="<%= locals.old && old.name ? old.name : null %>">
+                        </div>
+                        <div class="from-all">
+                            <small class="small-all">
+                                <%= locals.errors && errors.surname ? errors.surname.msg :null %>
+                            </small>
+                            <input class="input-all" placeholder="APELLIDO" type="text" id="surname"
+                                autocomplete="off" name="surname"
+                                value="<%= locals.old && old.surname ? old.surname : null %>">
+                        </div>
+                        <div class="from-all">
+                            <small class="small-all">
+                                <%= locals.errors && errors.email ? errors.email.msg :null %>
+                            </small>
+                            <input class="input-all" placeholder="EMAIL" type="email" id="email" name="email"
+                                value="<%= locals.old && old.email ? old.email: null %>">
+                        </div>
+                        <div class="from-all">
+                            <small class="small-all">
+                                <%= locals.errors && errors.password ? errors.password.msg :null %>
+                            </small>
+                            <input class="input-all" placeholder="CONTRASEÑA" type="password" id="password"
+                                name="password">
+                        </div>
+                        <div class="from-all">
+                            <small class="small-all">
+                                <%= locals.errors && errors.password2 ? errors.password2.msg :null %>
+                            </small>
+                            <input class="input-all" placeholder="REPETIR CONTRASEÑA" type="password" id="password2"
+                                autocomplete="off" name="password2">
+                            <br>
+                        </div>
+                        <div class="from-all">
+                            <label class="label-all" for="avatar">avatar</label>
+                            <input class="input-all"  id="avatar" type="file" name="avatar" autocomplete="off">
+                        </div>
 
-                            <button class="all-btn" type="submit">ENVIAR!</button>
+                        <button class="all-btn" type="submit">ENVIAR!</button>
+                     </form>
+                <div>   
 
-                        </form>
-
-                        </section>
-            </main>
-
+            </section>
+        </main>
+            
     </body>
 
     </html>

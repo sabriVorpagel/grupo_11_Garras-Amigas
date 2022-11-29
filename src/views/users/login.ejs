@@ -3,7 +3,7 @@
  <%- include('../partials/header') %> 
     <main class="main--all">
         <div class="login--container">
-            <div class="reg-info-container">
+            <div class="login-info-container">
                 <h1  class="titulo">Logueate con</h1>
                 <div class="social-all">
                     <div class="social-all-element">
@@ -12,29 +12,28 @@
                         <a href="#" class="btn-redes"><i class="fa-brands fa-google"></i> </a>
                     </div>
                 </div>
-                <p>o ingresa tus datos</p>
+                <p class="subtitulo">o ingresa tus datos</p>
                 <form action="/users/login" class="imputs-container-all" method="POST">
                     <div class="from-all">
                         <small class="small-all">
                             <%= locals.errors && errors.email ? errors.email.msg :null %>
                         </small>
-                        <input class="input-all" type="email" class="input" placeholder="EMAIL" name="email"  value="<%= locals.old && old.email ? old.email: null %>"/>
+                        <input class="input-all" type="email"  placeholder="EMAIL" name="email"  value="<%= locals.old && old.email ? old.email: null %>"/>
                     </div>
                     <div class="from-all">
                         <small class="small-all">
                             <%= locals.errors && errors.password ? errors.password.msg :null %>
                         </small>
-                        <input class="input-all" type="password" id="password" class="input" placeholder="CONTRASEÑA" name="password" />
+                        <input class="input-all" type="password" id="password"  placeholder="CONTRASEÑA" name="password" />
                     </div>
                     
                     <a href="#" class="span" >¿Olvidaste tu contraseña?</a>
-                    <label class="recordame" for="checkbox">Recordarme</label>
-                    <input  class="check"  type="checkbox" name="remember" id="recordame"/>
-                    <button class="login-btn"type="submit">INGRESA!</button>
-                    <p>¿Aún no tenes una cuenta?</p><a  class="span" href="/users/register">Registrate </a>
+                    <button class="all-btn" type="submit">INGRESA!</button>
+                    <p class="cuenta">¿Aún no tenes una cuenta?</p>
+                    <a class="span" href="/users/register">Registrate </a>
                 </form>          
             </div>
-                <img class="iamge-container" src="/images/faf.png" alt="">
+            <img class="iamge-container" src="/images/faf.png" alt="">
         </div>
     </main>
 </body>
