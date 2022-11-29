@@ -40,7 +40,7 @@ a{
 .main--all{
     height: 150vh;
     width: 100%;
-    background-image: linear-gradient( 45deg, #7f00ff 0%, #e48dcb 100%);
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
 }
 
 /* formularios */
