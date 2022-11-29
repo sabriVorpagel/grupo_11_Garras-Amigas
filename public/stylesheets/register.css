@@ -23,6 +23,7 @@
     justify-content: space-between;
     overflow: hidden;
     border-radius: 10px;
+    border: pink 3px solid;
 }
 .reg-info-container{
     width: 85%;
@@ -35,6 +36,7 @@
     margin: auto;
     border-radius: 10px;
     box-shadow: 16px 18px 3px 3px #12111142;
+    border: rgb(255, 226, 192) 3px solid;
 }
 .reg-info-container p {
     margin: 28px;
