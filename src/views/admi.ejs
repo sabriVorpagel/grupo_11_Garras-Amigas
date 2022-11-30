@@ -1,16 +1,18 @@
 <%- include('./partials/head', {title: 'Administrador'}) %> 
 <body>
     <%- include('./partials/header') %> 
-    <main>
-        <div>
-            <h2>titulo</h2>
-            <form action="/products/create" class="detail__main__producto--descripcion-botones color-boton-naranja">
-                <input type="submit" name="crear" id="crear" value="Crear Producto">
-            </form>
-            <!-- <form action="/users/delete/<%= "users.id" %>?_method=DELETE" method="POST" class="detail__main__producto--descripcion-botones color-boton-rojo">
-                <input type="submit" name="delete" id="delete" value="Eliminar Usuario">
-            </form> -->
+    <main class="main--admi">
+        <div class="admi--container">
+            <h2 class="admi--div-titulo">Bienvenido a las vista de administrador</h2>
+            <div class="sub">
+                <div class="admi-info-container">
+                
+                <a class="admi__button" href="/products/create"><button>Cambiar Rol</button></a>
+                <a class="admi__button" href="products/productCreate"><button>Crear Producto</button></a>
+                <a class="admi__button" href="/products/create"><button>Eliminar Usuario</button></a>
+                
+                </div>
+            </div>
     </div>
-    </main>
-    <%- include('./partials/footer') %> 
+    </main> 
 </body>

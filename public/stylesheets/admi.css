@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --login-bg:#f8f3ff;
+    --titulos:#9089cc;
+    --botones:#674baf;
+    --rosa:#e882e8;
+}
+
+.main--admi{
+    height: 100%;
+    width:100%;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+
+}
+
+.admi--container{
+    height: 37.75em;
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    align-items: center;
+}
+
+.admi-info-container{
+    width: 60%;
+    height: 51vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--login-bg);
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 16px 18px 3px 3px #12111142;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.admi--div-titulo{
+    text-transform: inherit;
+    font-size: 28px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 1px;
+    color: white;
+    margin: 10px 0px 0px 0px ;
+}
+
+.admi__button  button{
+    border: none;
+    padding: 10px;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    border-radius: 5px;
+    color:#fff;
+    text-transform: uppercase;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.admi__button button:hover{
+    background:  #fff;
+        color: #a18cd1;
+        border: solid #a18cd1 2px;
+        cursor: pointer;
+}
+
+.sub{
+    width: 100%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+}
+
+@media(min-width:768px){ 
+    .main--admi{
+        height: 100%;
+        width:100%;
+        background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    }
+
+    .admi--container{
+        height: 33.75em;
+        align-content: center;
+    }
+
+    .admi--div-titulo{
+        font-size: 33px;
+        margin: 20px 0px;
+    }
+
+    .admi-info-container{
+        width: 100%;
+        height: 15vh;
+        flex-direction: row;
+    }
+
+    .sub{
+        width: 80%;
+        height: 44vh;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+    }
+}
