@@ -4,39 +4,46 @@ const {hashSync}= require('bcryptjs');
 const db = require('../database/models');
 
 module.exports = {
+    // REGISTRO
     register : (req,res) => {
         return res.render('users/register')
     },
     processRegister : (req,res) => {
         const errors = validationResult(req);
-        const {name,surname,email,password} = req.body
+        const {name,surname,email,password, street, city, province, phone, height} = req.body
          if(errors.isEmpty()){
         db.User.create({
-                name : name,
-                surname : surname,
+                name : name.trim(),
+                surname : surname.trim(),
                 email : email,
                 password : hashSync(password, 10),
                 rolId : 2,
-                avatar: req.file ? req.file.filename : 'default.jpg'
-            }).then(user => {
-            db.Address.create({
-                    userId: user.id
-            }).then( () => {
-                    return res.redirect('/users/login')
-            })
-            }).catch(error => console.log(error))  
-            }else {
-            return res.render('users/register', {
-                errors : errors.mapped(),
-                old : req.body
-            })
-        }      
-    },
+                street : street.trim(),
+                city: city.trim(),
+                province: province.trim(),
+                phone: +phone,
+                height: +height,
+                avatar: req.file ? req.file.filename : 'default.jpg',
+        })
+                .then(() => {
+                    res.redirect("/users/login");
+                })
+                .catch((errors) => console.log(errors))
+            } else {
+                res.render("users/register", {
+                errors: errors.mapped(),
+                old: req.body,
+            });
+            }
+        },
+        // LOGIN
+          
     login : (req,res) => {
         return res.render('users/login')
     }, 
     processLogin : (req, res) =>{
         let errors = validationResult(req);
+        
         if(errors.isEmpty()){
             db.User.findOne({
                 where : {
@@ -51,7 +58,7 @@ module.exports = {
                 };
                 req.body.remember && res.cookie('garrasamigas',req.session.login, {maxAge : 1000 * 60});
                 
-                return res.redirect('/');
+                return res.redirect('/index');
 
             }).catch(error => console.log(error))
         }else {
@@ -61,49 +68,80 @@ module.exports = {
             })
         }
     },
+    // PERFIL
     
     profile: (req, res) => {
-        let users = db.User.findByPk(req.session.login.id)
-        
-        Promise.all([users])
-            .then(([users]) => {
-                return res.render('users/profile',{
-                    users,
-                })
+        db.User.findByPk(req.session.login.id)
+        .then((users)=>{
+            res.render("users/profile",{
+                
+                users,
+                
             })
-            .catch(error => console.log(error))
+        })
     },
-
+    // EDITAR PERFIL   
     editProfile: (req, res) =>{
-        let users = db.User.findByPk(req.params.id)
-        
-        Promise.all([users])
-            .then(([users]) => {
-                return res.render('users/editProfile',{
-                    users,
-                })
-            })
-            .catch(error => console.log(error))
-    },
-
-    update: (req, res) => {
-       const  users = loadUsers(); 
-       const { name, surname, email, password, password2, phone, direction, heigth, location, province,avatar } = req.body;
-       const usersModify = loadUsers().map((user) => {
-           if (users.id === +req.params.id) {
-               return {
-               ...user,
-               ...req.body,
-               imgUsers:  imgUsers,
-               };
-           }
-           return user;
+        db.User.findByPk(req.params.id)
+    .then((users)=>{
+        res.render("users/editProfile",{
+            users,
+            session:req.session,
+        })
     })
-       storeUsers(usersModify);
-       return res.redirect("/users/profile");
     },
+// EDICION
+    update: (req, res) => {
+         
+    db.User.update(
+        {
+            name: req.body.name?.trim(),
+            surname: req.body.surname?.trim(),
+            email: req.body.email?.trim(),
+            phone: req.body.phone?.trim(),
+            street: req.body.street?.trim(),
+            height: req.body.height?.trim(),
+            city: req.body.city?.trim(),
+            province: req.body.province?.trim(),
+            avatar: req.file ? req.file.filename : req.session.login.avatar
+        },
+        {
+            where:
+            {
+                id: +req.params.id
+            }
+        })
+        .then((users) =>
+        {
+          req.session.login = {
+          
+            ...req.session.login,
+            // email: email.login,
+            // password: password.login,
+            // avatar: req.file ? req.file.filename : req.session.login.avatar,
+          };
+  
+        })
+        
+        res.redirect("/users/profile");
+    },
+    //     const  users = loadUsers(); 
+    //     const { name, surname, email, password, password2, phone, direction, heigth, location, province,avatar } = req.body;
+    //     const usersModify = loadUsers().map((user) => {
+    //         if (users.id === +req.params.id) {
+    //             return {
+    //             ...user,
+    //             ...req.body,
+    //             imgUsers:  imgUsers,
+    //             };
+    //         }
+    //         return user;
+    // })
+    //     storeUsers(usersModify);
+    //     return res.redirect("/users/profile");
+    // },
 
-
+    // DESLOGEARSE
 
     logout: (req, res) => {
     req.session.destroy();

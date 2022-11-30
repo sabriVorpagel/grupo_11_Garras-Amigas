@@ -5,12 +5,16 @@
         <div class="editpro--container">
             <div class="editpro-info-container">
                 <h1 class="titulo">Editar Perfil</h1>
-                <div class="editpro-user-header">
-                    <div class="editpro-user-avatar">
-                        <img src="/images/users/<%=users.avatar%>" id="avatar" alt="avatar" id="avatar"/>
-                    </div>
-                </div>
-                <form class="imputs-container-profile"" action="/users/update/<%= users.id %>?_method=PUT"  method="post" >            
+                
+                <form class="imputs-container-profile"" action="/users/update/<%= users.id %>?_method=PUT"  method="post" >
+                    <div class="editpro-user-header">
+                        <div class="editpro-user-avatar">
+                            <img src="/images/users/<%=users.avatar%>" id="avatar" alt="avatar" id="avatar"/>
+                            
+                             <input type="file" name="avatar" id="avatar" onchange="preview(event)" />
+                        </div>
+                        <label class="label_photo-edit" for="avatar"> <i class="fa-solid fa-camera"></i></label>
+                    </div>            
                     <div class="from-all">
                         <label class="label-all for="name" >Nombre</label>
                         <input class="input-all" type="text" id="name" name="name" value="<%= users.name %>">
@@ -32,16 +36,16 @@
                         <input class="input-all" type="password" id="password" name="password" value="<%= users.password %>">
                     </div>
                     <div class="from-all">
-                        <label class="label-all" for="direction" >Dirección</label>
-                        <input class="input-all" type="text" id="direction"  name="direction" value="<%= users.direction %>">
+                        <label class="label-all" for="street" >Dirección</label>
+                        <input class="input-all" type="text" id="street"  name="street" value="<%= users.street %>">
                     </div>
                     <div class="from-all">
-                        <label class="label-all" for="heigth" >altura</label>
-                        <input class="input-all" type="number" id="heigth"  name="heigth" value="<%= users.heigth %>">
+                        <label class="label-all" for="height" >altura</label>
+                        <input class="input-all" type="number" id="height"  name="height" value="<%= users.height %>">
                     </div>
                     <div class="from-all">
-                        <label class="label-all" for="location" >localidad</label>
-                        <input class="input-all" type="text" id="location"  name="location" value="<%= users.location %>">
+                        <label class="label-all" for="city" >localidad</label>
+                        <input class="input-all" type="text" id="city"  name="city" value="<%= users.city %>">
                     </div>
                     <div class="from-all">
                         <label class="label-all" for="province" >Provincia</label>
@@ -53,8 +57,20 @@
                 </form>
             </div>
         </div>
+        <%- include('../partials/footer') %> 
      </main>
-    <%- include('../partials/footer') %> 
+    <script>
+        let preview = (event) => {
+            let new_img = new FileReader();
+            let id_img = document.getElementById("img-photo");
+            new_img.onload = () => {
+            if (new_img.readyState == 2) {
+                id_img.src = new_img.result;
+            }
+            };
+            new_img.readAsDataURL(event.target.files[0]);
+        };
+    </script>
     
 </body>
 </html>

@@ -122,10 +122,10 @@ a{
 .all-btn{
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: var(--inputs);
+    color: #fff;
     border-radius: 5px;
-    border: solid 2px var(--inputs);
-    background: transparent;
+    border: solid 2px #FFF;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
     cursor: pointer;
     border-radius: 5px;
     margin: 20px;
@@ -213,7 +213,7 @@ a{
     .from-all{
         width: 40%;
     }
-    .imputs-container-all{
+    .imputs-container-reg{
         height: 80%;
         display: flex;
         flex-direction: row;

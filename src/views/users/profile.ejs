@@ -10,47 +10,46 @@
                         <img src="/images/users/<%=users.avatar%>"/>
                     </div>
                 </div>
-                <from class="imputs-container-profile">
+                <div  class="imputs-container-profile">
                     <div class="from-all-profile"> 
-                        <label class="label-all" for="name">Nombre:</label>
+                        <p class="label-all">NOMBRE:</p>
                         <input class="input-all-profile" value="<%= users.name %>" >
                     </div> 
                     <div class="from-all-profile"> 
-                        <label class="label-all" for="surname">Apellido:</label>
+                        <p class="label-all">APELLIDO:</p>
                         <input class="input-all-profile" value="<%= users.surname %>" >
                     </div> 
                     <div class="from-all-profile"> 
-                        <label class="label-all" for="email">Email:</label>
+                        <p class="label-all">EMAIL:</p>
                         <input class="input-all-profile" value="<%= users.email %>" >
                     </div> 
-                    <div class="from-all-profile">
-                        <label class="label-all" for="phone">Número de teléfono:</label>
-                        <input class="input-all-profile" type="text" id="pone" atocomplete="off" name="phone" value="<%= locals.old && old.phone ? old.phone : null %>">
-                        <small class="small-all"><%= locals.errors && errors.phone ? errors.phone.msg :null  %> </small>
+                    <div class="from-all-profile"> 
+                        <p class="label-all" >DIRECCIÓN:</p>
+                        <input class="input-all-profile" value="<%= users.street %>" >
+                    </div> 
+                    <div class="from-all-profile"> 
+                        <p class="label-all">ALTURA:</p>
+                        <input class="input-all-profile" value="<%= users.height %>" >
+                    </div> 
+                    <div class="from-all-profile"> 
+                        <p class="label-all" >PROVINCIA</p>
+                        <input class="input-all-profile" value="<%= users.province %>" >
+                    </div> 
+                    <div class="from-all-profile"> 
+                        <p class="label-all">LOCALIDAD:</p>
+                        <input class="input-all-profile" value="<%= users.phone %>" >
                     </div>
-                    <div class="from-all-profile">
-                        <label class="label-all" for="direction">Direccion:</label>
-                        <input class="input-all-profile" type="text" id="direction" atocomplete="off" name="direction" value="<%= locals.old && old.direction ? old.direction : null %>">
-                        <small class="small-all"><%= locals.errors && errors.direction ? errors.direction.msg :null  %> </small>
-                    </div>
-                    <div class="from-all-profile">
-                        <label class="label-all" for="heigth">Altura:</label>
-                        <input class="input-all-profile" type="number" id="heigth" atocomplete="off" name="heigth" value="<%= locals.old && old.heigth ? old.heigth : null %>">
-                        <small class="small-all"><%= locals.errors && errors.heigth ? errors.heigth.msg :null  %> </small>
-                    </div>
-                    <div class="from-all-profile">
-                        <label class="label-all" for="location">Localidad:</label>
-                        <input class="input-all-profile" type="text" id="location" atocomplete="off" name="location" value="<%= locals.old && old.location ? old.location : null %>">
-                        <small class="small-all"><%= locals.errors && errors.location ? errors.location.msg :null  %> </small>
-                    </div>
-                    <div class="from-all-profile">
-                        <label class="label-all" for="province">Provincia:</label>
-                        <input class="input-all-profile" type="text" id="province" atocomplete="off" name="province" value="<%= locals.old && old.province ? old.province : null %>">
-                        <small class="small-all"><%= locals.errors && errors.province ? errors.province.msg :null  %> </small>
-                    </div>
+                    <div class="from-all-profile"> 
+                        <p class="label-all">TELEFONO:</p>
+                        <input class="input-all-profile" value="<%= users.phone %>" >
+                    </div> 
+                     
+
+                    
                     <a class="all-btn-profile" href="/users/editProfile/<%= users.id %>">Editar Perfil</a>
                     <a class="all-btn-profile" href="/users/logout" >Salir</a>
-                </from>
+
+                </div>
                 
             </div>
         </div>

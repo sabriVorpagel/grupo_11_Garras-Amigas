@@ -92,6 +92,7 @@
     text-align: center;
     padding: 8px;
 }
+
 @media ( min-width: 768px){
     .main--profile {
         height: 122vh;

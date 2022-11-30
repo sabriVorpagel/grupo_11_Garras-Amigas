@@ -1,5 +1,11 @@
+.main--reg{
+    height: 205vh;
+    width: 100%;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+
 .reg--container{
-    height: 50.75em;
+    height: 69.75em;
     width: 95%;
     margin: auto;
     display: flex;
@@ -10,7 +16,7 @@
 /* tarjeta blanca */ 
 .reg-info-container{
     width: 85%;
-    height: 140vh;
+    height: 190vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,20 +27,60 @@
     border-radius: 10px;
     margin-top: 31px;
 }
+/* botones */
+.reg-btn{
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 5px;
+    border: solid 2px #FFF;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 20px;
+    margin-top: 65px;
+    width: 47%;
+    height: 40px;
+    font-size: 1em;
+    text-align: center;
+}
+.file-register {
+    border: none;
+   
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    background: transparent;
+    width: 80%;
+    height: 35px;   
+    font-size: 1em; 
+    outline: transparent;
+    color: var(--inputs);
+}
 
 @media (min-width:768px){
+    .main--reg{
+    height: 161vh;
+    }
+    reg--container {
+        height: 53.75em;
+    }
+    
     .reg-info-container{
         width: 65%;
-        height: 110vh;
+        height: 126vh;
     }
     .btn-redes{
         width: 50px;
         height: 50px;
     }
+    .reg-btn{
+        margin-top: 8px;
+        width: 41%;
+    }
 }
 @media (min-width:1024px){
   
     .reg--container{
-        height: 55.75em;
+        height: 62.75em;
     }
 }

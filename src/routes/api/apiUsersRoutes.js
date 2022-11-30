@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const {} = require('../../controllers/api/apiUsersController')
+const {list} = require('../../controllers/api/apiUsersController')
 
-
+router
+    .get('/list', list)
 
 
 
