@@ -1,95 +1,66 @@
-const {loadProducts, storeProducts, loadCategorys, loadClass} = require('../data/db_Module')
-
-
+const db = require('../database/models');
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const { Op } = require("sequelize");
 
 module.exports = {
     product: (req, res) => { 
-        const products = loadProducts();
-        return res.render('products/products', {
-            products,
-            toThousand,}) 
+		let products = db.Product.findAll({
+			include : ['images']
+		})
+
+		Promise.all([products])
+			.then(([products]) => res.render('products/products', {
+				products,
+				toThousand
+			}))
+			.catch(error => console.log(error))
     },
     detail: (req,res) => {
-        const products = loadProducts();
-        const product = products.find(product => product.id === +req.params.id);
-        return res.render('products/productDetail' ,{
-            product,
-            toThousand
-        })
+		
+		db.Product.findByPk(req.params.id,{
+			include : [{all : true}]
+		})
+			.then(product => {
+				return res.render('products/productDetail', {
+			product,
+			toThousand
+			})
+			})
+			.catch(error => console.log(error))
     },
     cart: (req,res) => {
-        return res.render('products/productCart')
+		db.Cart.findAll()
+		.then(cart =>
+			res.render('products/productCart', {cart}))
+		.catch(error => console.log(error))
     },
-    edit: (req, res) => {
-		const products = loadProducts();
-		const categorys = loadCategorys();
-		const subCategorys = loadClass();
-        const product = products.find(product => product.id === +req.params.id);
-		return res.render('products/productEdit', {
-			categorys,
-			subCategorys,
-			product
+	search : (req,res) => {
+        let { keywords } = req.query;
+		db.Product.findAll({
+			where: {
+				[Op.or]: [
+					{
+						name: {
+							[Op.substring]: keywords,
+						},
+					},
+					{
+						description: {
+							[Op.substring]: keywords,
+						},
+					},
+				],
+			},
 		})
+			.then((result) => {
+				return res.render("products/result", {
+					result,
+					toThousand,
+					keywords,
+				});
+			})
+            .catch(error => console.log(error))
     },
-	update: (req, res) =>{
-		const products = loadProducts();
-		const {id} = req.params;
-		const {name, price, discount, description, subCategory, category, stock} = req.body;
-		const produtsModify = products.map(product => {
-			if(product.id === +id){
-				return {
-					...product,
-					name: name.trim(),
-					price: +price,
-					discount: +discount,
-					subCategory,
-					category,
-					stock: +stock,
-					description
-				}
-			}
-			return product
-		})
-		storeProducts(produtsModify);
-
-		return res.redirect('/products/detail/' + req.params.id)
-	},
-    // Create - Form to create
-    create: (req, res) => {
-		const categorys = loadCategorys();
-		const subCategorys = loadClass();
-        return res.render('products/productCreate',{
-			categorys: categorys.sort(),
-			subCategorys: subCategorys.sort()
-		})
-    },
-	store: (req,res) =>{
-		const products = loadProducts();
-		const {name, price, discount, description, subCategory, category, stock} = req.body;
-		const id = products[products.length - 1].id;
-		const newProduct ={
-			id: id +1,
-			...req.body,
-			name: name.trim(),
-			price: +price,
-			discount: +discount,
-			stock: +stock,
-			image: "Correa.jpeg",
-			description,
-			subCategory,
-			category
-		}
-		const productsNew = [...products, newProduct];
-		storeProducts(productsNew);
-		return res.redirect('/products/product')
-	},
-	remove: (req, res) => {
-		const products = loadProducts();
-		const productsModify = products.filter(product => product.id !== +req.params.id);
-		storeProducts(productsModify);
-		return res.redirect('/products/product')
-	}
 }
 
 

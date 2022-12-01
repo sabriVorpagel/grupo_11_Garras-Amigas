@@ -1,5 +1,5 @@
 // modulos
-require ('dotenv').config();
+require('dotenv').config();
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -11,9 +11,13 @@ const session = require('express-session');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productRouter = require('./routes/products');
+const admiRouter = require('./routes/admi');
 
-const {localsUserCheck, coockieCheck, adminUserCheck} = require('./middlewares/usersLogin');
+// rutas apis
 
+const apiUsersRoutes = require ('./routes/api/apiUsersRoutes')
+
+const {localsUserCheck, coockieCheck} = require('./middlewares/usersLogin');
 
 const app = express();
 
@@ -30,8 +34,8 @@ app.use(session({
   resave : false , 
   saveUnitialized : true }));
 
-  app.use(coockieCheck);
-  app.use(localsUserCheck);
+app.use(coockieCheck);
+app.use(localsUserCheck);
 
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(methodOverride('_method'));
@@ -39,6 +43,11 @@ app.use(methodOverride('_method'));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productRouter);
+app.use('/admi',admiRouter );
+
+// rutas apis
+
+app.use('api/users', apiUsersRoutes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

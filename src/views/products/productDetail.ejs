@@ -8,20 +8,20 @@
         <article class="detail__main__producto">
                 <div class="detail__main__producto-padre">
                     <div class="detail__main__product-img">
-                        <img src="/images/productos/<%= product.image %> " alt="" class="slider__img">
+                        <img src="/images/productos/<%= product.images.length > 0 ? product.images[0].file : 'Anuncio.png' %> " alt="" class="slider__img">
                     </div>
                     <div class="detail__main__product-contenedor-imagenes">
                         <div class="detail__main__product-imagenes">
-                            <img src="/images/productos/<%= product.image %> " alt="">
+                            <img src="/images/productos/<%= product.images.length > 0 ? product.images[0].file : 'Anuncio.png'  %> " alt="">
                         </div>    
                         <div class="detail__main__product-imagenes">
-                            <img src="/images/productos/<%= product.image %> " alt="">
+                            <img src="/images/productos/<%= product.images.length > 0 ? product.images[0].file : 'Anuncio.png'  %> " alt="">
                         </div>    
                         <div class="detail__main__product-imagenes">
-                            <img src="/images/productos/<%= product.image %> " alt="">
+                            <img src="/images/productos/<%= product.images.length > 0 ? product.images[0].file : 'Anuncio.png'  %> " alt="">
                         </div>
                         <div class="detail__main__product-imagenes">
-                            <img src="/images/productos/<%= product.image %> " alt="">
+                            <img src="/images/productos/<%= product.images.length > 0 ? product.images[0].file : 'Anuncio.png'  %> " alt="">
                         </div>
                     </div>
                 </div>
@@ -49,7 +49,7 @@
             </div>           
             <div class="detail_main__producto--descripcion-caja-de-botones">
             <% if(locals.login){ %> 
-                <% if(locals.login.rol === "admin"){ %>    
+                <% if(locals.login.rolId === 1){ %>    
                 <form action="/products/edit/<%= product.id %>" class="detail__main__producto--descripcion-botones color-boton-naranja">
                     <input type="submit" name="editar" id="editar" value="Editar producto">
                 </form>

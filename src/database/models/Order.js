@@ -1,55 +1,33 @@
-module.exports = (sequelize, dataTypes) => {
-
-    const alias = "Product";
-
-    const cols = {
-        id : {
-            type : dataTypes.INTEGER.UNSIGNED,
-            primaryKey : true,
-            allowNull : false,
-            autoIncrement : true
-        },
-       
-        total : {
-            type : dataTypes.INTEGER.UNSIGNED,
-            allowNull : true,
-        },
-        userId : {
-            type : dataTypes.INTEGER.UNSIGNED,
-            allowNull : true,
-            references : {
-                model : {
-                    tableName : 'User'
-                },
-                key : 'id'
-            }
-        },
-        payRoleId : {
-            type : dataTypes.INTEGER.UNSIGNED,
-            allowNull : true,
-        },
-        createdAt: {
-            type : dataTypes.DATETIME,
-            allowNull : true,
-        },
-        updateAt : {
-            type : dataTypes.DATETIME,
-            allowNull : true,
-        },
-        deleteAt : {
-            type : dataTypes.DATETIME,
-            allowNull : true,
-        },
-        
-
+'use strict';
+const {
+  Model
+} = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
+  class Order extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+      // define association here
+      Order.belongsTo(models.User,{
+        as: 'user',
+        foreignKey: 'userId'
+      });
+      Order.hasOne(models.State,{
+        as: 'state',
+        foreignKey: 'stateId'
+      })
     }
-
-    const config = {
-        tableName : 'products' ,
-        timestamp : true,
-        underscored : true,
-    }
-    const Product = sequelize.define(alias, cols, config)
-
-    return Product
-}
+  }
+  Order.init({
+    userId: DataTypes.INTEGER,
+    stateId: DataTypes.INTEGER,
+    total: DataTypes.INTEGER
+  }, {
+    sequelize,
+    modelName: 'Order',
+  });
+  return Order;
+};

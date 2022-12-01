@@ -1,26 +1,10 @@
 [
    {
       "id": 1,
-      "firstName": "firstName",
-      "lastName": "lastName",
-      "phone": "phone",
-      "email": "email",
-      "password": "password",
-      "password2": "password2",
-      "direction": "direction",
-      "heigth": "heigth",
-      "location": "location",
-      "province": "province",
-      "imgUsers": [
-         "image"
-      ],
-      "rol": "user"
-   },
-   {
-      "id": 2,
       "firstName": "hamster",
       "lastName": "cito",
       "phone": 123456,
+      "rolId": 1,
       "email": "hamster@gmail.com",
       "password": "$2a$10$9.gKYMx8sHAPzxdJJby2ReGpChVX/u5Pg7mQ7CKtMsehFLefEubQy",
       "password2": null,
@@ -29,5 +13,19 @@
       "location": "banfield",
       "province": "bsas",
       "imgUsers": "imgUsers-1665802679766.png"
+   },
+   {
+      "id": 3,
+      "firstName": "sabrina",
+      "lastName": "vorpagel",
+      "phone": 133264525,
+      "email": "sabrivorpagel2512@gmail.com",
+      "password": "$2a$10$sX3wKdVwbKy8LsYdSXdSkeNpNBYbMSUxZILmEqvfqxal.e.Q8Aj.O",
+      "password2": null,
+      "direction": "rio",
+      "heigth": 1442,
+      "location": "bella",
+      "province": "buenos",
+      "imgUsers": "default.jpg"
    }
 ]

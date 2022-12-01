@@ -1,5 +1,5 @@
 <article class="home__main__section--article">
-    <a href="/products/detail/<%= id %> "><img src="/images/productos/<%= image %>" width="200"; height="200"></a>
+    <a href="/products/detail/<%= id %> "><img src="/images/productos/<%= images[0] ? images[0].file : 'Anuncio.png' %>" width="200"; height="200"></a>
     <div class="home__main__section__article--div">
         <h4><%= name %> </h4>
         <p>$<%= toThousand((price - (price * discount / 100)).toFixed(0)) %>  </p>

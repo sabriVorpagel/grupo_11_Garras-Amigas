@@ -8,12 +8,12 @@
         <section class="home__main__section--novedades">
             <h2>NOVEDADES</h2>
             <section class="home__main__articulos">
-                <% productNovedades.forEach(({id, name, price, image, discount}) => { %>
+                <% productNovedades.forEach(({id, name, price, images, discount}) => { %>
                     <%- include('./partials/product',{
                         id,
                         name,
                         price,
-                        image,
+                        images,
                         discount,
                         toThousand
                     }) %> 
@@ -23,12 +23,12 @@
         <section class="home__main__section--destacados">
             <h2>DESTACADOS</h2>
             <section class="home__main__articulos">
-                <% productDestacados.forEach(({id, name, price, image, discount}) => { %>
+                <% productDestacados.forEach(({id, name, price, images, discount}) => { %>
                     <%- include('./partials/product',{
                         id,
                         name,
                         price,
-                        image,
+                        images,
                         discount,
                         toThousand
                     }) %> 
@@ -38,12 +38,12 @@
         <section class="home__main__section--ofertas">
             <h2>OFERTAS</h2>
             <section class="home__main__articulos">
-                <% productOfertas.forEach(({id, name, price, image, discount}) => { %>
+                <% productOfertas.forEach(({id, name, price, images, discount}) => { %>
                     <%- include('./partials/product',{
                         id,
                         name,
                         price,
-                        image,
+                        images,
                         discount,
                         toThousand
                     }) %> 

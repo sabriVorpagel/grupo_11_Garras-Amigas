@@ -1,57 +1,59 @@
 <%- include('../partials/head', {title: 'Mi perfil'}) %> 
 <body>
-    <%- include('../partials/header') %> 
-    <main class="seccion-profile-user">
-        <div class="profile-user-header">
-            <div class="profile-user-portada" >
+    <%- include('../partials/header') %>
+    <main class="main--profile">
+        <div class="profile--container">
+            <div class="profile-info-container">
+                <!-- foto y fondo -->
+                <div class="profile-user-header">
+                    <div class="profile-user-avatar">
+                        <img src="/images/users/<%=users.avatar%>"/>
+                    </div>
+                </div>
+                <div  class="imputs-container-profile">
+                    <div class="from-all-profile"> 
+                        <p class="label-all">NOMBRE:</p>
+                        <input class="input-all-profile" value="<%= users.name %>" >
+                    </div> 
+                    <div class="from-all-profile"> 
+                        <p class="label-all">APELLIDO:</p>
+                        <input class="input-all-profile" value="<%= users.surname %>" >
+                    </div> 
+                    <div class="from-all-profile"> 
+                        <p class="label-all">EMAIL:</p>
+                        <input class="input-all-profile" value="<%= users.email %>" >
+                    </div> 
+                    <div class="from-all-profile"> 
+                        <p class="label-all" >DIRECCIÓN:</p>
+                        <input class="input-all-profile" value="<%= users.street %>" >
+                    </div> 
+                    <div class="from-all-profile"> 
+                        <p class="label-all">ALTURA:</p>
+                        <input class="input-all-profile" value="<%= users.height %>" >
+                    </div> 
+                    <div class="from-all-profile"> 
+                        <p class="label-all" >PROVINCIA</p>
+                        <input class="input-all-profile" value="<%= users.province %>" >
+                    </div> 
+                    <div class="from-all-profile"> 
+                        <p class="label-all">LOCALIDAD:</p>
+                        <input class="input-all-profile" value="<%= users.phone %>" >
+                    </div>
+                    <div class="from-all-profile"> 
+                        <p class="label-all">TELEFONO:</p>
+                        <input class="input-all-profile" value="<%= users.phone %>" >
+                    </div> 
+                     
 
-            </div>
-            <div class="profile-user-avatar">
-                <img src="/images/users/<%=users.imgUsers%>"/>
+                    
+                    <a class="all-btn-profile" href="/users/editProfile/<%= users.id %>">Editar Perfil</a>
+                    <a class="all-btn-profile" href="/users/logout" >Salir</a>
+
+                </div>
+                
             </div>
         </div>
-        <div class="profile-user-body">
-            <div class="profile-user-bio">
-                <h3 class="profile-name">
-                <div>
-                    <p><%= users.firstName %>  <%= users.lastName %></p> 
-                </div>
-                </h3>
-            </div>
-        
-            <div class="lista-datos">
-                <div class="datos-user">
-                    <p>Número de teléfono:</p> 
-                    <h4><%= users.phone %></h4>
-                </div> 
-                <div class="datos-user"> 
-                    <p> Email:</p>
-                    <h4><%= users.email %></h4>
-                </div> 
-                <div class="datos-user">
-                    <p>Dirección:</p>
-                    <h4><%= users.direction %></h4>
-                </div>
-                <div class="datos-user"> 
-                    <p>Altura:</p>
-                    <h4><%= users.heigth %></h4>
-                </div>
-                <div class="datos-user"> 
-                    <p>Localidad:</p>
-                    <h4><%= users.location %></h4>
-                </div>
-                <div class="datos-user"> 
-                    <p>Provincia:</p>
-                    <h4><%= users.province %></h4>
-                </div>
-            
-                <a class="btn-profile" href="/users/editProfile/<%= users.id %>"><button>Editar Perfil</button></a>
-                <a class="btn-profile" href="/users/logout"> <button >Salir</button></a>
-            </div>
-        </div>
-
     </main>
-
     <%- include('../partials/footer') %> 
 </body>
 </html>

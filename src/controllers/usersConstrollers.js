@@ -1,61 +1,66 @@
 const {loadUsers , storeUsers } = require ('../data/db_Module');
 const {validationResult} = require('express-validator'); 
 const {hashSync}= require('bcryptjs');
-const fs = require('fs');
-const path = require('path');
+const db = require('../database/models');
 
 module.exports = {
+    // REGISTRO
     register : (req,res) => {
         return res.render('users/register')
     },
     processRegister : (req,res) => {
         const errors = validationResult(req);
-
-        if(errors.isEmpty()){
-            const {firstName, lastName, email, password, password2, phone, direction, heigth, location, province,imgUsers } = req.body;
-            const users = loadUsers();
-    
-            const newUser = {
-                id: users[users.length - 1] ? users[users.length - 1].id + 1 : 1,
-                
-                firstName : firstName.trim(),
-                lastName : lastName.trim(),
+        const {name,surname,email,password, street, city, province, phone, height} = req.body
+         if(errors.isEmpty()){
+        db.User.create({
+                name : name.trim(),
+                surname : surname.trim(),
+                email : email,
+                password : hashSync(password, 10),
+                rolId : 2,
+                street : street.trim(),
+                city: city.trim(),
+                province: province.trim(),
                 phone: +phone,
-                email : email.trim(), 
-                password : hashSync(password.trim(),10),
-                password2 : null,
-                direction : direction.trim(),
-                heigth : +heigth,
-                location :location.trim(),
-                province : province.trim(),
-                imgUsers: req.file ? req.file.filename : 'default.jpg',
-                
-            };
-
-             
-               
-    
-            const usersModify = [...users, newUser];
-            storeUsers(usersModify);
-            return res.redirect('/users/login')
-        }else {
-            return res.render('users/register', {
-                errors : errors.mapped(),
-                old : req.body
-            })
-        }
-    
-    },
-
+                height: +height,
+                avatar: req.file ? req.file.filename : 'default.jpg',
+        })
+                .then(() => {
+                    res.redirect("/users/login");
+                })
+                .catch((errors) => console.log(errors))
+            } else {
+                res.render("users/register", {
+                errors: errors.mapped(),
+                old: req.body,
+            });
+            }
+        },
+        // LOGIN
+          
     login : (req,res) => {
         return res.render('users/login')
     }, 
     processLogin : (req, res) =>{
         let errors = validationResult(req);
+        
         if(errors.isEmpty()){
-            let {id, email, password, imgUsers, rol} = loadUsers().find(user => user.email === req.body.email);
-        req.session.login= {id, email, password, imgUsers, rol} 
-            return res.redirect('/')
+            db.User.findOne({
+                where : {
+                    email : req.body.email
+                }
+            }).then(({id, name, avatar, rolId}) => {
+                req.session.login = {
+                    id,
+                    name,
+                    avatar,
+                    rolId
+                };
+                req.body.remember && res.cookie('garrasamigas',req.session.login, {maxAge : 1000 * 60});
+                
+                return res.redirect('/index');
+
+            }).catch(error => console.log(error))
         }else {
             return res.render('users/login', {
                 errors : errors.mapped(), 
@@ -63,44 +68,80 @@ module.exports = {
             })
         }
     },
+    // PERFIL
     
     profile: (req, res) => {
-        const users = loadUsers().find((user) => user.id === req.session.login.id);
-       
-        return res.render("users/profile", {
-        title: "Garras Amigas | Mi perfil",
-        users,
-        });
+        db.User.findByPk(req.session.login.id)
+        .then((users)=>{
+            res.render("users/profile",{
+                
+                users,
+                
+            })
+        })
     },
-
+    // EDITAR PERFIL   
     editProfile: (req, res) =>{
-        let users = loadUsers().find((user) => user.id === req.session.login.id);
-        return res.render("users/editProfile", {
+        db.User.findByPk(req.params.id)
+    .then((users)=>{
+        res.render("users/editProfile",{
             users,
-         })
-    },
-
-    update: (req, res) => {
-        const  users = loadUsers();
-        
-        const { firstName, lastName, email, password, password2, phone, direction, heigth, location, province,imgUsers } = req.body;
-
-        const usersModify = loadUsers().map((user) => {
-            if (user.id === +req.params.id) {
-                return {
-                ...user,
-                ...req.body,
-                imgUsers:  imgUsers,
-                };
-            }
-            return user;
+            session:req.session,
+        })
     })
-    
-        storeUsers(usersModify);
-        return res.redirect("/users/profile");
     },
+// EDICION
+    update: (req, res) => {
+         
+    db.User.update(
+        {
+            name: req.body.name?.trim(),
+            surname: req.body.surname?.trim(),
+            email: req.body.email?.trim(),
+            phone: req.body.phone?.trim(),
+            street: req.body.street?.trim(),
+            height: req.body.height?.trim(),
+            city: req.body.city?.trim(),
+            province: req.body.province?.trim(),
+            avatar: req.file ? req.file.filename : req.session.login.avatar
+        },
+        {
+            where:
+            {
+                id: +req.params.id
+            }
+        })
+        .then((users) =>
+        {
+          req.session.login = {
+          
+            ...req.session.login,
+            // email: email.login,
+            // password: password.login,
+            // avatar: req.file ? req.file.filename : req.session.login.avatar,
+          };
+  
+        })
+        
+        res.redirect("/users/profile");
+    },
+    //     const  users = loadUsers(); 
+    //     const { name, surname, email, password, password2, phone, direction, heigth, location, province,avatar } = req.body;
+    //     const usersModify = loadUsers().map((user) => {
+    //         if (users.id === +req.params.id) {
+    //             return {
+    //             ...user,
+    //             ...req.body,
+    //             imgUsers:  imgUsers,
+    //             };
+    //         }
+    //         return user;
+    // })
+    //     storeUsers(usersModify);
+    //     return res.redirect("/users/profile");
+    // },
 
-
+    // DESLOGEARSE
 
     logout: (req, res) => {
     req.session.destroy();

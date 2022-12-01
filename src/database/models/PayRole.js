@@ -1,47 +1,23 @@
-module.exports = (sequelize, dataTypes) => {
-
-    const alias = "PayRole";
-
-    const cols = {
-        id : {
-            type : dataTypes.INTEGER.UNSIGNED,
-            primaryKey : true,
-            allowNull : false,
-            autoIncrement : true
-        },
-        name :{
-            type : dataTypes.INTEGER.UNSIGNED,
-            allowNull : true,
-        },
-        release_date :{
-            type : dataTypes.DATE,
-            allowNull : true,
-        },
-        final_pricce : {
-            type : dataTypes.INTEGER.UNSIGNED,
-            allowNull : true,
-        },
-        createdAt: {
-            type : dataTypes.DATETIME,
-            allowNull : true,
-        },
-        updateAt : {
-            type : dataTypes.DATETIME,
-            allowNull : true,
-        },
-        deleteAt : {
-            type : dataTypes.DATETIME,
-            allowNull : true,
-        },
-       
+'use strict';
+const {
+  Model
+} = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
+  class Payrole extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+      // define association here
     }
-
-    const config = {
-        tableName : 'payRoles' ,
-        timestamp : true,
-        underscored : true,
-    }
-    const PayRole = sequelize.define(alias, cols, config)
-
-    return PayRole
-}
+  }
+  Payrole.init({
+    name: DataTypes.STRING
+  }, {
+    sequelize,
+    modelName: 'Payrole',
+  });
+  return Payrole;
+};

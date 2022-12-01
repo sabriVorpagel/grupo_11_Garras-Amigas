@@ -1,0 +1,28 @@
+<%- include('../partials/head', {title:'Resultados de la búsqueda'}) %>
+<body class="general_body">
+    <%- include('../partials/header') %>
+    <main>
+        <div>
+            <div>
+                <h2 class="products-title">Resultados de la búsqueda: <strong><%= keywords %></strong></h2>
+            </div>
+            <% if (result.length > 0) { %>
+				<% result.forEach(({id,name,price,images}) => { %>
+					<div>
+                        <img src="/images/productos/<%= images %>" alt="">
+                        <div>
+                            <p><%= name %> </p>
+                            <p><%= price %> </p>
+                            <a href="/products/detail/<%= id %>">ver más</a>
+                        </div>
+                    </div> 
+				<% }) %>
+				<% }else{ %>
+					<div>
+						<h2>No hay productos que coincidan con esa búsqueda</h2>
+		    		</div>		
+			<% } %>
+        </div>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
