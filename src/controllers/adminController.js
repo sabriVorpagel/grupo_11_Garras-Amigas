@@ -33,6 +33,7 @@ module.exports ={
                 ...req.body,
                 name: name.trim(),
                 categoryId: req.body.categoryId,
+                images:  req.files ? req.files.filename : 'default.jpg'
             })
             .then(product =>{
                 console.log(product)
