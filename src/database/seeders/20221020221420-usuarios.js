@@ -7,7 +7,6 @@ const users = [
     surname: 'Amigas',
     email: 'garrasamigas@gmail.com',
     password: hashSync('123123',10),
-    birthday: null,
     rolId: 1,
     createdAt: new Date()
   },
@@ -16,7 +15,6 @@ const users = [
     surname: 'User',
     email: 'user@gmail.com',
     password: hashSync('123123',10),
-    birthday: null,
     rolId: 2,
     createdAt: new Date()
   }

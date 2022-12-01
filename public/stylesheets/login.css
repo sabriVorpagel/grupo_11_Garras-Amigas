@@ -1,4 +1,3 @@
-
 *{
     margin: 0;
     padding: 0;
@@ -24,6 +23,7 @@
     justify-content: space-between;
     overflow: hidden;
     border-radius: 10px;
+    
     
 }
 .login-info-container{
@@ -157,7 +157,7 @@
     font-size: 17px;
     color: grey;
     display: inline-block;
-    border: solid red 2px;
+   
 }
 .imputs-container p{
     margin:0;
@@ -267,7 +267,7 @@
 }
 @media (min-width:1024px){
     .main--login{
-        height: 130vh;
+        height: 107vh;
     }
     .login--container{
         height: 42.75em;

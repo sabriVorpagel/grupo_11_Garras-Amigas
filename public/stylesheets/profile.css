@@ -1,21 +1,37 @@
-.seccion-profile-user{
+.main--profile{
+    height: 200vh;
+    width: 100%;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+.profile--container{
+    height: 77.75em;
+    width: 100%;
+    margin: auto;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 10px;
+}
+/* tarjeta blanca */
+.profile-info-container{
+    width: 85%;
+    height: 190vh;
+    display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    padding-top: 3.5rem;
+    background-color: #FFFFFF;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 31px;
 }
+/* foto avatr */
 .profile-user-header{
-    width: 75%;
+    width: 90%;
     display: flex;
     justify-content: center;
-}
-.profile-user-portada{
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 8rem;
-    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
-    border-radius: 0 0 20px 20px;
+    margin-top: -40px;
 }
 .profile-user-avatar{
     display: flex;
@@ -30,173 +46,133 @@
     position: absolute;
     z-index: 1;
     overflow: hidden;
-    margin-top: 80px;
-    border: solid rgb(0, 255, 128) 3px;
+    margin-bottom: 20px;
 }
 .profile-user-avatar img{
     width: 100%;
     position: relative;
     object-position: left 40% top 50% ;
-    
 }
-.profile-user-body{
-    width: 90%;
-    margin: 60px 0;
-    border: solid rgb(0, 255, 128) 3px;
 
-}
-.profile-name{
-    display: flex;
-    width: 100%;
-    font-size: 1.75rem;
-    margin-bottom: 0.5rem;
-    color: #686464;
-    justify-content: center;
-    align-items: center;
-}
-.profile-user-bio {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 1.5rem 2rem;
-    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
-    background-color: #fff;
-    border-radius: 15px;
-    text-align: center;
-    width: 100%;
-    
-}
-.profile-user-bio{
-    margin-bottom: 1.25rem;
-}
-.seccion-profile-user {
-    padding: 0;
-}
-.lista-datos{
+/* formulario */
+.imputs-container-profile {
+    height: 165vh;
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    padding: 1.5rem 2rem;
-    box-shadow: 0 0 12px rgb(0 0 0 / 20%);
-    background-color: #fff;
-    border-radius: 15px;
-    height: 100vh;
     flex-direction: column;
-    align-content: stretch;
-    justify-content: space-between
+    justify-content: space-around;
+    align-items: center;
+    gap: 5px;
+    margin-top: 97px;
 }
-.label-profile{
-    font-size: 15px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: violet;
-    
-}
-.input-profile{
-    width: 100%;
-    height: 35px;   
-    font-size: 1em;
-}
-.input-profile{
-    padding-left: 20px;
+.input-all-profile {
     border: none;
-    border-radius: 5px;
+    border-bottom: 2px solid grey;
     box-sizing: border-box;
-    margin-bottom: 6px;
-    background: #c7667730;
+    margin-bottom: 25px;
+    background: transparent;
+    width: 80%;
+    height: 35px;   
+    font-size: 1em; 
+    outline: transparent;
+    color: var(--inputs);
 }
-.input-profile:hover{
-    border: 2px solid var(--botones);
-    cursor: pointer;
-}
-.input-profile::placeholder{
-    font-size:12px;
-}
-.seccion-profile-user .lista-datos p{
-    padding: 5px 0;
-}
-.btn-profile button{
-    border: none;
-    padding: 10px;
-    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
-    border-radius: 5px;
-    color:#fff;
+.all-btn-profile{
+    letter-spacing: 1px;
     text-transform: uppercase;
-    width: 100%;
-    display: inline-block;
-    margin-bottom: 15px;
-}
-.btn-profile button:hover{
-    background:  #fff;
-    color: #a18cd1;
-    border: solid #a18cd1 2px;
+    color: var(--inputs);
+    border-radius: 5px;
+    border: solid 2px var(--inputs);
+    background: transparent;
     cursor: pointer;
+    border-radius: 5px;
+    width: 56%;
+    height: 40px;
+    font-size: 1em;
+    text-align: center;
+    padding: 8px;
 }
+
 @media ( min-width: 768px){
-    .profile-user-body{
-        width: 70%;
-        
+    .main--profile {
+        height: 122vh;
     }
-    .profile-name{
-        font-size: 24px;
-        height: 4vh;
+
+    /* tarjeta blanca */
+    .profile--container{
+        width: 75%
     }
-    .profile-user-bio {
+    .profile-info-container{
+        height: 105.75vh;
         display: flex;
-        flex-wrap: wrap;
-        padding: 1.5rem 2rem;
-        box-shadow: 0 0 12px rgba(0, 0, 0, .2);
-        background-color: #fff;
-        border-radius: 15px;
-        text-align: center;
-        width: 100%;
-        margin-bottom: 2.25rem;
-       
-    }
-    .lista-datos{
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
         flex-direction: row;
-        align-content: space-evenly;
-        justify-content: space-around;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        justify-content: space-evenly;
+    }
+    /* formulario */
+    .from-all-profile{
+        width: 40%;
+    }
+    .imputs-container-profile{
+        height: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
         align-items: center;
-        border: solid 2px red;
-    }
-    .datos-user {
-        display: flex;
-        flex-direction: row;
         flex-wrap: wrap;
-        align-content: center;
-        justify-content: space-between;
-        align-items: flex-start;
-        width: 45%;
+        align-content: flex-start;
     }
-    .datos-user p{
-        width: 200%;
-        color: grey;
-        text-transform: uppercase;
-        font-size: 13px;
-    }
-    
-    .btn-profile button{
+    .input-all-profile {
         border: none;
-        padding: 10px;
-        background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
-        border-radius: 5px;
-        color:#fff;
-        text-transform: uppercase;
-        width: 100%;
-        
-        margin-bottom: 15px;
+        border-bottom: 2px solid grey;
+        box-sizing: border-box;
+        margin-bottom: 25px;
+        background: transparent;
+        width: 80%;
+        height: 35px;   
+        font-size: 1em; 
+        outline: transparent;
+        color: var(--inputs);
     }
-    .btn-profile button:hover{
-        background:  #fff;
-        color: #a18cd1;
-        border: solid #a18cd1 2px;
+    .input-all-profile :hover{
+        border: 2px solid var(--botones);
         cursor: pointer;
     }
-}
+    .input-all-profile ::placeholder{
+        font-size:12px;
+        color: var(--inputs);
+        
+    }
+    /* botones */
+    .all-btn-profile{
+        width: 33%;
+        height: 40px;
+        font-size: 1em;
+        text-align: center;
+        padding: 8px;
+    }
+    .all-btn-profile:hover{
+        background:  var(--inputs);
+        color: #FFFFFF;
+        border: solid #FFFFFF 2px;
+        cursor: pointer;
+    }
 
+}
+@media ( min-width: 1024px){
+    .profile-info-container{
+        height: 88.75vh;
+    }
+    .profile--container {
+        height: 72.75em;
+        width: 50%;
+    }
+    .all-btn-profile {
+        width: 35%;
+    }
+
+}
 
 
 
