@@ -1,6 +1,6 @@
 const db = require('../../database/models');
 const path = require('path');
-const {Op} = require("sequelize");
+
 
 
 
@@ -8,7 +8,6 @@ module.exports = {
     // deveulve todos los usuarios
     getUsers : async (req,res)=>{
         const {limit, order , search, offset} = req.query;
-        // let fields = ["id", "name" , "surname", "email", "password", "avatar"]; //lo que quiero traer
         
         try {
             let total = await db.User.count()  // count devuelve una cantidad
@@ -102,28 +101,5 @@ module.exports = {
     },
    
 }
-// const getApiProduct = async (req, res) => {
-//     //  return res.send('geApiProducts')
-//     try {
-//       const product = await db.Product.findByPk(req.params.id, {
-//         attributes: {
-//           exclude: ["createdAt", "updatedAt", "deletedAt"],
-//         },
-//       });
-//       res.status(200).json({
-//         meta: {
-//           ok: true,
-//           status: 200,
-//           //  count: product ,//count: Devuelve el número total de objetos de una colección de propiedades del elemento web.
-//         },
-//         data: { product },
-//       });
-//     } catch (error) {
-//       return res.status(500).json({
-//         ok: false,
-//         status: 500,
-//         msg: "comuniquese con el Administrador del sitio",
-//       });
-//     }
-//   };
+
 

@@ -95,14 +95,14 @@ module.exports = {
          
     db.User.update(
         {
-            name: req.body.name?.trim(),
-            surname: req.body.surname?.trim(),
-            email: req.body.email?.trim(),
-            phone: req.body.phone?.trim(),
-            street: req.body.street?.trim(),
-            height: req.body.height?.trim(),
-            city: req.body.city?.trim(),
-            province: req.body.province?.trim(),
+            name: req.body.name,
+            surname: req.body.surname,
+            email: req.body.email,
+            phone: req.body.phone,
+            street: req.body.street,
+            height: req.body.height,
+            city: req.body.city,
+            province: req.body.province,
             avatar: req.file ? req.file.filename : req.session.login.avatar
         },
         {
