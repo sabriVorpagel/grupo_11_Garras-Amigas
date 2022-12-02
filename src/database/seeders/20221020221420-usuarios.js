@@ -7,15 +7,13 @@ const users = [
     surname: 'Amigas',
     email: 'garrasamigas@gmail.com',
     password: hashSync('123123',10),
+    street: "",
+    province: "Buenos Aires",
+    city: "San Miguel",
+    phone: 123456789,
+    height: 290,
+    avatar:"",
     rolId: 1,
-    createdAt: new Date()
-  },
-  {
-    name: 'User',
-    surname: 'User',
-    email: 'user@gmail.com',
-    password: hashSync('123123',10),
-    rolId: 2,
     createdAt: new Date()
   }
 ]
