@@ -1,10 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const {list} = require('../../controllers/api/apiUsersController')
+const {getUsers, getOne, getAvatar} = require('../../controllers/api/apiUsersController')
 
 router
-    .get('/list', list)
-
+    .get('/list', getUsers)
+    .get('/:id', getOne)
+    .get('/image/:id', getAvatar)
+    
 
 
 

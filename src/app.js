@@ -47,12 +47,12 @@ app.use('/admi',admiRouter );
 
 // rutas apis
 
-app.use('api/users', apiUsersRoutes);
+app.use('/', apiUsersRoutes);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
-});
+// app.use(function(req, res, next) {
+//   next(createError(404));
+// });
 
 // error handler
 app.use(function(err, req, res, next) {
