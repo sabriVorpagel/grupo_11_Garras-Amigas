@@ -6,9 +6,15 @@ const  {literal} = require('sequelize');
 
 module.exports = {
     list: async (req, res) => {
+        let {limit = 4 , page = 1} = req.query; 
+
+            limit = limit > 10 ? 10 : +limit; 
+
+            let offset = +limit * (+page - 1 );
         try {
-            let {limit} = req.query; 
-            let options = {
+            
+            const {count, rows : products} = await db.Product.findAndCountAll(options);
+                let options = {
                 attributes : {
                     exclude : ['createdAt', 'updatedAt', 'delatedAt'],
                     include : [ [literal(`CONCAT('${req.protocol}://${req.get('host')}/products/',Product.id)`), 'url']]
@@ -26,15 +32,19 @@ module.exports = {
                         attributes : ['name'],
                     }
                 ],
-                limit : +limit || 4
+                limit ,
+                offset 
             }
-            const {count, rows : products} = await db.Product.findAndCountAll(options);
+
+            const existPrev = page > 0;
 
             return res.status(200).json({
                 ok: true, 
                 meta : {
                     total : count,
-                    quantity : products.length
+                    quantity : products.length,
+                    prev,
+                    next
                 },
                 data: products  
             
