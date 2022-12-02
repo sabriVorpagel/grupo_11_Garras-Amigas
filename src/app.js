@@ -15,7 +15,8 @@ const admiRouter = require('./routes/admi');
 
 // rutas apis
 
-const apiUsersRoutes = require ('./routes/api/apiUsersRoutes')
+const apiUsersRoutes = require ('./routes/api/apiUsersRoutes');
+const apiAuthRouter = require('./routes/api/apiAuth')
 
 const {localsUserCheck, coockieCheck} = require('./middlewares/usersLogin');
 
@@ -47,7 +48,8 @@ app.use('/admi',admiRouter );
 
 // rutas apis
 
-app.use('/', apiUsersRoutes);
+app.use('api/users', apiUsersRoutes);
+app.use('/api/auth', apiAuthRouter);
 
 // catch 404 and forward to error handler
 // app.use(function(req, res, next) {
