@@ -1,8 +1,6 @@
 const db = require('../../database/models');
 const path = require('path');
-const { literal} = require('sequelize');
-
-
+const {literal} = require('sequelize');
 
 
 module.exports = {
@@ -12,8 +10,7 @@ module.exports = {
         
         try {
             let {limit = 4, page = 1, order = 'ASC', offset} = req.query;
-
-			// paginación
+            // paginación
 			limit = limit > 5? 5 : +limit;
 			page = +page;
 			offset = +limit * (+page - 1);
@@ -26,10 +23,7 @@ module.exports = {
                     exclude : ['createdAt','updatedAt', 'deletedAt', 'email','password'],
                     include : [[literal(`CONCAT('${req.protocol}://${req.get('host')}/api/users/avatar/',avatar)`),'url']]
                 },
-                   
-                      
-               
-        });
+            });
 
         return res.status(200).json({
             meta: {
@@ -50,7 +44,6 @@ module.exports = {
             msg: error.message
         });
     }
-
     },
     //  deveulve solo un  usuarios
     getOne : async (req,res)=>{
@@ -60,15 +53,16 @@ module.exports = {
             //  creo el error 
             if(isNaN(id)){
                  // cuando no encuentra el id del género
-                 let error = new Error('El Id debe ser un número');
-                 error.status = 400;
+                let error = new Error('El Id debe ser un número');
+                error.status = 400;
                  // arrojo el error
                 throw error;
             }
 
             let user = await db.User.findByPk(id,{
-                attributes: {
-                    exclude: ["createdAt", "updatedAt", "deletedAt"],
+                attributes:{
+                    exclude : ['createdAt','updatedAt', 'deletedAt', 'email','password'],
+                    include : [[literal(`CONCAT('${req.protocol}://${req.get('host')}/api/users/avatar/',avatar)`),'url']]
                 },
             });
 
@@ -100,13 +94,11 @@ module.exports = {
             })
         }
     },
-   
     getAvatar : async (req,res) => {
 		return res.sendFile(
             path.join(__dirname, `../../../public/images/users/${req.params.avatar}`));
 
 	},
-   
 }
 
 
