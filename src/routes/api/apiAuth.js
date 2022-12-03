@@ -9,7 +9,7 @@ const {checkToken} = require ('../../middlewares/checkToken');
 /* api/auth */
 
 router
-    .post('/login',loginValidator,processLogin, checkToken)
+    .post('/login',loginValidator,processLogin)
     .post('/register',registerValidator,processRegister)
 
 module.exports = router;
