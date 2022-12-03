@@ -2,40 +2,33 @@
     <%- include('../partials/head', {title: 'Carrito'}) %> 
 <body>
     <%- include('../partials/header') %> 
-    <main class="cart__main">
-        <article class="cart__main__article">
-            <h2>Tu selección de productos</h2><hr>     
-            <div class="cart__main__article--img">
-                <figure>
-                    <img src="/img/kit-completo-1.jpeg" alt="">
-                </figure>
-                <span>Descripcion del producto</span>
+    <main class="">
+        <div>
+            
+            <a href="/">Volver al inicio</a>
+        </div>
+        <div>
+            <div>
+                <img src="" alt="">
             </div>
-            <form action="/" class="cart__main__article--form">
-                <span>$<input type="number" name="precio" id="precio" min="0" max="999999999" value="0"></span>
-                <p>Unidad<input type="number" name="cantidad" id="cantidad" min="1" max="999" value="1"></p>
-                <p>Total $<input type="number" name="total" id="total" min="0" max="999999999" value="0"></p>
-            </form>
-            <hr>
-            <button type="submit"><a href="/"><i class="fa-solid fa-arrow-left-long"></i> Continuar comprando</a></button>
-        </article>
-        <article class="cart__main__article--recibo">
-            <div class="cart__main__article--recibo-caja">
-                <h2>Tu recibo</h2>
-                <hr>
-                <form action="" class="cart__main__article--textarea">
-                    <label for="lista">Tu compra</label>
-                    <textarea name="lista de compras" id="lista" cols="30" rows="10" maxlength="2000"></textarea>
-                </form>
-                <hr>
-                <div class="cart__main__article--total">
-                    <h4>Total</h4>
-                    <p>$<input type="number" value="0" min="0" max="99999999"></p>
-                </div>
-                <small>Gasto de envios y descuentos calculados al momento de la compra</small>
-                <input type="submit" value="Confirmar compra">
-            </div>
-        </article>
+            <h4>Nombre</h4>
+        </div>
+        <div>
+            <button>Concluir compra</button>
+        </div>
+        <section class="">
+            <% productOfertas.forEach(({id, name, price, images, discount}) => { %>
+                <%- include('../partials/product',{
+                    id,
+                    name,
+                    price,
+                    images,
+                    discount,
+                    toThousand
+                }) %> 
+            <% }) %>
+        </section>
+    </section>
     </main>
     <%- include('../partials/footer') %> 
 </body>

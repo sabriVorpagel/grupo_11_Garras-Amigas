@@ -29,10 +29,39 @@ module.exports = {
 			.catch(error => console.log(error))
     },
     cart: (req,res) => {
-		db.Cart.findAll()
-		.then(cart =>
-			res.render('products/productCart', {cart}))
-		.catch(error => console.log(error))
+		let productOfertas = db.Product.findAll({
+			where: {
+				discount: {
+					[Op.gte]: 10,
+				},
+			},
+			limit: 4,
+			order: [["discount", "DESC"]],
+			attributes: {
+				exclude: ["createdAt", "updatedAt", "categoryId"],
+			},
+			include: [
+				{
+					association: "category",
+					attributes: ["id", "name"],
+				},
+				{
+					association: "images",
+				},
+			],
+		});
+		Promise.all([productOfertas])
+			.then(([productOfertas]) => {
+				return res.render("products/productCart", {
+					productOfertas,
+					toThousand,
+				});
+			})
+			.catch((error) => console.log(error));
+		// db.Cart.findAll()
+		// .then(cart =>
+		// 	res.render('products/productCart', {cart}))
+		// .catch(error => console.log(error))
     },
 	search : (req,res) => {
         let { keywords } = req.query;
