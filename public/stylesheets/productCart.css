@@ -12,12 +12,3 @@
     --textoSizePrecios: 18px;
     --textoSizeProducto: 16px
 }
-.home__main__section__article--div--a{
-    display: none;
-}
-.carritoImagenOferta{
-    display: none;
-}
-.carritoDatosOferta{
-    display: none;
-}

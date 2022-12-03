@@ -1,5 +1,6 @@
 const db = require('../../database/models');
 const path = require('path');
+const { literal} = require('sequelize');
 
 
 
@@ -7,25 +8,27 @@ const path = require('path');
 module.exports = {
     // deveulve todos los usuarios
     getUsers : async (req,res)=>{
-        const {limit, order , search, offset} = req.query;
+        // const {limit, order , search, offset} = req.query;
         
         try {
+            let {limit = 4, page = 1, order = 'ASC', offset} = req.query;
+
+			// paginación
+			limit = limit > 5? 5 : +limit;
+			page = +page;
+			offset = +limit * (+page - 1);
+            order = ['ASC']
+			
+
             let total = await db.User.count()  // count devuelve una cantidad
             let users = await db.User.findAll({
-                attributes:[
-                    "id",
-                    "name",
-                    "surname",
-                    "email",
-                    "phone",
-                    "street",
-                    "height",
-                    "city",
-                    "province",
-                ],
-                limit : limit ? +limit : 5,
-                offset: offset? +offset :0,   // traigo las paginas
-                order : [order? order : 'id'] // coloca por order alfabetico la lista 
+                attributes:{
+                    exclude : ['createdAt','updatedAt', 'deletedAt', 'email','password'],
+                    include : [[literal(`CONCAT('${req.protocol}://${req.get('host')}/api/users/avatar/',avatar)`),'url']]
+                },
+                   
+                      
+               
         });
 
         return res.status(200).json({
@@ -56,7 +59,11 @@ module.exports = {
         try {
             //  creo el error 
             if(isNaN(id)){
-                throw createError(400, 'El Id debe ser un número');
+                 // cuando no encuentra el id del género
+                 let error = new Error('El Id debe ser un número');
+                 error.status = 400;
+                 // arrojo el error
+                throw error;
             }
 
             let user = await db.User.findByPk(id,{
@@ -93,13 +100,14 @@ module.exports = {
             })
         }
     },
-    // devuleve imagen de perfil
-    getAvatar : async (req,res)=>{
-        res.sendFile(
-        path.join(__dirname, `../../public/images/users/${req.params.avatar}`)
-    );
-    },
+   
+    getAvatar : async (req,res) => {
+		return res.sendFile(
+            path.join(__dirname, `../../../public/images/users/${req.params.avatar}`));
+
+	},
    
 }
+
 
 

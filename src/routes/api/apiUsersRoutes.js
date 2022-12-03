@@ -5,7 +5,7 @@ const {getUsers, getOne, getAvatar} = require('../../controllers/api/apiUsersCon
 router
     .get('/list', getUsers)
     .get('/:id', getOne)
-    .get('/image/:id', getAvatar)
+    .get('/avatar/:avatar',getAvatar)
     
 
 

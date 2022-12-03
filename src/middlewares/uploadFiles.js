@@ -7,7 +7,7 @@ const storageUsers = multer.diskStorage({
     },
     
     filename : (req, file, callback)=> {
-        callback(null, `imgUsers-${Date.now()}${path.extname(file.originalname)}`)
+        callback(null, `avatar-${Date.now()}${path.extname(file.originalname)}`)
        
     },
 });
