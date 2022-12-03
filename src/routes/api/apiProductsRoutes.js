@@ -3,7 +3,7 @@ const router = express.Router();
 const {list, detail, getImage } = require('../../controllers/api/apiProductsController')
 
 router
-    .get('/products', list)
+    .get('/list', list)
     /*** GET ONE PRODUCT ***/ 
     .get('/:id', detail)
     /***GET IMAGES ***/
