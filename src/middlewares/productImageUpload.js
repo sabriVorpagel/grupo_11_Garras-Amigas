@@ -7,7 +7,7 @@ const storageProducts = multer.diskStorage({
     },
     
     filename : (req, file, callback)=> {
-        callback(null, `image-${Date.now()}${path.extname(file.originalname)}`)
+        callback(null, `images-${Date.now()}${path.extname(file.originalname)}`)
        
     },
 });

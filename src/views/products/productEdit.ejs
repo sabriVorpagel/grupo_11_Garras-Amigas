@@ -3,7 +3,7 @@
     <%- include('../partials/header') %>
     <main class="main__create">
         <div class="main__caja">
-            <form action="/products/update/<%= product.id %>?_method=PUT " method="POST" class="main__caja__formulario">
+            <form action="/products/update/<%= product.id %>?_method=PUT " method="POST" class="main__caja__formulario formEdit">
                 <div class="main__formulario__cajas">
                     <label for="name">Nombre del producto</label>
                     <input type="text" name="name" id="name" value="<%= product.name %>">
@@ -49,5 +49,6 @@
         </div>
     </main>
     <%- include('../partials/footer') %>
+    <script src="/javascripts/editValidationFront.js"></script>
 </body>
 </html>

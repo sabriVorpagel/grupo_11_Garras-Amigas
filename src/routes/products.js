@@ -18,8 +18,8 @@ router
     .get('/create',adminCheck, create)
     .post('/create',store)
     /*** EDIT ONE PRODUCT ***/ 
-    .get('/edit/:id',adminCheck,editValidator, edit)
-    .put('/update/:id',editValidator, uploadProducts.array('images'), update)
+    .get('/edit/:id', editValidator, edit)
+    .put('/update/:id', update)
     /*** DELETE ONE PRODUCT***/ 
     .delete('/delete/:id',adminCheck, destroy)
     // Buscador
