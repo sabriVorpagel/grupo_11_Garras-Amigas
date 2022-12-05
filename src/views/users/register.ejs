@@ -1,99 +1,147 @@
 <%- include('../partials/head', {title: 'Register' }) %>
 
-    <body>
-        <%- include('../partials/header') %>
-        <main class="main--reg">
-            <div class="reg--container">
-                <div class="reg-info-container">
-                    <h1 class="titulo">Registrate con</h1>
-                    <div class="social-all">
-                        <div class="social-all-element">
-                            <a href="#" class="btn-redes"><i class="fa-brands fa-facebook-f"></i> </a>
-                            <a href="#" class="btn-redes"><i class="fa-brands fa-instagram"></i> </a>
-                            <a href="#" class="btn-redes"><i class="fa-brands fa-google"></i> </a>
+  <body>
+    <%- include('../partials/header') %>
+      <main class="main--reg">
+        <div class="reg--container">
+          <div class="reg-info-container">
+            <h1 class="titulo">Registrate con</h1>
+            <div class="social-all">
+              <div class="social-all-element">
+                <a href="#" class="btn-redes"><i class="fa-brands fa-facebook-f"></i> </a>
+                <a href="#" class="btn-redes"><i class="fa-brands fa-instagram"></i> </a>
+                <a href="#" class="btn-redes"><i class="fa-brands fa-google"></i> </a>
+              </div>
+            </div>
+            <p class="subtitulo">o ingresa tus datos</p>
+            <div class="container products-wrapper">
+              <div class="row">
+                <div class="col-12">
+                  <form id="form-register" action="/users/register" method="POST" enctype="multipart/form-data">
+                    <div class="row product-detail">
+                      <div class="col-12 col-md-6">
+                        <label class="form-label"></label>
+                        <input type="text" placeholder="NOMBRE"
+                          class=" form-control py-3 <%= locals.errors && errors.name ? 'is-invalid' : null %> "
+                          value="<%= locals.old && old.name ? old.name : null %>" id="name" name="name"
+                          title="El nombre debe tener más de dos caracteres" />
+                        <small class="text-danger">
+                          <%= locals.errors && errors.name ? errors.name.msg : null %>
+                        </small>
+                        <small id="errorNombre" class="text-danger"></small>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <label class="form-label"></label>
+                        <input type="text" placeholder="APELLIDO"
+                          value="<%= locals.old && old.surname ? old.surname : null %>"
+                          class=" form-control py-3 <%= locals.errors && errors.surname ? 'is-invalid' : null %>"
+                          id="surname" name="surname" title="El apellido debe tener más de dos caracteres" />
+                        <small class="text-danger">
+                          <%= locals.errors && errors.surname ? errors.surname.msg : null %>
+                        </small>
+                        <small id="errorApellido" class="text-danger"></small>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <label class="form-label"></label>
+                        <input type="email" placeholder="EMAIL"
+                        value="<%= locals.old && old.email ? old.email : null %>"
+                          class=" form-control py-3 <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                          id="email" name="email" />
+                        <small class="text-danger">
+                          <%= locals.errors && errors.email ? errors.email.msg : null %>
+                        </small>
+                        <small id="errorEmail" class="text-danger"></small>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <label class="form-label"></label>
+                        <div class="d-flex  mb-3">
+                          <input type="password" placeholder="CONTRASEÑA"
+                            class=" py-3 form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+                            name="password" id="password" />
+                          <span class="input-group-text" style="cursor: pointer;" id="btn-show-pass"><i
+                              class="fa-solid fa-eye-slash"></i></span>
                         </div>
-                    </div>
-                    <p class="subtitulo">o ingresa tus datos</p>
-                    <form action="" method="POST" enctype="multipart/form-data" class="imputs-container-reg">
-                        <div class="from-all">
-                            <small class="small-all">
-                                <%= locals.errors && errors.name ? errors.name.msg :null %>
-                            </small>
-                            <input class="input-all" placeholder="NOMBRE" type="text" id="name" atocomplete="off"
-                                name="name" value="<%= locals.old && old.name ? old.name : null %>">
-                        </div>
-                        <div class="from-all">
-                            <small class="small-all">
-                                <%= locals.errors && errors.surname ? errors.surname.msg :null %>
-                            </small>
-                            <input class="input-all" placeholder="APELLIDO" type="text" id="surname"
-                                autocomplete="off" name="surname"
-                                value="<%= locals.old && old.surname ? old.surname : null %>">
-                        </div>
-                        <div class="from-all">
-                            <small class="small-all">
-                                <%= locals.errors && errors.email ? errors.email.msg :null %>
-                            </small>
-                            <input class="input-all" placeholder="EMAIL" type="email" id="email" name="email"
-                                value="<%= locals.old && old.email ? old.email: null %>">
-                        </div>
-                        <div class="from-all">
-                            <small class="small-all">
-                                <%= locals.errors && errors.password ? errors.password.msg :null %>
-                            </small>
-                            <input class="input-all" placeholder="CONTRASEÑA" type="password" id="password"
-                                name="password">
-                        </div>
-                        <div class="from-all">
-                            <small class="small-all">
-                                <%= locals.errors && errors.password2 ? errors.password2.msg :null %>
-                            </small>
-                            <input class="input-all" placeholder="REPETIR CONTRASEÑA" type="password" id="password2"
-                                autocomplete="off" name="password2">
-                            
-                        </div> 
-                        <div class="from-all">
-                            <small class="small-all">
-                                <%= locals.errors && errors.phone ? errors.phone.msg :null  %> 
-                            </small>
-                            <input class="input-all" type="text" placeholder="TELEFÓNO" id="pone" atocomplete="off" name="phone" value="<%= locals.old && old.phone ? old.phone : null %>">
-                        </div>
-                        <div class="from-all">
-                            <small class="small-all">
-                                <%= locals.errors && errors.street ? errors.street.msg :null  %> 
-                            </small>
-                            <input class="input-all" placeholder="DIRECCIÓN" type="text" id="street" atocomplete="off" name="street" value="<%= locals.old && old.street ? old.street : null %>">
-                        </div>
-                        <div class="from-all">
-                            <small class="small-all">
-                                <%= locals.errors && errors.height ? errors.height.msg :null  %> 
-                            </small>
-                            <input class="input-all" placeholder="ALTURA" type="number" id="height" atocomplete="off" name="height" value="<%= locals.old && old.height ? old.height : null %>">
-                        </div>
-                        <div class="from-all">
-                            <small class="small-all">
-                                <%= locals.errors && errors.city ? errors.city.msg :null %> 
-                            </small>
-                            <input class="input-all" placeholder="LOCALIDAD" type="text" id="city" atocomplete="off" name="city" value="<%= locals.old && old.city ? old.city : null %>">
-                        </div>
-                        <div class="from-all">
-                            <small class="small-all">
-                                <%= locals.errors && errors.province ? errors.province.msg :null  %> 
-                            </small>
-                            <input class="input-all" placeholder ="PROVINCIA"type="text" id="province" atocomplete="off" name="province" value="<%= locals.old && old.province ? old.province : null %>">
-                        </div>
-                        <div class="from-all">
-                            <label class="label-all" for="avatar">avatar</label>
-                            <input class="file-register"  id="avatar" type="file" name="avatar" autocomplete="off">
-                        </div>
-
-                        <button class="reg-btn" type="submit">ENVIAR!</button>
-                     </form>
-                <div>   
-
-            </section>
-        </main>
-            
-    </body>
-
-    </html>
+                        <small class="text-danger">
+                          <%= locals.errors && errors.password ? errors.password.msg : null %>
+                        </small>
+                        <small id="errorPassword" class="text-danger"></small>
+                        <ul id="msgPass" hidden>
+                          <li id="mayu">Una mayúscula</li>
+                          <li id="minu">Un minúscula</li>
+                          <li id="num">Un número</li>
+                          <li id="esp">Un caracter especial ($@$!%*?&)</li>
+                          <li id="min">Mínimo 6 caracteres</li>
+                          <li id="max">Máximo 8 caracteres</li>
+                        </ul>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <label class="form-label"></label>
+                        <input type="password" placeholder="REPETIR CONTRASEÑA"
+                          class=" form-control py-3 <%= locals.errors && errors.password2 ? 'is-invalid' : null %>"
+                          id="password2" name="password2" />
+                        <small id="errorPassword2" class="text-danger">
+                          <%= locals.errors && errors.password2 ? errors.password2.msg : null %>
+                        </small>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <label class="form-label"></label>
+                        <input type="number" placeholder="TELÉFONO"
+                          class=" form-control py-3 <%= locals.errors && errors.phone ? 'is-invalid' : null %> "
+                          value="<%= locals.old && old.phone ? old.phone : null %>" id="phone" name="phone"
+                          title="El numero teléfonico debe tener más de seis caracteres" />
+                        <small class="text-danger">
+                          <%= locals.errors && errors.phone ? errors.phone.msg :null %>
+                        </small>
+                        <small id="errorTelefono" class="text-danger"></small>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <label class="form-label"></label>
+                        <input type="text" placeholder="DIRECCIÓN"
+                          value="<%= locals.old && old.street ? old.street : null %>"
+                          class=" form-control py-3 <%= locals.errors && errors.street ? 'is-invalid' : null %>"
+                          id="street" name="street" title="La dirección debe tener más de dos caracteres" />
+                        <small class="text-danger">
+                          <%= locals.errors && errors.street ? errors.street.msg : null %>
+                        </small>
+                        <small id="errorDirección" class="text-danger"></small>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <label class="form-label"></label>
+                        <input type="number" placeholder="ALTURA"
+                          class=" form-control py-3 <%= locals.errors && errors.height ? 'is-invalid' : null %> "
+                          value="<%= locals.old && old.height ? old.height : null %>" id="height" name="height"
+                          title="La altura debe tener más de dos caracteres" />
+                        <small class="text-danger">
+                          <%= locals.errors && errors.height ? errors.phone.msg :null %>
+                        </small>
+                        <small id="errorAltura" class="text-danger"></small>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <label class="form-label"></label>
+                        <input type="text" placeholder="LOCALIDAD"
+                          value="<%= locals.old && old.location ? old.location : null %>"
+                          class=" form-control py-3 <%= locals.errors && errors.location ? 'is-invalid' : null %>"
+                          id="location" name="location" title="La localidad debe tener más de dos caracteres" />
+                        <small class="text-danger">
+                          <%= locals.errors && errors.location ? errors.location.msg : null %>
+                        </small>
+                        <small id="errorLocalidad" class="text-danger"></small>
+                      </div>
+                      <div class="col-12 col-md-6 mt-4">
+                        <label for="avatar" class="form-label">FOTO DE PERFIL</label>
+                        <input class="form-control" type="file" id="avatar" multiple>
+                      </div>
+                      <div class="d-grid gap-2 col-6 mx-auto mt-4">
+                        <button class="btn btn-primary" type="button">REGISTRATE</button>
+                      </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
