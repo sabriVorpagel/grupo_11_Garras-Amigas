@@ -52,11 +52,11 @@ module.exports = {
             // de donde viene el products de data
         
         } catch (error) {
-            let errors = sendSequelizeError(error);
+            //let errors = sendSequelizeError(error);
             
             return res.status(error.status || 500).json ({
                 ok: false,
-                errors,
+                error,
             });
         }
     },
@@ -87,11 +87,11 @@ module.exports = {
             
             })
         } catch (error) {
-            let errors = sendSequelizeError(error);
+            //let errors = sendSequelizeError(error);
             
             return res.status(error.status || 500).json ({
                 ok: false,
-                errors,
+                error,
             });
             
         }
