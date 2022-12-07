@@ -7,10 +7,12 @@
                 <div class="main__formulario__cajas">
                     <label for="name">NOMBRE DEL PRODUCTO</label>
                     <input type="text" name="name" id="name">
+                    <small class="msg_error"><%= locals.errors && errors.name ? errors.name.msg : null %></small>
                 </div>
                 <div class="main__formulario__cajas">
                     <label for="description">DESCRIPCION</label>
                     <input type="text" name="description" id="description" maxlength="1000">
+                    <small class="msg_error"><%= locals.errors && errors.description ? errors.description.msg : null %></small>
                 </div>
                 <div class="main__formulario__cajasSelectoras">
                     <select name="category" id="category" aria-label="Default select example">
@@ -19,22 +21,27 @@
                             <option value="<%= categoria.id %>" <%= locals.old && categoria.id === +old.categoryId ? 'selected' :null %> ><%= categoria.name %></option>
                         <% }) %> 
                     </select>
+                    <small class="msg_error"><%= locals.errors && errors.category ? errors.category.msg : null %></small>
                 </div>
                 <div class="main__formulario__cajaImagen">
                     <label for="images">IMAGEN DEL PRODUCTO</label>
                     <input type="file" name="images" id="images">
+                    <small class="msg_error"><%= locals.errors && errors.images ? errors.images.msg : null %></small>
                 </div>
                 <div class="main__formulario__cajaPrecio">
                     <label for="price">$</label>
                     <input type="number" name="price" id="price" value="">
+                    <small class="msg_error"><%= locals.errors && errors.price ? errors.price.msg : null %></small>
                 </div>
                 <div class="main__formulario__cajaDescuento">
                     <input type="number" name="discount" id="discount" value="">
                     <label for="discount">%</label>
+                    <small class="msg_error"><%= locals.errors && errors.discount ? errors.discount.msg : null %></small>
                 </div>
                 <div class="main__formulario__cajaPrecio">
                     <label for="stock">Stock</label>
                     <input type="number" name="stock" id="stock" value="">
+                    <small class="msg_error"><%= locals.errors && errors.stock ? errors.stock.msg : null %></small>
                 </div>
                 
                 <div class="main__formulario__botones">

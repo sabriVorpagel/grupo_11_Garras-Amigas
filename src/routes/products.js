@@ -4,6 +4,7 @@ const {edit, store, update, create, destroy } = require('../controllers/adminCon
 const { product,detail, cart, search} = require('../controllers/productsControllers');
 const adminCheck = require('../middlewares/adminUserCheck');
 const privateRoute = require('../middlewares/privateRoute');
+const createValidator = require('../validator/createValidator');
 /* /products */
 
 router
@@ -13,7 +14,7 @@ router
     /*** GET CART ***/ 
     .get('/cart',privateRoute, cart)
     /*** CREATE ONE PRODUCT ***/
-    .get('/create',adminCheck, create)
+    .get('/create',adminCheck, createValidator,create)
     .post('/create',store)
     /*** EDIT ONE PRODUCT ***/ 
     .get('/edit/:id',adminCheck, edit)
