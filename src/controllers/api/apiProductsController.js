@@ -6,18 +6,14 @@ const  {literal} = require('sequelize');
 
 module.exports = {
     list: async (req, res) => {
-        let {limit = 4 , page = 1} = req.query; 
-
-            limit = limit > 10 ? 10 : +limit; 
-
+        let {limit = 4, page = 1, order = 'ASC', sortBy = 'id', search = "", sale = 0} = req.query;
+            limit = limit > 10 ? 10 : +limit;
             let offset = +limit * (+page - 1 );
         try {
-            
-            const {count, rows : products} = await db.Product.findAndCountAll(options);
                 let options = {
                 attributes : {
                     exclude : ['createdAt', 'updatedAt', 'delatedAt'],
-                    include : [[literal(`CONCAT('${req.protocol}://${req.get('host')}/products/', Products.id)`), 'url']]
+                    include : [[literal(`CONCAT('${req.protocol}://${req.get('host')}/products/product', Product.id)`), 'url']]
                 },
                 include : [
                     {
@@ -33,30 +29,42 @@ module.exports = {
                     }
                 ],
                 limit ,
-                offset 
+                offset
             }
-
-            const existPrev = page > 0;
-
+            const {count, rows : products} = await db.Product.findAndCountAll(options);
+            // console.log({products});
+            const queryKeys = {
+                limit,
+                order,
+                sortBy,
+                search,
+                sale
+            }
+            const existPrev = page > 1;
+            const existNext = offset + limit < count;
+            let queryUrl = "";
+            for (const key in queryKeys) {
+                queryUrl += `&${key}=${queryKeys[key]}`
+            }
+            const prev =  existPrev ? `${req.protocol}://${req.get('host')}${req.baseUrl}?page=${page - 1}${queryUrl}` : null;
+            const next = existNext ? `${req.protocol}://${req.get('host')}${req.baseUrl}?page=${page + 1}${queryUrl}` : null;
             return res.status(200).json({
-                ok: true, 
+                ok: true,
                 meta : {
                     total : count,
                     quantity : products.length,
+                    page,
                     prev,
                     next
                 },
-                data: products  
-            
+                data: products
             })
             // de donde viene el products de data
-        
         } catch (error) {
             //let errors = sendSequelizeError(error);
-            
             return res.status(error.status || 500).json ({
                 ok: false,
-                error,
+                error
             });
         }
     },
