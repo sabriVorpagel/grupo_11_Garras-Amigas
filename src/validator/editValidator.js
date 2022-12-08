@@ -3,13 +3,13 @@ const db = require('../database/models');
 
 module.exports = [
     check('name')
-        .notEmpty().withMessage('El nombre es obligatorio').bail()
+        .notEmpty().withMessage('El nombre es obligatorio')
         .isLength({
             min: 5
         }).withMessage('Minimo de cinco caracteres'),
 
     check('price')
-        .notEmpty().withMessage('El precio es obligatorio').bail()
+        .notEmpty().withMessage('El precio es obligatorio')
         .isNumeric({
             no_symbols: true,
         }).withMessage('Debe ser un número entero positivo'),
@@ -19,7 +19,7 @@ module.exports = [
         .isInt({
             min: 0,
             max: 99
-        }).withMessage('Descuento entre cero y noventa y nueve').bail()
+        }).withMessage('Descuento entre cero y noventa y nueve')
         .isNumeric({
             no_symbols: true,
         }).withMessage('Debe ser un número entero positivo'),
@@ -32,11 +32,15 @@ module.exports = [
         .isNumeric({
             no_symbols: true,
         }).withMessage('Debe ser un número entero positivo'),
+
     check('category')
         .notEmpty().withMessage('La categoria es obligatoria'),
+        
+    check('images')
+        .notEmpty().withMessage('La imagen es obligatoria'),
 
     check('description')
-        .notEmpty().withMessage('La descripción es obligatoria').bail()
+        .notEmpty().withMessage('La descripción es obligatoria')
         .isLength({
             min: 20,
         }).withMessage('Minimo de veinte caracteres')

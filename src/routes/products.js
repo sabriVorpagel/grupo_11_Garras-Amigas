@@ -18,7 +18,7 @@ router
     .get('/create',adminCheck, create)
     .post('/create',store)
     /*** EDIT ONE PRODUCT ***/ 
-    .get('/edit/:id', editValidator, edit)
+    .get('/edit/:id',adminCheck, editValidator, edit)
     .put('/update/:id', update)
     /*** DELETE ONE PRODUCT***/ 
     .delete('/delete/:id',adminCheck, destroy)
