@@ -1,30 +1,37 @@
 const db = require('../../database/models');
-const {hashSyng} = require('bcryptjs');
+const {hashSync} = require('bcryptjs');
 const {validationResult} = require('express-validator');
-const {sing} = require('jsonwebtoken');
+const {sign} = require('jsonwebtoken');
 
 module.exports = {
     //Registro de usuario y devuelve token.
     processRegister: async (req,res) => {
+        console.log('processRegister');
         try{
             let errors = validationResult(req);
+            
             const {name,surname,email,password, street, city, province, phone, height} = req.body;
+            
             errors = errors.mapped();
-            if(SVGForeignObjectElement.entries(errors).length === 0){
+            
+            if(Object.entries(errors).length === 0){
+                console.log("sin errores");
                 const user = await db.User.create({
                     name : name.trim(),
                     surname : surname.trim(),
                     email : email.trim(),
                     password : hashSync(password, 10),
-                    rolId : false,
+                    rolId : 2,
                     street : street.trim(),
                     city: city.trim(),
                     province: province.trim(),
                     phone: +phone,
                     height: +height,
                     avatar: req.file ? req.file.filename : 'default.jpg',
-                })
-                const token = sing(
+                }).catch(err => console.log(err));
+
+                console.log(user);
+                const token = sign(
                     {
                         id: user.id,
                         rol: user.rol
@@ -67,7 +74,6 @@ module.exports = {
     },
 
     processLogin: async (req,res) => {
-
         const errors = validationResult(req);
         try{
             if(errors.isEmpty()){
@@ -76,7 +82,7 @@ module.exports = {
                         email:req.body.email
                     }
                 })
-                const token = sing(
+                const token = sign(
                     {
                         id: user.id,
                         rol: user.rol
@@ -98,6 +104,7 @@ module.exports = {
             }
             throw errors
         }catch(error){
+            console.log(error);
             let msgErrorsObjet1 = {};
             error.errors.forEach(err => {
                 msgErrorsObjet1 ={

@@ -86,25 +86,32 @@ module.exports ={
     },
     //proceso de borrar en base de datos
     destroy: async(req,res) =>{
-        let product = await db.Product.findByPk(req.params.id,{
-            include: [{all : true}]
-        });
-        console.log(product)
-        let imageId = product.images[0].id;
-        console.log('images=',product.images)
-        db.Image.destroy({
-            where:{
-                id: imageId
-            }
-        })
         db.Product.destroy({
-            where:{
-                id: req.params.id
-            }
-        })
-        .then(result => {
-            console.log(result)
-            return res.redirect('/index')
-        })
-    }
+			where : {
+				id : req.params.id
+			}
+		})
+			.then( () => res.redirect('/products'))
+			.catch( error => console.log(error));
+	}
+        // let product = await db.Product.findByPk(req.params.id,{
+        //     include: [{all : true}]
+        // });
+        // console.log(product)
+        // let imageId = product.images[0].id;
+        // console.log('images=',product.images)
+        // db.Image.destroy({
+        //     where:{
+        //         id: imageId
+        //     }
+        // })
+        // db.Product.destroy({
+        //     where:{
+        //         id: req.params.id
+        //     }
+        // })
+        // .then(result => {
+        //     console.log(result)
+        //     return res.redirect('/index')
+        // })}
 }
