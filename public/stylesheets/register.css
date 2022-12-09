@@ -1,86 +1,12 @@
 .main--reg{
-    height: 205vh;
-    width: 100%;
     background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
 }
-
-.reg--container{
-    height: 69.75em;
-    width: 95%;
+.title-reg{
+    color: #9089cc;
     margin: auto;
-    display: flex;
-    justify-content: space-between;
-    overflow: hidden;
-    border-radius: 10px;
-}
-/* tarjeta blanca */ 
-.reg-info-container{
-    width: 85%;
-    height: 190vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding-top: 3.5rem;
-    background-color: #ffff;
-    margin: auto;
-    border-radius: 10px;
-    margin-top: 31px;
-}
-/* botones */
-.reg-btn{
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #fff;
-    border-radius: 5px;
-    border: solid 2px #FFF;
-    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
-    cursor: pointer;
-    border-radius: 5px;
-    margin: 20px;
-    margin-top: 65px;
-    width: 47%;
-    height: 40px;
-    font-size: 1em;
-    text-align: center;
-}
-.file-register {
-    border: none;
-   
-    box-sizing: border-box;
-    margin-bottom: 25px;
-    background: transparent;
-    width: 80%;
-    height: 35px;   
-    font-size: 1em; 
-    outline: transparent;
-    color: var(--inputs);
 }
 
-@media (min-width:768px){
-    .main--reg{
-    height: 161vh;
-    }
-    reg--container {
-        height: 53.75em;
-    }
-    
-    .reg-info-container{
-        width: 65%;
-        height: 126vh;
-    }
-    .btn-redes{
-        width: 50px;
-        height: 50px;
-    }
-    .reg-btn{
-        margin-top: 8px;
-        width: 41%;
-    }
-}
-@media (min-width:1024px){
-  
-    .reg--container{
-        height: 62.75em;
-    }
+.tagger2{
+    border-radius: 20px;
+    box-shadow: 16px 18px 3px 3px #12111142;
 }
