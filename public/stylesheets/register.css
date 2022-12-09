@@ -1,55 +1,12 @@
 .main--reg{
-    height: 247vh;
-    width: 100%;
     background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
 }
+.title-reg{
+    color: #9089cc;
+    margin: auto;
+}
 
-.reg--container{
-    height: 80.75em;
-    width: 95%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    overflow: hidden;
-    border-radius: 10px;
-}
-/* tarjeta blanca */ 
-.reg-info-container{
-    width: 85%;
-    height: 219vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding-top: 3.5rem;
-    background-color: #ffff;
-    margin: auto;
-    border-radius: 10px;
-    margin-top: 31px;
-}
-@media (min-width:768px){
-    .main--reg{
-    height: 178vh;
-    }
-    .reg--container {
-        height: 55.75em;
-    }
-    
-    .reg-info-container{
-        width: 65%;
-        height: 147vh;
-    }
-    
-}
-@media (min-width:1024px){
-    .main--reg {
-        height: 146vh;
-    }
-    .reg--container{
-        height: 60.75em;
-    }
-    .reg-info-container{
-        width: 65%;
-        height: 123vh;
-    }
+.tagger2{
+    border-radius: 20px;
+    box-shadow: 16px 18px 3px 3px #12111142;
 }

@@ -1,7 +1,8 @@
-<%- include('../partials/head', {title: 'Editar perfil'}) %> 
-<body>
-    <%- include('../partials/header') %> 
-    <main class="main--editpro">
+<%- include('../partials/head', {title: 'Editar perfil' }) %>
+
+    <body>
+        <%- include('../partials/header') %>
+            <!-- <main class="main--editpro">
         <div class="editpro--container">
             <div class="editpro-info-container">
                 <h1 class="titulo">Editar Perfil</h1>
@@ -57,7 +58,7 @@
                 </form>
             </div>
         </div>
-        <%- include('../partials/footer') %> 
+        
      </main>
     <script>
         let preview = (event) => {
@@ -71,6 +72,83 @@
             new_img.readAsDataURL(event.target.files[0]);
         };
     </script>
+     -->
+
+            <main class="main--reg">
+                <div class="container">
+                    <div class="row  pt-5 pb-5 ">
+                        <div class="col-12 p-5 border-2 bg-white tagger2">
+                            <form id="form-register" action="/users/update/<%= users.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                                <div class="row-8 profile-user-header">
+                                    <div class="profile-user-avatar">
+                                        <img class="img-fluid" src="/images/users/<%=users.avatar%>" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label" for="name">Nombre</label>
+                                        <input class="form-control" type="text" id="name" name="name"
+                                            value="<%= users.name %>">
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label" for="surname">Apellido</label>
+                                        <input class="form-control" type="text" id="surname" name="surname"
+                                            value="<%= users.surname %>">
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label" for="email">Email</label>
+                                        <input class="form-control" type="email" id="email" name="email"
+                                            value="<%= users.email %>">
+                                    </div>
+
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label" for="phone">Teléfono</label>
+                                        <input class="form-control" type="number" id="phone" name="phone"
+                                            value="<%= users.phone %>">
+
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label" for="street">Dirección</label>
+                                        <input class="form-control" type="text" id="street" name="street"
+                                            value="<%= users.street %>">
+
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label" for="height">Altura</label>
+                                        <input class="form-control" type="number" id="height" name="height"
+                                            value="<%= users.height %>">
+
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label" for="province">Provincia</label>
+                                        <input class="form-control" type="text" id="province" name="province"
+                                            value="<%= users.province %>">
+
+
+                                    </div>
+                                    
+
+                                    <div class="d-grid gap-2 col-6 mx-auto mt-4">
+                                        <button class="btn btn-outline-secondary" type="submit">Guardar Cambios</button>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+            </main>
+    </body>
+
+      <!-- ----------Inicio de footer----------- -->
+      <%- include('../partials/footer') %>
+      <!-- ----------Fin de footer----------- -->
+
     
-</body>
-</html>
+        </body>
+
+        </html>

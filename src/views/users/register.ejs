@@ -1,24 +1,31 @@
+<html lang="es">
 <%- include('../partials/head', {title: 'Register' }) %>
 
   <body>
+    <!-- ----------Inicio de header----------- -->
     <%- include('../partials/header') %>
+    <!-- ----------Fin de header----------- -->
+
+    <!-- ----------Inicio de main----------- -->
+    
       <main class="main--reg">
-        <div class="reg--container">
-          <div class="reg-info-container">
-            <h1 class="titulo">Registrate con</h1>
-            <div class="social-all">
-              <div class="social-all-element">
+        <div class="container">
+          <div class="row  pt-5 pb-5 ">
+            <div class="col-12 p-5 border-2 bg-white tagger2">
+            <h1 class="text-center title-reg">Registrate con</h1>
+            <div class="social-all text-center">
+              <div class="social-all-element text-center">
                 <a href="#" class="btn-redes"><i class="fa-brands fa-facebook-f"></i> </a>
                 <a href="#" class="btn-redes"><i class="fa-brands fa-instagram"></i> </a>
                 <a href="#" class="btn-redes"><i class="fa-brands fa-google"></i> </a>
               </div>
             </div>
-            <p class="subtitulo">o ingresa tus datos</p>
-            <div class="container products-wrapper">
+            <h5 class="text-center title-reg">o ingresa tus datos</h5>
+            <div class="container">
               <div class="row">
                 <div class="col-12">
-                  <form id="form-register" action="/users/register" method="POST" enctype="multipart/form-data">
-                    <div class="row product-detail">
+                  <form id="form-register" action="" method="POST" enctype="multipart/form-data">
+                    <div class="row">
                       <div class="col-12 col-md-6">
                         <label class="form-label"></label>
                         <input type="text" placeholder="NOMBRE"
@@ -132,8 +139,9 @@
                         <input class="form-control" type="file" id="avatar" multiple>
                       </div>
                       <div class="d-grid gap-2 col-6 mx-auto mt-4">
-                        <button class="btn btn-primary" type="button">REGISTRATE</button>
+                        <button class="btn btn-outline-secondary" type="submit">REGISTRATE</button>
                       </div>
+                    </div>
                   </div>
                 </div>
               </form>
@@ -143,5 +151,12 @@
       </div>
     </div>
   </div>
+  
 </main>
+ <!-- ----------Fin de header----------- -->
+  <!-- ----------Inicio de footer----------- -->
+    <%- include('../partials/footer') %>
+  <!-- ----------Fin de footer----------- -->
+<script src="/js/users/register.js"></script>
 </body>
+</html>

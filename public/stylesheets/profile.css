@@ -1,32 +1,23 @@
 .main--profile{
-    height: 200vh;
-    width: 100%;
     background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
 }
-.profile--container{
-    height: 77.75em;
+.card-profile{
+    margin: auto;
+}
+.text-profile{
+    font-size: 15px;
+    text-transform: uppercase;
+    
     width: 100%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    overflow: hidden;
-    border-radius: 10px;
+    padding: 0 15px;
 }
-/* tarjeta blanca */
-.profile-info-container{
-    width: 85%;
-    height: 190vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding-top: 3.5rem;
-    background-color: #FFFFFF;
-    margin: auto;
-    border-radius: 10px;
-    margin-top: 31px;
+.btn-profile{
+    width: 100%;
 }
-/* foto avatr */
+.col-8{
+    margin: auto;
+}
+/* foto avatar */
 .profile-user-header{
     width: 90%;
     display: flex;
@@ -34,153 +25,17 @@
     margin-top: -40px;
 }
 .profile-user-avatar{
-    display: flex;
-    width: 100px;
-    height: 100px;
-    align-items: center;
-    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
     border: 4px solid #FFFFFF;
     background-color: #DFE5F2;
-    border-radius: 50%;
     box-shadow: 0 0 12px #000;
-    position: absolute;
-    z-index: 1;
-    overflow: hidden;
-    margin-bottom: 20px;
 }
 .profile-user-avatar img{
     width: 100%;
     position: relative;
     object-position: left 40% top 50% ;
+    border-radius: 50%;
 }
-
-/* formulario */
-.imputs-container-profile {
-    height: 165vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    gap: 5px;
-    margin-top: 97px;
-}
-.input-all-profile {
-    border: none;
-    border-bottom: 2px solid grey;
-    box-sizing: border-box;
-    margin-bottom: 25px;
-    background: transparent;
-    width: 80%;
-    height: 35px;   
-    font-size: 1em; 
-    outline: transparent;
-    color: var(--inputs);
-}
-.all-btn-profile{
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--inputs);
-    border-radius: 5px;
-    border: solid 2px var(--inputs);
-    background: transparent;
-    cursor: pointer;
-    border-radius: 5px;
-    width: 56%;
-    height: 40px;
-    font-size: 1em;
-    text-align: center;
-    padding: 8px;
-}
-
-@media ( min-width: 768px){
-    .main--profile {
-        height: 122vh;
-    }
-
-    /* tarjeta blanca */
-    .profile--container{
-        width: 75%
-    }
-    .profile-info-container{
-        height: 105.75vh;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-content: flex-start;
-        justify-content: space-evenly;
-    }
-    /* formulario */
-    .from-all-profile{
-        width: 40%;
-    }
-    .imputs-container-profile{
-        height: 80%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-wrap: wrap;
-        align-content: flex-start;
-    }
-    .input-all-profile {
-        border: none;
-        border-bottom: 2px solid grey;
-        box-sizing: border-box;
-        margin-bottom: 25px;
-        background: transparent;
-        width: 80%;
-        height: 35px;   
-        font-size: 1em; 
-        outline: transparent;
-        color: var(--inputs);
-    }
-    .input-all-profile :hover{
-        border: 2px solid var(--botones);
-        cursor: pointer;
-    }
-    .input-all-profile ::placeholder{
-        font-size:12px;
-        color: var(--inputs);
-        
-    }
-    /* botones */
-    .all-btn-profile{
-        width: 33%;
-        height: 40px;
-        font-size: 1em;
-        text-align: center;
-        padding: 8px;
-    }
-    .all-btn-profile:hover{
-        background:  var(--inputs);
-        color: #FFFFFF;
-        border: solid #FFFFFF 2px;
-        cursor: pointer;
-    }
-
-}
-@media ( min-width: 1024px){
-    .profile-info-container{
-        height: 88.75vh;
-    }
-    .profile--container {
-        height: 72.75em;
-        width: 50%;
-    }
-    .all-btn-profile {
-        width: 35%;
-    }
-
-}
-
-
-
-
-
-
-
-
-
-
 

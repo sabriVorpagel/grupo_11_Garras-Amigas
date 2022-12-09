@@ -120,21 +120,24 @@ a{
 }
 /* botones */
 .all-btn{
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #fff;
+    border: solid 3px rgb(126, 191, 252);
+    background:transparent;
     border-radius: 5px;
-    border: solid 2px #FFF;
-    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
-    cursor: pointer;
-    border-radius: 5px;
-    margin: 20px;
-    margin-top: 65px;
-    width: 47%;
+    padding: 10px;
+    width: 80%;
     height: 40px;
-    font-size: 1em;
     text-align: center;
+    margin: auto;
 }
+.all-btn a{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: rgb(126, 191, 252);
+
+}
+
 /* botones de redes sociales */
 
 .social-all{
