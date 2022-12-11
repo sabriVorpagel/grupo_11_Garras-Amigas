@@ -19,7 +19,7 @@ router
     .post('/create',store)
     /*** EDIT ONE PRODUCT ***/ 
     .get('/edit/:id',adminCheck, editValidator, edit)
-    .put('/update/:id', update)
+    .put('/update/:id',editValidator, update)
     /*** DELETE ONE PRODUCT***/ 
     .delete('/delete/:id',adminCheck, destroy)
     // Buscador
