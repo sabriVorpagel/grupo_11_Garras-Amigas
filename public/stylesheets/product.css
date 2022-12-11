@@ -79,7 +79,7 @@
     font-weight: 600;
     font-family: 'roboto';
 }
-.home__main__section__article--div a :hover{
+.home__main__section__article--div--a:hover{
     background-color: #FFC18E;
     color: #666666 ;
     transition:
@@ -90,13 +90,7 @@
     font-size: var(--textoSizeCuerpo);
     color:#666666;
 }
-.home__main__section__article--div i :hover{
-    background-color: #FFC18E;
-    color: #666666 ;
-    transition:
-        background-color, 0.5s,
-        color, 0.5;
-}
+
 
 /*TABLET*/
 @media (min-width:768px){

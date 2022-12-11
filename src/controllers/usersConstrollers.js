@@ -11,7 +11,7 @@ module.exports = {
     processRegister : (req,res) => {
         const errors = validationResult(req);
         const {name,surname,email,password, street, city, province, phone, height} = req.body
-         if(errors.isEmpty()){
+        if(errors.isEmpty()){
         db.User.create({
                 name : name.trim(),
                 surname : surname.trim(),
@@ -37,7 +37,6 @@ module.exports = {
             }
         },
         // LOGIN
-          
     login : (req,res) => {
         return res.render('users/login')
     }, 
@@ -92,7 +91,6 @@ module.exports = {
     },
 // EDICION
     update: (req, res) => {
-         
     db.User.update(
         {
             name: req.body.name,
@@ -113,14 +111,12 @@ module.exports = {
         })
         .then((users) =>
         {
-          req.session.login = {
-          
+        req.session.login = {
             ...req.session.login,
             // email: email.login,
             // password: password.login,
             // avatar: req.file ? req.file.filename : req.session.login.avatar,
-          };
-  
+        };
         })
         
         res.redirect("/users/profile");

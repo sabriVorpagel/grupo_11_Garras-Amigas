@@ -6,6 +6,7 @@ const adminCheck = require('../middlewares/adminUserCheck');
 const privateRoute = require('../middlewares/privateRoute');
 const editValidator = require('../validator/editValidator');
 const {uploadProducts} = require('../middlewares/productImageUpload')
+const createValidator = require('../validator/createValidator');
 /* /products */
 
 router
@@ -15,8 +16,8 @@ router
     /*** GET CART ***/ 
     .get('/cart',privateRoute, cart)
     /*** CREATE ONE PRODUCT ***/
-    .get('/create',adminCheck, create)
-    .post('/create',store)
+    .get('/create',adminCheck, createValidator,create)
+    .post('/create', createValidator,store)
     /*** EDIT ONE PRODUCT ***/ 
     .get('/edit/:id',adminCheck, editValidator, edit)
     .put('/update/:id',editValidator, update)
