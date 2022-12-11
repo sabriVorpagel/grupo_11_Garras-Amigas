@@ -15,7 +15,7 @@ router
     .get('/cart',privateRoute, cart)
     /*** CREATE ONE PRODUCT ***/
     .get('/create',adminCheck, createValidator,create)
-    .post('/create',store)
+    .post('/create', createValidator,store)
     /*** EDIT ONE PRODUCT ***/ 
     .get('/edit/:id',adminCheck, edit)
     .put('/update/:id', update)

@@ -8,7 +8,7 @@ module.exports =[
             min: 5
         }).withMessage('Minimo de cinco caracteres'),
     
-        check('decription')
+        check('description')
         .notEmpty().withMessage('La decripcion es obligatorio')
         .isLength({
             min: 20
@@ -30,7 +30,7 @@ module.exports =[
     }).withMessage('Debe ser un número entero positivo'),
     
     check('stock')
-    .isInt({
+    .notEmpty().isInt({
         min: 1,
     }).withMessage('Debe ser mayor o igual a uno')
     .isNumeric({

@@ -3,16 +3,18 @@
     <%- include('../partials/header') %>
     <main class="main__create">
         <div class="main__caja">
-            <form action="/products/create" method="POST" class="main__caja__formulario">
-                <div class="main__formulario__cajas">
+            <form id="form-create" action="/products/create" method="POST" class="main__caja__formulario">
+                <div class="main__formulario__cajas <%= locals.errors && errors.name ? 'is-invalid' : null %> ">
                     <label for="name">NOMBRE DEL PRODUCTO</label>
                     <input type="text" name="name" id="name">
                     <small class="msg_error"><%= locals.errors && errors.name ? errors.name.msg : null %></small>
+                    <small id="errorNombre" class="msg_error"></small>
                 </div>
                 <div class="main__formulario__cajas">
                     <label for="description">DESCRIPCION</label>
                     <input type="text" name="description" id="description" maxlength="1000">
                     <small class="msg_error"><%= locals.errors && errors.description ? errors.description.msg : null %></small>
+                    <small id="errorDescripcion" class="msg_error" ></small>
                 </div>
                 <div class="main__formulario__cajasSelectoras">
                     <select name="category" id="category" aria-label="Default select example">
@@ -22,35 +24,42 @@
                         <% }) %> 
                     </select>
                     <small class="msg_error"><%= locals.errors && errors.category ? errors.category.msg : null %></small>
+                    <small id="errorCategory" class="msg_error" ></small>
                 </div>
                 <div class="main__formulario__cajaImagen">
                     <label for="images">IMAGEN DEL PRODUCTO</label>
                     <input type="file" name="images" id="images">
                     <small class="msg_error"><%= locals.errors && errors.images ? errors.images.msg : null %></small>
+                    <small id="errorImages" class="msg_error" ></small>
                 </div>
                 <div class="main__formulario__cajaPrecio">
                     <label for="price">$</label>
                     <input type="number" name="price" id="price" value="">
                     <small class="msg_error"><%= locals.errors && errors.price ? errors.price.msg : null %></small>
+                    <small id="errorPrice" class="msg_error" ></small>
                 </div>
                 <div class="main__formulario__cajaDescuento">
                     <input type="number" name="discount" id="discount" value="">
                     <label for="discount">%</label>
                     <small class="msg_error"><%= locals.errors && errors.discount ? errors.discount.msg : null %></small>
+                    <small id="errorDiscount" class="msg_error" ></small>
                 </div>
                 <div class="main__formulario__cajaPrecio">
                     <label for="stock">Stock</label>
                     <input type="number" name="stock" id="stock" value="">
                     <small class="msg_error"><%= locals.errors && errors.stock ? errors.stock.msg : null %></small>
+                    <small id="errorStock" class="msg_error" ></small>
                 </div>
                 
                 <div class="main__formulario__botones">
                     <input type="submit" class="submit" value="Guardar Cambios">
+                    <span id="advertencia" class="text-danger"></span>
                     <input type="reset" class="reset" value="Cancelar Cambios">  
                 </div>
             </form>
         </div>
     </main>
     <%- include('../partials/footer') %>
+    <script src="/javascripts/creatValidator.js"></script>
 </body>
 </html>
