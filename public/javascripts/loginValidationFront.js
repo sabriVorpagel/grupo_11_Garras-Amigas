@@ -4,10 +4,7 @@ console.log("loginValidationFront.js connected!");
 const $ = (element) => document.getElementById(element);
 
 
-// anula el envio de form hasta validarlo
-$("form-register").addEventListener("submit", function (e) {
-  e.preventDefault();
-});
+
 
 
 // expresiones regulares

@@ -5,9 +5,9 @@ const $ = (element) => document.getElementById(element);
 
 
 // anula el envio de form hasta validarlo
-$("form-register").addEventListener("submit", function (e) {
-  e.preventDefault();
-});
+// $("form-register").addEventListener("submit", function (e) {
+//   e.preventDefault();
+// });
 
 
 // expresiones regulares
@@ -33,15 +33,10 @@ const msgError = (element, msg, target) => {
 
 
 //  funcion para remover las clases invalidas
-const cleanField = (element, target) => {
+const validField = (element, target) => {
   $(element).innerText = null;
-  target.classList.remove('is-invalid', 'is-valid')
-};
-
-const validField = (element,{target}) => {
-  cleanField(element, target)
-  target.classList.add('is-valid');
-  
+  target.classList.remove("is-invalid");
+  target.classList.add("is-valid");
 };
 
 // **************
@@ -90,7 +85,7 @@ $("name").addEventListener("blur", function ({ target }) {
       msgError("errorName", "El nombre debe tener solo letras", target);
       break;
     default:
-      validField("errorSurname", target);
+      validField("errorName", target);
 
       break;
       } 
@@ -179,7 +174,7 @@ $("password2").addEventListener("blur", function ({ target }) {
         );
         break;
       default:
-        validField("errorPass2", target);
+        validField("errorPassword2", target);
         break;
     }
   });
@@ -203,6 +198,17 @@ $("password2").addEventListener("blur", function ({ target }) {
         break;
     }
   });
+  $('avatar').addEventListener('blur', function ({target}) {
+    switch (true) {
+        case !this.value.trim():
+            error('errorAatar', 'La imagen es obligatoria', target)
+        break;
+    
+        default:
+            $('errorAatar').innerText= null;
+            break;
+    }
+});
   
   $("city").addEventListener("blur", function ({ target }) {
     switch (true) {
@@ -286,98 +292,26 @@ $("password2").addEventListener("blur", function ({ target }) {
         $("avatar").src = reader.result
     }
   
-  
-  
-  
-  
-  })
-
-  // $("form-register").addEventListener("submit", function (e) {
-
-  //   e.preventDefault();
-  //   let error = false;
-  //   const elements = this.elements;
-  //   for (let i = 0; i < elements.length - 2; i++) {
-        
-  //       if(!elements[i].value.trim() || elements[i].classList.contains('is-invalid')){
-  //           elements[i].classList.add('is-invalid')
-  //          $('msgError').innerText = 'Hay campos con errores o están vacíos';
-  //          error = true;
-  //       }
-  //   }
-
+})
 
   
-  
-  // !error && this.submit()
+$("form-register").addEventListener("submit", function (e) {
 
-  //  Swal.fire({
-  //       position: "center",
-  //       icon: "info",
-  //       title: "Recibirás un email para confirmar tu registración",
-  //       showConfirmButton: true,
-  //       allowOutsideClick: false,
-  //       allowEscapeKey: false,
-  //   }).then((result) => {
-  //       if (result.isConfirmed) {
-  //           this.submit();
-  //       }
-  //   });
-  // })
-
-
-//   $('form-register').addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     let error = false;
-//     const elements = $('form-register').elements;
-
-    
-
-
-//   /*   Array.from(elements).forEach(element => {
-//     }) */
-
-//     for (let i = 0; i < elements.length - 2; i++) {
-        
-//         if(!elements[i].value || elements[i].classList.contains('is-invalid')){
-//             error = true;
-//             elements[i].classList.add('is-invalid')
-//             $('msgError').hidden = false;
-//             setTimeout(() => {
-//                 $('msgError').hidden = true;
-
-//             }, 3000);
-//         }
-        
-//     }
-
-//     !error &&  $('form-register').submit()
-// })
-
-
-$('form-register').addEventListener('submit', function (e) {
   e.preventDefault();
   let error = false;
-  let elements = this.elements;
+  const elements = this.elements;
+    for (let i = 0; i < elements.length - 2; i++) {
+        
+        if(!elements[i].value.trim() || elements[i].classList.contains('is-invalid')){
+            elements[i].classList.add('is-invalid')
+           $('msgError').innerText = "Todos los campos son obligatorios";
+           error = true;
+        }
+    }
+  !error && this.submit()
 
-  for (let i = 0; i < elements.length - 2; i++) {
-      if(!elements[i].value){
-          elements[i].classList.add('is-invalid');
-          $('msgError').innerHTML = "Todos los campos son obligatorios";
-          error = true
-      }
-  }
+});
 
-  for (let i = 0; i < elements.length - 2; i++) {
-     
-      if(elements[i].classList.contains('is-invalid')){
-          error = true
-      }
-  }
-  if(!error){
-    $('msgError').innerHTML = null
-}
-})
 
 
 
