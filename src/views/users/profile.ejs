@@ -11,78 +11,47 @@
                   <img class="img-fluid" src="/images/users/<%=users.avatar%>" />
                 </div>
               </div>
-              <!-- <div class="row-8">
-                <div class="card-body">
-                  <p class="form-input">
-                    <%= users.name %>
-                  </p>
-                  <p class="form-input">
-                    <%= users.surname %>
-                  </p>
-                  <p class="form-input">
-                    <%= users.email %>
-                  </p>
-                  <p class="form-input">
-                    <%= users.street %>
-                  </p>
-                  <p class="form-input">
-                    <%= users.height %>
-                  </p>
-                  <p class="form-input">
-                    <%= users.location%>
-                  </p>
-                  <p class="form-input">
-                    <%= users.phone %>
-                  </p>
-                </div>
-              </div> -->
-
-
-
-             
-<div class="input-group mb-3">
-  <span class="input-group-text" id="inputGroup-sizing-default">Nombre</span>
-  <input type="text" class="form-control"
-  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" 
-  value=" <%= users.name %>">
-</div>
-<div class="input-group mb-3">
-  <span class="input-group-text" id="inputGroup-sizing-default">Apellido</span>
-  <input type="text" class="form-control"
-  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" 
-  value=" <%= users.surname %>">
-</div>
-<div class="input-group mb-3">
-  <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
-  <input type="email" class="form-control"
-  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" 
-  value=" <%= users.email %>">
-</div>
-<div class="input-group mb-3">
-  <span class="input-group-text" id="inputGroup-sizing-default">Teléfono</span>
-  <input type="number" class="form-control"
-  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" 
-  value=" <%= users.phone %>">
-</div>
-<div class="input-group mb-3">
-  <span class="input-group-text" id="inputGroup-sizing-default">Direccón</span>
-  <input type="text" class="form-control"
-  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" 
-  value=" <%= users.street %>">
-</div>
-<div class="input-group mb-3">
-  <span class="input-group-text" id="inputGroup-sizing-default">Altura</span>
-  <input type="number" class="form-control"
-  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" 
-  value=" <%= users.height %>">
-</div>
-<div class="input-group mb-3">
-  <span class="input-group-text" id="inputGroup-sizing-default">Localidad</span>
-  <input type="text" class="form-control"
-  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" 
-  value=" <%= users.location %>">
-</div>
-<div class="col-8">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Nombre</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default" value=" <%= users.name %>">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Apellido</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default" value=" <%= users.surname %>">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
+                <input type="email" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default" value=" <%= users.email %>">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Teléfono</span>
+                <input type="number" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default" value=" <%= users.phone %>">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Direccón</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default" value=" <%= users.street %>">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Altura</span>
+                <input type="number" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default" value=" <%= users.height %>">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Localidad</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default" value=" <%= users.city %>">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Provincia</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default" value=" <%= users.province %>">
+              </div>
+              <div class="col-8">
                 <a href="/users/editProfile/<%= users.id %>">
                   <button type="submit" class="mt-4 btn-profile btn btn-outline-secondary">Editar Perfil</button>
                 </a>
@@ -93,7 +62,7 @@
             </div>
           </div>
       </main>
-      <%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>
   </body>
 
   </html>

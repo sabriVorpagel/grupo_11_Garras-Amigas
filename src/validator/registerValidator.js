@@ -3,13 +3,19 @@ const db = require('../database/models');
 module.exports = [
     check('name')
         .notEmpty()
-        .withMessage('El nombre es obligatorio'),
+        // .isLength({
+        //     min: 2
+        // }).withMessage('Minimo de dos caracteres (BE)')
+        .withMessage('El nombre es obligatorio(BE)'),
     check('surname')
         .notEmpty()
-        .withMessage('El apellido es obligatorio'),
+        // .isLength({
+        //     min: 2
+        // }).withMessage('Minimo de dos caracteres (BE)')
+        .withMessage('El apellido es obligatorio (BE)'),
     body('email')
-        .notEmpty().withMessage('El email es obligatorio').bail()
-        .isEmail().withMessage('Debe ser un email válido')
+        .notEmpty().withMessage('El email es obligatorio (BE)').bail()
+        .isEmail().withMessage('Debe ser un email válido (BE)')
         .custom( (value,{req}) => {
           return db.User.findOne({
             where : {
@@ -19,19 +25,37 @@ module.exports = [
                 if(user) {
                     return Promise.reject()
                 }
-          }).catch( () => Promise.reject('El email ya se encuentra registrado'))
+          }).catch( () => Promise.reject('El email ya se encuentra registrado (BE)'))
         })
         ,
     check('password')
         .notEmpty()
-        .withMessage('La contraseña es obligatoria'),
+        .withMessage('La contraseña es obligatoria (BE)'),
     body('password2')
         .notEmpty()
-        .withMessage('Reingresá tu contraseña').bail()
+        .withMessage('Reingresá tu contraseña (BE)').bail()
         .custom( (value, {req}) => {
             return req.body.password !== value ? false : true
-        }).withMessage('Las contraseñas no coinciden'),
-    // check('terms')
-    //     .isString('on')
-    //     .withMessage('Debes aceptar las bases y condiciones'),
+        }).withMessage('Las contraseñas no coinciden (BE)'),
+    check('street')
+        .notEmpty()
+        .withMessage('El domicilio es obligatorio (BE)'),
+    check('province')
+        .notEmpty()
+        .withMessage('La provincia es obligatoria (BE)'),
+    check('city')
+        .notEmpty()
+        .withMessage('La localidad es obligatoria (BE)'),
+    check('phone')
+        .notEmpty()
+        .withMessage('El número teléfonico es obligatorio (BE)')
+        .isNumeric({
+            no_symbols: true,
+        }).withMessage('Debe ser un número entero positivo (BE)'),
+    check('height')
+        .notEmpty()
+        .withMessage('La altura es obligatoria (BE)')
+        .isNumeric({
+            no_symbols: true,
+        }).withMessage('Debe ser un número entero positivo (BE)'),
     ]

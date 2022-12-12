@@ -13,7 +13,7 @@
                     </div>
                 </div>
                 <p>o ingresa tus datos</p>
-                <form action="/users/login" method="POST">
+                <form  action="/users/login" method="POST" id="form-register">
                     <div class="mb-3">
                         <input placeholder="EMAIL" type="email" class="form-control" aria-describedby="emailHelp" name="email"  value="<%= locals.old && old.email ? old.email: null %>"/>
                         <small><%= locals.errors && errors.email ? errors.email.msg :null %></small>
@@ -27,13 +27,14 @@
                         <input  class="check"  type="checkbox" name="remember" id="recordame"/>
                         <label class="recordame" for="checkbox">Recordarme</label>
                     </div>
-                    <button class="login-btn"type="submit">INGRESA!</button>
+                    <button id="boton"  class="login-btn"type="submit">INGRESA!</button>
                     <p>¿Aún no tenes una cuenta?</p><a  class="span" href="/users/register">Registrate </a>
                 </form>
             </div>
             <img class="iamge-container" src="/images/faf.png" alt="">
         </div>
     </main>
+    <script src="/javascripts/loginValidationFront.js"></script>
 </body>
 
 
@@ -42,32 +43,6 @@
 
 
 
-<!-- <main class="main--login">
-        <div class="login--container">
-            <div class="login-info-container">
-                <h1>Logueate con</h1>
-                <div class="social-login">
-                    <div class="social-login-element">
-                        <a href="#" class="btn-redes"><i class="fa-brands fa-facebook-f"></i> </a>
-                        <a href="#" class="btn-redes"><i class="fa-brands fa-instagram"></i> </a>
-                        <a href="#" class="btn-redes"><i class="fa-brands fa-google"></i> </a>
-                    </div>
-                </div>
-                <p>o ingresa tus datos</p>
-                <form action="/users/login" class="imputs-container" method="POST">
-                    <input type="email" class="input" placeholder="EMAIL" name="email"  value="<%= locals.old && old.email ? old.email: null %>"/>
-                    <small><%= locals.errors && errors.email ? errors.email.msg :null %></small>
-                    <input type="password" id="password" class="input" placeholder="CONTRASEÑA" name="password" />
-                    <small><%= locals.errors && errors.password ? errors.password.msg :null %></small>
-                    <a href="#" class="span" >¿Olvidaste tu contraseña?</a>
-                    <label class="recordame" for="checkbox">Recordarme</label>
-                    <input  class="check"  type="checkbox" name="remember" id="recordame"/>
-                    <button class="login-btn"type="submit">INGRESA!</button>
-                    <p>¿Aún no tenes una cuenta?</p><a  class="span" href="/users/register">Registrate </a>
-                </form>          
-            </div>
-            <img class="iamge-container" src="/images/faf.png" alt="">
-        </div>
-    </main> -->
+
 
 

@@ -2,153 +2,84 @@
 
     <body>
         <%- include('../partials/header') %>
-            <!-- <main class="main--editpro">
-        <div class="editpro--container">
-            <div class="editpro-info-container">
-                <h1 class="titulo">Editar Perfil</h1>
-                
-                <form class="imputs-container-profile"" action="/users/update/<%= users.id %>?_method=PUT"  method="post" >
-                    <div class="editpro-user-header">
-                        <div class="editpro-user-avatar">
-                            <img src="/images/users/<%=users.avatar%>" id="avatar" alt="avatar" id="avatar"/>
-                            
-                             <input type="file" name="avatar" id="avatar" onchange="preview(event)" />
-                        </div>
-                        <label class="label_photo-edit" for="avatar"> <i class="fa-solid fa-camera"></i></label>
-                    </div>            
-                    <div class="from-all">
-                        <label class="label-all for="name" >Nombre</label>
-                        <input class="input-all" type="text" id="name" name="name" value="<%= users.name %>">
+        <main class="main--reg">
+            <div class="container">
+                <div class="row  pt-5 pb-5 ">
+                    <div class="col-12 p-5 border-2 bg-white tagger2">
+                        <form id="form-register" action="/users/update/<%= users.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                            <div class="row-8 profile-user-header">
+                                <div class="profile-user-avatar">
+                                    <img class="img-fluid" src="/images/users/<%=users.avatar%>" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label" for="name">Nombre</label>
+                                    <input class="form-control" type="text" id="name" name="name"
+                                    value="<%= users.name %>">
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label" for="surname">Apellido</label>
+                                    <input class="form-control" type="text" id="surname" name="surname"
+                                    value="<%= users.surname %>">
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label" for="email">Email</label>
+                                    <input class="form-control" type="email" id="email" name="email"
+                                    value="<%= users.email %>">
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label" for="phone">Teléfono</label>
+                                    <input class="form-control" type="number" id="phone" name="phone"
+                                        alue="<%= users.phone %>">
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label" for="street">Dirección</label>
+                                    <input class="form-control" type="text" id="street" name="street"
+                                    value="<%= users.street %>">
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label" for="height">Altura</label>
+                                    <input class="form-control" type="number" id="height" name="height"
+                                    value="<%= users.height %>">
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label" for="province">Localidad</label>
+                                    <input class="form-control" type="text" id="province" name="province"
+                                    value="<%= users.city %>">
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label" for="province">Provincia</label>
+                                    <input class="form-control" type="text" id="province" name="province"
+                                    value="<%= users.province %>">
+                                </div>
+                                <div class="d-grid gap-2 col-6 mx-auto mt-4">
+                                    <button class="btn btn-outline-secondary" type="submit">Guardar Cambios</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                    <div class="from-all">
-                        <label class="label-all" for="surname" >Apellido</label>
-                        <input class="input-all" type="text" id="surname"  name="surname" value="<%= users.surname %>">
-                    </div>
-                    <div class="from-all">
-                        <label class="label-all"  for="phone" >numero teléfonico</label>
-                        <input class="input-all"  type="number" id="phone"  name="phone" value="<%= users.phone %>">
-                    </div>
-                    <div class="from-all">
-                        <label class="label-all"  for="email" >email</label>
-                        <input class="input-all"  type="email" id="email" name="email" value="<%= users.email %>">
-                    </div>
-                    <div class="from-all">
-                        <label class="label-all" for="password">password</label>
-                        <input class="input-all" type="password" id="password" name="password" value="<%= users.password %>">
-                    </div>
-                    <div class="from-all">
-                        <label class="label-all" for="street" >Dirección</label>
-                        <input class="input-all" type="text" id="street"  name="street" value="<%= users.street %>">
-                    </div>
-                    <div class="from-all">
-                        <label class="label-all" for="height" >altura</label>
-                        <input class="input-all" type="number" id="height"  name="height" value="<%= users.height %>">
-                    </div>
-                    <div class="from-all">
-                        <label class="label-all" for="city" >localidad</label>
-                        <input class="input-all" type="text" id="city"  name="city" value="<%= users.city %>">
-                    </div>
-                    <div class="from-all">
-                        <label class="label-all" for="province" >Provincia</label>
-                        <input class="input-all" type="text" id="province"  name="province" value="<%= users.province %>">
-                    </div>
-                    
-                        <input class="btn-all"  type="submit" class="submit" value="Guardar Cambios">
-                   
-                </form>
+                </div>
             </div>
-        </div>
-        
-     </main>
-    <script>
-        let preview = (event) => {
-            let new_img = new FileReader();
-            let id_img = document.getElementById("img-photo");
-            new_img.onload = () => {
-            if (new_img.readyState == 2) {
-                id_img.src = new_img.result;
-            }
-            };
-            new_img.readAsDataURL(event.target.files[0]);
-        };
-    </script>
-     -->
+        </main>
+            <!-- <script>
+                    let preview = (event) => {
+                        let new_img = new FileReader();
+                        let id_img = document.getElementById("img-photo");
+                        new_img.onload = () => {
+                        if (new_img.readyState == 2) {
+                            id_img.src = new_img.result;
+                        }
+                        };
+                        new_img.readAsDataURL(event.target.files[0]);
+                    };
+        </script> -->
 
-            <main class="main--reg">
-                <div class="container">
-                    <div class="row  pt-5 pb-5 ">
-                        <div class="col-12 p-5 border-2 bg-white tagger2">
-                            <form id="form-register" action="/users/update/<%= users.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
-                                <div class="row-8 profile-user-header">
-                                    <div class="profile-user-avatar">
-                                        <img class="img-fluid" src="/images/users/<%=users.avatar%>" />
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 col-md-6">
-                                        <label class="form-label" for="name">Nombre</label>
-                                        <input class="form-control" type="text" id="name" name="name"
-                                            value="<%= users.name %>">
-                                    </div>
-                                    <div class="col-12 col-md-6">
-                                        <label class="form-label" for="surname">Apellido</label>
-                                        <input class="form-control" type="text" id="surname" name="surname"
-                                            value="<%= users.surname %>">
-                                    </div>
-                                    <div class="col-12 col-md-6">
-                                        <label class="form-label" for="email">Email</label>
-                                        <input class="form-control" type="email" id="email" name="email"
-                                            value="<%= users.email %>">
-                                    </div>
-
-                                    <div class="col-12 col-md-6">
-                                        <label class="form-label" for="phone">Teléfono</label>
-                                        <input class="form-control" type="number" id="phone" name="phone"
-                                            value="<%= users.phone %>">
-
-                                    </div>
-                                    <div class="col-12 col-md-6">
-                                        <label class="form-label" for="street">Dirección</label>
-                                        <input class="form-control" type="text" id="street" name="street"
-                                            value="<%= users.street %>">
-
-                                    </div>
-                                    <div class="col-12 col-md-6">
-                                        <label class="form-label" for="height">Altura</label>
-                                        <input class="form-control" type="number" id="height" name="height"
-                                            value="<%= users.height %>">
-
-                                    </div>
-                                    <div class="col-12 col-md-6">
-                                        <label class="form-label" for="province">Provincia</label>
-                                        <input class="form-control" type="text" id="province" name="province"
-                                            value="<%= users.province %>">
-
-
-                                    </div>
-                                    
-
-                                    <div class="d-grid gap-2 col-6 mx-auto mt-4">
-                                        <button class="btn btn-outline-secondary" type="submit">Guardar Cambios</button>
-                                    </div>
-                                </div>
-                        </div>
-                    </div>
-                    </form>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-            </main>
-    </body>
 
       <!-- ----------Inicio de footer----------- -->
       <%- include('../partials/footer') %>
       <!-- ----------Fin de footer----------- -->
 
-    
-        </body>
+    </body>
 
-        </html>
+</html>
