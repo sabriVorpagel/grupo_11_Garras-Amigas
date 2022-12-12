@@ -12,7 +12,7 @@
                 </div>
                 <div class="main__formulario__cajas">
                     <label for="descripcion">Descripción</label>
-                    <input type="text" name="description" id="descripcion" maxlength="1000" value="<%= product.description %>">
+                    <input type="text" name="description" id="description" maxlength="1000" value="<%= product.description %>">
                     <small class="advertencia"><%= locals.errors && errors.description ? errors.description.msg : null %></small>
                     <span id="errorDescription"></span>
                 </div>
@@ -50,6 +50,7 @@
                     <span id="errorImages"></span>
                 </div>
                 <div class="main__formulario__botones">
+                    <span id="errorForm" class=""></span>
                     <input type="submit" class="submit" value="Guardar Cambios">
                     <input type="reset" class="reset" value="Cancelar Cambios">  
                 </div>

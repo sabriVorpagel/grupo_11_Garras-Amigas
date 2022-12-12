@@ -20,7 +20,7 @@ $('name').addEventListener('blur', function(){
             $('errorName').innerText= null;
             break;
     }
-}),
+})
 $('description').addEventListener('blur', function(){
     switch(true){
         case !this.value.trim():
@@ -33,7 +33,27 @@ $('description').addEventListener('blur', function(){
             $('errorDescription').innerText= null;
             break;
     }
-}),
+})
+$('category').addEventListener('blur', function(){
+    switch(true){
+        case !this.value.trim():
+            $('errorCategory').innerText= 'La categoria es obligatorio';
+            break;
+        default:
+            $('errorCategory').innerText= null;
+            break;
+    }
+})
+$('images').addEventListener('blur', function(){
+    switch(true){
+        case !this.value.trim():
+            $('errorImages').innerText= 'La imagen es obligatorio';
+            break;
+        default:
+            $('errorImages').innerText= null;
+            break;
+    }
+})
 $('price').addEventListener('blur', function(){
     switch(true){
         case !this.value.trim():
@@ -46,7 +66,20 @@ $('price').addEventListener('blur', function(){
             $('errorPrice').innerText= null;
             break;
     }
-}),
+})
+$('stock').addEventListener('blur', function(){
+    switch(true){
+        case !this.value.trim():
+            $('errorStock').innerText= 'El stock es obligatorio';
+            break;
+        case !exRegs.exRegNum.test(this.value):
+            $('errorStock').innerText= 'El stock no tiene el formato correcto';
+            break;
+        default:
+            $('errorStock').innerText= null;
+            break;
+    }
+})
 $('discount').addEventListener('blur', function(){
     switch(true){
         case !this.value.trim():
@@ -57,39 +90,6 @@ $('discount').addEventListener('blur', function(){
             break;
         default:
             $('errorDiscount').innerText= null;
-            break;
-    }
-}),
-$('stock').addEventListener('blur', function(){
-    switch(true){
-        case !this.value.trim():
-            $('errorStock').innerText= 'El stock es obligatorio';
-            break;
-        case !exRegs.exRegNum.test(this.value):
-            $('errorName').innerText= 'El stock no tiene el formato correcto';
-            break;
-        default:
-            $('errorStock').innerText= null;
-            break;
-    }
-}),
-$('images').addEventListener('blur', function(){
-    switch(true){
-        case !this.value.trim():
-            $('errorImages').innerText= 'La imagen es obligatorio';
-            break;
-        default:
-            $('errorImages').innerText= null;
-            break;
-    }
-}),
-$('category').addEventListener('blur', function(){
-    switch(true){
-        case !this.value.trim():
-            $('errorCategory').innerText= 'La categoria es obligatorio';
-            break;
-        default:
-            $('errorCategory').innerText= null;
             break;
     }
 })

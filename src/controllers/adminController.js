@@ -91,7 +91,7 @@ module.exports ={
 				id : req.params.id
 			}
 		})
-			.then( () => res.redirect('/products'))
+			.then( () => res.redirect('/products/product'))
 			.catch( error => console.log(error));
 	}
         // let product = await db.Product.findByPk(req.params.id,{
