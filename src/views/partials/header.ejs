@@ -1,34 +1,63 @@
 <header>
-    <main class="header-main">
-        <nav class="header--nav">
-            <div class="header--logo">
-                <a href="/">G A<b>.</b></a>
-            </div>
-            <div class="header--links">
-                <% if(locals.login) { %>
-                    <a class="hebtn-redes" href="/users/profile "><i class="fa-regular fa-circle-user"></i></a>
-                    <a class="hebtn-redes" href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a>
-                    <a class="hebtn-reder" href="/admi/admi"><i class="fa-solid fa-lock"></i></a>
-                    <button id="menu">Menu</button>
-                <% }else{ %>
-                    <a class="hebtn-redes" href="/users/login"><i class="fa-solid fa-person-walking-arrow-right"></i></a>
-                    <button id="menu" type="submit">Menu</button>
-                <% } %>
-            </div>   
-            <ul class="header--navItems">
-                <li><a href="/index">Home</a></li>
-                <li><a href="/products/product">productos</a></li>
-                <li><a href="/#">Nosotros</a></li>
-                <!-- <li><a href="/products/create">agr. producto</a></li> -->
-            </ul>
-            <form action="/products/search" class="header--search" method="get">
-                <input type="search" name="keywords" >
-                <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
-            </form>
-                 
-        </nav>
-    </main>
-    <script src="/javascripts/index.js"></script>
-</header>
 
-  
+    <body>
+
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid header--logo">
+                <a class="navbar-brand" href="/index">GA.</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-item dropdown" aria-current="page" href="/index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-item dropdown " aria-current="page" href="/products/product">Productos</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                <a class="" aria-current="page" href="#">Admin</a>
+            </li>  -->
+                        <!-- xxxxxxxxxxxxxventana emergentexxxxxxxxxx  -->
+                        <% if(locals.login) { %>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    YO
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/users/profile">Mi Perfil</a></li>
+                                    <li><a class="dropdown-item" href="/products/cart">Mi Carrito</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="/admi/admi"">Admin</a></li>
+                </ul>
+            </li>
+            <!-- <li class=" nav-item">
+                                            <a class="nav-link disabled">Disabled</a>
+                                    </li> -->
+                                    <% }else{ %>
+                                        <li class="nav-item">
+                                            <a class="" aria-current="page" href="/users/login">Logueate</a>
+                                        </li>
+                                        <% } %>
+                                </ul>
+                                <form action="/products/search" method="get" class="d-flex header--search"
+                                    role="search">
+                                    <input class="form-control me-2" name="keywords" type="search"
+                                        placeholder="Buscador" aria-label="Search">
+                                    <button class="btn btn-outline-success" type="submit"><i
+                                            class="fa-solid fa-magnifying-glass"></i></button>
+                                </form>
+                </div>
+            </div>
+        </nav>
+
+
+    </body>
+
+    </html>

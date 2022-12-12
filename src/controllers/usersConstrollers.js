@@ -13,14 +13,14 @@ module.exports = {
         const {name,surname,email,password, street, city, province, phone, height} = req.body
         if(errors.isEmpty()){
         db.User.create({
-                name : name.trim(),
-                surname : surname.trim(),
+                name : name,
+                surname : surname,
                 email : email,
                 password : hashSync(password, 10),
                 rolId : 2,
-                street : street.trim(),
-                city: city.trim(),
-                province: province.trim(),
+                street : street,
+                city: city,
+                province: province,
                 phone: +phone,
                 height: +height,
                 avatar: req.file ? req.file.filename : 'default.jpg',

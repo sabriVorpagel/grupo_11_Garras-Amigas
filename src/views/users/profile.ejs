@@ -1,59 +1,68 @@
-<%- include('../partials/head', {title: 'Mi perfil'}) %> 
-<body>
+<%- include('../partials/head', {title: 'Mi perfil' }) %>
+
+  <body>
     <%- include('../partials/header') %>
-    <main class="main--profile">
-        <div class="profile--container">
-            <div class="profile-info-container">
-                <!-- foto y fondo -->
-                <div class="profile-user-header">
-                    <div class="profile-user-avatar">
-                        <img src="/images/users/<%=users.avatar%>"/>
-                    </div>
+      <main class="main--profile">
+        <div class="container py-4">
+          <div class="card tagger2 card-profile" style="max-width: 540px;">
+            <div class="col m-4 pt-5 pb-5 border-2 bg-white col-profile">
+              <div class="row-8 profile-user-header">
+                <div class="profile-user-avatar">
+                  <img class="img-fluid" src="/images/users/<%=users.avatar%>" />
                 </div>
-                <div  class="imputs-container-profile">
-                    <div class="from-all-profile"> 
-                        <p class="label-all">NOMBRE:</p>
-                        <input class="input-all-profile" value="<%= users.name %>" >
-                    </div> 
-                    <div class="from-all-profile"> 
-                        <p class="label-all">APELLIDO:</p>
-                        <input class="input-all-profile" value="<%= users.surname %>" >
-                    </div> 
-                    <div class="from-all-profile"> 
-                        <p class="label-all">EMAIL:</p>
-                        <input class="input-all-profile" value="<%= users.email %>" >
-                    </div> 
-                    <div class="from-all-profile"> 
-                        <p class="label-all" >DIRECCIÓN:</p>
-                        <input class="input-all-profile" value="<%= users.street %>" >
-                    </div> 
-                    <div class="from-all-profile"> 
-                        <p class="label-all">ALTURA:</p>
-                        <input class="input-all-profile" value="<%= users.height %>" >
-                    </div> 
-                    <div class="from-all-profile"> 
-                        <p class="label-all" >PROVINCIA</p>
-                        <input class="input-all-profile" value="<%= users.province %>" >
-                    </div> 
-                    <div class="from-all-profile"> 
-                        <p class="label-all">LOCALIDAD:</p>
-                        <input class="input-all-profile" value="<%= users.phone %>" >
-                    </div>
-                    <div class="from-all-profile"> 
-                        <p class="label-all">TELEFONO:</p>
-                        <input class="input-all-profile" value="<%= users.phone %>" >
-                    </div> 
-                     
-
-                    
-                    <a class="all-btn-profile" href="/users/editProfile/<%= users.id %>">Editar Perfil</a>
-                    <a class="all-btn-profile" href="/users/logout" >Salir</a>
-
-                </div>
-                
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Nombre</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default" value=" <%= users.name %>">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Apellido</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default" value=" <%= users.surname %>">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
+                <input type="email" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default" value=" <%= users.email %>">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Teléfono</span>
+                <input type="number" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default" value=" <%= users.phone %>">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Direccón</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default" value=" <%= users.street %>">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Altura</span>
+                <input type="number" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default" value=" <%= users.height %>">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Localidad</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default" value=" <%= users.city %>">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Provincia</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default" value=" <%= users.province %>">
+              </div>
+              <div class="col-8">
+                <a href="/users/editProfile/<%= users.id %>">
+                  <button type="submit" class="mt-4 btn-profile btn btn-outline-secondary">Editar Perfil</button>
+                </a>
+                <a href="/users/logout">
+                  <button type="submit" class="mt-4 btn-profile btn btn-outline-secondary">Salir</button>
+                </a>
+              </div>
             </div>
-        </div>
-    </main>
-    <%- include('../partials/footer') %> 
-</body>
-</html>
+          </div>
+      </main>
+    <%- include('../partials/footer') %>
+  </body>
+
+  </html>
