@@ -23,8 +23,7 @@ module.exports =[
         .withMessage('La imagen es obligatorio'),
     
         check('price')
-        .notEmpty()
-        .withMessage('El precio es obligatorio')
+        .notEmpty().withMessage('El precio es obligatorio')
         .isNumeric({
         no_symbols: true,
     }).withMessage('Debe ser un número entero positivo'),
