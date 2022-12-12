@@ -2,10 +2,9 @@ console.log("creatValidator.js");
 const $ = (element) => document.getElementById(element);
 
 const exRegs = {
-    exRegAlfa: /^[A-Za-zÁÉÍÓÚáéíóúñÑ ]+$/,}
-
-    const number = {
-        exRegNumber : /^[0-9]+$/}
+    exRegAlfa: /^[A-Za-zÁÉÍÓÚáéíóúñÑ ]+$/,
+    exRegNumber : /^[0-9]+$/
+}
 
 const error = (element, msg) => {
     $(element).innerText= msg ;
@@ -117,11 +116,16 @@ $('stock').addEventListener('blur', function ({target}) {
 
     $("form-create").addEventListener("submit", function (e) {
     e.preventDefault();
+    const error = false
     const elements = this.elements;
         for (let i= 0; i < elements.length -1; i++) {
             
             if (!elements[i].value.trim()) {
                 $('advertencia').innerText ='Todos los campos tiene que estar completos'
+                error = true;
             }
+            
         }
+        
+    !error && this.submit()
         });
