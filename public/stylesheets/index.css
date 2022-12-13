@@ -39,7 +39,7 @@
     gap: 10px;
 }
 .home__main__section--novedades h2{
-    background-color: var(--colorAzul);
+    background-color: #9089cc;
     width: 100%;
 }
 .home__main__section--destacados{
@@ -56,7 +56,7 @@
     gap: 10px;
 }
 .home__main__section--destacados h2{
-    background-color: var(--colorAzul);
+    background-color:#9089cc;
     width: 100%;
 }
 .home__main__section--ofertas{
@@ -73,7 +73,7 @@
     gap: 10px;
 }
 .home__main__section--ofertas h2{
-    background-color: var(--colorAzul);
+    background-color: #9089cc;
     width: 100%;
 }
 .home__main__articulos{
