@@ -94,15 +94,15 @@ $('discount').addEventListener('blur', function(){
     }
 })
 
-$('main__caja__formulario').addEventListener('submit', function (e){
+$('product_edit').addEventListener('submit', function (e){
     e.preventDefault();
+    const error = false
     const elements = this.elements;
-    for (let i = 0; i < elements.length; i++) {
-        if(!elements[i].value.trim()){
-            $('errorForm').innerText= 'Algunos de los campos no es valido';
-            console.log('no está todo bien')
-        }else{
-            this.submit()
+        for (let i = 0; i < elements.length -1; i++) {
+            if(!elements[i].value.trim()){
+                $('errorForm').innerText= 'Algunos de los campos no es valido'
+                error= true ;
+            }
         }
-    }
-})
+    !error && this.submit()
+});

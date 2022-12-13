@@ -3,7 +3,7 @@
     <%- include('../partials/header') %>
     <main class="main__create">
         <div class="main__caja">
-            <form action="/products/update/<%= product.id %>?_method=PUT " method="POST" class="main__caja__formulario formEdit">
+            <form action="/products/update/<%= product.id %>?_method=PUT " method="POST" class="main__caja__formulario formEdit" id="product_edit">
                 <div class="main__formulario__cajas">
                     <label for="name">Nombre del producto</label>
                     <input type="text" name="name" id="name" value="<%= product.name %>">
@@ -50,8 +50,8 @@
                     <span id="errorImages"></span>
                 </div>
                 <div class="main__formulario__botones">
-                    <span id="errorForm" class=""></span>
                     <input type="submit" class="submit" value="Guardar Cambios">
+                    <span id="errorForm" class=""></span>
                     <input type="reset" class="reset" value="Cancelar Cambios">  
                 </div>
             </form>
