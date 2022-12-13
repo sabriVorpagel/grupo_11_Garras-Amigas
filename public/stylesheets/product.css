@@ -24,7 +24,7 @@
     margin-top: 15px;
 }
 .product__main__section h2{
-    background-color: var(--colorAzul);
+    background-color: #9089cc;
     width: 100%;
     font-family: "Roboto";
     font-size: var(--textoSizeTitulares);
@@ -80,17 +80,23 @@
     font-family: 'roboto';
 }
 .home__main__section__article--div--a:hover{
-    background-color: #FFC18E;
-    color: #666666 ;
+    background-color:#9089cc;
+    color: white ;
     transition:
         background-color, 0.5s,
         color, 0.5;
 }
 .home__main__section__article--div i{
     font-size: var(--textoSizeCuerpo);
-    color:#666666;
+    color: white;
 }
 
+.home__main__section__article--div i:hover{
+    color: white ;
+    transition:
+        background-color, 0.5s,
+        color, 0.5;
+}
 
 /*TABLET*/
 @media (min-width:768px){
