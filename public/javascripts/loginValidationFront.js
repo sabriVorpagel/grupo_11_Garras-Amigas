@@ -50,14 +50,7 @@ $("email").addEventListener("blur", async function ({ target }) {
     
     switch (true) {
       case !this.value.trim():
-          msgErrors("errorPassword", "La contraseña es obligatoria(js)", target);
-          case !exRegs.exRegPass.test(this.value):
-            msgError(
-              "errorPassword",
-              "La contraseña debe tener un símbolo, una número, una mayúscula, una minúscula y entre 6 y 8 caracteres",
-              target
-            );
-            break;
+          msgError("errorPassword", "La contraseña es obligatoria(js)", target);
           default:
             validField("errorPassword", target);
             break;
