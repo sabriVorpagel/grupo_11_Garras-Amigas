@@ -152,10 +152,18 @@
                       </div>
                       <div class="col-12 col-md-6 mt-4">
                         <label for="avatar" class="form-label">FOTO DE PERFIL</label>
-                        <input class="form-control" type="file" id="avatar" multiple>
+                        <input class="form-control" type="file" id="avatar" 
+                          value="<%= locals.old && old.avatar ? old.avatar : null %>"
+                          class=" form-control py-3 <%= locals.errors && errors.avatar ? 'is-invalid' : null %>"
+                          id="avatar" name="avatar" title="La provincia debe tener más de dos caracteres" />
+                        <small class="text-danger">
+                          <%= locals.errors && errors.avatar ? errors.avatar.msg : null %>
+                        </small>
+                        <small id="errorAvatar" class="text-danger"></small>
                       </div>
                       <div class="d-grid gap-2 col-6 mx-auto mt-4">
-                        <button  id="boton" class="btn btn-outline-secondary" type="submit">REGISTRATE</button>
+                        <button  class="btn btn-outline-secondary" type="submit">REGISTRATE</button>
+                        <small id="errorSubmit" class="text-danger"></small>
                       </div>
                     </div>
                   </div>

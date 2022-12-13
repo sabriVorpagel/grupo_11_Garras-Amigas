@@ -4,12 +4,6 @@ console.log("userValidationFront.js connected!");
 const $ = (element) => document.getElementById(element);
 
 
-// anula el envio de form hasta validarlo
-// $("form-register").addEventListener("submit", function (e) {
-//   e.preventDefault();
-// });
-
-
 // expresiones regulares
 
 const exRegs = {
@@ -50,28 +44,6 @@ const validPass = (element, exReg, value) => {
 };
 
 
-
-// const verifyEmail = async (email) => {
-//   try {
-//     let response = await fetch("/api/apiUsersController/", {
-//       method: "POST",
-//       body: JSON.stringify({
-//         email: email,
-//       }),
-//       headers: {
-//         "Content-Type": "application/json",
-//       },
-//     });
-
-//     let result = await response.json();
-
-//     console.log(result);
-
-//     return result.verified;
-//   } catch (error) {
-//     console.error;
-//   }
-// };
 // validaciones
 $("name").addEventListener("blur", function ({ target }) {
   switch (true) {
@@ -201,11 +173,11 @@ $("password2").addEventListener("blur", function ({ target }) {
   $('avatar').addEventListener('blur', function ({target}) {
     switch (true) {
         case !this.value.trim():
-            error('errorAatar', 'La imagen es obligatoria', target)
+            error('errorAvatar', 'La imagen es obligatoria', target)
         break;
     
         default:
-            $('errorAatar').innerText= null;
+            $('errorAvatar').innerText= null;
             break;
     }
 });
@@ -284,15 +256,6 @@ $("password2").addEventListener("blur", function ({ target }) {
     }
   });
 
-  $("avatar").addEventListener("change", function({target}){
-    let reader = new FileReader();
-    reader.readAsDataURL(target.files[0]);
-
-    reader.onload = () => {
-        $("avatar").src = reader.result
-    }
-  
-})
 
   
 $("form-register").addEventListener("submit", function (e) {
@@ -304,7 +267,7 @@ $("form-register").addEventListener("submit", function (e) {
         
         if(!elements[i].value.trim() || elements[i].classList.contains('is-invalid')){
             elements[i].classList.add('is-invalid')
-           $('msgError').innerText = "Todos los campos son obligatorios";
+           $('errorSubmit').innerText = "Todos los campos son obligatorios";
            error = true;
         }
     }
@@ -331,181 +294,3 @@ $("form-register").addEventListener("submit", function (e) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// cxcxcxcxcxcxcxccxcxcxcxcusdcuisdgvoshfdriovjhfdoibjvspjbpj<bpjfs
-
-// $('name').addEventListener('blur', function(){
-//     switch(true){
-//         case !this.value.trim():
-//             $('errorName').innerText= 'El nombre es obligatorio';
-//             break;
-//         case this.value.trim().length < 2:
-//             $('errorName').innerText= 'El nombre debe tener al menos 2 caracteres'
-//             break;
-//         case !exRegs.exRegAlfa.test(this.value):
-//             $('errorName').innerText= 'El nombre no tiene el formato correcto';
-//             break;
-//         default:
-//             $('errorName').innerText= null;
-//             break;
-//     }
-// }),
-// $('surname').addEventListener('blur', function(){
-//   switch(true){
-//       case !this.value.trim():
-//           $('errorSurname').innerText= 'El apellido es obligatorio';
-//           break;
-//       case this.value.trim().length < 2:
-//           $('errorSurname').innerText= 'El apellido debe tener al menos 2 caracteres'
-//           break;
-//       case !exRegs.exRegAlfa.test(this.value):
-//           $('errorSurname').innerText= 'El apellido no tiene el formato correcto';
-//           break;
-//       default:
-//           $('errorSurname').innerText= null;
-//           break;
-//   }
-// }),
-// // $('email').addEventListener("blur", function () {
-// //   switch (true) {
-// //     case !this.value.trim():
-// //       $('email').innerText= "El email es obligatorio";
-// //       break;
-// //     case !exRegEmail.test(this.value):
-// //       $('email').innerText= "Debes ingresar un email válido";
-// //       break;
-// //     default:
-// //       $('email').innerText= null;
-// //       break;
-// //   }
-// // });
-// // $('password').addEventListener("blur", function () {
-// //   switch (true) {
-// //     case !password.value.trim():
-// //       $('password').innerText= "El password es obligatorio";
-// //       break;
-// //     case !exRegPassword.test(password.value):
-// //       $('email').innerText= "Debe tener una mayúscula, una minúscula, un número, un carácter especial y al menos 8 caracteres"
-// //       break;
-// //     default:
-// //       $('password').innerText= null;
-// //       break;
-// //   }
-// // });
-
-// $('phone').addEventListener('blur', function(){
-//     switch(true){
-//         case !this.value.trim():
-//             $('errorPhone').innerText= 'El número teléfonico es obligatorio';
-//             break;
-//         case !exRegs.exRegNum.test(this.value):
-//             $('errorPhone').innerText= 'El número teléfonico no tiene el formato correcto';
-//             break;
-//         default:
-//             $('errorPhone').innerText= null;
-//             break;
-//     }
-// }),
-// $('height').addEventListener('blur', function(){
-//   switch(true){
-//       case !this.value.trim():
-//           $('errorHeight').innerText= 'La altura es obligatoria';
-//           break;
-//       case !exRegs.exRegNum.test(this.value):
-//           $('errorHeight').innerText= 'La altura no tiene el formato correcto';
-//           break;
-//       default:
-//           $('errorHeight').innerText= null;
-//           break;
-//   }
-// }),
-// $('avatar').addEventListener('blur', function(){
-//     switch(true){
-//         case !this.value.trim():
-//             $('errorAvatar').innerText= 'La foto de perfil es obligatoria';
-//             break;
-//         default:
-//             $('errorAvatar').innerText= null;
-//             break;
-//     }
-// }),
-// $('street').addEventListener('blur', function(){
-//     switch(true){
-//         case !this.value.trim():
-//             $('errorStreet').innerText= 'El domicilio es obligatorio';
-//             break;
-//         case this.value.trim().length < 2:
-//             $('errorStreet').innerText= 'El domicilio debe tener al menos 2 caracteres'
-//             break;
-//         case !exRegs.exRegAlfa.test(this.value):
-//             $('errorStreet').innerText= 'El domicilio no tiene el formato correcto';
-//             break;
-//         default:
-//             $('errorStreet').innerText= null;
-//             break;
-//     }
-// }),
-// $('city').addEventListener('blur', function(){
-//   switch(true){
-//       case !this.value.trim():
-//           $('errorCity').innerText= 'La localidad es obligatoria';
-//           break;
-//       case this.value.trim().length < 2:
-//           $('errorCity').innerText= 'La localidad debe tener al menos 2 caracteres'
-//           break;
-//       case !exRegs.exRegAlfa.test(this.value):
-//           $('errorCity').innerText= 'La localidad no tiene el formato correcto';
-//           break;
-//       default:
-//           $('errorCity').innerText= null;
-//           break;
-//   }
-// }),
-// $('province').addEventListener('blur', function(){
-//   switch(true){
-//       case !this.value.trim():
-//           $('errorProvince').innerText= 'La provincia es obligatoria';
-//           break;
-//       case this.value.trim().length < 2:
-//           $('errorProvince').innerText= 'La provincia debe tener al menos 2 caracteres'
-//           break;
-//       case !exRegs.exRegAlfa.test(this.value):
-//           $('errorProvince').innerText= 'La provincia no tiene el formato correcto';
-//           break;
-//       default:
-//           $('errorProvince').innerText= null;
-//           break;
-//   }
-// })
-
-// $('#form-register').addEventListener('submit', function (e){
-//     e.preventDefault();
-//     const elements = this.elements;
-//     for (let i = 0; i < elements.length; i++) {
-//         if(!elements[i].value.trim()){
-//             $('errorForm').innerText= 'Algunos de los campos no es valido';
-//             console.log('no está todo bien')
-//         }else{
-//             this.submit()
-//         }
-//     }
-// })
-  

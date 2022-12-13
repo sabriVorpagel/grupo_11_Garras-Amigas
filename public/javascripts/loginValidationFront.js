@@ -3,12 +3,7 @@ console.log("loginValidationFront.js connected!");
 
 const $ = (element) => document.getElementById(element);
 
-
-
-
-
 // expresiones regulares
-
 const exRegs = {
   exRegAlfa: /^[A-Za-zÁÉÍÓÚáéíóúñÑ ]+$/,
   exRegEmail: /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/,
@@ -30,16 +25,13 @@ const msgError = (element, msg, target) => {
 
 
 //  funcion para remover las clases invalidas
-const cleanField = (element, target) => {
+const validField = (element, target) => {
   $(element).innerText = null;
-  target.classList.remove('is-invalid', 'is-valid')
+  target.classList.remove("is-invalid");
+  target.classList.add("is-valid");
 };
 
-const validField = (element,{target}) => {
-  cleanField(element, target)
-  target.classList.add('is-valid');
-  
-};
+// validaciones
 $("email").addEventListener("blur", async function ({ target }) {
     switch (true) {
       case !this.value.trim():
@@ -48,67 +40,51 @@ $("email").addEventListener("blur", async function ({ target }) {
       case !exRegs.exRegEmail.test(this.value):
         msgError("errorEmail", "El email tiene un formato incorrecto(js)", target);
         break;
-      case await verifyEmail(this.value):
-        msgError("errorEmail", "El email ya está registrado(js)", target);
-        break;
       default:
         validField("errorEmail", target);
         break;
     }
   });
   
-  $("password").addEventListener("focus", () => {
-    $("msgPass").hidden = false;
-  });
-  
   $("password").addEventListener("blur", function ({ target }) {
-    $("msgPass").hidden = true;
+    
     switch (true) {
       case !this.value.trim():
-        msgError("errorPassword", "La contraseña es obligatoria(js)", target);
-        break;
-      case !exRegs.exRegPass.test(this.value):
-        msgError(
-          "errorPass",
-          "La contraseña debe tener un símbolo, una número, una mayúscula, una minúscula y entre 6 y 8 caracteres(js)",
-          target
-        );
-        break;
-      default:
-        validField("errorPassword", target);
-        break;
-    }
-  });
-  
-  $("password").addEventListener("keyup", function ({ target }) {
-    validPass("mayu", exRegs.exRegMayu, target.value);
-    validPass("minu", exRegs.exRegMinu, target.value);
-    validPass("num", exRegs.exRegNum, target.value);
-    validPass("esp", exRegs.exRegEsp, target.value);
-    validPass("min", exRegs.exRegMin, target.value);
-    validPass("max", exRegs.exRegMax, target.value);
-  });
-  
-  $('form-register').addEventListener('submit', function (e) {
+          msgErrors("errorPassword", "La contraseña es obligatoria(js)", target);
+          case !exRegs.exRegPass.test(this.value):
+            msgError(
+              "errorPassword",
+              "La contraseña debe tener un símbolo, una número, una mayúscula, una minúscula y entre 6 y 8 caracteres",
+              target
+            );
+            break;
+          default:
+            validField("errorPassword", target);
+            break;
+        }
+});
+
+  $('form-login').addEventListener('submit', function (e) {
     e.preventDefault();
     let error = false;
-    let elements = this.elements;
+    const elements = this.elements;
+      for (let i = 0; i < elements.length - 2; i++) {
+          
+          if(!elements[i].value.trim() || elements[i].classList.contains('is-invalid')){
+              elements[i].classList.add('is-invalid')
+             $('errorSubmit').innerText = "Todos los campos son obligatorios";
+             error = true;
+          }
+      }
+    !error && this.submit()
   
-    for (let i = 0; i < elements.length - 2; i++) {
-        if(!elements[i].value){
-            elements[i].classList.add('is-invalid');
-            $('msgError').innerHTML = "Todos los campos son obligatorios";
-            error = true
-        }
+  });
+
+
+  // VER LA CONTRASEÑA
+  $("btn-show-pass").addEventListener("click", ({ target }) => {
+    if (target.localName === "i") {
+      target.classList.toggle("fa-eye");
+      $("password").type = $("password").type === "text" ? "password" : "text";
     }
-  
-    for (let i = 0; i < elements.length - 2; i++) {
-       
-        if(elements[i].classList.contains('is-invalid')){
-            error = true
-        }
-    }
-    if(!error){
-      $('msgError').innerHTML = null
-  }
-  })
+  });

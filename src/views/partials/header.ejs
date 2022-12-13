@@ -18,9 +18,7 @@
                         <li class="nav-item">
                             <a class="nav-item dropdown " aria-current="page" href="/products/product">Productos</a>
                         </li>
-                        <!-- <li class="nav-item">
-                <a class="" aria-current="page" href="#">Admin</a>
-            </li>  -->
+
                         <!-- xxxxxxxxxxxxxventana emergentexxxxxxxxxx  -->
                         <% if(locals.login) { %>
                             <li class="nav-item dropdown">
@@ -34,28 +32,39 @@
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
+                                    <li><a class="dropdown-item" href="/users/logout">Salir</a></li>
                                     <% if(locals.login) { %>
-                                        <% if(locals.login.rolId === 1) { %>  
-                                    <li><a class="dropdown-item" href="/admi/admi">Admin</a></li>
-                                    <% }} %> 
-                </ul>
-            </li>
-            <!-- <li class=" nav-item">
-                                            <a class="nav-link disabled">Disabled</a>
-                                    </li> -->
-                                    <% }else{ %>
-                                        <li class="nav-item">
-                                            <a class="" aria-current="page" href="/users/login">Logueate</a>
-                                        </li>
-                                        <% } %>
+                                        <% if(locals.login.rolId===1) { %>
+                                            <li><a class="dropdown-item" href="/admi/admi">Admin</a></li>
+                                            <% }} %>
                                 </ul>
-                                <form action="/products/search" method="get" class="d-flex header--search"
-                                    role="search">
-                                    <input class="form-control me-2" name="keywords" type="search"
-                                        placeholder="Buscador" aria-label="Search">
-                                    <button class="btn btn-outline-success" type="submit"><i
-                                            class="fa-solid fa-magnifying-glass"></i></button>
-                                </form>
+                            </li>
+                            
+                            <% }else{ %>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Ingresa
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item"  href="/users/login">Logueate</a></li>
+                                        <li><a class="dropdown-item" href="/users/register">Registrate</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="/users/logout">Salir</a></li>
+                                        
+                                    </ul>
+                                </li>
+                                
+                            <% } %>
+                    </ul>
+                    <form action="/products/search" method="get" class="d-flex header--search" role="search">
+                        <input class="form-control me-2" name="keywords" type="search" placeholder="Buscador"
+                            aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
                 </div>
             </div>
         </nav>

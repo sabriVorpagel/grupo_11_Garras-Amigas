@@ -114,7 +114,7 @@ $('stock').addEventListener('blur', function ({target}) {
 });
 
 
-    $("form-create").addEventListener("submit", function (e) {
+$("form-create").addEventListener("submit", function (e) {
     e.preventDefault();
     const error = false
     const elements = this.elements;
@@ -128,4 +128,4 @@ $('stock').addEventListener('blur', function ({target}) {
         }
         
     !error && this.submit()
-        });
+});

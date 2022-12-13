@@ -1,48 +1,70 @@
-<%- include('../partials/head', {title: 'Login'}) %> 
-<body >
-<%- include('../partials/header') %> 
-    <main class="main--login">
-        <div class="login--container">
-            <div class="login-info-container">
-                <h1>Logueate con</h1>
-                <div class="social-login">
-                    <div class="social-login-element">
-                        <a href="#" class="btn-redes"><i class="fa-brands fa-facebook-f"></i> </a>
-                        <a href="#" class="btn-redes"><i class="fa-brands fa-instagram"></i> </a>
-                        <a href="#" class="btn-redes"><i class="fa-brands fa-google"></i> </a>
+<%- include('../partials/head', {title: 'Login' }) %>
+
+    <body>
+        <%- include('../partials/header') %>
+            <main class="main--login">
+                <div class="login--container">
+                    <div class="login-info-container">
+                        <h1>Logueate con</h1>
+                        <div class="social-login">
+                            <div class="social-login-element">
+                                <a href="#" class="btn-redes"><i class="fa-brands fa-facebook-f"></i> </a>
+                                <a href="#" class="btn-redes"><i class="fa-brands fa-instagram"></i> </a>
+                                <a href="#" class="btn-redes"><i class="fa-brands fa-google"></i> </a>
+                            </div>
+                        </div>
+                        <p>o ingresa tus datos</p>
+                        <form action="/users/login" method="POST" id="form-login">
+                            <div class="row">
+                                <div class="col-12 ">
+                                    <label class="form-label"></label>
+                                    <input type="email" placeholder="EMAIL"
+                                        value="<%= locals.old && old.email ? old.email : null %>"
+                                        class=" form-control py-3 <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                                        id="email" name="email" />
+                                    <small class="text-danger">
+                                        <%= locals.errors && errors.email ? errors.email.msg : null %>
+                                    </small>
+                                    <small id="errorEmail" class="text-danger"></small>
+                                </div>
+                                <div class="col-12 ">
+                                    <label class="form-label"></label>
+                                    <div class="d-flex  mb-3">
+                                        <input type="password" placeholder="CONTRASEÑA"
+                                            class=" py-3 form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+                                            name="password" id="password" />
+                                        <span class="input-group-text" style="cursor: pointer;" id="btn-show-pass"><i
+                                                class="fa-solid fa-eye-slash"></i></span>
+                                    </div>
+                                    <small class="text-danger">
+                                        <%= locals.errors && errors.password ? errors.password.msg : null %>
+                                    </small>
+                                    <small id="errorPassword" class="text-danger"></small>
+                                    <!-- <ul id="msgPass" hidden>
+                                        <li id="mayu">Una mayúscula</li>
+                                        <li id="minu">Un minúscula</li>
+                                        <li id="num">Un número</li>
+                                        <li id="esp">Un caracter especial ($@$!%*?&)</li>
+                                        <li id="min">Mínimo 6 caracteres</li>
+                                        <li id="max">Máximo 8 caracteres</li>
+                                    </ul> -->
+                                </div>
+
+                                <div class="mb-3 form-check">
+                                    <input class="check" type="checkbox" name="remember" id="recordame" />
+                                    <label class="recordame" for="checkbox">Recordarme</label>
+                                </div>
+                                <!-- <button id="boton"  class="login-btn"type="submit">INGRESA!</button> -->
+                                <div class="d-grid gap-2 col-6 mx-auto mt-4">
+                                    <button class="btn btn-outline-secondary" type="submit">INGRESA!</button>
+                                    <small id="errorSubmit" class="text-danger"></small>
+                                </div>
+                                <p>¿Aún no tenes una cuenta?</p><a class="span" href="/users/register">Registrate </a>
+                            </div>
+                        </form>
                     </div>
+                    <img class="iamge-container" src="/images/faf.png" alt="">
                 </div>
-                <p>o ingresa tus datos</p>
-                <form  action="/users/login" method="POST" id="form-register">
-                    <div class="mb-3">
-                        <input placeholder="EMAIL" type="email" class="form-control" aria-describedby="emailHelp" name="email"  value="<%= locals.old && old.email ? old.email: null %>"/>
-                        <small><%= locals.errors && errors.email ? errors.email.msg :null %></small>
-                        <div id="emailHelp" class="form-text">Nunca compartiremos tu correo electrónico con nadie más..</div>
-                    </div>
-                        <div class="mb-3">
-                        <input placeholder="CONTRASEÑA" type="password" class="form-control" name="password"">
-                        <small><%= locals.errors && errors.password ? errors.password.msg :null %></small>
-                    </div>
-                    <div class="mb-3 form-check">
-                        <input  class="check"  type="checkbox" name="remember" id="recordame"/>
-                        <label class="recordame" for="checkbox">Recordarme</label>
-                    </div>
-                    <button id="boton"  class="login-btn"type="submit">INGRESA!</button>
-                    <p>¿Aún no tenes una cuenta?</p><a  class="span" href="/users/register">Registrate </a>
-                </form>
-            </div>
-            <img class="iamge-container" src="/images/faf.png" alt="">
-        </div>
-    </main>
-    <script src="/javascripts/loginValidationFront.js"></script>
-</body>
-
-
-
-
-
-
-
-
-
-
+            </main>
+            <script src="/javascripts/loginValidationFront.js"></script>
+    </body>
