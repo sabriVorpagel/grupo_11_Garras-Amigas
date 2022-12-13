@@ -96,7 +96,7 @@ $("email").addEventListener("blur", async function ({ target }) {
       msgError("errorEmail", "El email ya está registrado", target);
       break;
     default:
-      $('errorName').innerText= null;
+      $('errorEmail').innerText= null;
       break;
   }
 });
