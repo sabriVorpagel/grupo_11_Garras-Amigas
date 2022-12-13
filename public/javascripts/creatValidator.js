@@ -119,13 +119,11 @@ $("form-create").addEventListener("submit", function (e) {
     const error = false
     const elements = this.elements;
         for (let i= 0; i < elements.length -1; i++) {
-            
             if (!elements[i].value.trim()) {
                 $('advertencia').innerText ='Todos los campos tiene que estar completos'
                 error = true;
             }
             
         }
-        
     !error && this.submit()
-});
+    });
