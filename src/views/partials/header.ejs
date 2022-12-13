@@ -34,7 +34,10 @@
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="/admi/admi"">Admin</a></li>
+                                    <% if(locals.login) { %>
+                                        <% if(locals.login.rolId === 1) { %>  
+                                    <li><a class="dropdown-item" href="/admi/admi">Admin</a></li>
+                                    <% }} %> 
                 </ul>
             </li>
             <!-- <li class=" nav-item">
