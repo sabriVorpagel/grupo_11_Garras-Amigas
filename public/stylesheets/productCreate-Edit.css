@@ -11,6 +11,7 @@
     justify-content: center;
     flex-wrap: wrap;
     padding: 20px 0;
+    background-image: url("/images/fondo.png");
     
 }
 .main__caja{
@@ -21,9 +22,9 @@
     background-position: 15% 100%;
     background-size: contain;
     background-attachment: scroll;
-    background-color: rgb(148, 179, 211);
+    background-color: rgb(228, 232, 236);
     border-radius: 8px;
-    box-shadow: 10px 10px 10px rgb(148 179 211);
+    box-shadow: 10px 10px 10px rgb(236, 241, 245);
 }
 .main__caja__formulario{
     display: flex;
@@ -43,84 +44,7 @@
     width: 100%;
     text-align: center;
 }
-.main__formulario__cajas label{
-    font-size: 11px;
-    width: 100%;
-    color: #fff;
-    letter-spacing: 3px;
-    margin: 5px 0;
-    
-}
-.main__formulario__cajas input{
-    width: 80%;
-    height: 30px;
-    padding: 5px;
-    border: none;
-    border-radius: 5px;
-    margin: 8px 0;
-    background: rgba(5, 7, 12, 0.1);
-} 
-.main__formulario__cajasSelectoras{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    height: 30px;
-    margin-bottom: 15px;
-}
-.main__formulario__cajasSelectoras select{
-    width: 80%;
-    padding: 5px 0;
-    border: none;
-    color: black;
-    border-radius: 5px;
-    background: rgba(5, 7, 12, 0.1);
-}
-.main__formulario__cajasSelectoras select#colores, .main__formulario__cajasSelectoras select#talles{
-    width: 80%;
-    height: 30px;
-    border-radius: 5px;
-}
-.main__formulario__cajaImagen {
-    width: 80%;
-}
-.main__formulario__cajaImagen label{
-    font-size: 11px;
-    width: 100%;
-    color: #fff;
-    letter-spacing: 3px;
-}
-.main__formulario__cajaImagen input{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    height: 30px;
-    text-align: center;
-}
-.main__formulario__cajaImagen input#imagenProduct{
-    width: 100%;
-}
-.main__formulario__cajaPrecio, .main__formulario__cajaDescuento{
-    padding: 5px;
-    width: 80%;
-    height: 30px;
-    color: #fff;
-}
-.main__formulario__cajaPrecio input,
-.main__formulario__cajaDescuento input{
-    text-align: center;
-    background: rgba(5, 7, 12, 0.1);
-    width: 60%;
-    height: 30px;
-    padding: 5px;
-    border-radius: 5px;
-    color: #fff;
-    border: solid 1px #fff;
-    justify-items: center;
-    margin-bottom: 10px;
-}
-*/
+
 .main__formulario__botones{
     display: flex;
     width: 80%;
@@ -156,26 +80,6 @@
         flex-direction: row;
         width: 100%;
     }
-    .main__formulario__cajasSelectoras{
-        width: 100%;
-    }
-    .main__formulario__cajaImagen{
-        width: 80%;
-    }
-    .main__formulario__cajaImagen label{
-        margin-left:60px
-    }
-    .main__formulario__cajaPrecio, .main__formulario__cajaDescuento{
-        display: flex;
-        flex-direction: row;
-        width: 35%;
-    }
-    .main__formulario__cajaPrecio input{
-        width: 80%;
-    }
-    .main__formulario__cajaDescuento input{
-        width: 80%;
-    }
     .main__formulario__botones{
         width: 80%;
         flex-direction: row;
@@ -191,40 +95,7 @@
     .main__formulario__cajas{
         width: 45%;
     }
-     .main__formulario__cajas label{
-        font-size: 15px;
-    }
-    .main__formulario__cajas input{
-        width: 100%;
-    }
-    .main__formulario__cajasSelectoras{
-        width: 45%;
-    }
-    .main__formulario__cajasSelectoras select{
-        width: 100%;
-    }
-    .main__formulario__cajaImagen {
-        width: 39%;
-    }
-    .main__formulario__cajaImagen label{
-        width: 45%;
-        font-size: 15px;
-        margin-left: -2px;
-    }
-    .main__formulario__cajaImagen input{
-        height: 30px;
-    }
-    .main__formulario__cajaImagen input#imagenProduct{
-        width: 50%;
-    }
-    .main__formulario__cajaPrecio,
-    .main__formulario__cajaDescuento{
-        width: 25%;
-    }
-    .main__formulario__cajaPrecio input,
-    .main__formulario__cajaDescuento input{
-        width: 100%;
-    } */
+    
     .main__formulario__botones{
         width: 45%;
     }
@@ -232,4 +103,5 @@
         width: 50%;
     }
 }
+
 

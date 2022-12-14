@@ -1,7 +1,7 @@
 .main--login{
     height: 145vh;
     width:100%;
-    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    background-image: url("/images/fondo2.png");
 }
 .login--container{
     height: 42.75em;
@@ -134,7 +134,6 @@
     .main--login{
         height: 145vh;
         width:100%;
-        background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
     }
     .login--container{
         height: 42.75em;

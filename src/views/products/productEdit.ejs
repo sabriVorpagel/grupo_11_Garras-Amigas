@@ -4,20 +4,15 @@
     <main class="main__create">
         <div class="main__caja">
             <form action="/products/update/<%= product.id %>?_method=PUT " method="POST" class="main__caja__formulario formEdit" id="product_edit">
-                <div class="main__formulario__cajas">
-                    <label for="name">Nombre del producto</label>
-                    <input type="text" name="name" id="name" value="<%= product.name %>">
+                <div class="col-10 col-md-5 col-lg-5">
+                    <label class=" form-label" for="name"></label>
+                    <input class=" form-control" placeholder="NOMBRE DEL PRODUCTO" type="text" name="name" id="name" value="<%= product.name %>">
                     <small class="advertencia"><%= locals.errors && errors.name ? errors.name.msg : null %></small>
                     <span id="errorName"></span>
                 </div>
-                <div class="main__formulario__cajas">
-                    <label for="descripcion">Descripción</label>
-                    <input type="text" name="description" id="description" maxlength="1000" value="<%= product.description %>">
-                    <small class="advertencia"><%= locals.errors && errors.description ? errors.description.msg : null %></small>
-                    <span id="errorDescription"></span>
-                </div>
-                <div class="main__formulario__cajasSelectoras">
-                    <select name="category" id="category" aria-label="Default select example">
+                <div class="col-10 col-md-5 col-lg-5">
+                    <label class="form-label" ></label>
+                    <select class="form-select" name="category" id="category" aria-label="Default select example">
                     <% categories.forEach(categoria =>{ %> 
 						<option value="<%= categoria.id %>" <%= locals.old && categoria.id === +old.categoryId ? 'selected' :null %> ><%= categoria.name %></option>
                     <% }) %> 
@@ -25,39 +20,44 @@
                     <small class="advertencia"><%= locals.errors && errors.category ? errors.category.msg : null %></small>
                     <span id="errorCategory"></span>
                 </div>
-                <div class="main__formulario__cajaPrecio">
-                    <label for="stock">Stock</label>
-                    <input type="number" name="stock" id="stock" value="<%= product.stock %> ">
+                 <div class="col-10 col-md-5 col-lg-5">
+                    <label class=" form-label" for="stock"></label>
+                    <input class=" form-control" placeholder="STOCK" type="number" name="stock" id="stock" value="<%= product.stock %> ">
                     <small class="advertencia"><%= locals.errors && errors.stock ? errors.stock.msg : null %></small>
                     <span id="errorStock"></span>
                 </div>
-                <div class="main__formulario__cajaPrecio">
-                    <label for="price">$</label>
-                    <input type="number" name="price" id="price" value="<%= product.price %>">
+                 <div class="col-10 col-md-5 col-lg-5">
+                    <label class=" form-label" for="price"></label>
+                    <input class=" form-control" placeholder=" P
+                    type="number" name="price" id="price" value="<%= product.price %>">
                     <small class="advertencia"><%= locals.errors && errors.price ? errors.price.msg : null %></small>
                     <span id="errorPrice"></span>
                 </div>
-                <div class="main__formulario__cajaDescuento">
-                    <label for="discount">%</label>
-                    <input type="number" name="discount" id="discount" value="<%= product.discount %>">
+                <div class="col-10 col-md-5 col-lg-5">
+                    <label class=" form-label" for="discount"></label>
+                    <input class=" form-control" placeholder="DESCUENTO" type="number" name="discount" id="discount" value="<%= product.discount %>">
                     <small class="advertencia"><%= locals.errors && errors.discount ? errors.discount.msg : null %></small>
                     <span id="errorDiscount"></span>
                 </div>
-                <div class="main__formulario__cajaImagen">
-                    <label for="images">Selecciona imagen del producto</label>
-                    <input type="file" name="images" id="images" value="<%= product.images %>">
+                <div class="col-10 col-md-5 col-lg-5">
+                    <label class=" form-label" for="images">Selecciona imagen del producto</label>
+                    <input class=" form-control" type="file" name="images" id="images" value="<%= product.images %>">
                     <small><%= locals.errors && errors.images ? errors.images.msg : null %></small>
                     <span id="errorImages"></span>
                 </div>
+                <div class="col-10 col-md-10 col-lg-10">
+                    <textarea name="description" placeholder="DESCRIPCION" id="description" class="form-control form-control-lg py-3" style="resize: none;" rows="5" maxlength="1000"></textarea>
+                    <small class="advertencia"><%= locals.errors && errors.description ? errors.description.msg : null %></small>
+                    <span id="errorDescription"></span>
+                </div>
                 <div class="main__formulario__botones">
-                    <input type="submit" class="submit" value="Guardar Cambios">
+                    <input  type="submit" class="submit" value="Guardar Cambios">
                     <span id="errorForm" class=""></span>
                     <input type="reset" class="reset" value="Cancelar Cambios">  
                 </div>
             </form>
         </div>
     </main>
-    <%- include('../partials/footer') %>
     <script src="/javascripts/editValidationFront.js"></script>
 </body>
 </html>

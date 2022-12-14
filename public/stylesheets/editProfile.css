@@ -4,7 +4,7 @@
 .main--editpro{
     height: 200vh;
     width: 100%;
-    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    background-image: url("/images/fondo2.png");
 }
 .editpro--container{
     height: 77.75em;

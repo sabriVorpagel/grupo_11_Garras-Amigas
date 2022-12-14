@@ -1,5 +1,5 @@
 .main--profile{
-    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    background-image: url("/images/fondo2.png");
 }
 .card-profile{
     margin: auto;

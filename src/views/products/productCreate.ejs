@@ -14,16 +14,10 @@
                 <div class="col-10 col-md-5 col-lg-5">
                     <label class="form-label" ></label>
                     <select class="form-select " name="category" id="category" aria-label="Default select example">
-                        <!-- <option value="" selected hidden>SELECCIONE UNA CATEGORIA--</option>
+                        <option value="" selected hidden>SELECCIONE UNA CATEGORIA--</option>
                         <% categories.forEach(categoria => { %>
                             <option value="<%= categoria.id %>" <%= locals.old && categoria.id === +old.categoryId ? 'selected' :null %> ><%= categoria.name %></option>
-                        <% }) %>  -->
-                        <option value="-1" disabled selected hidden>SELECCIONE UNA CATEGORIA</option>
-                        <% for( let i=0; i < categories.length; i++ ) { %>
-                            <option value="<%= categories[i].id %>">
-                                <%= categories[i].name %>
-                            </option>
-                            <% } %>
+                        <% }) %> 
                     </select>
                     <small class="msg_error"><%= locals.errors && errors.category ? errors.category.msg : null %></small>
                     <small id="errorCategory" class="msg_error" ></small>
@@ -53,9 +47,7 @@
                     <small id="errorImages" class="msg_error" ></small>
                 </div>
                 <div class="col-10 col-md-10 col-lg-10">
-                    <!-- <label class="form-label" for="description"></label> -->
                     <textarea name="description" placeholder="DESCRIPCION" id="description" class="form-control form-control-lg py-3" style="resize: none;" rows="5" maxlength="1000"></textarea>
-                    <!-- <input class=" form-control"  type="textarea" name="description" id="description" maxlength="1000"> -->
                     <small class="msg_error"><%= locals.errors && errors.description ? errors.description.msg : null %></small>
                     <small id="errorDescripcion" class="msg_error" ></small>
                 </div>
@@ -67,7 +59,7 @@
             </form>
         </div>
     </main>
-    <%- include('../partials/footer') %>
+    
     <script src="/javascripts/creatValidator.js"></script>
 </body>
 </html>
