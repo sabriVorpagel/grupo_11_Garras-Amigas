@@ -57,6 +57,49 @@ module.exports = {
                 };
                 req.body.remember && res.cookie('garrasamigas',req.session.login, {maxAge : 1000 * 60});
                 
+                /* CARRITO*/
+                db.Order.findOne({
+                    where : {
+                        userId : req.session.userLogin.id,          //viene de order/models
+                        statusId : 1                                //si esta pendiente
+                    },
+                    include : [
+                        {
+                            assocition : 'cart',                       //dviene de la tabla carrito 
+                            attributes : ['id', 'quantity'],            // de dicha tabla necesito 
+                            include : [
+                                {
+                                    assocition : 'product',             // lo que necesito 
+                                    attributes: ['id', 'name', 'price', 'discount'],      // lo que quiero que tariga de productos
+                                    include : ['images']                             //aparte porque esta en otra tabla
+                                }
+                            ]
+                        }
+                    ]
+                }).then(order =>{
+                    if(order){
+                        req.session.orederCart = {
+                            id : order.id,
+                            total : order.total,
+                            items : order.cart
+                        }   // esto viene desde appis cars ( si la orden existe)
+                    }else{
+                        db.Order.create({
+                            date : new Date(),  // crearlo en order.js
+                            total : 0,
+                            userId : req.session.userLogin.id, 
+                            statusId : 1,      //crearlo en order.js
+                        }).then(order => {
+                            
+                            req.session.orederCart = {
+                                id : order.id,
+                                total : order.total,
+                                items : []
+                            }
+                        })
+                    }
+                })
+
                 return res.redirect('/index');
 
             }).catch(error => console.log(error))
