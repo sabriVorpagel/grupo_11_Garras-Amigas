@@ -113,29 +113,22 @@ module.exports = {
         {
         req.session.login = {
             ...req.session.login,
-            // email: email.login,
-            // password: password.login,
-            // avatar: req.file ? req.file.filename : req.session.login.avatar,
+            name: users.name,
+            surname: users.surname,
+            email: users.email,
+            phone: users.phone,
+            street: users.street,
+            height: users.height,
+            city: users.city,
+            province: users.province,
+            avatar: req.file ? req.file.filename : req.session.login.avatar
+            
         };
         })
         
         res.redirect("/users/profile");
     },
-    //     const  users = loadUsers(); 
-    //     const { name, surname, email, password, password2, phone, direction, heigth, location, province,avatar } = req.body;
-    //     const usersModify = loadUsers().map((user) => {
-    //         if (users.id === +req.params.id) {
-    //             return {
-    //             ...user,
-    //             ...req.body,
-    //             imgUsers:  imgUsers,
-    //             };
-    //         }
-    //         return user;
-    // })
-    //     storeUsers(usersModify);
-    //     return res.redirect("/users/profile");
-    // },
+    
 
     // DESLOGEARSE
 

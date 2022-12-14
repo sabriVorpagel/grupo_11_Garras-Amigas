@@ -87,16 +87,13 @@ $("surname").addEventListener("blur", function ({ target }) {
 $("email").addEventListener("blur", async function ({ target }) {
   switch (true) {
     case !this.value.trim():
-      msgError("errorEmail", "El email es obligatorio", target);
+      msgError("errorEmail", "El email es obligatorio(js)", target);
       break;
     case !exRegs.exRegEmail.test(this.value):
-      msgError("errorEmail", "El email tiene un formato incorrecto", target);
-      break;
-    case await verifyEmail(this.value):
-      msgError("errorEmail", "El email ya está registrado", target);
+      msgError("errorEmail", "El email tiene un formato incorrecto(js)", target);
       break;
     default:
-      $('errorEmail').innerText= null;
+      validField("errorEmail", target);
       break;
   }
 });

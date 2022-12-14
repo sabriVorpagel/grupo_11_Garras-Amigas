@@ -1,23 +1,12 @@
-.advertencia{
-    color: red;
-}
 .main--editpro{
     height: 200vh;
     width: 100%;
     background-image: url("/images/fondo2.png");
 }
-.editpro--container{
-    height: 77.75em;
-    width: 100%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    overflow: hidden;
-    border-radius: 10px;
-}
+
 /* tarjeta blanca */
 .editpro-info-container{
-    width: 85%;
+    width: 65%;
     height: 190vh;
     display: flex;
     flex-direction: column;

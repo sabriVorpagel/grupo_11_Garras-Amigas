@@ -1,11 +1,17 @@
+<!-- inicio de head -->
 <%- include('../partials/head', {title: 'Login' }) %>
+<!-- fin head -->
 
     <body>
+        <!-- inicio header -->
         <%- include('../partials/header') %>
+        <!-- fin header -->
+        <!-- inicio main -->
             <main class="main--login">
                 <div class="login--container">
                     <div class="login-info-container">
                         <h1>Logueate con</h1>
+                        <!-- botones redes sociales -->
                         <div class="social-login">
                             <div class="social-login-element">
                                 <a href="#" class="btn-redes"><i class="fa-brands fa-facebook-f"></i> </a>
@@ -13,7 +19,9 @@
                                 <a href="#" class="btn-redes"><i class="fa-brands fa-google"></i> </a>
                             </div>
                         </div>
+                        <!-- fin botones de redes sociales -->
                         <p>o ingresa tus datos</p>
+                        <!-- inicio del formulario -->
                         <form action="/users/login" method="POST" id="form-login">
                             <div class="row">
                                 <div class="col-12 ">
@@ -34,27 +42,17 @@
                                             class=" py-3 form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
                                             name="password" id="password" />
                                         <span class="input-group-text" style="cursor: pointer;" id="btn-show-pass"><i
-                                                class="fa-solid fa-eye-slash"></i></span>
+                                            class="fa-solid fa-eye-slash"></i></span>
                                     </div>
                                     <small class="text-danger">
                                         <%= locals.errors && errors.password ? errors.password.msg : null %>
                                     </small>
                                     <small id="errorPassword" class="text-danger"></small>
-                                    <!-- <ul id="msgPass" hidden>
-                                        <li id="mayu">Una mayúscula</li>
-                                        <li id="minu">Un minúscula</li>
-                                        <li id="num">Un número</li>
-                                        <li id="esp">Un caracter especial ($@$!%*?&)</li>
-                                        <li id="min">Mínimo 6 caracteres</li>
-                                        <li id="max">Máximo 8 caracteres</li>
-                                    </ul> -->
                                 </div>
-
                                 <div class="mb-3 form-check">
                                     <input class="check" type="checkbox" name="remember" id="recordame" />
                                     <label class="recordame" for="checkbox">Recordarme</label>
                                 </div>
-                                <!-- <button id="boton"  class="login-btn"type="submit">INGRESA!</button> -->
                                 <div class="d-grid gap-2 col-6 mx-auto mt-4">
                                     <button class="btn btn-outline-secondary" type="submit">INGRESA!</button>
                                     <small id="errorSubmit" class="text-danger"></small>
@@ -62,8 +60,9 @@
                                 <p>¿Aún no tenes una cuenta?</p><a class="span" href="/users/register">Registrate </a>
                             </div>
                         </form>
+                        <!-- fin del formulario -->
                     </div>
-                    <img class="iamge-container" src="/images/faf.png" alt="">
+                    <!-- <img class="iamge-container" src="/images/faf.png" alt=""> -->
                 </div>
             </main>
             <script src="/javascripts/loginValidationFront.js"></script>

@@ -155,7 +155,8 @@
                         <input class="form-control" type="file" id="avatar" 
                           value="<%= locals.old && old.avatar ? old.avatar : null %>"
                           class=" form-control py-3 <%= locals.errors && errors.avatar ? 'is-invalid' : null %>"
-                          id="avatar" name="avatar" title="La provincia debe tener más de dos caracteres" />
+                          id="avatar" name="avatar" title="La provincia debe tener más de dos caracteres" 
+                          accept=".jpg, .png, .gif, .jpeg"/>
                         <small class="text-danger">
                           <%= locals.errors && errors.avatar ? errors.avatar.msg : null %>
                         </small>
