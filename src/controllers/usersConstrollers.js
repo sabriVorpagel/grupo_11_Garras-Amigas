@@ -60,7 +60,7 @@ module.exports = {
                 /* CARRITO*/
                 db.Order.findOne({
                     where : {
-                        userId : req.session.userLogin.id,          //viene de order/models
+                        userId : req.session.login.id,          //viene de order/models
                         statusId : 1                                //si esta pendiente
                     },
                     include : [
