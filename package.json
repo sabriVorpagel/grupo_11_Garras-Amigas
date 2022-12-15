@@ -3,8 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "nodemon ./src/app.js",
-    "start": "node ./src/bin/www"
+    "start": "node ./src/bin/www",
+    "server": "nodemon ./src/bin/www",
+    "client:start": "cd garrasamigas & npm run start",
+    "client:build": "cd garrasamigas & npm run build",
+    "dev": "concurrently \"npm run server\" \"npm run client:start\""
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
