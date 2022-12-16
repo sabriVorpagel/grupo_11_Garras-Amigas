@@ -17,10 +17,10 @@ router
     .get('/cart',privateRoute, cart)
     /*** CREATE ONE PRODUCT ***/
     .get('/create',adminCheck, createValidator,create)
-    .post('/create', createValidator,store)
+    .post('/create',uploadProducts.array('images'), createValidator,store)
     /*** EDIT ONE PRODUCT ***/ 
     .get('/edit/:id',adminCheck, editValidator, edit)
-    .put('/update/:id',editValidator, update)
+    .put('/update/:id',uploadProducts.array('images'),editValidator, update)
     /*** DELETE ONE PRODUCT***/ 
     .delete('/delete/:id',adminCheck, destroy)
     // Buscador
