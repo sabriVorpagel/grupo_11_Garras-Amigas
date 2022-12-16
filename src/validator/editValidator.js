@@ -17,9 +17,6 @@ module.exports = [
     check('category')
         .notEmpty().withMessage('La categoria es obligatoria'), 
 
-    check('images')
-        .notEmpty().withMessage('La imagen es obligatoria'), 
-
     check('price')
         .notEmpty().withMessage('El precio es obligatorio')
         .isNumeric({

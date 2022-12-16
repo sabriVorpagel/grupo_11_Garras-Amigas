@@ -3,7 +3,10 @@
     <%- include('../partials/header') %>
     <main class="main__create">
         <div class="main__caja">
-            <form action="/products/update/<%= product.id %>?_method=PUT " method="POST" class="main__caja__formulario formEdit" id="product_edit">
+            <form action="/products/update/<%= product.id %>?_method=PUT " method="POST" class="main__caja__formulario formEdit" id="product_edit" enctype="multipart/form-data">
+                <div class="col-11">
+                <img id="imgPrev" src="/images/productos/<%= product.images[0] ? product.images[0].file : 'Anuncio.png' %>" alt="" class="img-fluid">
+                </div>
                 <div class="col-10 col-md-5 col-lg-5">
                     <label class=" form-label" for="name"></label>
                     <input class=" form-control" placeholder="NOMBRE DEL PRODUCTO" type="text" name="name" id="name" value="<%= product.name %>">
@@ -40,7 +43,7 @@
                 </div>
                 <div class="col-10 col-md-5 col-lg-5">
                     <label class=" form-label" for="images">Selecciona imagen del producto</label>
-                    <input class=" form-control" type="file" name="images" id="images" value="<%= product.images %>">
+                    <input class=" form-control" type="file" name="images" id="images" multiple >
                     <small><%= locals.errors && errors.images ? errors.images.msg : null %></small>
                     <span id="errorImages"></span>
                 </div>
