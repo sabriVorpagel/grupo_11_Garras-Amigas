@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { fetchWithoutToken } from '../hooks/userFech';
 import { Categories } from './Categories';
 import { LastProduct } from './LastProduct';
-
 import { Metric } from './Metric';
 
 
@@ -30,39 +29,66 @@ function MetricAll() {
 		},
 	});
 
+	// const getData = async (endpoint) => {
+	// 	try{
+	// 		let response = await fetchWithoutToken(endpoint);
+	// 		return response;
+	// 	} catch(error){
+			
+	// 	}
+	// };
+
+	// useEffect(() => {
+	// 	getData("/totals")
+	// 	.then(({data}) => {
+	// 		setState({
+	// 			loading: false,
+	// 			products:{
+	// 				...state.products,
+	// 				data: data.productsTotal,
+	// 			},
+	// 			users: {
+	// 				...users,
+	// 				data: data.usersTotal,
+	// 			},
+	// 			categories: {
+	// 				...categories,
+	// 				data: data.categoriesTotal,
+	// 			},
+	// 		})
+	// 	})
+	// 	.catch(()=> console.error);
+	// }, []);
+
 	const getData = async (endpoint) => {
-		try{
-			let response = await fetchWithoutToken(endpoint);
-			return response;
-		} catch(error){
-			console.log(error);
+		try {
+		  let {data} = await fetchWithoutToken(endpoint);
+		  setState({
+			loading: false,
+			products: {
+			  ...state.products,
+			  data: data.productsTotal,
+			},
+			users: {
+			  ...state.users,
+			  data: data.usersTotal,
+			},
+			categories: {
+			  ...state.categories,
+			  data: data.categoriesTotal,
+			},
+		  });
+		} catch (error) {
+		  console.log(error);
 		}
-	};
-
-	useEffect(() => {
-		getData("/totals")
-		.then(({data}) => {
-			setState({
-				loading: false,
-				products:{
-					...state.products,
-					data: data.productsTotal,
-				},
-				users: {
-					...users,
-					data: data.usersTotal,
-				},
-				categories: {
-					...categories,
-					data: data.categoriesTotal,
-				},
-			})
-		})
-		.catch(()=> console.error);
-	}, []);
+	  };
+	
+	  useEffect(() => {
+		getData("/total")
+	  }, []);
 
 
-	const {products, users, categories} = state
+	const {products, users, categories} = state;
 
 
 	return (

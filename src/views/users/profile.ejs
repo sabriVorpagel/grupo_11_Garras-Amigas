@@ -26,12 +26,12 @@
                 <input type="email" class="form-control" aria-label="Sizing example input"
                   aria-describedby="inputGroup-sizing-default" value=" <%= users.email %>">
               </div>
-              <div class="input-group mb-3">
+               <div class="input-group mb-3">
                 <span class="input-group-text" id="inputGroup-sizing-default">Teléfono</span>
                 <input type="number" class="form-control" aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing-default" value=" <%= users.phone %>">
+                  aria-describedby="inputGroup-sizing-default" value="<%= users.phone %>">
               </div>
-              <div class="input-group mb-3">
+              <--<div class="input-group mb-3">
                 <span class="input-group-text" id="inputGroup-sizing-default">Direccón</span>
                 <input type="text" class="form-control" aria-label="Sizing example input"
                   aria-describedby="inputGroup-sizing-default" value=" <%= users.street %>">
@@ -50,13 +50,13 @@
                 <span class="input-group-text" id="inputGroup-sizing-default">Provincia</span>
                 <input type="text" class="form-control" aria-label="Sizing example input"
                   aria-describedby="inputGroup-sizing-default" value=" <%= users.province %>">
-              </div>
+              </div> -->
               <div class="col-8">
                 <a href="/users/editProfile/<%= users.id %>">
                   <button type="submit" class="mt-4 btn-profile btn btn-outline-secondary">Editar Perfil</button>
                 </a>
                 <a href="/users/logout">
-                  <button type="submit" class="mt-4 btn-profile btn btn-outline-secondary">Salir</button>
+                  <button type="submit" class="mt-4 btn-profile btn btn-outline-secondary">Cerrar sesion</button>
                 </a>
               </div>
             </div>
