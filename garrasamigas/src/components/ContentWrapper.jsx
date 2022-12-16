@@ -1,6 +1,7 @@
 import React from 'react'
-import { MetricAll } from './MetricAll'
+
 import { Footer } from './Footer'
+import MetricAll from './MetricAll'
 import { TopBar } from './TopBar'
 
 export const ContentWrapper = () => {

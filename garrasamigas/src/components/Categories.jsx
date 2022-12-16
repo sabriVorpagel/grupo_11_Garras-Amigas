@@ -86,4 +86,6 @@ import React from 'react'
 						</div>
   )
 }
+
 export {Categories}
+
