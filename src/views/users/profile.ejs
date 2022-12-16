@@ -3,66 +3,78 @@
   <body>
     <%- include('../partials/header') %>
       <main class="main--profile">
-        <div class="container py-4">
-          <div class="card tagger2 card-profile" style="max-width: 540px;">
-            <div class="col m-4 pt-5 pb-5 border-2 bg-white col-profile">
-              <div class="row-8 profile-user-header">
-                <div class="profile-user-avatar">
-                  <img class="img-fluid" src="/images/users/<%=users.avatar%>" />
+        <section>
+          <div class="container py-5">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="card mb-4">
+                  <div class="card-body text-center">
+                    <img src="/images/users/<%=users.avatar%>" alt="avatar"
+                      class=" img-fluid py-3" style="width: 500px;">
+                    <div class="d-flex justify-content-center mb-2">
+                      <a href="/users/editProfile/<%= users.id %>">
+                      <button type="button" class="btn btn-primary" >Editar Perfil</button></a>
+                      <a href="/users/logout">
+                      <button type="button" class="btn btn-outline-primary ms-1">Cerrar Sesion</button></a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-lg-8">
+                <div class="card mb-4">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <p class="mb-0">Nombre</p>
+                      </div>
+                      <div class="col-sm-9">
+                        <p class="text-muted mb-0"><%= users.name %> </p>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <p class="mb-0">Apellido</p>
+                      </div>
+                      <div class="col-sm-9">
+                        <p class="text-muted mb-0"><%= users.surname %></p>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <p class="mb-0">Teléfono</p>
+                      </div>
+                      <div class="col-sm-9">
+                        <p class="text-muted mb-0"><%= users.phone %></p>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <p class="mb-0">Email</p>
+                      </div>
+                      <div class="col-sm-9">
+                        <p class="text-muted mb-0"><%= users.email %></p>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <p class="mb-0">Dirección</p>
+                      </div>
+                      <div class="col-sm-9">
+                        <p class="text-muted mb-0"><%= users.street %></p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="input-group mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-default">Nombre</span>
-                <input type="text" class="form-control" aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing-default" value=" <%= users.name %>">
-              </div>
-              <div class="input-group mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-default">Apellido</span>
-                <input type="text" class="form-control" aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing-default" value=" <%= users.surname %>">
-              </div>
-              <div class="input-group mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
-                <input type="email" class="form-control" aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing-default" value=" <%= users.email %>">
-              </div>
-               <div class="input-group mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-default">Teléfono</span>
-                <input type="number" class="form-control" aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing-default" value="<%= users.phone %>">
-              </div>
-              <--<div class="input-group mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-default">Direccón</span>
-                <input type="text" class="form-control" aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing-default" value=" <%= users.street %>">
-              </div>
-              <div class="input-group mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-default">Altura</span>
-                <input type="number" class="form-control" aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing-default" value="<%= users.height %>">
-              </div>
-              <div class="input-group mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-default">Localidad</span>
-                <input type="text" class="form-control" aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing-default" value=" <%= users.city %>">
-              </div>
-              <div class="input-group mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-default">Provincia</span>
-                <input type="text" class="form-control" aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing-default" value=" <%= users.province %>">
-              </div> -->
-              <div class="col-8">
-                <a href="/users/editProfile/<%= users.id %>">
-                  <button type="submit" class="mt-4 btn-profile btn btn-outline-secondary">Editar Perfil</button>
-                </a>
-                <a href="/users/logout">
-                  <button type="submit" class="mt-4 btn-profile btn btn-outline-secondary">Cerrar sesion</button>
-                </a>
-              </div>
             </div>
-          </div>
+        </section>
       </main>
-    <%- include('../partials/footer') %>
+      <%- include('../partials/footer') %>
   </body>
 
   </html>

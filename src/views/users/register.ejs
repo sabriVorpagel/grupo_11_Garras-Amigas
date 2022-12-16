@@ -85,7 +85,7 @@
                         <label class="form-label"></label>
                         <div class="d-flex  mb-3">
                           <input type="password" placeholder="REPETIR CONTRASEÑA"
-                            class=" py-3form-control <%= locals.errors && errors.password2 ? 'is-invalid' : null %>"
+                            class=" py-3 form-control <%= locals.errors && errors.password2 ? 'is-invalid' : null %>"
                             name="password2" id="password2" />
                           <span class="input-group-text" style="cursor: pointer;" id="btn-show-pass2"><i
                               class="fa-solid fa-eye-slash"></i></span>
@@ -151,12 +151,13 @@
                         <small id="errorProvince" class="text-danger"></small>
                       </div> -->
                       <div class="col-12 col-md-6 mt-4">
-                        <label for="avatar" class="form-label">FOTO DE PERFIL</label>
+                      
                         <input class="form-control" type="file" id="avatar" 
                           value="<%= locals.old && old.avatar ? old.avatar : null %>"
                           class=" form-control py-3 <%= locals.errors && errors.avatar ? 'is-invalid' : null %>"
                           id="avatar" name="avatar" title="La provincia debe tener más de dos caracteres" 
                           accept=".jpg, .png, .gif, .jpeg"/>
+                          <label for="avatar" class="form-label">FOTO DE PERFIL</label>
                         <small class="text-danger">
                           <%= locals.errors && errors.avatar ? errors.avatar.msg : null %>
                         </small>

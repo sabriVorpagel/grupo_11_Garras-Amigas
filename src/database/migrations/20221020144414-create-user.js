@@ -24,10 +24,10 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
-      // street: {
-      //   type: Sequelize.STRING,
-      //   allowNull: false
-      // },
+      street: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
       // province: {
       //   type: Sequelize.STRING,
       //   allowNull: false
@@ -36,9 +36,9 @@ module.exports = {
       //   type: Sequelize.STRING,
       //   allowNull: false
       // },
-      // phone: {
-      //   type: Sequelize.INTEGER,
-      // },
+      phone: {
+        type: Sequelize.INTEGER,
+      },
       // height: {
       //   type: Sequelize.INTEGER,
       // },
