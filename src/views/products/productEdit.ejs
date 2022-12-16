@@ -40,12 +40,12 @@
                 </div>
                 <div class="col-10 col-md-5 col-lg-5">
                     <label class=" form-label" for="images">Selecciona imagen del producto</label>
-                    <input class=" form-control" type="file" name="images" id="images" value="<%= product.images %>">
+                    <input class=" form-control" type="file" name="images" id="images" accept="image/*" multiple value="<%= product.images[0].file %>">
                     <small><%= locals.errors && errors.images ? errors.images.msg : null %></small>
                     <span id="errorImages"></span>
                 </div>
                 <div class="col-10 col-md-10 col-lg-10">
-                    <input name="description" placeholder="DESCRIPCION" id="description" class="form-control form-control-lg py-3" style="resize: none;" rows="5" maxlength="1000" value="<%= product.description %> ">
+                    <input name="description" placeholder="DESCRIPCION" id="description" class="form-control form-control-lg py-3" style="resize: none;" rows="5" maxlength="1000" value="<%= product.description %>">
                     <small class="advertencia"><%= locals.errors && errors.description ? errors.description.msg : null %></small>
                     <span id="errorDescription"></span>
                 </div>
