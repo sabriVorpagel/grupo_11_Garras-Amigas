@@ -3,7 +3,7 @@
     <%- include('../partials/header') %>
     <main class="main__create">
         <div class="main__caja">
-            <form id="form-create" action="/products/create" method="POST" class="main__caja__formulario">
+            <form id="form-create" action="/products/create" method="POST" class="main__caja__formulario" enctype="multipart/form-data">
                 <div class="col-10 col-md-5 col-lg-5">
                     <label class=" form-label" for="name"></label>
                     <input class=" form-control" placeholder="NOMBRE DEL PRODUCTO" type="text" name="name" id="name">
