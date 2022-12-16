@@ -57,6 +57,7 @@ module.exports ={
         let categories = db.Category.findAll();
 
         let product = db.Product.findByPk(req.params.id);
+        
 
         Promise.all([categories, product])
         .then(([categories, product]) => {
