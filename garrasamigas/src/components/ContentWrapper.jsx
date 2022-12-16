@@ -1,5 +1,8 @@
 import React from 'react'
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 import { Footer } from './Footer'
 import MetricAll from './MetricAll'
 import { TopBar } from './TopBar'
@@ -11,11 +14,11 @@ export const ContentWrapper = () => {
             <div id="content-wrapper" className="d-flex flex-column">
                 {/*<!-- Main Content -->*/}
                 <div id="content">
-                <TopBar />
-                <MetricAll />
+                <TopBar/>
+                <MetricAll/>
                    
                 </div>
-                <Footer />
+                <Footer/>
             </div>    
         </React.Fragment>
   )

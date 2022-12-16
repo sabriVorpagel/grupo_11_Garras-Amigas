@@ -33,9 +33,24 @@ module.exports ={
                 ...req.body,
                 name: name.trim(),
                 categoryId: req.body.categoryId,
-                images:  req.files ? req.files.filename : 'default.jpg'
             })
-            .then(product =>{
+            .then( async (product) =>{
+
+                if(req.files.length){
+                    const images = req.files.map(file => {
+                        return {
+                            file : file.filename,
+                            productId : product.id
+                        }
+            
+                    });
+
+                    await db.Image.bulkCreate(images,{
+						validate : true
+					}).then( (result) => console.log(result) )
+                    
+                    return res.redirect('/index')
+                }
                 console.log(product)
                 return res.redirect('/index')
             })
@@ -54,13 +69,16 @@ module.exports ={
     },
     //vista de edit con datos
     edit: (req,res) =>{
+
         let categories = db.Category.findAll();
 
-        let product = db.Product.findByPk(req.params.id);
-        
+        let product = db.Product.findByPk(req.params.id,{
+            include : ['images']
+        });
 
         Promise.all([categories, product])
         .then(([categories, product]) => {
+            console.log(product)
             return res.render('products/productEdit',{
                 product,
                 categories
@@ -79,7 +97,27 @@ module.exports ={
                 where: {id:req.params.id}
             }
         )
-        .then(result =>{
+        .then(async (result) =>{
+
+            if(req.files.length){
+                await db.Image.destroy({
+                    where : {
+                        productId : req.params.id
+                    }
+                })
+                const images = req.files.map(file => {
+                    return {
+                        file : file.filename,
+                        productId : req.params.id
+                    }
+        
+                });
+
+                await db.Image.bulkCreate(images,{
+                    validate : true
+                }).then( (result) => console.log(result) )
+            }
+
             console.log(result)
             return res.redirect('/products/detail/' +req.params.id)
         })

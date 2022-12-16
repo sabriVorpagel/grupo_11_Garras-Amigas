@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { fetchWithoutToken } from '../hooks/userFech';
 import { Categories } from './Categories';
+<<<<<<< HEAD
 import { LastProduct } from './LastProduct';
+=======
+import { LastProducts } from './LastMovieInDb';
+
+>>>>>>> master
 import { Metric } from './Metric';
 
 
