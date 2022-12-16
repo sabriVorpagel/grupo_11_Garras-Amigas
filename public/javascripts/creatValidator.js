@@ -58,7 +58,7 @@ $('category').addEventListener('blur', function ({target}) {
             break;
     }
 });
-
+/* 
 $('images').addEventListener('blur', function ({target}) {
     switch (true) {
         case !this.value.trim():
@@ -69,7 +69,7 @@ $('images').addEventListener('blur', function ({target}) {
             $('errorImages').innerText= null;
             break;
     }
-});
+}); */
 
 $('discount').addEventListener('blur', function ({target}) {
     switch (true) {
