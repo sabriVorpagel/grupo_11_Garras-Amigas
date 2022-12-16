@@ -11,18 +11,15 @@
                         <img src="/images/productos/<%= product.images.length > 0 ? product.images[0].file : 'Anuncio.png' %> " alt="" class="slider__img">
                     </div>
                     <div class="detail__main__product-contenedor-imagenes">
-                        <div class="detail__main__product-imagenes">
-                            <img src="/images/productos/<%= product.images.length > 0 ? product.images[0].file : 'Anuncio.png'  %> " alt="">
-                        </div>    
-                        <div class="detail__main__product-imagenes">
-                            <img src="/images/productos/<%= product.images.length > 0 ? product.images[0].file : 'Anuncio.png'  %> " alt="">
-                        </div>    
-                        <div class="detail__main__product-imagenes">
-                            <img src="/images/productos/<%= product.images.length > 0 ? product.images[0].file : 'Anuncio.png'  %> " alt="">
-                        </div>
-                        <div class="detail__main__product-imagenes">
-                            <img src="/images/productos/<%= product.images.length > 0 ? product.images[0].file : 'Anuncio.png'  %> " alt="">
-                        </div>
+
+                        <% for( let i = 1; i < product.images.length; i++ ) { %>
+                            <div class="detail__main__product-imagenes">
+                                <img src="/images/productos/<%= product.images[i].file %> " alt="">
+                            </div> 
+                        <% } %>
+                     
+                           
+                     
                     </div>
                 </div>
         </article>  
