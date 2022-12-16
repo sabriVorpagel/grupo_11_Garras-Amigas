@@ -3,7 +3,7 @@ import { fetchWithoutToken } from '../hooks/userFech';
 import { Categories } from './Categories';
 import { LastProducts } from './LastMovieInDb';
 
-import { Metric } from './metric/Metric';
+import { Metric } from './Metric';
 
 
 function MetricAll() {
