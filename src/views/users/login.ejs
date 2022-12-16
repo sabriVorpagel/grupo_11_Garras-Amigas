@@ -7,21 +7,22 @@
         <%- include('../partials/header') %>
         <!-- fin header -->
         <!-- inicio main -->
-            <main class="main--login">
-                <div class="login--container">
-                    <div class="login-info-container">
-                        <h1>Logueate con</h1>
-                        <!-- botones redes sociales -->
-                        <div class="social-login">
-                            <div class="social-login-element">
-                                <a href="#" class="btn-redes"><i class="fa-brands fa-facebook-f"></i> </a>
-                                <a href="#" class="btn-redes"><i class="fa-brands fa-instagram"></i> </a>
-                                <a href="#" class="btn-redes"><i class="fa-brands fa-google"></i> </a>
-                            </div>
+            <main class="main--reg">
+                <div class="container">
+                    <div class="row pt-5 pb-5 justify-content-center">
+                      <div class="col-sm-8 col-lg-4 p-5 border-2 bg-white tagger2">
+                      <h1 class="text-center title-reg">Logueate con</h1>
+                      <div class="social-all text-center">
+                        <div class="social-all-element text-center">
+                          <a href="#" class="btn-redes"><i class="fa-brands fa-facebook-f"></i> </a>
+                          <a href="#" class="btn-redes"><i class="fa-brands fa-instagram"></i> </a>
+                          <a href="#" class="btn-redes"><i class="fa-brands fa-google"></i> </a>
                         </div>
-                        <!-- fin botones de redes sociales -->
-                        <p>o ingresa tus datos</p>
-                        <!-- inicio del formulario -->
+                      </div>
+                      <h5 class="text-center title-reg py-3">o ingresa tus datos</h5>
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-12">
                         <form action="/users/login" method="POST" id="form-login">
                             <div class="row">
                                 <div class="col-12 ">
@@ -49,7 +50,7 @@
                                     </small>
                                     <small id="errorPassword" class="text-danger"></small>
                                 </div>
-                                <div class="mb-3 form-check">
+                                <div class="mb-3 form-check text-center">
                                     <input class="check" type="checkbox" name="remember" id="recordame" />
                                     <label class="recordame" for="checkbox">Recordarme</label>
                                 </div>
@@ -57,7 +58,7 @@
                                     <button class="btn btn-outline-secondary" type="submit">INGRESA!</button>
                                     <small id="errorSubmit" class="text-danger"></small>
                                 </div>
-                                <p>¿Aún no tenes una cuenta?</p><a class="span" href="/users/register">Registrate </a>
+                                <p  class="text-center py-3">¿Aún no tenes una cuenta?</p><a class="span text-center" href="/users/register">Registrate </a>
                             </div>
                         </form>
                         <!-- fin del formulario -->
@@ -65,5 +66,8 @@
                     <!-- <img class="iamge-container" src="/images/faf.png" alt=""> -->
                 </div>
             </main>
+              <!-- ----------Inicio de footer----------- -->
+            <%- include('../partials/footer') %>
+    <!-- ----------Fin de footer----------- -->
             <script src="/javascripts/loginValidationFront.js"></script>
     </body>

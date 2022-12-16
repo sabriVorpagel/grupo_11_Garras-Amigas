@@ -7,83 +7,93 @@
             <!-- fin header -->
             <!-- inicio main -->
             <main class="main--profile">
-                <div class="container">
-                    <div class="row-10  pt-5 pb-5 ">
-                        <div class="col-8 p-5 border-2 bg-white tagger2">
-                            <!-- inicio del formulario -->
-                            <form id="form-register" action="/users/update/<%= users.id %>?_method=PUT" method="POST"
-                                enctype="multipart/form-data">
-                                <div class="row-12 profile-user-header mb-4">
-                                    <div class="profile-user-avatar">
-                                        <img src="/images/users/<%=users.avatar%>" id="avatar" />
-                                        <input class="row-6" type="file" name="avatar" id="avatar" onchange="preview(event)"
-                                        accept=".jpg, .png, .gif, .jpeg" />
+                <section>
+                    <form id="form-register" action="/users/update/<%= users.id %>?_method=PUT" method="POST">
+                        <div class="container py-5">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="card mb-4">
+                                        <div class="card-body text-center">
+                                            <img src="/images/users/<%=users.avatar%>" id="avatar" 
+                                            class="img-fluid py-3" style="width: 500px;"/>
+                                            <input class="row-6" type="file" name="avatar" id="avatar"
+                                            onchange="preview(event)" accept=".jpg, .png, .gif, .jpeg" />
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-12 mt-4">
-                                    <div class="row  mt-4">
-                                        <div class="d-grid gap-2 col-6 mx-auto mt-4">
-                                            <label class="form-label">NOMBRE</label>
-                                            <input class="form-control" aria-label="Sizing example input"
-                                                aria-describedby="inputGroup-sizing-default" type="text" id="name"
-                                                name="name" value="<%= users.name %>">
-                                        </div>
-                                        <div class="d-grid gap-2 col-6 mx-auto mt-4">
-                                            <label class="form-label">APELLIDO</label>
-                                            <input class="form-control" aria-label="Sizing example input"
-                                                aria-describedby="inputGroup-sizing-default" type="text" id="surname"
-                                                name="surname" value="<%= users.surname %>">
-                                        </div>
-                                        <div class="d-grid gap-2 col-6 mx-auto mt-4">
-                                            <label class="form-label">EMAIL</label>
-                                            <input class="form-control" aria-label="Sizing example input"
-                                                aria-describedby="inputGroup-sizing-default" type="email" id="email"
-                                                name="email" value="<%= users.email %>">
-                                        </div>
-                                        <!-- <div class="d-grid gap-2 col-6 mx-auto mt-4">
-                                            <label class="form-label">NÚMERO TELÉFONICO</label>
-                                            <input class="form-control" aria-label="Sizing example input"
-                                                aria-describedby="inputGroup-sizing-default" type="number" id="phone"
-                                                name="phone" value="<%= users.phone %>">
-                                        </div>
-                                        <div class="d-grid gap-2 col-6 mx-auto mt-4">
-                                            <label class="form-label">DIRECCIÓN</label>
-                                            <input class="form-control" aria-label="Sizing example input"
-                                                aria-describedby="inputGroup-sizing-default" type="text" id="street"
-                                                name="street" value="<%= users.street %>">
-                                        </div>
-                                        <div class="d-grid gap-2 col-6 mx-auto mt-4">
-                                            <label class="form-label">ALTURA</label>
-                                            <input class="form-control" aria-label="Sizing example input"
-                                                aria-describedby="inputGroup-sizing-default" type="number" id="height"
-                                                name="height" value="<%= users.height %>">
-                                        </div>
-                                        <div class="d-grid gap-2 col-6 mx-auto mt-4">
-                                            <label class="form-label">LOCALIDAD</label>
-                                            <input class="form-control" aria-label="Sizing example input"
-                                                aria-describedby="inputGroup-sizing-default" type="text" id="city"
-                                                name="city" value="<%= users.city %>">
-                                        </div>
-                                        <div class="d-grid gap-2 col-6 mx-auto mt-4">
-                                            <label class="form-label">PROVINCIA</label>
-                                            <input class="form-control" aria-label="Sizing example input"
-                                                aria-describedby="inputGroup-sizing-default" type="text" id="province"
-                                                name="province" value="<%= users.province %>">
-                                        </div> -->
-                                        <div class="d-grid gap-2 col-6 mx-auto mt-4">
-                                            <button class="btn btn-outline-secondary" type="submit">Guardar
-                                                Cambios</button>
-                                        </div>
+                                <div class="col-lg-8">
+                                    <div class="card mb-4">
+                                        <div class="card-body">
+
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <p class="mb-0">Nombre</p>
+                                                </div>
+                                                <div class="col-sm-9">
+                                                    <input class="form-control" aria-label="Sizing example input"
+                                                        aria-describedby="inputGroup-sizing-default" type="text"
+                                                        id="name" name="name" value="<%= users.name %>">
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <p class="mb-0">Apellido</p>
+                                                </div>
+                                                <div class="col-sm-9">
+                                                    <input class="form-control" aria-label="Sizing example input"
+                                                        aria-describedby="inputGroup-sizing-default" type="text"
+                                                        id="surname" name="surname" value="<%= users.surname %>">
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <p class="mb-0">Teléfono</p>
+                                                </div>
+                                                <div class="col-sm-9">
+                                                    <input class="form-control" aria-label="Sizing example input"
+                                                        aria-describedby="inputGroup-sizing-default" type="number"
+                                                        id="phone" name="phone" value="<%= users.phone %>">
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <p class="mb-0">Email</p>
+                                                </div>
+                                                <div class="col-sm-9">
+                                                    <input class="form-control" aria-label="Sizing example input"
+                                                        aria-describedby="inputGroup-sizing-default" type="email"
+                                                        id="email" name="email" value="<%= users.email %>">
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <p class="mb-0">Dirección</p>
+                                                </div>
+                                                <div class="col-sm-9">
+                                                    <input class="form-control" aria-label="Sizing example input"
+                                                        aria-describedby="inputGroup-sizing-default" type="text"
+                                                        id="street" name="street" value="<%= users.street %>">
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-center mb-2 py-3">
+                                                <button class="btn btn-primary" type="submit">Guardar Cambios</button>
+                                            </div>
                                     </div>
-                            </form>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <!-- fin del formulario -->
-                </div>
-                </div>
-                </div>
+                    </form>
+                </section>
             </main>
             <!-- fin del main -->
+            <!-- inicio de footer -->
+            <%- include('../partials/footer') %>
+            <!-- fin del footer -->
             <!-- inicio de editar foto de avatar -->
             <script>
                 let preview = (event) => {
