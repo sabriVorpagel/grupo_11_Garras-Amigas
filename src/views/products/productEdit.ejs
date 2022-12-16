@@ -22,14 +22,13 @@
                 </div>
                  <div class="col-10 col-md-5 col-lg-5">
                     <label class=" form-label" for="stock"></label>
-                    <input class=" form-control" placeholder="STOCK" type="number" name="stock" id="stock" value="<%= product.stock %> ">
+                    <input class=" form-control" placeholder="STOCK" type="number" name="stock" id="stock" value="<%= product.stock %>">
                     <small class="advertencia"><%= locals.errors && errors.stock ? errors.stock.msg : null %></small>
                     <span id="errorStock"></span>
                 </div>
                  <div class="col-10 col-md-5 col-lg-5">
                     <label class=" form-label" for="price"></label>
-                    <input class=" form-control" placeholder=" P
-                    type="number" name="price" id="price" value="<%= product.price %>">
+                    <input class=" form-control" placeholder=" Precio" type="number" name="price" id="price" value="<%= product.price %>">
                     <small class="advertencia"><%= locals.errors && errors.price ? errors.price.msg : null %></small>
                     <span id="errorPrice"></span>
                 </div>
@@ -46,7 +45,7 @@
                     <span id="errorImages"></span>
                 </div>
                 <div class="col-10 col-md-10 col-lg-10">
-                    <textarea name="description" placeholder="DESCRIPCION" id="description" class="form-control form-control-lg py-3" style="resize: none;" rows="5" maxlength="1000"></textarea>
+                    <input name="description" placeholder="DESCRIPCION" id="description" class="form-control form-control-lg py-3" style="resize: none;" rows="5" maxlength="1000" value="<%= product.description %> ">
                     <small class="advertencia"><%= locals.errors && errors.description ? errors.description.msg : null %></small>
                     <span id="errorDescription"></span>
                 </div>
