@@ -11,7 +11,11 @@
     --textoSizePrecios: 18px;
     --textoSizeProducto: 16px
 }
-
+.banner-carrusel{
+    width: 80%;
+    height: 80vh;
+   
+}
 /*Main*/
 .home__main{
     display: flex;

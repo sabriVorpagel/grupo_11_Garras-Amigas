@@ -1,4 +1,5 @@
 import React from 'react'
+// import image from '..assets/images/logopyg.png';
 
 export const SideBar = () =>{
     return(
@@ -9,7 +10,8 @@ export const SideBar = () =>{
                 {/*<!-- Sidebar - Brand -->*/}
                 <a className="sidebar-brand d-flex" href="/">
                     <div className="sidebar-brand-icon">
-                        <img className="w-100" alt="Garras Amigas"/>
+                        <img src="" className="w-100" alt="Garras Amigas"/>
+                        
                     </div>
                 </a>
 

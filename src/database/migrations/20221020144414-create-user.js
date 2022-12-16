@@ -24,24 +24,24 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
-      street: {
-        type: Sequelize.STRING,
-        allowNull: false
-      },
-      province: {
-        type: Sequelize.STRING,
-        allowNull: false
-      },
-      city: {
-        type: Sequelize.STRING,
-        allowNull: false
-      },
-      phone: {
-        type: Sequelize.INTEGER,
-      },
-      height: {
-        type: Sequelize.INTEGER,
-      },
+      // street: {
+      //   type: Sequelize.STRING,
+      //   allowNull: false
+      // },
+      // province: {
+      //   type: Sequelize.STRING,
+      //   allowNull: false
+      // },
+      // city: {
+      //   type: Sequelize.STRING,
+      //   allowNull: false
+      // },
+      // phone: {
+      //   type: Sequelize.INTEGER,
+      // },
+      // height: {
+      //   type: Sequelize.INTEGER,
+      // },
       avatar:{
         type: Sequelize.STRING
       },
