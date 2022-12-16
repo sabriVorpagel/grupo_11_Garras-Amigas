@@ -73,6 +73,7 @@ module.exports ={
         let categories = db.Category.findAll();
 
         let product = db.Product.findByPk(req.params.id,{
+
             include : ['images']
         });
 
@@ -81,7 +82,7 @@ module.exports ={
             console.log(product)
             return res.render('products/productEdit',{
                 product,
-                categories
+                categories, 
             })
         })
         .catch(error => console.log('Se detecto un error, revisar por favor'+ error))

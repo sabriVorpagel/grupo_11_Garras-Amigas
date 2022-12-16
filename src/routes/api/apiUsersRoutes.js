@@ -8,4 +8,7 @@ router
     .get('/:id', getOne)
     .get('/avatar/:avatar',getAvatar)
 
+
+    
+
 module.exports = router;
