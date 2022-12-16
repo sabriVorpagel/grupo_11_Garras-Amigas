@@ -60,6 +60,7 @@ module.exports ={
 
         Promise.all([categories, product])
         .then(([categories, product]) => {
+            console.log(product)
             return res.render('products/productEdit',{
                 product,
                 categories

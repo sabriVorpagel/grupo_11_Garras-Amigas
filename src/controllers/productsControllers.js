@@ -80,8 +80,10 @@ module.exports = {
 					},
 				],
 			},
+			include : ['images']
 		})
 			.then((result) => {
+				console.log(result[0].images[0].file)
 				return res.render("products/result", {
 					result,
 					toThousand,

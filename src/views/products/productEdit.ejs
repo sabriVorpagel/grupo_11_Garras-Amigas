@@ -22,14 +22,13 @@
                 </div>
                  <div class="col-10 col-md-5 col-lg-5">
                     <label class=" form-label" for="stock"></label>
-                    <input class=" form-control" placeholder="STOCK" type="number" name="stock" id="stock" value="<%= product.stock %> ">
+                    <input class=" form-control" placeholder="STOCK" type="number" name="stock" id="stock" value="<%= product.stock %>">
                     <small class="advertencia"><%= locals.errors && errors.stock ? errors.stock.msg : null %></small>
                     <span id="errorStock"></span>
                 </div>
                  <div class="col-10 col-md-5 col-lg-5">
                     <label class=" form-label" for="price"></label>
-                    <input class=" form-control" placeholder=" P
-                    type="number" name="price" id="price" value="<%= product.price %>">
+                    <input class=" form-control" placeholder=" Precio" type="number" name="price" id="price" value="<%= product.price %>">
                     <small class="advertencia"><%= locals.errors && errors.price ? errors.price.msg : null %></small>
                     <span id="errorPrice"></span>
                 </div>
