@@ -1,4 +1,3 @@
-
 .products-title{
     text-align: center;
 }
@@ -14,18 +13,15 @@
     justify-content: center;
 }
 
-.result-div a{
-    width: 70%;
-}
 .result-div img{
-    width: 100%;
+    width: 254px;
+    height: 250px;
 }
 
 .result-div2{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 30%;
 }
 
 .result-div2 h4{
