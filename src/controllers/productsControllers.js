@@ -29,35 +29,16 @@ module.exports = {
 			.catch(error => console.log(error))
     },
     cart: (req,res) => {
-		let productOfertas = db.Product.findAll({
-			where: {
-				discount: {
-					[Op.gte]: 10,
-				},
-			},
-			limit: 4,
-			order: [["discount", "DESC"]],
-			attributes: {
-				exclude: ["createdAt", "updatedAt", "categoryId"],
-			},
-			include: [
-				{
-					association: "category",
-					attributes: ["id", "name"],
-				},
-				{
-					association: "images",
-				},
-			],
-		});
-		Promise.all([productOfertas])
-			.then(([productOfertas]) => {
-				return res.render("products/productCart", {
-					productOfertas,
-					toThousand,
-				});
+		db.Product.findByPk(req.params.id,{
+			include : [{all : true}]
+		})
+			.then(product => {
+				return res.render('products/productCart', {
+			product,
+			toThousand
 			})
-			.catch((error) => console.log(error));
+			})
+			.catch(error => console.log(error))
 		// db.Cart.findAll()
 		// .then(cart =>
 		// 	res.render('products/productCart', {cart}))
