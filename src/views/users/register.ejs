@@ -9,9 +9,9 @@
     <!-- ----------Inicio de main----------- -->
     
       <main class="main--reg">
-        <div class="container-fliud">
-          <div class="row pt-5 pb-5 justify-content-center">
-            <div class="col-sm-10 col-lg-8 p-5 border-2 bg-white tagger2">
+        <div class="container">
+          <div class="row  pt-5 pb-5 ">
+            <div class="col-12 p-5 border-2 bg-white tagger2">
             <h1 class="text-center title-reg">Registrate con</h1>
             <div class="social-all text-center">
               <div class="social-all-element text-center">
@@ -25,7 +25,7 @@
               <div class="row">
                 <div class="col-12">
                   <form id="form-register" action="" method="POST" enctype="multipart/form-data">
-                    <div class="row g-3">
+                    <div class="row">
                       <div class="col-12 col-md-6">
                         <label class="form-label"></label>
                         <input type="text" placeholder="NOMBRE"
@@ -38,7 +38,7 @@
                         <small id="errorName" class="text-danger"></small>
                       </div>
                       <div class="col-12 col-md-6">
-                        <label class=" form-label"></label>
+                        <label class="form-label"></label>
                         <input type="text" placeholder="APELLIDO"
                           value="<%= locals.old && old.surname ? old.surname : null %>"
                           class=" form-control py-3 <%= locals.errors && errors.surname ? 'is-invalid' : null %>"
@@ -49,7 +49,7 @@
                         <small id="errorSurname" class="text-danger"></small>
                       </div>
                       <div class="col-12 col-md-6">
-                        <label class=" form-label"></label>
+                        <label class="form-label"></label>
                         <input type="email" placeholder="EMAIL"
                         value="<%= locals.old && old.email ? old.email : null %>"
                           class=" form-control py-3 <%= locals.errors && errors.email ? 'is-invalid' : null %>"
@@ -60,7 +60,7 @@
                         <small id="errorEmail" class="text-danger"></small>
                       </div>
                       <div class="col-12 col-md-6">
-                        <label class=" form-label"></label>
+                        <label class="form-label"></label>
                         <div class="d-flex  mb-3">
                           <input type="password" placeholder="CONTRASEÑA"
                             class=" py-3 form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
@@ -98,7 +98,7 @@
                       <div class="col-12 col-md-6">
                         <label class="form-label"></label>
                         <input type="number" placeholder="TELÉFONO"
-                          class="form-control py-3 <%= locals.errors && errors.phone ? 'is-invalid' : null %> "
+                          class=" form-control py-3 <%= locals.errors && errors.phone ? 'is-invalid' : null %> "
                           value="<%= locals.old && old.phone ? old.phone : null %>" id="phone" name="phone"
                           title="El numero teléfonico debe tener más de seis caracteres" />
                         <small class="text-danger">
@@ -110,7 +110,7 @@
                         <label class="form-label"></label>
                         <input type="text" placeholder="DIRECCIÓN"
                           value="<%= locals.old && old.street ? old.street : null %>"
-                          class="form-control py-3 <%= locals.errors && errors.street ? 'is-invalid' : null %>"
+                          class=" form-control py-3 <%= locals.errors && errors.street ? 'is-invalid' : null %>"
                           id="street" name="street" title="La dirección debe tener más de dos caracteres" />
                         <small class="text-danger">
                           <%= locals.errors && errors.street ? errors.street.msg : null %>
@@ -120,11 +120,11 @@
                       <!-- <div class="col-12 col-md-6">
                         <label class="form-label"></label>
                         <input type="number" placeholder="ALTURA"
-                          class="form-control py-3 <%= locals.errors && errors.height ? 'is-invalid' : null %> "
+                          class=" form-control py-3 <%= locals.errors && errors.height ? 'is-invalid' : null %> "
                           value="<%= locals.old && old.height ? old.height : null %>" id="height" name="height"
                           title="La altura debe tener más de dos caracteres" />
                         <small class="text-danger">
-                          <%= locals.errors && errors.height ? errors.height.msg :null %>
+                          <%= locals.errors && errors.height ? errors.height :null %>
                         </small>
                         <small id="errorHeight" class="text-danger"></small>
                       </div>
@@ -151,13 +151,12 @@
                         <small id="errorProvince" class="text-danger"></small>
                       </div> -->
                       <div class="col-12 col-md-6 mt-4">
-                      
+                        <label for="avatar" class="form-label">FOTO DE PERFIL</label>
                         <input class="form-control" type="file" id="avatar" 
                           value="<%= locals.old && old.avatar ? old.avatar : null %>"
                           class=" form-control py-3 <%= locals.errors && errors.avatar ? 'is-invalid' : null %>"
                           id="avatar" name="avatar" title="La provincia debe tener más de dos caracteres" 
                           accept=".jpg, .png, .gif, .jpeg"/>
-                          <label for="avatar" class="form-label">FOTO DE PERFIL</label>
                         <small class="text-danger">
                           <%= locals.errors && errors.avatar ? errors.avatar.msg : null %>
                         </small>

@@ -150,37 +150,37 @@ $("password2").addEventListener("blur", function ({ target }) {
         break;
     }
   });
-  // $("street").addEventListener("blur", function ({ target }) {
-  //   switch (true) {
-  //     case !this.value.trim():
-  //       msgError("errorStreet", "La dirección es obligatoria", target);
-  //       break;
-  //     case this.value.trim().length < 2:
-  //       msgError(
-  //         "errorStreet",
-  //         "La dirección debe tener como minimo dos caracteres",
-  //         target
-  //       );
-  //       break;
-  //     case !exRegs.exRegAlfa.test(this.value):
-  //       msgError("errorStreet", "La dirección debe tener solo letras", target);
-  //       break;
-  //     default:
-  //       validField("errorStreet", target);
-  //       break;
-  //   }
-  // });
-  $('avatar').addEventListener('blur', function ({target}) {
+  $("street").addEventListener("blur", function ({ target }) {
     switch (true) {
-        case !this.value.trim():
-            error('errorAvatar', 'La imagen es obligatoria', target)
+      case !this.value.trim():
+        msgError("errorStreet", "La dirección es obligatoria", target);
         break;
-    
-        default:
-            $('errorAvatar').innerText= null;
-            break;
+      case this.value.trim().length < 2:
+        msgError(
+          "errorStreet",
+          "La dirección debe tener como minimo dos caracteres",
+          target
+        );
+        break;
+      case !exRegs.exRegAlfa.test(this.value):
+        msgError("errorStreet", "La dirección debe tener solo letras", target);
+        break;
+      default:
+        validField("errorStreet", target);
+        break;
     }
-});
+  });
+//   $('avatar').addEventListener('blur', function ({target}) {
+//     switch (true) {
+//         case !this.value.trim():
+//             error('errorAvatar', 'La imagen es obligatoria', target)
+//         break;
+    
+//         default:
+//             $('errorAvatar').innerText= null;
+//             break;
+//     }
+// });
   
   // $("city").addEventListener("blur", function ({ target }) {
   //   switch (true) {
@@ -222,26 +222,26 @@ $("password2").addEventListener("blur", function ({ target }) {
   //       break;
   //   }
   // });
-  // $("phone").addEventListener("blur", function ({ target }) {
-  //   switch (true) {
-  //     case !this.value.trim():
-  //       msgError("errorPhone", "El número teléfonico es obligatoria", target);
-  //       break;
-  //     case this.value.trim().length < 5:
-  //       msgError(
-  //         "errorPhone",
-  //         "El teléfono debe tener como mínimino cinco caracteres",
-  //         target
-  //       );
-  //       break;
-  //     case !exRegs.exRegNum.test(this.value):
-  //       msgError("errorPhone", "El teléfono debe  tener solo números", target);
-  //       break;
-  //     default:
-  //       validField("errorPhone", target);
-  //       break;
-  //   }
-  // });
+  $("phone").addEventListener("blur", function ({ target }) {
+    switch (true) {
+      case !this.value.trim():
+        msgError("errorPhone", "El número teléfonico es obligatoria", target);
+        break;
+      case this.value.trim().length < 5:
+        msgError(
+          "errorPhone",
+          "El teléfono debe tener como mínimino cinco caracteres",
+          target
+        );
+        break;
+      case !exRegs.exRegNum.test(this.value):
+        msgError("errorPhone", "El teléfono debe  tener solo números", target);
+        break;
+      default:
+        validField("errorPhone", target);
+        break;
+    }
+  });
   // $("height").addEventListener("blur", function ({ target }) {
   //   switch (true) {
   //     case !this.value.trim():
