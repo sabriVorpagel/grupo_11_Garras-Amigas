@@ -1,39 +1,41 @@
 
-    <%- include('../partials/head', {title: 'Carrito'}) %> 
+    <%- include('../partials/head', {title: 'Carrito'}) %>
 <body>
-    <%- include('../partials/header') %> 
-    <main class="">
-        <div>
-            <a href="/">Volver al inicio</a>
+    <%- include('../partials/header') %>
+    <main class="cart-main">
+        <div class="cart-div">
+            <h1 class="cart-titulo">Shopping Cart</h1>
+            <article class="cart-articulo">
+                <div class="cart-articulo-div">
+                    <img src="/images/productos/camita.colchones.jpg" alt="">
+                    <div class="cart-articulo-div2">
+                        <h3> Camita Colchones</h3>
+                        <p class="cart-descripcion">descripcion hhhhhhhhhhhhhhh hhhhhhhhhhhhh hhhhhhhhhh hhhhhhhhhhhhh hhhhhhhhhhhh hhhhhhhhhhh hhhhhhhh hhhhh</p>
+                        <p class="cart-precio"> $23.569</p>
+                        <h6 class="cart-cantidad"><small>CANTIDAD</small></h6>                    
+                        <input class="cart-input" value="1" />   
+                        
+                        <a class="cart-eliminar">ELIMINAR <i class="fa-regular fa-trash-can"></i></a>
+                    </div>
+                </div>
+            </article>
+            <article class="cart-articulo">
+                <div class="cart-articulo-div">
+                    <img src="/images/productos/collar.nudo.producto.jpeg" alt="">
+                    <div class="cart-articulo-div2">
+                        <h3> Collar nudo</h3>
+                        <p class="cart-descripcion">descripcion hhhhhhhhhhhhhhh hhhhhhhhhhhhh hhhhhhhhhh hhhhhhhhhhhhh hhhhhhhhhhhh hhhhhhhhhhh hhhhhhhh hhhhh</p>
+                        <p class="cart-precio"> $23.569</p>
+                        <h6 class="cart-cantidad"><small>CANTIDAD</small></h6>                    
+                        <input class="cart-input" value="1" />   
+                        
+                        <a class="cart-eliminar">ELIMINAR <i class="fa-regular fa-trash-can"></i></a>
+                    </div>
+                </div>
+            </article>
         </div>
-        <div>
-            <div>
-                <img src="" alt="">
-            </div>
-            <h4>Nombre</h4>
-            <p>precio</p>
-            <span>descuento</span>
-            <select name="" id="">
-                <option value="">Cantidad</option>
-            </select>
-        </div>
-        <div>
-            <button>Concluir compra</button>
-        </div>
-        <section class="">
-            <% productOfertas.forEach(({id, name, price, images, discount}) => { %>
-                <%- include('../partials/product',{
-                    id,
-                    name,
-                    price,
-                    images,
-                    discount,
-                    toThousand
-                }) %> 
-            <% }) %>
-        </section>
-    </section>
+        <button type="button" class="btn btn-secondary">Finalisar Compra</button>
     </main>
-    <%- include('../partials/footer') %> 
+    <%- include('../partials/footer') %>
 </body>
 </html>
