@@ -1,40 +1,30 @@
 
-    <%- include('../partials/head', {title: 'Carrito'}) %> 
+    <%- include('../partials/head', {title: 'Carrito'}) %>
 <body>
-    <%- include('../partials/header') %> 
-    <main class="">
+    <%- include('../partials/header') %>
+    <main class="cart-main">
         <div>
             <a href="/">Volver al inicio</a>
         </div>
-        <div>
-            <div>
-                <img src="" alt="">
-            </div>
-            <article></article>
-                <h4><%= product.name %></h4>
-                <% if (product.discount > 0) {%>                  
-                    <p class="precio">
-                        $<%= toThousand(product.price - (product.price * product.discount / 100)) %>
-                    </p>
-                    <p class="descuento">
-                        <%= product.discount %>%
-                    </p>
-                <%}else{ %> 
-                    <p class="precio">
-                        $<%= toThousand(product.price) %>
-                    </p>
-                <% } %> 
-                <span>Stock: <%= product.stock %></span>
-                <select name="" id="">
-                    <option value="">Cantidad</option>
-                </select>
-            </article>
+        <div class="cart-div">
+            <h1 class="cart-titulo">Shopping Cart</h1>
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="/images/productos/camita.colchones.jpg" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Camita colchones</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <p class="card-text"><small class="text-muted">precio</small></p>
+                      <p class="card-text"><small class="text-muted">cantidad</small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
         </div>
-        <div>
-            <button>Concluir compra</button>
-        </div>
-    </section>
     </main>
-    <%- include('../partials/footer') %> 
+    <%- include('../partials/footer') %>
 </body>
 </html>
