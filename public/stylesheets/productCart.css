@@ -51,7 +51,7 @@
 
 .cart-articulo-div img{
     width: 100%;
-    height: 30%;
+    height: 50%;
 }
 
 .cart-articulo-div2{
@@ -97,12 +97,13 @@
 
 .cart-eliminar{
     color: red;
-    text-align: end ;
+    text-align: end;
 }
 
 .btn-secondary{
     margin: 15px;
-    order: 1;
+    display: flex;
+    direction: rtl;
 }
 
 @media(min-width:768px){
