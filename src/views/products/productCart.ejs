@@ -3,27 +3,38 @@
 <body>
     <%- include('../partials/header') %>
     <main class="cart-main">
-        <div>
-            <a href="/">Volver al inicio</a>
-        </div>
         <div class="cart-div">
             <h1 class="cart-titulo">Shopping Cart</h1>
-            <div class="card mb-3" style="max-width: 540px;">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img src="/images/productos/camita.colchones.jpg" class="img-fluid rounded-start" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Camita colchones</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <p class="card-text"><small class="text-muted">precio</small></p>
-                      <p class="card-text"><small class="text-muted">cantidad</small></p>
+            <article class="cart-articulo">
+                <div class="cart-articulo-div">
+                    <img src="/images/productos/camita.colchones.jpg" alt="">
+                    <div class="cart-articulo-div2">
+                        <h3> Camita Colchones</h3>
+                        <p class="cart-descripcion">descripcion hhhhhhhhhhhhhhh hhhhhhhhhhhhh hhhhhhhhhh hhhhhhhhhhhhh hhhhhhhhhhhh hhhhhhhhhhh hhhhhhhh hhhhh</p>
+                        <p class="cart-precio"> $23.569</p>
+                        <h6 class="cart-cantidad"><small>CANTIDAD</small></h6>                    
+                        <input class="cart-input" value="1" />   
+                        
+                        <a class="cart-eliminar">ELIMINAR <i class="fa-regular fa-trash-can"></i></a>
                     </div>
-                  </div>
                 </div>
-              </div>
+            </article>
+            <article class="cart-articulo">
+                <div class="cart-articulo-div">
+                    <img src="/images/productos/collar.nudo.producto.jpeg" alt="">
+                    <div class="cart-articulo-div2">
+                        <h3> Collar nudo</h3>
+                        <p class="cart-descripcion">descripcion hhhhhhhhhhhhhhh hhhhhhhhhhhhh hhhhhhhhhh hhhhhhhhhhhhh hhhhhhhhhhhh hhhhhhhhhhh hhhhhhhh hhhhh</p>
+                        <p class="cart-precio"> $23.569</p>
+                        <h6 class="cart-cantidad"><small>CANTIDAD</small></h6>                    
+                        <input class="cart-input" value="1" />   
+                        
+                        <a class="cart-eliminar">ELIMINAR <i class="fa-regular fa-trash-can"></i></a>
+                    </div>
+                </div>
+            </article>
         </div>
+        <button type="button" class="btn btn-secondary">Finalisar Compra</button>
     </main>
     <%- include('../partials/footer') %>
 </body>
