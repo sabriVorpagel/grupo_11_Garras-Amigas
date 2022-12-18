@@ -10,7 +10,7 @@ module.exports = {
     },
     processRegister : (req,res) => {
         const errors = validationResult(req);
-        const {name,surname,email,password, street, city, province, phone, height} = req.body
+        const {name,surname,email,password, street, phone } = req.body
         if(errors.isEmpty()){
         db.User.create({
                 name : name,
@@ -19,10 +19,7 @@ module.exports = {
                 password : hashSync(password, 10),
                 rolId : 2,
                 street : street,
-                city: city,
-                province: province,
                 phone: +phone,
-                height: +height,
                 avatar: req.file ? req.file.filename : 'default.jpg',
         })
                 .then(() => {
@@ -98,9 +95,6 @@ module.exports = {
             email: req.body.email,
             phone: req.body.phone,
             street: req.body.street,
-            height: req.body.height,
-            city: req.body.city,
-            province: req.body.province,
             avatar: req.file ? req.file.filename : req.session.login.avatar
         },
         {

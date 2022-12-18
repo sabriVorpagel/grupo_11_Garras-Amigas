@@ -40,22 +40,11 @@ module.exports = [
     check('street')
         .notEmpty()
         .withMessage('El domicilio es obligatorio (BE)'),
-    check('province')
-        .notEmpty()
-        .withMessage('La provincia es obligatoria (BE)'),
-    check('city')
-        .notEmpty()
-        .withMessage('La localidad es obligatoria (BE)'),
     check('phone')
         .notEmpty()
         .withMessage('El número teléfonico es obligatorio (BE)')
         .isNumeric({
             no_symbols: true,
         }).withMessage('Debe ser un número entero positivo (BE)'),
-    check('height')
-        .notEmpty()
-        .withMessage('La altura es obligatoria (BE)')
-        .isNumeric({
-            no_symbols: true,
-        }).withMessage('Debe ser un número entero positivo (BE)'),
+    
     ]

@@ -170,58 +170,7 @@ $("password2").addEventListener("blur", function ({ target }) {
         break;
     }
   });
-//   $('avatar').addEventListener('blur', function ({target}) {
-//     switch (true) {
-//         case !this.value.trim():
-//             error('errorAvatar', 'La imagen es obligatoria', target)
-//         break;
-    
-//         default:
-//             $('errorAvatar').innerText= null;
-//             break;
-//     }
-// });
-  
-  // $("city").addEventListener("blur", function ({ target }) {
-  //   switch (true) {
-  //     case !this.value.trim():
-  //       msgError("errorCity", "La provincia es obligatoria", target);
-  //       break;
-  //     case this.value.trim().length < 2:
-  //       msgError(
-  //         "errorCity",
-  //         "La ciudad debe tener como mínimino  dos caracteres",
-  //         target
-  //       );
-  //       break;
-  //     case !exRegs.exRegAlfa.test(this.value):
-  //       msgError("errorCity", "La ciudad debe tener solo letras", target);
-  //       break;
-  //     default:
-  //       validField("errorCity", target);
-  //       break;
-  //   }
-  // });
-  // $("province").addEventListener("blur", function ({ target }) {
-  //   switch (true) {
-  //     case !this.value.trim():
-  //       msgError("errorProvince", "La provincia es obligatoria", target);
-  //       break;
-  //     case this.value.trim().length < 2:
-  //       msgError(
-  //         "errorProvince",
-  //         "La provincia debe tener como mínimino  dos caracteres",
-  //         target
-  //       );
-  //       break;
-  //     case !exRegs.exRegAlfa.test(this.value):
-  //       msgError("errorProvince", "La provincia debe tener solo letras", target);
-  //       break;
-  //     default:
-  //       validField("errorProvince", target);
-  //       break;
-  //   }
-  // });
+
   $("phone").addEventListener("blur", function ({ target }) {
     switch (true) {
       case !this.value.trim():
@@ -242,19 +191,7 @@ $("password2").addEventListener("blur", function ({ target }) {
         break;
     }
   });
-  // $("height").addEventListener("blur", function ({ target }) {
-  //   switch (true) {
-  //     case !this.value.trim():
-  //       msgError("errorHeight", "La altura es obligatoria", target);
-  //       break;
-  //     case !exRegs.exRegNum.test(this.value):
-  //       msgError("errorHeight", "La altura debe  tener solo números", target);
-  //       break;
-  //     default:
-  //       validField("errorHeight", target);
-  //       break;
-  //   }
-  // });
+  
 
 
   
@@ -267,8 +204,8 @@ $("form-register").addEventListener("submit", function (e) {
         
         if(!elements[i].value.trim() || elements[i].classList.contains('is-invalid')){
             elements[i].classList.add('is-invalid')
-           $('errorSubmit').innerText = "Todos los campos son obligatorios";
-           error = true;
+          $('errorSubmit').innerText = "Todos los campos son obligatorios";
+          error = true;
         }
     }
   !error && this.submit()

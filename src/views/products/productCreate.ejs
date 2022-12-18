@@ -42,7 +42,7 @@
                 </div>
                 <div class="col-10 col-md-5 col-lg-5">
                     <label class="form-label" for="images">IMAGEN </label>
-                    <input class=" form-control" type="file" name="images" id="images" value="">
+                    <input class=" form-control" type="file" name="images" id="images" value="" multiple>
                     <small class="msg_error"><%= locals.errors && errors.images ? errors.images.msg : null %></small>
                     <small id="errorImages" class="msg_error" ></small>
                 </div>
