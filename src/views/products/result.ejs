@@ -7,19 +7,22 @@
                 <h2 class="products-title">Resultados de la búsqueda: <strong><%= keywords %></strong></h2>
             </div>
             <% if (result.length > 0) { %>
-				<% result.forEach(({id,name,price,images}) => { %>
-					<div>
-                        <img src="/images/productos/<%= images[0].file %>" alt="">
-                        <div>
-                            <p><%= name %> </p>
-                            <p>$ <%=  price %> </p>
-                            <a href="/products/detail/<%= id %>">ver más</a>
+				<% result.forEach(({id,name,price,images,discount}) => { %>
+					<div class="result-div">
+                        <a href="/products/detail/<%= id %> ">
+                            <img src="/images/productos/<%= images[0] ? images[0].file : 'Anuncio.png' %>" ></a>
+                        <div class="result-div2">
+                            <h4><%= name %> </h4>
+                            <p> $<%= price %> </p>
+                            <p><%= discount %>%</p>
+                            <a href="/products/cart" class="result-div2-a"><i class="fa-solid fa-cart-shopping"></i>Añadir al carrito</a>
+                        </a>
                         </div>
                     </div> 
 				<% }) %>
 				<% }else{ %>
 					<div>
-						<h2>No hay productos que coincidan con esa búsqueda</h2>
+						<h2 class="products-title">No hay productos que coincidan con esa búsqueda</h2>
 		    		</div>		
 			<% } %>
         </div>
