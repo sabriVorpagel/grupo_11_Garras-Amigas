@@ -54,7 +54,7 @@
                     <input type="submit" name="delete" id="delete" value="Eliminar">
                 </form>
             <% } else {%> 
-                <form action="/products/cart" class="detail__main__producto--descripcion-botones color-boton-verde">
+                <form action="/products/cart" class="detail__main__producto--descripcion-botones color-boton-verde" onclick="addCartItem('<%=product.id%>')">
                     <input type="submit" name="agregarCarrito" id="agregarCarrito" value="Agregar al carrito"></a>
                 </form>
             <% }} %> 

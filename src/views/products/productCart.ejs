@@ -7,11 +7,11 @@
             <h1 class="cart-titulo">Shopping Cart</h1>
             <article class="cart-articulo">
                 <div class="cart-articulo-div">
-                    <img src="/images/productos/camita.colchones.jpg" alt="">
+                    <img src="/images/productos/<%= product.images %> " alt="">
                     <div class="cart-articulo-div2">
-                        <h3> Camita Colchones</h3>
-                        <p class="cart-descripcion">descripcion hhhhhhhhhhhhhhh hhhhhhhhhhhhh hhhhhhhhhh hhhhhhhhhhhhh hhhhhhhhhhhh hhhhhhhhhhh hhhhhhhh hhhhh</p>
-                        <p class="cart-precio"> $23.569</p>
+                        <h3><%= product.name %> </h3>
+                        <p class="cart-descripcion"><%= product.description %> </p>
+                        <p class="cart-precio"> <%= product.price - (product.price * product.discount) / 100 %></p>
                         <h6 class="cart-cantidad"><small>CANTIDAD</small></h6>                    
                         <input class="cart-input" value="1" />   
                         
