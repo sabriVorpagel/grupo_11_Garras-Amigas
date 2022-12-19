@@ -1,3 +1,5 @@
+
+
 :root{
     --colorRosa:#FF6B6B;
     --colorAmarrillo:#FFD93D;
@@ -22,7 +24,12 @@
     box-sizing: border-box;
     margin: 0; 
     padding: 0;
+    
 }
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
 ul, ol{
     padding: 0;
     text-decoration: none; 
