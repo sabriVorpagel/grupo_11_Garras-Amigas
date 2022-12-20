@@ -1,5 +1,5 @@
 'use strict';
-const productos = require('../../data/products.json');
+const productos = require('../../data/datosSQL/garrasamigas_products.sql');
 
 const products = productos.map(({name,price,discount,description,stock,categoryId}) => {
   return{
