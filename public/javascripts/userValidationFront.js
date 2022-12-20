@@ -16,6 +16,8 @@ const exRegs = {
   exRegEsp: /[$@$!%*?&]/,
   exRegMin: /.{6,}/,
   exRegMax: /.{8}/,
+  exRegAlfaNum: /[a-zA-Z0-9]+/,
+  
 };
 
 // funcion para el mensaje de error
@@ -162,7 +164,7 @@ $("password2").addEventListener("blur", function ({ target }) {
           target
         );
         break;
-      case !exRegs.exRegAlfa.test(this.value):
+      case !exRegs.exRegAlfaNum.test(this.value):
         msgError("errorStreet", "La dirección debe tener solo letras", target);
         break;
       default:
