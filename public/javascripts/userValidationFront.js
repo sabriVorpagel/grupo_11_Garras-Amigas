@@ -1,6 +1,9 @@
 console.log("userValidationFront.js connected!");
 
 
+
+
+    
 const $ = (element) => document.getElementById(element);
 
 
@@ -210,9 +213,26 @@ $("form-register").addEventListener("submit", function (e) {
           error = true;
         }
     }
-  !error && this.submit()
-
+    if (!error && this.submit()){
 });
+$("form-register").addEventListener("submit", function () {
+
+  Swal.fire({
+    position: 'center',
+    icon: 'info',
+    title: 'Recibiras un email para confirmar tu registración',
+    showConfirmButton: true,
+    allowOutsideClick : false,
+    allowEscapeKey: false
+  }).then((result) =>{
+    if(result.isConfirmed){
+        this.submit();
+    }
+  })
+}) ;
+    
+   
+
 
 
 

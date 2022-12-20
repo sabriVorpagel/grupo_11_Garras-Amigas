@@ -72,23 +72,24 @@ module.exports = {
             res.render("users/profile",{
                 
                 users,
+                session:req.session,
                 
             })
         })
     },
     // EDITAR PERFIL   
     editProfile: (req, res) =>{
-        db.User.findByPk(req.params.id)
+       let users =  db.User.findByPk(req.params.id)
     .then((users)=>{
         res.render("users/editProfile",{
             users,
-            session:req.session,
+            // session:req.session,
         })
-    })
+    }).catch(error => console.log('Se detecto un error, revisar por favor'))
     },
 // EDICION
     update: (req, res) => {
-    db.User.update(
+    let users = db.User.update(
         {
             name: req.body.name,
             surname: req.body.surname,
@@ -100,7 +101,7 @@ module.exports = {
         {
             where:
             {
-                id: +req.params.id
+                id:req.params.id
             }
         })
         .then((users) =>

@@ -12,15 +12,30 @@
                         <div class="container py-5">
                             <div class="row">
                                 <div class="col-lg-4">
-                                    <div class="card mb-4">
-                                        <div class="card-body text-center">
+                                    <div class="card mb-4 profile-user-header">
+                                        <div class="card-body text-center profile-user-avatar">
                                             <img src="/images/users/<%=users.avatar%>" id="avatar" 
-                                            class="img-fluid py-3" style="width: 500px;"/>
-                                            <input class="row-6" type="file" name="avatar" id="avatar"
-                                            onchange="preview(event)" accept=".jpg, .png, .gif, .jpeg" />
+                                            class="img-fluid py-3"/>
+                                            <input  type="file" name="avatar" id="avatar"
+                                            onchange="preview(event)" />
                                         </div>
                                     </div>
                                 </div>
+                                <!-- <div >
+                                    <img src="/images/users/<%=users.avatar%>" id="avatar" alt="avatar" id="avatar"/>
+                                    
+                                     <input type="file" name="avatar" id="avatar" onchange="preview(event)" />
+                                </div> -->
+
+
+
+
+
+
+
+
+
+
                                 <div class="col-lg-8">
                                     <div class="card mb-4">
                                         <div class="card-body">
@@ -55,17 +70,6 @@
                                                     <input class="form-control" aria-label="Sizing example input"
                                                         aria-describedby="inputGroup-sizing-default" type="number"
                                                         id="phone" name="phone" value="<%= users.phone %>">
-                                                </div>
-                                            </div>
-                                            <hr>
-                                            <div class="row">
-                                                <div class="col-sm-3">
-                                                    <p class="mb-0">Email</p>
-                                                </div>
-                                                <div class="col-sm-9">
-                                                    <input class="form-control" aria-label="Sizing example input"
-                                                        aria-describedby="inputGroup-sizing-default" type="email"
-                                                        id="email" name="email" value="<%= users.email %>">
                                                 </div>
                                             </div>
                                             <hr>
