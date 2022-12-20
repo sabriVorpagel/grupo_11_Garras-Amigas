@@ -33,6 +33,8 @@
                                                     <input class="form-control" aria-label="Sizing example input"
                                                         aria-describedby="inputGroup-sizing-default" type="text"
                                                         id="name" name="name" value="<%= users.name %>">
+                                                        <small class="msg_error"><%= locals.errors && errors.name ? errors.name.msg : null %></small>
+                                                        <small id="errorNombre" class="msg_error"></small>
                                                 </div>
                                             </div>
                                             <hr>
@@ -44,6 +46,8 @@
                                                     <input class="form-control" aria-label="Sizing example input"
                                                         aria-describedby="inputGroup-sizing-default" type="text"
                                                         id="surname" name="surname" value="<%= users.surname %>">
+                                                        <small class="msg_error"><%= locals.errors && errors.surname? errors.surname.msg : null %></small>
+                                                        <small id="errorSurname" class="msg_error"></small>
                                                 </div>
                                             </div>
                                             <hr>
@@ -55,17 +59,8 @@
                                                     <input class="form-control" aria-label="Sizing example input"
                                                         aria-describedby="inputGroup-sizing-default" type="number"
                                                         id="phone" name="phone" value="<%= users.phone %>">
-                                                </div>
-                                            </div>
-                                            <hr>
-                                            <div class="row">
-                                                <div class="col-sm-3">
-                                                    <p class="mb-0">Email</p>
-                                                </div>
-                                                <div class="col-sm-9">
-                                                    <input class="form-control" aria-label="Sizing example input"
-                                                        aria-describedby="inputGroup-sizing-default" type="email"
-                                                        id="email" name="email" value="<%= users.email %>">
+                                                        <small class="msg_error"><%= locals.errors && errors.phone ? errors.phone.msg : null %></small>
+                                                        <small id="errorPhone" class="msg_error"></small>
                                                 </div>
                                             </div>
                                             <hr>
@@ -77,6 +72,8 @@
                                                     <input class="form-control" aria-label="Sizing example input"
                                                         aria-describedby="inputGroup-sizing-default" type="text"
                                                         id="street" name="street" value="<%= users.street %>">
+                                                        <small class="msg_error"><%= locals.errors && errors.street ? errors.street.msg : null %></small>
+                                                        <small id="errorStreet" class="msg_error"></small>
                                                 </div>
                                             </div>
                                             <div class="d-flex justify-content-center mb-2 py-3">

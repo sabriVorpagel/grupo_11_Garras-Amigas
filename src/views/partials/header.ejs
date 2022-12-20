@@ -34,11 +34,11 @@
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="/users/logout">Salir</a></li>
                                     <% if(locals.login) { %>
                                         <% if(locals.login.rolId===1) { %>
-                                            <li><a class="dropdown-item" href="/admi/admi">Admin</a></li>
-                                            <% }} %>
+                                            <li><a class="dropdown-item" href="/products/create">Crear un Producto</a></li>
+                                        <% }} %>
+                                    <li><a class="dropdown-item" href="/users/logout">Salir</a></li>
                                 </ul>
                             </li>
                             
