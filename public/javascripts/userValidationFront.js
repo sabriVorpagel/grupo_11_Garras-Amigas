@@ -176,7 +176,7 @@ $("password2").addEventListener("blur", function ({ target }) {
       case !this.value.trim():
         msgError("errorPhone", "El número teléfonico es obligatoria", target);
         break;
-      case this.value.trim().length < 10:
+      case this.value.trim().length != 10:
         msgError(
           "errorPhone",
           "El teléfono debe tener como mínimino 10 caracteres",
