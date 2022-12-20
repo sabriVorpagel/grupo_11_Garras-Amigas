@@ -21,3 +21,14 @@ Durante la semana que es el tiempo transcurrido de este sprint N°4, nos hemos r
  En el Sprint número 5 seguimos implementamdo las deylis diariamente, nos encontramos en un momento donde hay mayor compromiso, compañerosmo y paciencia entre nosotoros.
  Buscamos siempre la manera de llegar a las metas que nos proponemos, de forma colaborativa entre nosotros.
 >>>>>>> develop
+
+
+ ## _** Implementar daily Sprint 6**_
+Durante este sprint la verdad que tuvimos muy pocas deylis. Por muchas diferencias de horarios,trabajos y situciones familiares. Pero si tuvimos reuniones donde cada uno se le encargo una tarea y antes de finaliza el tiempo de entrega nos mostramos en trabaja realisado.
+
+ ## _** Implementar daily Sprint 7**_
+En este sprint tuvimos muchas mas reuniones, pudimos coincidir mucho mas coon los tiempos y hacer un trabajo mas en conjunto entre todos y no tan individual como nos paso con el sprint anterior.  
+
+ ## _** Implementar daily Sprint 8**_
+
+En este sprint pudimos mantener la continuidad de las reuniones del sprint anterior, tambien tuvimos mas espacios de reunion en las clases, asi que pudimos estas mas informados todos de nuestro proyecto.
