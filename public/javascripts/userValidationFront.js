@@ -213,26 +213,17 @@ $("form-register").addEventListener("submit", function (e) {
           error = true;
         }
     }
-    !error && this.submit()
-  
-});
-$("form-register").addEventListener("submit", function () {
-
-  Swal.fire({
-    position: 'top-end',
-    icon: 'success',
-    title: 'Te registraste con exito!',
-    showConfirmButton: false,
-    timer: 4500
-  })
-}) 
+    !error && this.submit(
+      Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Te registraste con exito!',
+        showConfirmButton: false,
+        timer: 4500
+      }));
+      !error && this.submit()
+    }) ;
     
-   
-
-
-
-
-
   // VER LA CONTRASEÑA
   $("btn-show-pass").addEventListener("click", ({ target }) => {
     if (target.localName === "i") {
