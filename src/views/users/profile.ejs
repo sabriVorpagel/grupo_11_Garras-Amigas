@@ -6,9 +6,9 @@
         <section>
           <div class="container py-5">
             <div class="row">
-              <div class="col-lg-4">
-                <div class="card mb-4">
-                  <div class="card-body text-center">
+              <div class="col-lg-4 ">
+                <div class="card mb-4 profile-user-header">
+                  <div class="card-body text-center profile-user-avatar">
                     <img src="/images/users/<%=users.avatar%>" alt="avatar"
                       class=" img-fluid py-3" style="width: 500px;">
                     <div class="d-flex justify-content-center mb-2">
@@ -48,15 +48,6 @@
                       </div>
                       <div class="col-sm-9">
                         <p class="text-muted mb-0"><%= users.phone %></p>
-                      </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                      <div class="col-sm-3">
-                        <p class="mb-0">Email</p>
-                      </div>
-                      <div class="col-sm-9">
-                        <p class="text-muted mb-0"><%= users.email %></p>
                       </div>
                     </div>
                     <hr>

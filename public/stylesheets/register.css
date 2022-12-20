@@ -1,9 +1,11 @@
 .main--reg{
     background-image: url("/images/fondo2.png");
+
 }
 .title-reg{
     color: #9089cc;
     margin: auto;
+    font-family: Roboto;
 }
 
 .tagger2{

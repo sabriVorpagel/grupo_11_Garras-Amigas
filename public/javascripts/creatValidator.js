@@ -127,3 +127,15 @@ $("form-create").addEventListener("submit", function (e) {
         }
     !error && this.submit()
     });
+
+   
+    $("form-create").addEventListener("submit", function () {
+
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Producto creado con exito!',
+          showConfirmButton: false,
+          timer: 4500
+        })
+      }) 
