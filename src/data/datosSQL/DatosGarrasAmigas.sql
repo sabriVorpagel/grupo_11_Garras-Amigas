@@ -84,16 +84,6 @@ INSERT INTO `rols` VALUES (1,'Admin','2022-12-20 00:25:46',NULL,NULL),(2,'User',
 UNLOCK TABLES;
 
 --
--- Dumping data for table `sequelizemeta`
---
-
-LOCK TABLES `sequelizemeta` WRITE;
-/*!40000 ALTER TABLE `sequelizemeta` DISABLE KEYS */;
-INSERT INTO `sequelizemeta` VALUES ('20221020142436-create-category.js'),('20221020143659-create-product.js'),('20221020144217-create-image.js'),('20221020144412-create-rol.js'),('20221020144414-create-user.js'),('20221020145033-create-payrole.js'),('20221020145212-create-state.js'),('20221020145314-create-order.js'),('20221020145516-create-cart.js');
-/*!40000 ALTER TABLE `sequelizemeta` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Dumping data for table `states`
 --
 
