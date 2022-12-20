@@ -213,23 +213,19 @@ $("form-register").addEventListener("submit", function (e) {
           error = true;
         }
     }
-    if (!error && this.submit()){
+    !error && this.submit()
+  
 });
 $("form-register").addEventListener("submit", function () {
 
   Swal.fire({
-    position: 'center',
-    icon: 'info',
-    title: 'Recibiras un email para confirmar tu registración',
-    showConfirmButton: true,
-    allowOutsideClick : false,
-    allowEscapeKey: false
-  }).then((result) =>{
-    if(result.isConfirmed){
-        this.submit();
-    }
+    position: 'top-end',
+    icon: 'success',
+    title: 'Te registraste con exito!',
+    showConfirmButton: false,
+    timer: 4500
   })
-}) ;
+}) 
     
    
 

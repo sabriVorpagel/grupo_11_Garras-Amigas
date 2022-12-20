@@ -57,7 +57,7 @@
                                                 <a href="/products/edit/<%= product.id %>">
                                                     <button type="submit" class="btn btn-outline-primary ms-1 mb-3">Editar producto</button>
                                                 </a> 
-                                                <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" >
+                                                <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" id="from-delete" >
                                                     <input class="btn btn-outline-primary ms-1 mb-3" type="submit"  name="delete" id="delete" value="Eliminar">
                                                 </form>
                                         <% } else {%> 
@@ -77,111 +77,11 @@
                     </div>
                 </section>
             </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            </main>
             <%- include('../partials/footer') %>
-                <script src="javascripts/slider.js"></script>
+            <%- include('../partials/scripts') %> 
+
+            <script src="/javascripts/productDetail.js"></script>
     </body>
 
     </html>
-    <!-- <figure class="detail__main__anuncio">
-            <img src="/images/productos/Anuncio.png" alt="">
-        </figure>
-        <article class="detail__main__producto">
-                <div class="detail__main__producto-padre">
-                    <div class="detail__main__product-img">
-                        <img src="/images/productos/<%= product.images.length > 0 ? product.images[0].file : 'Anuncio.png' %> " alt="" class="slider__img">
-                    </div>
-                    <div class="detail__main__product-contenedor-imagenes">
-
-                        <% for( let i = 1; i < product.images.length; i++ ) { %>
-                            <div class="detail__main__product-imagenes">
-                                <img src="/images/productos/<%= product.images[i].file %> " alt="">
-                            </div> 
-                        <% } %>
-                     
-                           
-                     
-                    </div>
-                </div>
-        </article>  
-        <article class="detail__main__producto--datos">  
-            <div class="detail__main__producto--descripcion--datos">
-                <h2><%= product.name %> </h2>   
-                <% if (product.discount > 0) {%>                  
-                    <p class="precio">
-                        $<%= toThousand(product.price - (product.price * product.discount / 100)) %>
-                    </p>
-                    <p class="descuento">
-                        <%= product.discount %>%
-                    </p>
-                    <%}else{ %> 
-                    <p class="precio">
-                        $<%= toThousand(product.price) %>
-                    </p>
-                    <% } %> 
-                <span>Stock: <%= product.stock %> </span>
-                <div class="detail__main__producto--descripcion--datos-botones">
-                    <a href="/" class="boton">Metodos de envio</a>
-                    <a href="/" class="boton1">Metodos de pago</a>
-                </div>  
-            </div>           
-            <div class="detail_main__producto--descripcion-caja-de-botones">
-            <% if(locals.login){ %> 
-                <% if(locals.login.rolId === 1){ %>    
-                <form action="/products/edit/<%= product.id %>" class="detail__main__producto--descripcion-botones color-boton-naranja">
-                    <input type="submit" name="editar" id="editar" value="Editar producto">
-                </form>
-                <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" class="detail__main__producto--descripcion-botones color-boton-rojo">
-                    <input type="submit" name="delete" id="delete" value="Eliminar">
-                </form>
-            <% } else {%> 
-                <form action="/products/cart" class="detail__main__producto--descripcion-botones color-boton-verde">
-                    <input type="submit" name="agregarCarrito" id="agregarCarrito" value="Agregar al carrito"></a>
-                </form>
-            <% }} %> 
-            </div>
-        </article>
-        <article class="detail__main__producto--detalles">
-            <div class="detail__main__producto--descripcion">
-                <h4>Descripcion del producto</h4>
-                <p><%= product.description %> </p>
-            </div>
-            <div class="detail__main__producto--descripcion-opinion">
-                <div class="detail__main__producto--descripcion--producto">           
-                    <form action="" class="detail__main__producto--descripcion-clasificacion-form">  
-                        <h4>Clalificación</h4>
-                        <div>
-                            <input id="radio1" type="radio" name="estrellas" value="5">
-                            <label for="radio1">★</label>
-                            <input id="radio2" type="radio" name="estrellas" value="4">
-                            <label for="radio2">★</label>
-                            <input id="radio3" type="radio" name="estrellas" value="3">
-                            <label for="radio3">★</label>
-                            <input id="radio4" type="radio" name="estrellas" value="2">
-                            <label for="radio4">★</label>
-                            <input id="radio5" type="radio" name="estrellas" value="1">
-                            <label for="radio5">★</label>
-                        </div>
-                    </form>                      
-                </div>
-            </div>
-        </article> -->
+  
