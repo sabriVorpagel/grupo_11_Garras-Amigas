@@ -198,7 +198,29 @@ $("password2").addEventListener("blur", function ({ target }) {
   });
   
 
+$("form-register").addEventListener("submit", function (e) {
 
+  e.preventDefault();
+  let error = false;
+  const elements = this.elements;
+    for (let i = 0; i < elements.length - 2; i++) {
+        
+        if(!elements[i].value.trim() || elements[i].classList.contains('is-invalid')){
+            elements[i].classList.add('is-invalid')
+          $('errorSubmit').innerText = "Todos los campos son obligatorios";
+          error = true;
+        }
+    }
+    !error && this.submit(
+      Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Te registraste con exito!',
+        showConfirmButton: false,
+        timer: 4500
+      }));
+      !error && this.submit()
+    }) ;
   
 $("form-register").addEventListener("submit", function (e) {
 

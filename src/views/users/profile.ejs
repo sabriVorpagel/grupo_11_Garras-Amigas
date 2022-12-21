@@ -5,13 +5,13 @@
       <main class="main--profile">
         <section>
           <div class="container py-5">
-            <div class="row">
+            <div class="row justify-content-center">
               <div class="col-lg-4 ">
                 <div class="card mb-4 profile-user-header">
                   <div class="card-body text-center profile-user-avatar">
                     <img src="/images/users/<%=users.avatar%>" alt="avatar"
                       class=" img-fluid py-3" style="width: 500px;">
-                    <div class="d-flex justify-content-center mb-2">
+                    <div class="d-flex justify-content-center ">
                       <a href="/users/editProfile/<%= users.id %>">
                       <button type="button" class="btn btn-primary" >Editar Perfil</button></a>
                       <a href="/users/logout">
@@ -21,7 +21,7 @@
                 </div>
 
               </div>
-              <div class="col-lg-8">
+              <div class="col-lg-6">
                 <div class="card mb-4">
                   <div class="card-body">
                     <div class="row">
