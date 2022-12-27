@@ -7,7 +7,9 @@
     "server": "nodemon ./src/bin/www",
     "client:start": "cd garrasamigas & npm run start",
     "client:build": "cd garrasamigas & npm run build",
-    "dev": "concurrently \"npm run server\" \"npm run client:start\""
+    "dev": "concurrently \"npm run server\" \"npm run client:start\"",
+    "create:db": "sequelize db:create && sequelize db:migrate && sequelize db:seed:all",
+    "reset:db": "sequelize db:drop && npm run create:db"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -29,6 +31,7 @@
     "mysql2": "^2.3.3",
     "sequelize": "^6.25.2",
     "sequelize-cli": "^6.5.2",
-    "sweetalert2": "^11.6.15"
+    "sweetalert2": "^11.6.15",
+   
   }
 }
