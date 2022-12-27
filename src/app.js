@@ -22,6 +22,7 @@ const apiUsersRoutes = require ('./routes/api/apiUsersRoutes');
 const apiAuthRouter = require('./routes/api/apiAuth');
 const apiProductsRoutes = require('./routes/api/apiProductsRoutes');
 
+
 const {localsUserCheck, coockieCheck} = require('./middlewares/usersLogin');
 
 const app = express();
@@ -57,6 +58,8 @@ app.use('/admi',admiRouter );
 app.use('/api/auth', apiAuthRouter);
 app.use('/api/users', apiUsersRoutes);
 app.use('/api/products', apiProductsRoutes);
+
+app.use('/api/carts', require('./routes/api/apiCarts'));
 
 // catch 404 and forward to error handler
 // app.use(function(req, res, next) {

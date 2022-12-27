@@ -17,7 +17,8 @@ module.exports = (sequelize, DataTypes) => {
       });
       Product.hasMany(models.Image,{
         as: 'images',
-        foreignKey: 'productId'
+        foreignKey: 'productId',
+        onDelete : 'cascade'
       })
     }
   }
@@ -31,6 +32,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Product',
+  
   });
   return Product;
 };

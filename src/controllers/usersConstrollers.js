@@ -41,9 +41,10 @@ module.exports = {
         let errors = validationResult(req);
         
         if(errors.isEmpty()){
+            const { email, remember } = req.body;
             db.User.findOne({
                 where : {
-                    email : req.body.email
+                    email,
                 }
             }).then(({id, name, avatar, rolId}) => {
                 req.session.login = {
@@ -52,11 +53,65 @@ module.exports = {
                     avatar,
                     rolId
                 };
-                req.body.remember && res.cookie('garrasamigas',req.session.login, {maxAge : 1000 * 60});
+                if (remember){
+                    res.cookie('garrasamigas',req.session.login, {
+                        maxAge : 1000 * 60 * 2,
+                    });
+
+                };
+
+
+                // carrito
+                db.Order.findOne({
+                    where : {
+                        userId : req.session.login.id,
+                        stateId : 1
+                    },
+                    include : [
+                        {
+                            association : "carts",
+                            attributes : ["id", "quantity"],
+                        include :[
+                            {
+                                association : "product",
+                                attributes : ["id", "name", "price", "discount"],
+                                include : ["images"]
+                            }
+                        ]   
+                    }
+                ]
+                }).then(ordes => {
+                    if(ordes){
+                        req.session.orderCart ={
+                            id : orderId,
+                            total : order.total,
+                            items : order.carts
+                        }
+
+                    }else{
+                        db.Order.create({
+                            // date : new Date(),
+                            total : 0,
+                            userId : req.session.login.id,
+                            stateId : 1
+                          }).then(order => {
+                            
+                            req.session.orderCart = {
+                              id : order.id,
+                              total : order.total,
+                              items : []
+                            }
+              
+                          })
+                        }
+            
+
+                   
                 
                 return res.redirect('/index');
 
             }).catch(error => console.log(error))
+        });
         }else {
             return res.render('users/login', {
                 errors : errors.mapped(), 

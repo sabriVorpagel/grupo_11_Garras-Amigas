@@ -11,20 +11,28 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Order.belongsTo(models.User,{
-        as: 'user',
-        foreignKey: 'userId'
+      this.hasMany(models.Cart,{
+        foreignKey : 'orderId',
+        as : 'carts',
+        onDelete : 'cascade'
       });
-      Order.hasOne(models.State,{
-        as: 'state',
-        foreignKey: 'stateId'
-      })
+      this.belongsTo(models.User,{
+        foreignKey: 'userId',
+        as: 'user'
+        
+      });
+      this.belongsTo(models.Status, {
+        foreignKey : 'statusId',
+        as : 'status'
+      });
     }
   }
   Order.init({
+    date : DataTypes.DATE,
     userId: DataTypes.INTEGER,
-    stateId: DataTypes.INTEGER,
+    statusId : DataTypes.INTEGER,
     total: DataTypes.INTEGER
+
   }, {
     sequelize,
     modelName: 'Order',
