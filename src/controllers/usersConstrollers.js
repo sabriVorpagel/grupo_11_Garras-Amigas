@@ -54,6 +54,21 @@ module.exports = {
                 };
                 req.body.remember && res.cookie('garrasamigas',req.session.login, {maxAge : 1000 * 60});
                 
+                // carrito
+                db.Order.findOne({
+                    where: {
+                        userId : req.session.login.id,
+                        statusId:1
+                    }
+                })
+
+
+
+
+
+
+
+
                 return res.redirect('/index');
 
             }).catch(error => console.log(error))

@@ -31,7 +31,6 @@
     "mysql2": "^2.3.3",
     "sequelize": "^6.25.2",
     "sequelize-cli": "^6.5.2",
-    "sweetalert2": "^11.6.15",
-   
+    "sweetalert2": "^11.6.15"
   }
 }

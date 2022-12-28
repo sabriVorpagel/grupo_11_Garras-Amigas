@@ -58,6 +58,8 @@ app.use('/api/auth', apiAuthRouter);
 app.use('/api/users', apiUsersRoutes);
 app.use('/api/products', apiProductsRoutes);
 
+app.use('/api/carts', require('./routes/api/apiCarts'));
+
 // catch 404 and forward to error handler
 // app.use(function(req, res, next) {
 //   next(createError(404));
