@@ -1,20 +1,22 @@
 'use strict';
 const estados = ['Pendiente', 'Retrasado', 'In pago', 'Finalizado']
 
-const states = estados.map(estado =>{
-  return{
-    state: estado,
-    createdAt: new Date()
-  }
-})
+const statuses = estados.map(status => ({
+  name : status,
+  createdAt : new Date()
+}))
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-      await queryInterface.bulkInsert('States', states, {});
+   
+    await queryInterface.bulkInsert('Statuses', statuses, {});
+    
   },
 
   async down (queryInterface, Sequelize) {
-      await queryInterface.bulkDelete('States', null, {});
+ 
+     await queryInterface.bulkDelete('Statuses', null, {});
+     
   }
 };
 
