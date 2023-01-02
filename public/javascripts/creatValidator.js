@@ -32,13 +32,13 @@ $('name').addEventListener('blur', function ({target}) {
 $('description').addEventListener('blur', function ({target}) {
     switch (true) {
         case !this.value.trim():
-            error('errorDescripcion', 'La descripcion es obligatoria', target)
+            error('errorDescripcion', 'La descripción es obligatoria', target)
         break;
         case this.value.trim().length < 20 :
-            error('errorDescripcion', 'La descripcion debe tener como minimo veinte caracteres', target)
+            error('errorDescripcion', 'La descripción debe tener como minimo veinte caracteres', target)
         break;
         case !exRegs.exRegAlfa.test(this.value):
-            error('errorDescripcion', 'La descripcion deve tener caracteres alfavetico' , target)
+            error('errorDescripcion', 'La descripción debe tener caracteres alfabético' , target)
         break;
     
         default:
@@ -58,7 +58,7 @@ $('category').addEventListener('blur', function ({target}) {
             break;
     }
 });
-/* 
+
 $('images').addEventListener('blur', function ({target}) {
     switch (true) {
         case !this.value.trim():
@@ -69,7 +69,7 @@ $('images').addEventListener('blur', function ({target}) {
             $('errorImages').innerText= null;
             break;
     }
-}); */
+}); 
 
 $('discount').addEventListener('blur', function ({target}) {
     switch (true) {
@@ -77,7 +77,7 @@ $('discount').addEventListener('blur', function ({target}) {
             error('errorDiscount', 'El descuento es obligatoria', target)
         break;
         case !exRegs.exRegNumber.test(this.value):
-            error('errorDiscount', 'El descuento deve tener caracteres numericos' , target)
+            error('errorDiscount', 'El descuento debe tener caracteres númericos' , target)
         break;
         default:
             $('errorDiscount').innerText= null;
@@ -91,7 +91,7 @@ $('price').addEventListener('blur', function ({target}) {
             error('errorPrice', 'El precio es obligatoria', target)
         break;
         case !exRegs.exRegNumber.test(this.value):
-            error('errorPrice', 'El precio deve tener caracteres numericos' , target)
+            error('errorPrice', 'El precio debe tener caracteres númericos' , target)
         break;
         default:
             $('errorPrice').innerText= null;
@@ -102,10 +102,10 @@ $('price').addEventListener('blur', function ({target}) {
 $('stock').addEventListener('blur', function ({target}) {
     switch (true) {
         case !this.value.trim():
-            error('errorStock', 'El stock es obligatoria', target)
+            error('errorStock', 'El stock es obligatorio', target)
         break;
         case !exRegs.exRegNumber.test(this.value):
-            error('errorStock', 'El stock deve tener caracteres numericos' , target)
+            error('errorStock', 'El stock deve tener caracteres númericos' , target)
         break;
         default:
             $('errorStock').innerText= null;
@@ -114,16 +114,25 @@ $('stock').addEventListener('blur', function ({target}) {
 });
 
 
-$("form-create").addEventListener("submit", function (e) {
-    e.preventDefault();
-    const error = false
-    const elements = this.elements;
-        for (let i= 0; i < elements.length -1; i++) {
-            if (!elements[i].value.trim()) {
-                $('advertencia').innerText ='Todos los campos tiene que estar completos'
-                error = true;
-            }
-            
-        }
-    !error && this.submit()
-    });
+
+    $("form-create").addEventListener("submit", function (e) {
+
+        e.preventDefault();
+        const error = false
+        const elements = this.elements;
+            for (let i= 0; i < elements.length -1; i++) {
+                if (!elements[i].value.trim()) {
+                    $('advertencia').innerText ='Todos los campos tiene que estar completos'
+                    error = true;
+              }
+          }
+          !error && this.submit(
+            Swal.fire({
+              position: 'top-end',
+              icon: 'success',
+              title: 'Producto guardado con exito!',
+              showConfirmButton: false,
+              timer: 4500
+            }));
+            !error && this.submit()
+          }) ;

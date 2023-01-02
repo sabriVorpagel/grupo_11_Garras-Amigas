@@ -9,9 +9,9 @@
     <!-- ----------Inicio de main----------- -->
     
       <main class="main--reg">
-        <div class="container">
-          <div class="row  pt-5 pb-5 ">
-            <div class="col-12 p-5 border-2 bg-white tagger2">
+        <div class="container justify-content-center">
+          <div class="row  pt-5 pb-5 justify-content-center">
+            <div class="col-8  p-5 border-2 bg-white tagger2">
             <h1 class="text-center title-reg">Registrate con</h1>
             <div class="social-all text-center">
               <div class="social-all-element text-center">
@@ -112,6 +112,7 @@
                           value="<%= locals.old && old.street ? old.street : null %>"
                           class=" form-control py-3 <%= locals.errors && errors.street ? 'is-invalid' : null %>"
                           id="street" name="street" title="La dirección debe tener más de dos caracteres" />
+                          <label class="form-label">Ej, calle , número, localidad</label>
                         <small class="text-danger">
                           <%= locals.errors && errors.street ? errors.street.msg : null %>
                         </small>
@@ -144,11 +145,14 @@
     </div>
   </div>
   
+  
 </main>
  <!-- ----------Fin de header----------- -->
   <!-- ----------Inicio de footer----------- -->
     <%- include('../partials/footer') %>
+    
   <!-- ----------Fin de footer----------- -->
 <script src="/javascripts/userValidationFront.js"></script>
+
 </body>
 </html>

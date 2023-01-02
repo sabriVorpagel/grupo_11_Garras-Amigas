@@ -5,8 +5,8 @@
   "scripts": {
     "start": "node ./src/bin/www",
     "server": "nodemon ./src/bin/www",
-    "client:start": "cd garras-amigas & npm run start",
-    "client:build": "cd garras-amigas & npm run build",
+    "client:start": "cd garrasamigas & npm run start",
+    "client:build": "cd garrasamigas & npm run build",
     "dev": "concurrently \"npm run server\" \"npm run client:start\"",
     "create:db": "sequelize db:create && sequelize db:migrate && sequelize db:seed:all",
     "reset:db": "sequelize db:drop && npm run create:db"

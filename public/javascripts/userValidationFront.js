@@ -1,6 +1,9 @@
 console.log("userValidationFront.js connected!");
 
 
+
+
+    
 const $ = (element) => document.getElementById(element);
 
 
@@ -16,6 +19,8 @@ const exRegs = {
   exRegEsp: /[$@$!%*?&]/,
   exRegMin: /.{6,}/,
   exRegMax: /.{8}/,
+  exRegAlfaNum: /[a-zA-Z0-9]+/,
+  
 };
 
 // funcion para el mensaje de error
@@ -162,7 +167,7 @@ $("password2").addEventListener("blur", function ({ target }) {
           target
         );
         break;
-      case !exRegs.exRegAlfa.test(this.value):
+      case !exRegs.exRegAlfaNum.test(this.value):
         msgError("errorStreet", "La dirección debe tener solo letras", target);
         break;
       default:
@@ -176,10 +181,10 @@ $("password2").addEventListener("blur", function ({ target }) {
       case !this.value.trim():
         msgError("errorPhone", "El número teléfonico es obligatoria", target);
         break;
-      case this.value.trim().length < 10:
+      case this.value.trim().length != 10:
         msgError(
           "errorPhone",
-          "El teléfono debe tener como mínimino 10 caracteres",
+          "El teléfono debe tener 10 caracteres",
           target
         );
         break;
@@ -193,7 +198,29 @@ $("password2").addEventListener("blur", function ({ target }) {
   });
   
 
+$("form-register").addEventListener("submit", function (e) {
 
+  e.preventDefault();
+  let error = false;
+  const elements = this.elements;
+    for (let i = 0; i < elements.length - 2; i++) {
+        
+        if(!elements[i].value.trim() || elements[i].classList.contains('is-invalid')){
+            elements[i].classList.add('is-invalid')
+          $('errorSubmit').innerText = "Todos los campos son obligatorios";
+          error = true;
+        }
+    }
+    !error && this.submit(
+      Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Te registraste con exito!',
+        showConfirmButton: false,
+        timer: 4500
+      }));
+      !error && this.submit()
+    }) ;
   
 $("form-register").addEventListener("submit", function (e) {
 
@@ -208,13 +235,17 @@ $("form-register").addEventListener("submit", function (e) {
           error = true;
         }
     }
-  !error && this.submit()
-
-});
-
-
-
-
+    !error && this.submit(
+      Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Te registraste con exito!',
+        showConfirmButton: false,
+        timer: 4500
+      }));
+      !error && this.submit()
+    }) ;
+    
   // VER LA CONTRASEÑA
   $("btn-show-pass").addEventListener("click", ({ target }) => {
     if (target.localName === "i") {

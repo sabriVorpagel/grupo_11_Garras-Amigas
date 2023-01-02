@@ -3,6 +3,7 @@ const $ = (element) => document.getElementById(element);
 const exRegs = {
     exRegAlfa: /^[A-Za-zÁÉÍÓÚáéíóúñÑ ]+$/,
     exRegNum: /[0-9]/,
+    exRegAlfaNum: /[a-zA-Z0-9]+/,
 };
 
 $('name').addEventListener('blur', function(){
@@ -24,10 +25,13 @@ $('name').addEventListener('blur', function(){
 $('description').addEventListener('blur', function(){
     switch(true){
         case !this.value.trim():
-            $('errorDescription').innerText= 'El descripción es obligatorio';
+            $('errorDescription').innerText= 'El descripción es obligatoria';
             break;
         case this.value.trim().length < 20:
             $('errorDescription').innerText= 'La descripción debe tener al menos 20 caracteres'
+            break;
+        case !exRegs.exRegAlfaNum.test(this.value):
+            $('errorDescription').innerText= 'La descripción debe tener solo letras';
             break;
         default:
             $('errorDescription').innerText= null;
@@ -44,16 +48,16 @@ $('category').addEventListener('blur', function(){
             break;
     }
 })
-$('images').addEventListener('blur', function(){
-    switch(true){
-        case !this.value.trim():
-            $('errorImages').innerText= 'La imagen es obligatorio';
-            break;
-        default:
-            $('errorImages').innerText= null;
-            break;
-    }
-})
+// $('images').addEventListener('blur', function(){
+//     switch(true){
+//         case !this.value.trim():
+//             $('errorImages').innerText= 'La imagen es obligatorio';
+//             break;
+//         default:
+//             $('errorImages').innerText= null;
+//             break;
+//     }
+// })
 $('price').addEventListener('blur', function(){
     switch(true){
         case !this.value.trim():

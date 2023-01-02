@@ -1,41 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../partials/head",{ title : "Tu carrito" }) %>
 
-    <%- include('../partials/head', {title: 'Carrito'}) %>
-<body>
-    <%- include('../partials/header') %>
-    <main class="cart-main">
-        <div class="cart-div">
-            <h1 class="cart-titulo">Shopping Cart</h1>
-            <article class="cart-articulo">
-                <div class="cart-articulo-div">
-                    <img src="/images/productos/<%= product.images %> " alt="">
-                    <div class="cart-articulo-div2">
-                        <h3><%= product.name %> </h3>
-                        <p class="cart-descripcion"><%= product.description %> </p>
-                        <p class="cart-precio"> <%= product.price - (product.price * product.discount) / 100 %></p>
-                        <h6 class="cart-cantidad"><small>CANTIDAD</small></h6>                    
-                        <input class="cart-input" value="1" />   
-                        
-                        <a class="cart-eliminar">ELIMINAR <i class="fa-regular fa-trash-can"></i></a>
-                    </div>
-                </div>
-            </article>
-            <article class="cart-articulo">
-                <div class="cart-articulo-div">
-                    <img src="/images/productos/collar.nudo.producto.jpeg" alt="">
-                    <div class="cart-articulo-div2">
-                        <h3> Collar nudo</h3>
-                        <p class="cart-descripcion">descripcion hhhhhhhhhhhhhhh hhhhhhhhhhhhh hhhhhhhhhh hhhhhhhhhhhhh hhhhhhhhhhhh hhhhhhhhhhh hhhhhhhh hhhhh</p>
-                        <p class="cart-precio"> $23.569</p>
-                        <h6 class="cart-cantidad"><small>CANTIDAD</small></h6>                    
-                        <input class="cart-input" value="1" />   
-                        
-                        <a class="cart-eliminar">ELIMINAR <i class="fa-regular fa-trash-can"></i></a>
-                    </div>
-                </div>
-            </article>
+  <body class="cart">
+ <%- include('../partials/header') %>
+
+    <main class="carrito__main">
+      <section class="carrito__main--section">
+        <article class="carrito__main--section-article">
+          <img
+            src="/images/productos/<%= products.image %>"
+            alt=" botella "
+          />
+
+          <div class="carrito__producto--compra">
+            <h3 class="title__beer--ipa"><%=productCart.name %></h3>
+            <p><%=productCart.description %></p>
+            <h4><%= productCart.price %></h4>
+            <div class="cantidad--btn">
+              <p>Cantidad:</p>
+              <button class="btn--agregar">- 1 +</button>
+            </div>
+          </div>
+        </article>
+      </section>
+      <hr class="" />
+      <section class="cart__main--section">
+        <div class="cart__main--section--btn">
+          <button>Vaciar carrito</button>
+          <button>Volver a la tienda</button>
         </div>
-        <button type="button" class="btn btn-secondary">Finalisar Compra</button>
+      </section>
+      <div class="description">
+        <h2 class="title__description">Titulo</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident
+          aut harum modi consectetur obcaecati. Iusto, architecto accusantium
+          cum quia expedita, non inventore fuga tenetur quaerat excepturi
+          voluptas, laborum a ipsam.
+        </p>
+      </div>
+      <%- include('../partials/footer') %>
+      <div class="conteiner__pagar--btn">
+        <button class="pagar-btn">
+          <p>Pagar :</p>
+          <small>Subtotal :</small>
+        </button>
+      </div>
     </main>
-    <%- include('../partials/footer') %>
-</body>
+  </body>
 </html>

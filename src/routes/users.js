@@ -8,6 +8,7 @@ const loginValidator = require('../validator/loginValidator');
 const registerValidator = require('../validator/registerValidator');
 const publicRoute = require('../middlewares/publicRoute');
 const privateRoute = require('../middlewares/privateRoute');
+const profileValidator = require( '../validator/editProfileValidator');
 /* /users */
 router
   .get('/register', publicRoute, register) 
@@ -15,7 +16,7 @@ router
   .get('/login',publicRoute, login) 
   .post('/login', loginValidator , processLogin)
   .get('/profile',privateRoute, profile)
-  .get('/editProfile/:id', privateRoute, editProfile)
+  .get('/editProfile/:id', privateRoute,  profileValidator, editProfile)
   .put('/update/:id', uploadUsers.single('avatar'), update)
   .get('/logout',logout)
 

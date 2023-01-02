@@ -4,17 +4,17 @@
     <main class="main__create">
         <div class="main__caja">
             <form action="/products/update/<%= product.id %>?_method=PUT " method="POST" class="main__caja__formulario formEdit" id="product_edit" enctype="multipart/form-data">
-                <div class="col-11">
-                <img id="imgPrev" src="/images/productos/<%= product.images[0] ? product.images[0].file : 'Anuncio.png' %>" alt="" class="img-fluid">
+                <div class="col-11 ">
+                <img id="imgPrev" src="/images/productos/<%= product.images[0] ? product.images[0].file : 'Anuncio.png' %>" alt="" class="img-fluid justify-content-center">
                 </div>
                 <div class="col-10 col-md-5 col-lg-5">
-                    <label class=" form-label" for="name"></label>
-                    <input class=" form-control" placeholder="NOMBRE DEL PRODUCTO" type="text" name="name" id="name" value="<%= product.name %>">
+                    <label class=" form-label" for="name">NOMBRE DEL PRODUCTO</label>
+                    <input class=" form-control" type="text" name="name" id="name" value="<%= product.name %>">
                     <small class="advertencia"><%= locals.errors && errors.name ? errors.name.msg : null %></small>
                     <span id="errorName"></span>
                 </div>
                 <div class="col-10 col-md-5 col-lg-5">
-                    <label class="form-label" ></label>
+                    <label class="form-label" >CATEGORIA</label>
                     <select class="form-select" name="category" id="category" aria-label="Default select example">
                     <% categories.forEach(categoria =>{ %> 
 						<option value="<%= categoria.id %>" <%= locals.old && categoria.id === +old.categoryId ? 'selected' :null %> ><%= categoria.name %></option>
@@ -24,31 +24,32 @@
                     <span id="errorCategory"></span>
                 </div>
                  <div class="col-10 col-md-5 col-lg-5">
-                    <label class=" form-label" for="stock"></label>
-                    <input class=" form-control" placeholder="STOCK" type="number" name="stock" id="stock" value="<%= product.stock %>">
+                    <label class=" form-label" for="stock">sTOCK</label>
+                    <input class=" form-control"  type="number" name="stock" id="stock" value="<%= product.stock %>">
                     <small class="advertencia"><%= locals.errors && errors.stock ? errors.stock.msg : null %></small>
                     <span id="errorStock"></span>
                 </div>
                  <div class="col-10 col-md-5 col-lg-5">
-                    <label class=" form-label" for="price"></label>
-                    <input class=" form-control" placeholder=" Precio" type="number" name="price" id="price" value="<%= product.price %>">
+                    <label class=" form-label" for="price">PRECIO</label>
+                    <input class=" form-control" type="number" name="price" id="price" value="<%= product.price %>">
                     <small class="advertencia"><%= locals.errors && errors.price ? errors.price.msg : null %></small>
                     <span id="errorPrice"></span>
                 </div>
                 <div class="col-10 col-md-5 col-lg-5">
-                    <label class=" form-label" for="discount"></label>
-                    <input class=" form-control" placeholder="DESCUENTO" type="number" name="discount" id="discount" value="<%= product.discount %>">
+                    <label class=" form-label" for="discount">DESCUENTO</label>
+                    <input class=" form-control"  type="number" name="discount" id="discount" value="<%= product.discount %>">
                     <small class="advertencia"><%= locals.errors && errors.discount ? errors.discount.msg : null %></small>
                     <span id="errorDiscount"></span>
                 </div>
                 <div class="col-10 col-md-5 col-lg-5">
-                    <label class=" form-label" for="images">Selecciona imagen del producto</label>
+                    <label class=" form-label" for="images">IMAGEN DEL PRODUCTO</label>
                     <input class=" form-control" type="file" name="images" id="images" multiple >
                     <small><%= locals.errors && errors.images ? errors.images.msg : null %></small>
                     <span id="errorImages"></span>
                 </div>
                 <div class="col-10 col-md-10 col-lg-10">
-                    <input name="description" placeholder="DESCRIPCION" id="description" class="form-control form-control-lg py-3" style="resize: none;" rows="5" maxlength="1000" value="<%= product.description %>">
+                    <label class=" form-label" for="description">DESCRIPCION</label>
+                    <input name="description"  id="description" class="form-control form-control-lg py-3" style="resize: none;" rows="5" maxlength="1000" value="<%= product.description %>">
                     <small class="advertencia"><%= locals.errors && errors.description ? errors.description.msg : null %></small>
                     <span id="errorDescription"></span>
                 </div>

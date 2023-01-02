@@ -62,6 +62,8 @@ app.use('/api/products', apiProductsRoutes);
 app.use('/api/carts', apiCartsRouter);
 app.use('/api/categories', apiCategoriesRouter)
 
+app.use('/api/carts', require('./routes/api/apiCarts'));
+
 // catch 404 and forward to error handler
 // app.use(function(req, res, next) {
 //   next(createError(404));

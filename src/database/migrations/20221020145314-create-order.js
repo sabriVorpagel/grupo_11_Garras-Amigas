@@ -8,6 +8,9 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+       date: {
+        type: Sequelize.DATE
+      },
       total: {
         type: Sequelize.INTEGER
       },
@@ -20,7 +23,7 @@ module.exports = {
           key: 'id'
         }
       },
-      stateId: {
+      statusesId: {
         type: Sequelize.INTEGER,
         references:{
           model: {

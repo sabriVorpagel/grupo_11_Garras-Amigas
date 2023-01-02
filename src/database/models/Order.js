@@ -11,19 +11,25 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Order.hasMany(models.Cart,{
+        foreignKey : 'orderId',
+        as : 'cart',
+        onDelete : 'cascade'
+      });
       Order.belongsTo(models.User,{
         as: 'user',
         foreignKey: 'userId'
       });
-      Order.hasOne(models.State,{
-        as: 'state',
-        foreignKey: 'stateId'
+      Order.belongsTo(models.State,{
+        as: 'statuses',
+        foreignKey: 'statusesId'
       })
     }
   }
   Order.init({
+    date: DataTypes.DATE,
     userId: DataTypes.INTEGER,
-    stateId: DataTypes.INTEGER,
+    statusesId: DataTypes.INTEGER,
     total: DataTypes.INTEGER
   }, {
     sequelize,
@@ -31,3 +37,5 @@ module.exports = (sequelize, DataTypes) => {
   });
   return Order;
 };
+
+
