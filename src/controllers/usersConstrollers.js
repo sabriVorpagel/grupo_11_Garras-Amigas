@@ -77,7 +77,7 @@ module.exports = {
                     },
                     include: [
                         {
-                            association: 'cart',
+                            association: 'carts',
                             attributes: ['id', 'quantity'],
                             include: [
                                 {
@@ -93,13 +93,13 @@ module.exports = {
                         req.session.orderCart = {
                             id: order.id,
                             total: order.total,
-                            items: order.cart
+                            items: order.carts
                         }
 
                     } else {
 
                         db.Order.create({
-                            date: new Data(),
+                            date: new Date(),
                             total: 0,
                             userId: req.session.login.id,
                             statusesId: 1

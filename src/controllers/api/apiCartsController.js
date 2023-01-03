@@ -3,9 +3,9 @@ const db = require('../../database/models');
 module.exports = {
     list : async (req, res) => {
         try {
-            return res.satuts(200).json({
+            return res.status(200).json({
                 ok : true,
-                data : req.sesssion.orderCart || null
+                data : req.session.orderCart || null
             })
             
         } catch (error) {
