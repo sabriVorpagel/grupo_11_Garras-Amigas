@@ -11,19 +11,19 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Order.hasMany(models.Cart,{
+      this.hasMany(models.Cart,{
         foreignKey : 'orderId',
-        as : 'cart',
-        onDelete : 'cascade'
-      });
-      Order.belongsTo(models.User,{
+        as : 'carts'
+      })
+      this.belongsTo(models.User,{
         as: 'user',
         foreignKey: 'userId'
       });
-      Order.belongsTo(models.State,{
+      this.belongsTo(models.State,{
         as: 'statuses',
         foreignKey: 'statusesId'
       })
+    
     }
   }
   Order.init({

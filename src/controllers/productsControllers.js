@@ -29,8 +29,8 @@ module.exports = {
 			.catch(error => console.log(error))
     },
     cart: (req,res) => {
-		db.Product.findByPk(req.params.id,{
-			include : [{all : true}]
+		db.Product.findAll(req.params.id,{
+			include : ['images']
 		})
 			.then(product => {
 				return res.render('products/productCart', {

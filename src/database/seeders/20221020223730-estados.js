@@ -2,7 +2,7 @@
 const estados = ['Pendiente', 'Retrasado', 'In pago', 'Finalizado']
 
 const statuses = estados.map(status => ({
-  name : status,
+  state : status,
   createdAt : new Date()
 }))
 

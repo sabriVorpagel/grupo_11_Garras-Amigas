@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
     orderId: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'Cart n',
+    modelName: 'Cart',
   });
   return Cart;
 };
