@@ -64,8 +64,9 @@
                                             <!-- <form >
                                                 <input class="btn btn-outline-primary ms-1 mb-3 justify-content-center button-cart" type="submit" name="agregarCarrito" id="agregarCarrito" value="Agregar al carrito  ♥"></a>
                                             </form> -->
-                                            <button class="btn btn-primary" onclick="addCartItem('<%=product.id%>')">AGREGAR AL CARRITO</button>
-                                        <% }} %> 
+                                            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#cartModal"  onclick="addCartItem('<%=product.id%>')">AGREGAR AL CARRITO</button>
+                                            
+                                            <% }} %> 
                                     </div>
                                 </div>
                             </div>
