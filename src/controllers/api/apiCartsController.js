@@ -18,23 +18,28 @@ module.exports = {
         }
 
     },
-    addItem: async (req, res) => {
+    addItem : async (req,res) => {
         try {
-            const { id } = req.body;
-            let item = req.session.orderCart.items.find(item => item.product.id === +id);
-            if (item) {
+
+            const {id} = req.body;
+
+            let item = req.session.orderCart.items.find((item)=> item.product.id === +id);
+
+            if(item) {
+
                 await db.Cart.update(
                     {
-                        quantity: item.quantity + 1
+                        quantity : item.quantity + 1
                     },
                     {
-                        where: {
-                            id: item.id
-                        }
+                      where : {
+                        id : item.id
+                      }  
                     }
                 )
+
                 const itemsModify = req.session.orderCart.items.map(element => {
-                    if (element.id === item.id) {
+                    if(element.id === item.id){
                         element.quantity = element.quantity + 1;
                         return element
                     }
@@ -44,49 +49,49 @@ module.exports = {
 
                 req.session.orderCart = {
                     ...req.session.orderCart,
-                    items: itemsModify
-                }
+                    items : itemsModify
+                   }
 
-            } else {
+            }else {
 
-                const newCart = await db.Cart.create({
-                    quantity: 1,
-                    productId: id,
-                    orderId: req.session.orderCart.id
-                });
+               const newCart = await db.Cart.create({
+                    quantity : 1,
+                    productId : id,
+                    orderId : req.session.orderCart.id
+               });
 
-                const cartItem = await db.Cart.findByPk(newCart.id, {
-                    attributes: ['id', 'quantity'],
-                    include: [
-                        {
-                            association: 'product',
-                            attributes: ['id', 'name', 'price', 'discount'],
-                            include: ['images']
-                        }
-                    ]
-                });
+               const cartItem = await db.Cart.findByPk(newCart.id, {
+                attributes : ['id','quantity'],
+                include : [
+                  {
+                    association : 'product',
+                    attributes : ['id','name','price','discount'],
+                    include : ['images']
+                  }
+                ]
+               });
 
-                req.session.orderCart = {
-                    ...req.session.orderCart,
-                    items: [
-                        ...req.session.orderCart.items,
-                        cartItem
-                    ]
-                }
+               req.session.orderCart = {
+                ...req.session.orderCart,
+                items : [
+                    ...req.session.orderCart.items,
+                    cartItem
+                ]
+               }
 
             }
 
             return res.status(201).json({
-                ok: true,
-                data: req.session.orderCart || null
+                ok : true,
+                data : req.session.orderCart || null
             })
 
-
+            
         } catch (error) {
             console.log(error);
             return res.status(error.status || 500).json({
-                ok: false,
-                msg: error.message || 'Comunicate con el administrador'
+                ok : false,
+                msg : error.message || 'Comuniquese con el administrador'
             })
         }
     },
@@ -153,5 +158,69 @@ module.exports = {
             })
         }
     },
- 
+    removeItem: async (req,res)=>{
+        try {
+
+            const {id} = req.params;
+
+            let item = req.session.orderCart.items.find((item)=> item.product.id === +id);
+
+            if(item) {
+
+                await db.Cart.destroy(
+                    {
+                        where : {
+                        id : item.id
+                    }  
+                    }
+                )
+                const itemsModify = req.session.orderCart.items.filter((item)=> item.product.id != +id);
+
+                req.session.orderCart = {
+                    ...req.session.orderCart,
+                    items : itemsModify
+                }
+
+            }
+
+            return res.status(201).json({
+                ok : true,
+                data : req.session.orderCart || null
+            })
+
+            
+        } catch (error) {
+            console.log(error);
+            return res.status(error.status || 500).json({
+                ok : false,
+                msg : error.message || 'Comuniquese con el administrador'
+            })
+        }
+        
+    },
+    removeAllItems: async (req,res)=>{
+        try {
+            await db.Order.destroy({
+                where:{
+                    userId: req.session.login.id,
+                    statusesId:1
+                }
+            })
+            
+            req.session.orderCart={
+                ...req.session.orderCart,
+                items: []
+            }
+            return res.status(201).json({
+                ok : true,
+                data : req.session.orderCart || null
+            })
+        } catch (error) {
+            console.log(error);
+            return res.status(error.status || 500).json({
+                ok : false,
+                msg : error.message || 'Comuniquese con el administrador'
+            })
+        }
+    }
 }
