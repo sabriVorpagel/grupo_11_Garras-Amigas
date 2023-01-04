@@ -30,6 +30,9 @@ const showItems = (items) => {
             <td>
             ${((+product.price - (+product.price * +product.discount) / 100) *+quantity).toFixed(0)}
             </td>
+            // <td>
+            // ${(((+product.price - (+product.price * +product.discount) / 100) *+quantity)+quantity).toFixed(0)}
+            // </td>
             <td>
                <button class="btn btn-sm btn-danger" onclick="removeItem(${product.id
             })"><i class="fas fa-trash"></i></button>
@@ -63,7 +66,7 @@ document
    });
 const addCartItem = async (id) => {
    try {
-      let response = await fetch("/api/carts", {
+      let response = await fetch("/api/carts/", {
          method: "POST",
          body: JSON.stringify({
             id,
@@ -119,7 +122,7 @@ const removeItem = async (id) => {
 };
 const remove = async (id) => {
    try {
-      let response = await fetch("/api/carts/all", {
+      let response = await fetch("/api/carts/all/", {
          method: "DELETE",
       });
 
@@ -129,8 +132,12 @@ const remove = async (id) => {
          showItems(result.data.items);
       }
    } catch (error) {
-      console.error(error);
-   }
+      console.log(error);
+      return res.status(error.status || 500).json({
+         ok: false,
+         msg: error.message || "Comuniquese con el administrador",
+      });
+   } 
 };
 
 // function finalizar_compra(){

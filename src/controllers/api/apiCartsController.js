@@ -222,5 +222,10 @@ module.exports = {
                 msg : error.message || 'Comuniquese con el administrador'
             })
         }
+    },
+    cartTotal : async (req,res) =>{
+        let total = 0;
+
+
     }
 }
