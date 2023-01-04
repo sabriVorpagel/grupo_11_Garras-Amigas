@@ -37,12 +37,12 @@ module.exports = {
     login: (req, res) => {
         return res.render('users/login')
     },
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
     processLogin: (req, res) => {
         let errors = validationResult(req);
 
@@ -68,7 +68,6 @@ module.exports = {
                     });
                 };
                 
-                   
                 // carrito
                 db.Order.findOne({
                     where: {
@@ -90,6 +89,7 @@ module.exports = {
                     ]
                 }).then(order => {
                     if (order) {
+
                         req.session.orderCart = {
                             id: order.id,
                             total: order.total,
@@ -104,19 +104,20 @@ module.exports = {
                             userId: req.session.login.id,
                             statusesId: 1
                         }).then(order => {
+
                             req.session.orderCart = {
                                 id: order.id,
                                 total: order.total,
                                 items: []
                             }
+
                         })
-                      
                     }
-                  
+
                     return res.redirect('/index');
 
                 }).catch(error => console.log(error))
-                
+
 
             });
 
@@ -125,9 +126,7 @@ module.exports = {
                 errors: errors.mapped(),
 
             });
-
         }
-
     },
     // PERFIL
 
