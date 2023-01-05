@@ -4,7 +4,7 @@ const {getUsers, getOne, getAvatar} = require('../../controllers/api/apiUsersCon
 
 router
 
-    .get('/list', getUsers)
+    .get('/', getUsers)
     .get('/:id', getOne)
     .get('/avatar/:avatar',getAvatar)
 

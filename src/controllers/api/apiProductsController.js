@@ -9,6 +9,7 @@ module.exports = {
         let {limit = 4, page = 1, order = 'ASC', sortBy = 'id', search = "", sale = 0} = req.query;
             limit = limit > 10 ? 10 : +limit;
             let offset = +limit * (+page - 1 );
+            let total = await db.Product.count() 
         try {
                 let options = {
                 attributes : {
@@ -57,7 +58,11 @@ module.exports = {
                     prev,
                     next
                 },
-                data: products
+                data: {
+                    total,
+                    products
+                }
+                
             })
             // de donde viene el products de data
         } catch (error) {
