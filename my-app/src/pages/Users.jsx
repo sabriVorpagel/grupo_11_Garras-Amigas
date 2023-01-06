@@ -1,7 +1,7 @@
-// import React from 'react'
+import React from 'react'
 
-// export const Users = () => {
-//   return (
-//     <div>Users</div>
-//   )
-// }
+export const Users = () => {
+  return (
+    <div>Users</div>
+  )
+}

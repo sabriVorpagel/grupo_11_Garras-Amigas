@@ -1,9 +1,8 @@
-
 const express = require('express');
 const router = express.Router();
 
 
-const {list} = require('../../controllers/api/apiCategoriesController');
+const {list} = require('../../controllers/api/apiCategorieController');
 
 
 router

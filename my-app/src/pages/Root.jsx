@@ -1,24 +1,25 @@
-// import React from 'react'
-// import {Outlet} from 'react-router-dom'
-// import { Footer } from '../components/Footer'
-// import { SideBar } from '../components/SideBar'
-// import { TopBar } from '../components/TopBar'
-// // import { Produtcs } from './Products'
+import React from 'react'
+import {Outlet} from 'react-router-dom'
+import { Footer } from '../components/Footer'
+import { SideBar } from '../components/SideBar'
+import { TopBar } from '../components/TopBar'
 
-// export const Root = () => {
-//     return (
-//         <div id="wrapper">
-//             <SideBar />
-//             <div id="content-wrapper" className="d-flex flex-column">
-//                 <div id="content">
+// import { Produtcs } from './Products'
 
-//                     <TopBar />
+export const Root = () => {
+    return (
+        <div id="wrapper">
+            <SideBar />
+            <div id="content-wrapper" className="d-flex flex-column">
+                <div id="content">
 
-//                     <Outlet/>
-//                 </div>
+                    <TopBar />
 
-//                 <Footer/>
-//             </div>
-//         </div>
-//     )
-// }
+                    <Outlet />
+                </div>
+
+                <Footer/>
+            </div>
+        </div>
+    )
+}

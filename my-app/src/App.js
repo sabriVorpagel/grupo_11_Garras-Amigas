@@ -1,19 +1,11 @@
 import './App.css';
-import { Home } from './pages/Home';
+import { AppRouter } from './routes/AppRouter';
 
-
-
-// import { AppRouter } from './routes/AppRouter';
-
-// function App() {
-//   return (
-//     <AppRouter/>
-//   );
-// }
-function App(){
-  return(
-    <Home />
-  )
+function App() {
+  return (
+    <AppRouter/>
+  );
 }
+
 
 export default App;

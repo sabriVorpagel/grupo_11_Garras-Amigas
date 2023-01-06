@@ -53,11 +53,7 @@ export const Metrics = () => {
   useEffect(() => {
     getData('/totals')
   }, []);
-
-
   
-
-
   return (
     <div className="row">
         <Metric {...state.products} />
